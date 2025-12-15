@@ -18,7 +18,6 @@ ___
 >[!problem] Problem 2
 >Obtain the first fundamental form of the sphere in the parametrization given by stereographic projection (cf. Exercise 16, Sec. 2-2).
 
-
+**Proof:**
 ___
-
 

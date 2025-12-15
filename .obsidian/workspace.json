@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数分三/数分三作业四.md",
+                "file": "Topology and geometry homework/Topology and geometry HW11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数分三作业四"
+              "title": "Topology and geometry HW11"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "659ae78406fac190",
   "lastOpenFiles": [
+    "数分三/数分三作业四.md",
     "未命名",
     "Complex analysis/Complex analysis HW1.md",
     "关于双周期函数的一些问题.md",
@@ -228,7 +229,6 @@
     "物理",
     "Topology and geometry homework/graph",
     "Probability and statistic homework",
-    "meet",
-    "Complex analysis/graphs"
+    "meet"
   ]
 }
