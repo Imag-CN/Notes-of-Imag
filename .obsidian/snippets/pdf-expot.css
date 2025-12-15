@@ -1,0 +1,19 @@
+/* 防止callout跨页断裂 */
+.callout {
+  page-break-inside: avoid !important;
+  break-inside: avoid-page !important;
+}
+
+/* 添加页码到右上角（纯数字） */
+@media print {
+  @page {
+    margin: 20mm;
+    
+    @top-right {
+      content: counter(page);  /* 只显示数字 */
+      font-size: 10pt;
+      color: #666;
+      font-family: sans-serif;
+    }
+  }
+}
