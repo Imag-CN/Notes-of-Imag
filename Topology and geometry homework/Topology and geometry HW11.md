@@ -12,12 +12,119 @@ ___
 >d. $\mathbf{x}(u, v)=(a \sinh u \cos v, b \sinh u \sin v, c \cosh u)$; hyperboloid of two sheets.
 
 **Proof:** 
+**a.** Compute derivatives:
+$$
+\begin{aligned}
+\mathbf{x}_u &= (a\cos u\cos v,\; b\cos u\sin v,\; -c\sin u), \\
+\mathbf{x}_v &= (-a\sin u\sin v,\; b\sin u\cos v,\; 0).
+\end{aligned}
+$$
+First fundamental form coefficients:
+$$
+\begin{aligned}
+E &= a^2\cos^2 u\cos^2 v + b^2\cos^2 u\sin^2 v + c^2\sin^2 u, \\
+F &= (b^2-a^2)\sin u\cos u\sin v\cos v, \\
+G &= a^2\sin^2 u\sin^2 v + b^2\sin^2 u\cos^2 v.
+\end{aligned}
+$$
+The first fundamental form:
+$$
+I = E\,du^2 + 2F\,du\,dv + G\,dv^2.
+$$
 
+**b.** Compute derivatives:
+$$
+\begin{aligned}
+\mathbf{x}_u &= (a\cos v,\; b\sin v,\; 2u), \\
+\mathbf{x}_v &= (-au\sin v,\; bu\cos v,\; 0).
+\end{aligned}
+$$
+First fundamental form coefficients:
+$$
+\begin{aligned}
+E &= a^2\cos^2 v + b^2\sin^2 v + 4u^2, \\
+F &= (b^2-a^2)u\sin v\cos v, \\
+G &= u^2(a^2\sin^2 v + b^2\cos^2 v).
+\end{aligned}
+$$
+The first fundamental form:
+$$
+I = E\,du^2 + 2F\,du\,dv + G\,dv^2.
+$$
+
+**c.**
+Compute derivatives:
+$$
+\begin{aligned}
+\mathbf{x}_u &= (a\cosh v,\; b\sinh v,\; 2u), \\
+\mathbf{x}_v &= (au\sinh v,\; bu\cosh v,\; 0).
+\end{aligned}
+$$
+First fundamental form coefficients:
+$$
+\begin{aligned}
+E &= a^2\cosh^2 v + b^2\sinh^2 v + 4u^2, \\
+F &= (a^2+b^2)u\sinh v\cosh v, \\
+G &= a^2u^2\sinh^2 v + b^2u^2\cosh^2 v.
+\end{aligned}
+$$
+The first fundamental form:
+$$
+I = E\,du^2 + 2F\,du\,dv + G\,dv^2.
+$$
+
+**d.**
+Compute derivatives:
+$$
+\begin{aligned}
+\mathbf{x}_u &= (a\cosh u\cos v,\; b\cosh u\sin v,\; c\sinh u), \\
+\mathbf{x}_v &= (-a\sinh u\sin v,\; b\sinh u\cos v,\; 0).
+\end{aligned}
+$$
+First fundamental form coefficients:
+$$
+\begin{aligned}
+E &= a^2\cosh^2 u\cos^2 v + b^2\cosh^2 u\sin^2 v + c^2\sinh^2 u, \\
+F &= (b^2-a^2)\sinh u\cosh u\sin v\cos v, \\
+G &= \sinh^2 u\,(a^2\sin^2 v + b^2\cos^2 v).
+\end{aligned}
+$$
+The first fundamental form:
+$$
+I = E\,du^2 + 2F\,du\,dv + G\,dv^2.
+$$
 ___
 
 >[!problem] Problem 2
->Obtain the first fundamental form of the sphere in the parametrization given by stereographic projection (cf. Exercise 16, Sec. 2-2).
+>Obtain the first fundamental form of the sphere in the parametrization given by stereographic projection:
+>$$
+>\pi^{-1} \left\{
+\begin{aligned}
+x &= \frac{4u}{u^2+v^2+4}, \\
+y &= \frac{4v}{u^2+v^2+4}, \\
+z &= \frac{2(u^2+v^2)}{u^2+v^2+4}.
+\end{aligned}
+\right.
+>$$
 
 **Proof:**
+Let $\rho^2 = u^2+v^2$, $D = \rho^2+4$, then:
+$$
+\mathbf{x}_u = \left( \frac{4(D-2u^2)}{D^2}, \; \frac{-8uv}{D^2}, \; \frac{8u}{D^2} \right),
+$$
+$$
+\mathbf{x}_v = \left( \frac{-8uv}{D^2}, \; \frac{4(D-2v^2)}{D^2}, \; \frac{8v}{D^2} \right).
+$$
+First fundamental form coefficients:
+$$
+E = \mathbf{x}_u\cdot\mathbf{x}_u = \frac{16}{D^2}, \quad
+F = \mathbf{x}_u\cdot\mathbf{x}_v = 0, \quad
+G = \mathbf{x}_v\cdot\mathbf{x}_v = \frac{16}{D^2}.
+$$
+
+Therefore the first fundamental form:
+$$
+I = \frac{16}{(u^2+v^2+4)^2} \, (du^2 + dv^2).
+$$
 ___
 
