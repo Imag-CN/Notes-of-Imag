@@ -128,3 +128,11 @@ I = \frac{16}{(u^2+v^2+4)^2} \, (du^2 + dv^2).
 $$
 ___
 
+>[!problem] Problem 3
+>Show that a surface of revolution can always be parametrized so that
+>
+>$$
+>E = E ( v ),\quad F = 0,\quad G = 1.
+>$$
+
+**Proof:**
