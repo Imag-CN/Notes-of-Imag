@@ -124,12 +124,8 @@ ___
 **Proof:**
 **a.** For $\hat{\theta}_1 = \frac{1}{n}\sum_{i=1}^{n}X_i$:
 $$
-E(X_i) = \frac{(\theta - \frac{1}{2}) + (\theta + \frac{1}{2})}{2} = \theta
-$$
-    Therefore,
-    $$ E(\hat{\theta}_1) = E\left( \frac{1}{n}\sum_{i=1}^{n}X_i \right) = \frac{1}{n}\sum_{i=1}^{n}E(X_i) = \frac{1}{n} \cdot n\theta = \theta $$
-
-2.  **For $\hat{\theta}_2 = \frac{1}{2}(X_{(1)} + X_{(n)})$:**
+E(\hat{\theta}_1) = E\left( \frac{1}{n}\sum_{i=1}^{n}X_i \right) = \frac{1}{n}\sum_{i=1}^{n}E(X_i) = \frac{1}{n} \cdot n\theta = \theta
+$$For $\hat{\theta}_2 = \frac{1}{2}(X_{(1)} + X_{(n)})$:
     Let $Y_i = X_i - (\theta - \frac{1}{2})$. Then $Y_i \sim \text{Uniform}(0, 1)$, and we have $X_{(1)} = \theta - \frac{1}{2} + Y_{(1)}$ and $X_{(n)} = \theta - \frac{1}{2} + Y_{(n)}$.
     For $Y_i \overset{\text{i.i.d.}}{\sim} \text{Uniform}(0,1)$, the moments of the order statistics are known:
     $$ E(Y_{(1)}) = \frac{1}{n+1}, \quad E(Y_{(n)}) = \frac{n}{n+1} $$
@@ -138,15 +134,18 @@ $$
     $$ = \frac{1}{2} E\left( 2\theta - 1 + Y_{(1)} + Y_{(n)} \right) = \theta - \frac{1}{2} + \frac{1}{2} \left( E(Y_{(1)}) + E(Y_{(n)}) \right) $$
     $$ = \theta - \frac{1}{2} + \frac{1}{2} \left( \frac{1}{n+1} + \frac{n}{n+1} \right) = \theta - \frac{1}{2} + \frac{1}{2} \cdot \frac{n+1}{n+1} = \theta - \frac{1}{2} + \frac{1}{2} = \theta $$
 
-    Hence, both $\hat{\theta}_1$ and $\hat{\theta}_2$ are **unbiased** estimators of $\theta$.
+Hence, both $\hat{\theta}_1$ and $\hat{\theta}_2$ are unbiased estimators of $\theta$.
 
-**b. Compare the variances of the two estimators.**
+**b.**
+For $X_{i}$:
+$$
+Var(X_i) = \frac{[(\theta+\frac{1}{2}) - (\theta-\frac{1}{2})]^2}{12} = \frac{1^2}{12} = \frac{1}{12}
+$$
 
-1.  **Variance of $\hat{\theta}_1$:**
-    Since the $X_i$ are i.i.d. with variance:
-    $$ Var(X_i) = \frac{[(\theta+\frac{1}{2}) - (\theta-\frac{1}{2})]^2}{12} = \frac{1^2}{12} = \frac{1}{12} $$
-    Therefore,
-    $$ Var(\hat{\theta}_1) = Var\left( \frac{1}{n}\sum_{i=1}^{n}X_i \right) = \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) = \frac{1}{n^2} \cdot n \cdot \frac{1}{12} = \frac{1}{12n} $$
+Therefore,
+$$
+Var(\hat{\theta}_1) = Var\left( \frac{1}{n}\sum_{i=1}^{n}X_i \right) = \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) = \frac{1}{n^2} \cdot n \cdot \frac{1}{12} = \frac{1}{12n}
+$$
 
 2.  **Variance of $\hat{\theta}_2$:**
     Using the same transformation $Y_i \sim \text{Uniform}(0,1)$. For the standard uniform distribution, the variances and covariance of the extreme order statistics are:
