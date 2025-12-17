@@ -10,7 +10,7 @@ ___
 **Solution:**
 **a.** The population mean is $\mu = 0$, and the population variance is $\sigma^2 = E(X^2) - (E(X))^2 = E(X^2)$.
 
-Since the first moment doesn't contain equate the second moment ($E(X^2)$) to the corresponding sample moment:
+Since the first moment doesn't contain information about $\sigma^2$, we equate the second moment ($E(X^2)$) to the corresponding sample moment:
 $$
 E(X^2) = \frac{1}{n} \sum_{i=1}^n X_i^2
 $$
@@ -25,7 +25,7 @@ Check unbiasedness:
 $$
 E(\hat{\sigma}^2_{\text{MM}}) = E\left( \frac{1}{n} \sum_{i=1}^n X_i^2 \right) = \frac{1}{n} \sum_{i=1}^n E(X_i^2) = \frac{1}{n} \sum_{i=1}^n \sigma^2 = \sigma^2
 $$
-Therefore, $\hat{\sigma}^2_{\text{MM}}$ is an **unbiased** estimator of $\sigma^2$.
+Therefore, $\hat{\sigma}^2_{\text{MM}}$ is an unbiased estimator of $\sigma^2$.
 
 **b.** The joint density is 
 $$
@@ -82,34 +82,35 @@ ___
 $$
 E(X) = \int_0^1 x \cdot (\alpha+1) x^{\alpha} dx = (\alpha+1) \int_0^1 x^{\alpha+1} dx = (\alpha+1) \left[ \frac{x^{\alpha+2}}{\alpha+2} \right]_0^1 = \frac{\alpha+1}{\alpha+2}
 $$
+Equate the population mean to the sample mean $\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i$:
+$$
+\frac{\alpha+1}{\alpha+2} = \bar{X}
+$$
 
-2.  **Set up the moment equation:**
-    Equate the population mean to the sample mean $\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i$:
-    $$ \frac{\alpha+1}{\alpha+2} = \bar{X} $$
+Solve for $\alpha$ gives:
+$$
+\hat{\alpha}_{\text{MM}} = \frac{2\bar{X} - 1}{1 - \bar{X}}
+$$
 
-3.  **Solve for $\alpha$:**
-    $$ \alpha + 1 = \bar{X}(\alpha + 2) $$
-    $$ \alpha + 1 = \bar{X}\alpha + 2\bar{X} $$
-    $$ \alpha - \bar{X}\alpha = 2\bar{X} - 1 $$
-    $$ \alpha(1 - \bar{X}) = 2\bar{X} - 1 $$
-    $$ \hat{\alpha}_{\text{MM}} = \frac{2\bar{X} - 1}{1 - \bar{X}} $$
+**b.** Write the likelihood function:
+$$
+L(\alpha) = \prod_{i=1}^n f(x_i; \alpha) = \prod_{i=1}^n (\alpha+1)x_i^{\alpha} = (\alpha+1)^n \left( \prod_{i=1}^n x_i \right)^{\alpha}
+$$
+Write the log-likelihood function:
+$$
+\ell(\alpha) = \ln L(\alpha) = n \ln(\alpha+1) + \alpha \sum_{i=1}^n \ln x_i
+$$
+Differentiate with respect to $\alpha$:
+$$
+\frac{\partial \ell}{\partial \alpha} = \frac{n}{\alpha+1} + \sum_{i=1}^n \ln x_i \
+$$
+Set the derivative to zero:
+$$
+\frac{n}{\alpha+1} + \sum_{i=1}^n \ln X_i = 0
+$$
+Solve for $\alpha$ gives:
+$$
+\hat{\alpha}_{\text{MLE}} = -\frac{n}{\sum_{i=1}^n \ln X_i} - 1
+$$
+___
 
-**b. Maximum Likelihood Estimator of $\alpha$**
-
-1.  **Write the likelihood function:**
-    $$ L(\alpha) = \prod_{i=1}^n f(x_i; \alpha) = \prod_{i=1}^n (\alpha+1)x_i^{\alpha} = (\alpha+1)^n \left( \prod_{i=1}^n x_i \right)^{\alpha} $$
-
-2.  **Write the log-likelihood function:**
-    $$ \ell(\alpha) = \ln L(\alpha) = n \ln(\alpha+1) + \alpha \sum_{i=1}^n \ln x_i $$
-
-3.  **Maximize the log-likelihood:**
-    Differentiate with respect to $\alpha$:
-    $$ \frac{\partial \ell}{\partial \alpha} = \frac{n}{\alpha+1} + \sum_{i=1}^n \ln x_i $$
-    Set the derivative to zero to find the MLE:
-    $$ \frac{n}{\hat{\alpha}_{\text{MLE}}+1} + \sum_{i=1}^n \ln X_i = 0 $$
-    $$ \frac{n}{\hat{\alpha}_{\text{MLE}}+1} = -\sum_{i=1}^n \ln X_i $$
-    $$ \hat{\alpha}_{\text{MLE}} + 1 = -\frac{n}{\sum_{i=1}^n \ln X_i} $$
-    Therefore, the maximum likelihood estimator is:
-    $$ \hat{\alpha}_{\text{MLE}} = -\frac{n}{\sum_{i=1}^n \ln X_i} - 1 $$
-    This can be equivalently written as:
-    $$ \hat{\alpha}_{\text{MLE}} = -1 - \frac{n}{\sum_{i=1}^n \ln X_i} $$
