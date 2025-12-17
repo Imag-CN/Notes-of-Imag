@@ -10,7 +10,7 @@ ___
 **Solution:**
 **a.** The population mean is $\mu = 0$, and the population variance is $\sigma^2 = E(X^2) - (E(X))^2 = E(X^2)$.
 
-Equate the first population moment ($E(X^2)$) to the corresponding sample moment:
+Since the first moment doesn't contain equate the second moment ($E(X^2)$) to the corresponding sample moment:
 $$
 E(X^2) = \frac{1}{n} \sum_{i=1}^n X_i^2
 $$
@@ -70,3 +70,46 @@ $$
 To maximizing $L(\theta)$ is equivalent to letting $L(\theta) = 1$, so we can take any $\theta$ in the interval $[X_{(n)} - 1, \; X_{(1)}]$ as the maximum likelihood estimator. So MLE is not unique (because $X_{(1)}$ and $X_{(n)} - 1$ cannot be equal). Specifically we can take $X_{(1)},X_{(n)}-1$ and $\dfrac{X_{(1)}+X_{(n)}-1}{2}$ as the MLE of $\theta$.
 ___
 
+>[!problem] Problem 3
+>Assume $X_{1},X_{2},\ldots,X_{n}$ are a random sample from a population with pdf $f(x)=(\alpha + 1)x^{\alpha}$, for $0 < x < 1$. Otherwise $f(x)=0$.
+>
+>a. Find the method of moment estimator of $\alpha$.
+>
+>b. Find the maximum likelihood estimator of $\alpha$.
+
+**Solution:**
+**a.** The first moment (mean) of the distribution is:
+$$
+E(X) = \int_0^1 x \cdot (\alpha+1) x^{\alpha} dx = (\alpha+1) \int_0^1 x^{\alpha+1} dx = (\alpha+1) \left[ \frac{x^{\alpha+2}}{\alpha+2} \right]_0^1 = \frac{\alpha+1}{\alpha+2}
+$$
+
+2.  **Set up the moment equation:**
+    Equate the population mean to the sample mean $\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i$:
+    $$ \frac{\alpha+1}{\alpha+2} = \bar{X} $$
+
+3.  **Solve for $\alpha$:**
+    $$ \alpha + 1 = \bar{X}(\alpha + 2) $$
+    $$ \alpha + 1 = \bar{X}\alpha + 2\bar{X} $$
+    $$ \alpha - \bar{X}\alpha = 2\bar{X} - 1 $$
+    $$ \alpha(1 - \bar{X}) = 2\bar{X} - 1 $$
+    $$ \hat{\alpha}_{\text{MM}} = \frac{2\bar{X} - 1}{1 - \bar{X}} $$
+
+**b. Maximum Likelihood Estimator of $\alpha$**
+
+1.  **Write the likelihood function:**
+    $$ L(\alpha) = \prod_{i=1}^n f(x_i; \alpha) = \prod_{i=1}^n (\alpha+1)x_i^{\alpha} = (\alpha+1)^n \left( \prod_{i=1}^n x_i \right)^{\alpha} $$
+
+2.  **Write the log-likelihood function:**
+    $$ \ell(\alpha) = \ln L(\alpha) = n \ln(\alpha+1) + \alpha \sum_{i=1}^n \ln x_i $$
+
+3.  **Maximize the log-likelihood:**
+    Differentiate with respect to $\alpha$:
+    $$ \frac{\partial \ell}{\partial \alpha} = \frac{n}{\alpha+1} + \sum_{i=1}^n \ln x_i $$
+    Set the derivative to zero to find the MLE:
+    $$ \frac{n}{\hat{\alpha}_{\text{MLE}}+1} + \sum_{i=1}^n \ln X_i = 0 $$
+    $$ \frac{n}{\hat{\alpha}_{\text{MLE}}+1} = -\sum_{i=1}^n \ln X_i $$
+    $$ \hat{\alpha}_{\text{MLE}} + 1 = -\frac{n}{\sum_{i=1}^n \ln X_i} $$
+    Therefore, the maximum likelihood estimator is:
+    $$ \hat{\alpha}_{\text{MLE}} = -\frac{n}{\sum_{i=1}^n \ln X_i} - 1 $$
+    This can be equivalently written as:
+    $$ \hat{\alpha}_{\text{MLE}} = -1 - \frac{n}{\sum_{i=1}^n \ln X_i} $$
