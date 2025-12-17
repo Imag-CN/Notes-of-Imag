@@ -48,7 +48,7 @@ $$
 ___
 
 >[!problem] Problem 1
->Assume $X_{1},X_{2},...,X_{n}$ are a random sample from a uniformly distributed population Uniform($\theta,\theta+1$).
+>Assume $X_{1},X_{2},...,X_{n}$ are a random sample from a uniformly distributed population Uniform ($\theta,\theta+1$).
 >
 >Show that the maximum likelihood estimator (MLE) of $\theta$ is not unique. For example, $X_{(1)},X_{(n)}-1$ and $\dfrac{X_{(1)}+X_{(n)}-1}{2}$ are the MLE of $\theta$.
 
@@ -57,14 +57,15 @@ The probability density function (pdf) for $X_i \sim \text{Uniform}(\theta, \the
 $$ f(x_i; \theta) = \begin{cases} 1, & \theta \le x_i \le \theta + 1 \\ 0, & \text{otherwise} \end{cases} $$
 The joint pdf (the likelihood function) is:
 $$ L(\theta) = \prod_{i=1}^n f(x_i; \theta) = \begin{cases} 1, & \theta \le x_i \le \theta+1 \text{ for all } i=1,...,n \\ 0, & \text{otherwise} \end{cases} $$
-Let $X_{(1)} = \min\{X_1,...,X_n\}$ and $X_{(n)} = \max\{X_1,...,X_n\}$. For the likelihood to be $1$, we need every $x_i$ to satisfy $\theta \le x_i \le \theta+1$. This condition is equivalent to:
-$$ \theta \le X_{(1)} \quad \text{and} \quad X_{(n)} \le \theta + 1 \iff X_{(n)} - 1 \le \theta \le X_{(1)} $$
+Let $X_{(1)} = \min\{X_1,...,X_n\}$ and $X_{(n)} = \max\{X_1,...,X_n\}$. Since the population is uniform ($\theta,\theta+1$), For the likelihood to be $1$, we need every $x_i$ to satisfy $\theta \le x_i \le \theta+1$. This condition is equivalent to:
+$$
+\theta \le X_{(1)} \quad \text{and} \quad X_{(n)} \le \theta + 1, \quad \text{i.e.} \quad X_{(n)} - 1 \le \theta \le X_{(1)}.
+$$
 So we can rewrite the likelihood function:
 $$
 L(\theta) = \begin{cases} 1, & \text{if } X_{(n)} - 1 \le \theta \le X_{(1)} \\ 0, & \text{otherwise} \end{cases}
 $$
-This is not a differentiable function. The MLE is found by maximizing $L(\theta)$.
-Since $L(\theta) = 1$ for any $\theta$ in the interval $[X_{(n)} - 1, \; X_{(1)}]$ and $L(\theta) = 0$ outside, **any value $\hat{\theta}$ within this interval maximizes the likelihood**.
+To maximizing $L(\theta)$ is to let $L(\theta) = 1$, so we can take any $\theta$ in the interval $[X_{(n)} - 1, \; X_{(1)}]$ as the maximum likelihood estimator,
 
 Therefore, the MLE is **not unique**; it can be any value in that closed interval.
 
