@@ -168,11 +168,14 @@ ___
 >**b.** Apply part **a** to compute the area of a torus of revolution.
 
 **Proof:**
-**a.** Let the generating curve $C$ be parametrized by arc length $s$ as $(x(s),0,z(s))$, with $x(s)=\rho(s)>0$ the distance to rotation axis ($z$-axis). Parameterize $S$ as
+**a.** Let the generating curve $C$ be parametrized by arc length $s$ as $(x(s),0,z(s))$, with $x(s)=\rho(s)>0$ the distance to rotation $z$-axis. Parameterize $S$ as
 $$
 \mathbf{x}(u,s)=(\rho(s)\cos u, \rho(s)\sin u, z(s)),\quad u\in[0,2\pi],\; s\in[0,l].
 $$
-Since $s$ is arc length, by the last problem we know that the first fundamental form has $E=\rho(s)^2$, $F=0$, $G=1$.
+Since $s$ is arc length, by the last problem we know that the first fundamental form coefficients are:
+$$
+E=\rho(s)^2, F=0, G=1.
+$$
 The area element is
 $$
 dA=\sqrt{EG-F^2}\,du\,ds = \rho(s)\,du\,ds.
@@ -182,12 +185,13 @@ $$
 A = 2\pi\int_0^l \rho(s)\,ds.
 $$
 
-**b. Torus area**
-
-Take circle of radius $r$ centered at distance $R$ from axis: $C:\,(R+r\cos\theta,0,r\sin\theta)$, $\theta\in[0,2\pi]$. Arc length $s=r\theta$, so $s\in[0,2\pi r]$, and $\rho(s)=R+r\cos(s/r)$.
+**b.** Take circle of radius $r$ centered at distance $R$ from $z$-axis:
+$$
+C:\,(R+r\cos\theta,0,r\sin\theta),\theta\in[0,2\pi].
+$$ Let Then we have arc length $s=r\theta\in[0,2\pi r]$, and $\rho(s)=R+r\cos(s/r)$. By part **a** we have:
 $$
 A = 2\pi\int_0^{2\pi r}\left[R+r\cos\frac{s}{r}\right]ds
 = 2\pi\left[Rs + r^2\sin\frac{s}{r}\right]_0^{2\pi r}
 = 4\pi^2 Rr.
 $$
-
+Therefore the 
