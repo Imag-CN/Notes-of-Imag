@@ -146,10 +146,8 @@ Therefore,
 $$
 Var(\hat{\theta}_1) = Var\left( \frac{1}{n}\sum_{i=1}^{n}X_i \right) = \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) = \frac{1}{n^2} \cdot n \cdot \frac{1}{12} = \frac{1}{12n}
 $$
-
-2.  **Variance of $\hat{\theta}_2$:**
-    Using the same transformation $Y_i \sim \text{Uniform}(0,1)$. For the standard uniform distribution, the variances and covariance of the extreme order statistics are:
-    $$ Var(Y_{(1)}) = Var(Y_{(n)}) = \frac{n}{(n+1)^2(n+2)} $$
+Using the same transformation $Y_i \sim \text{Uniform}(0,1)$. For the standard uniform distribution, the variances and covariance of the extreme order statistics are:
+$$Var(Y_{(1)}) = Var(Y_{(n)}) = \frac{n}{(n+1)^2(n+2)} $$
     $$ Cov(Y_{(1)}, Y_{(n)}) = \frac{1}{(n+1)^2(n+2)} $$
     Since $X_{(k)} = (\theta - \frac{1}{2}) + Y_{(k)}$, we have $Var(X_{(k)}) = Var(Y_{(k)})$ and $Cov(X_{(1)}, X_{(n)}) = Cov(Y_{(1)}, Y_{(n)})$.
     Therefore,
