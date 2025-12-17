@@ -136,3 +136,33 @@ ___
 >$$
 
 **Proof:**
+General parametrization of a surface of revolution (profile curve rotated about $z$-axis) is:
+$$
+\mathbf{x}(u,v) = (f(v)\cos u, f(v)\sin u, g(v)), \quad f(v)>0.
+$$
+First fundamental form:
+$$
+E = f(v)^2, \quad F = 0, \quad G = f'(v)^2 + g'(v)^2.
+$$
+Reparameterize the profile curve by arc length $s$:
+$$
+\frac{ds}{dv} = \sqrt{f'(v)^2+g'(v)^2}, \quad s'(v)>0.
+$$
+In parameters $(u,s)$, write $\tilde{f}(s)=f(v(s))$, $\tilde{g}(s)=g(v(s))$:
+$$
+\tilde{\mathbf{x}}(u,s) = (\tilde{f}(s)\cos u, \tilde{f}(s)\sin u, \tilde{g}(s)).
+$$
+Coefficients:
+$$
+\tilde{E} = \tilde{f}(s)^2, \quad \tilde{F}=0, \quad \tilde{G} = \tilde{f}'(s)^2 + \tilde{g}'(s)^2.
+$$
+
+Since $s$ is arc length, $\tilde{f}'(s)^2 + \tilde{g}'(s)^2 = 1$, hence $\tilde{G}=1$ and $\tilde{E}$ depends only on $s$.
+
+Renaming $s$ as $v$ gives
+$$
+E = E(v), \quad F = 0, \quad G = 1.
+$$
+Thus a surface of revolution can always be parametrized in this form.
+___
+
