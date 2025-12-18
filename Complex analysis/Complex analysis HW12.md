@@ -99,5 +99,12 @@ $$
 $$
 ___
 
+>[!problem] [GAM] VII.1.2
+>Calculate the residue at each isolated singularity in the complex plane of the following functions.
+>
+>(b) $\tan z$
+>
+>(c) $\dfrac{z}{(z^{2}+1)^{2}}$
 
-
+**Proof:**
+**(b)** Since $\tan z= \dfrac{\sin{z}}{\cos{z}}$, the singularities are $\pi /2 +k \pi,k\in \mathbb{Z}$
