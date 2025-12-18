@@ -137,3 +137,176 @@ $$
 $$
 ___
 
+>[!problem] [GAM] VII.1.3
+>Evaluate the following integrals, using the residue theorem.
+>
+>(d) $\displaystyle \oint_{|z|=1}\frac{z^{4}}{\sin z}\,dz$
+>
+>(e) $\displaystyle \oint_{|z-1|=1}\frac{1}{z^{8}-1}\,dz$
+
+**Solution:**
+**(d)** Only $z=0$ satisfies $\sin z=0$ inside the unit circle, but $z=0$ is a removable singularity since $\lim_{ z \to 0 } \dfrac{z^4}{\sin z}=0$, also means the residue at $0$ is $0$.
+
+By the residue theorem,
+$$
+\oint_{|z|=1}\frac{z^{4}}{\sin z}\,dz = 2\pi i \cdot 0 = 0.
+$$
+---
+
+**(e)** Poles of $\dfrac{1}{z^{8}-1}$: $z^{8}-1=0 \Rightarrow z_k = e^{2\pi i k/8},\;k=0,1,\dots,7$, they are all simple poles. Among them only $z=1$, $z=e^{\pm i\pi/4}$ are inside the contour.
+
+Compute residues:
+$$
+\operatorname{Res}\left[ \dfrac{1}{z^{8}-1} ,1\right]=\frac{1}{8\cdot1^{7}}=\frac{1}{8}.
+$$
+$$
+\operatorname{Res}\left[\dfrac{1}{z^{8}-1} , e^{i\pi/4}\right]=\frac{1}{8\cdot(e^{i\pi/4})^{7}}=\frac{e^{i\pi/4}}{8}
+$$
+$$
+\operatorname{Res}\left[ \dfrac{1}{z^{8}-1} ,e^{-i\pi/4}\right]=\frac{1}{8\cdot(e^{-i\pi/4})^{7}}=\frac{e^{-i\pi/4}}{8}
+$$
+By the residue theorem,
+$$
+\oint_{|z-1|=1}\frac{1}{z^{8}-1}\,dz
+= 2\pi i \cdot \frac{1}{8} + \left( \frac{e^{i\pi/4}}{8} + \frac{e^{-i\pi/4}}{8}
+ \right)
+= \frac{\pi i}{4}\bigl(1+\sqrt{2}\bigr).
+$$
+___
+
+>[!problem] [GAM] VII.1.5
+>Let $f(z)$ be a meromorphic function on the complex plane that is doubly periodic, and suppose that none of the poles of $f(z)$ lie on the boundary of the period parallelogram $P$ constructed in Section VI.5. By integrating $f(z)$ around the boundary of $P$, show that the sum of the residues at the poles of $f(z)$ in $P$ is zero. Conclude that there is no doubly periodic meromorphic function with only one pole, a simple pole, in the period parallelogram.
+
+**Proof:** Integrating $f(z)$ around the boundary of $P$ yields $0$. This is because, due to the double periodicity, the values of $f$ on opposite sides of the parallelogram are equal, but the orientations of opposite sides are opposite. Therefore, the integrals of falong opposite sides cancel each other out.
+
+By the residue theorem, the integration around the boundary of $P$ equals to the sum of the residues at the poles of $f(z)$ in $P$, thus the sum equals $0$.
+
+If there is only one simple pole in the period parallelogram, the sum of the residues at the poles of $f(z)$ in $P$ will equal to the residue of that simple pole, which is nonzero. Therefore, there is no doubly periodic meromorphic function with only one pole, a simple pole, in the period parallelogram.
+___
+
+>[!problem] [GAM] VII.1.6
+>Consider the integral
+>$$
+>\int_{\partial D_{R}} \frac{e^{\pi i(z-1 / 2)^{2}}}{1-e^{-2 \pi i z}} d z,
+>$$
+>where $D_{R}$ is the parallelogram with vertices $\pm(\frac{1}{2}) \pm(1+i) R$.
+>
+>(a) Use the residue theorem to show that the integral is $(1+i) / \sqrt{2}$.
+>
+>(b) By parameterizing the sides of the parallelogram, show that the integral tends to
+>$$
+>(1+i) \int_{-\infty}^{\infty} e^{-2 \pi t^{2}} d t
+>$$
+>as $R \to \infty$.
+>
+>(c) Use (a) and (b) to show that
+>$$
+>\int_{-\infty}^{\infty} e^{-s^{2}} d s = \sqrt{\pi} .
+>$$
+
+**Proof:**
+**(a)** Let $f(z)=\dfrac{e^{\pi i(z-1 / 2)^{2}}}{1-e^{-2 \pi i z}}$. Since $1-e^{-2\pi i z}=0$ implies $z$ is an integer and $e^{\pi i(z-1 / 2)^{2}}\neq 0$, $f(z)$ has poles at $z=k$, $k\in\mathbb{Z}$ (expansion of $e^z$ implies they are simple poles).
+
+Inside the parallelogram $D_{R}$ with vertices $\pm\frac12\pm(1+i)R$, for $R$ large enough the only pole is $z=0$ (since $z=0$ lies inside, while other poles $z=\pm1,\pm2,\dots$ are outside for large $R$).  
+
+Compute the residue at $z=0$:
+Since the pole is simple,
+$$
+\operatorname{Res}[f,0]=\lim_{z\to0}z\,f(z)
+ =\lim_{z\to0}\frac{z\,e^{\pi i(z-1/2)^{2}}}{1-e^{-2\pi i z}}=\frac{e^{i\pi/4}}{2\pi i}.
+$$
+Therefore, by the residue theorem,
+$$
+\int_{\partial D_{R}}f(z)\,dz = 2\pi i\cdot\operatorname{Res}[f,0]
+ 
+ =\frac{1+i}{\sqrt2}.
+$$
+
+**(b)** The parallelogram $D_{R}$ has four vertices $A=-\frac12-(1+i)R$, $B=\frac12-(1+i)R$, $C=\frac12+(1+i)R$, $D=-\frac12+(1+i)R$. Parameterize the two slanted sides (parallel to $1+i$).  
+On the right side $BC$: $z=\tfrac12-(1+i)R+(1+i)t$, $0\le t\le1$. Set $t-R=-s$, as $R\to\infty$, $s$ runs over $\mathbb{R}$. Then
+$$z-\tfrac12=(1+i)(t-R)=-(1+i)s,$$
+$$(z-\tfrac12)^2=-(1+i)^2s^2=-2is^2,$$
+so $e^{\pi i(z-1/2)^2}=e^{-2\pi s^2}$.  
+The denominator $1-e^{-2\pi i z}\to1$ as $R\to\infty$. The direction gives $dz=(1+i)ds$.  
+Thus the integral on $BC$ tends to $(1+i)\int_{-\infty}^{\infty}e^{-2\pi s^2}ds$.  
+
+The left side $DA$ gives the same contribution, while the horizontal sides $AB$ and $CD$ vanish because $e^{\pi i(z-1/2)^2}$ decays super‑exponentially there. Hence
+$$\int_{\partial D_R}f(z)\,dz\;\longrightarrow\;(1+i)\int_{-\infty}^{\infty}e^{-2\pi t^{2}}dt\quad(R\to\infty).$$
+
+**(c)** From (a) we have
+$$
+\int_{\partial D_{R}}f(z)\,dz=\frac{1+i}{\sqrt2}\quad\text{for all large }R.
+$$
+Hence, taking the limit $R\to\infty$ and using (b),
+$$
+\frac{1+i}{\sqrt2}=(1+i)\int_{-\infty}^{\infty}e^{-2\pi t^{2}}\,dt.
+$$
+Simplified to
+$$
+\frac{1}{\sqrt2}= \int_{-\infty}^{\infty}e^{-2\pi t^{2}}\,dt.
+$$
+Now set $s=t\sqrt{2\pi}$, so $ds=\sqrt{2\pi}\,dt$, and $e^{-2\pi t^{2}}=e^{-s^{2}}$. Then
+$$
+\int_{-\infty}^{\infty}e^{-2\pi t^{2}}\,dt
+ =\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-s^{2}}\,ds.
+$$
+Thus
+$$
+\frac{1}{\sqrt2}= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-s^{2}}\,ds,
+$$
+Therefore,
+$$
+\int_{-\infty}^{\infty}e^{-s^{2}}\,ds = \sqrt{\pi}.
+$$
+___
+
+>[!problem]
+>Let $f(z)$ and $g(z)$ be analytic functions at $z_{0}$.
+>Suppose $z_{0}$ is a zero of order $n$ for $f(z)$, and a zero of order $m$ for $g(z)$.
+>Show that:
+>
+>(a)  if $n>m$ then $z_{0}$ is a removable singularity of $\dfrac{f(z)}{g(z)}$ and after removing the singularity $z_{0}$ becomes a zero of order $n-m$;
+>
+>(b)  if $n=m$ then $z_{0}$ is a removable singularity of $\dfrac{f(z)}{g(z)}$ and $\displaystyle\lim_{z\to z_{0}}\frac{f(z)}{g(z)}\neq0$;
+>
+>(c)  if $n<m$ then $z_{0}$ is a pole of $\dfrac{f(z)}{g(z)}$ of order $m-n$.
+
+**Proof.**  
+Since $f(z)$ and $g(z)$ are analytic at $z_0$ and have zeros of orders $n$ and $m$ respectively, we can write
+$$
+f(z)=(z-z_0)^n\,F(z),\qquad
+g(z)=(z-z_0)^m\,G(z),
+$$
+where $F(z)$ and $G(z)$ are analytic at $z_0$ and $F(z_0)\neq0$, $G(z_0)\neq0$.
+
+Thus
+$$
+\frac{f(z)}{g(z)} = (z-z_0)^{\,n-m}\,\frac{F(z)}{G(z)},
+\qquad \frac{F(z)}{G(z)}\ \text{analytic at }z_0,\ \frac{F(z_0)}{G(z_0)}\neq0.
+$$
+
+**(a)** If $n>m$, then $n-m>0$ and
+$$
+\frac{f(z)}{g(z)}=(z-z_0)^{\,n-m}\,H(z),
+$$
+with $H(z)=F(z)/G(z)$ analytic and $H(z_0)\neq0$.
+Hence $f/g$ has a removable singularity at $z_0$ (after removing it, the value is $0$), and the resulting holomorphic function has a zero of order $n-m$ at $z_0$.
+
+**(b)** If $n=m$, then
+$$
+\frac{f(z)}{g(z)}=\frac{F(z)}{G(z)},
+$$
+which is analytic at $z_0$ and satisfies
+$$
+\lim_{z\to z_0}\frac{f(z)}{g(z)}=\frac{F(z_0)}{G(z_0)}\neq0.
+$$
+Thus $z_0$ is a removable singularity of $f/g$, and the limit is a non‑zero constant.
+
+**(c)** If $n<m$, then $n-m<0$; write $m-n>0$. Then
+$$
+\frac{f(z)}{g(z)}=(z-z_0)^{-(m-n)}\,\frac{F(z)}{G(z)},
+$$
+with $F(z)/G(z)$ analytic and non‑zero at $z_0$.  
+Hence $f/g$ has a pole of order $m-n$ at $z_0$.
+___
+
