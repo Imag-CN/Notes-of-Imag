@@ -312,33 +312,26 @@ ___
 
 >[!problem]
 >Let $f:\mathbb{C}\to\mathbb{C}$ be an entire function which is injective. Show that $f$ is of the form
->$$f(z)=az+b,\quad a\neq0,$$
+>$$
+>f(z)=az+b,\quad a\neq0,
+>$$
 >and deduce that $f$ is a bijective map from $\mathbb{C}$ to $\mathbb{C}$.
->(Hint: by the open mapping theorem the unit disk $B(0,1)$ is mapped to an open subset of $\mathbb{C}$, and by injectivity of $f$ the complement of $B(0,1)$ is mapped to the complement of this open set; then use Casorati–Weierstrass theorem to show that $\infty$ is not an essential singularity of $f$.)
 >
 >Find all entire functions $f$ with $f(f(z))=z$ for any $z\in\mathbb{C}$.
->(Hint: first show that $f$ is injective.)
 
 **Proof:**
-We first study the behavior of $f$ at $\infty$. Consider $f(1/z)$ near $z=0$; equivalently, examine the type of singularity of $f$ at $\infty$.
-
 First, $f$ cannot have a removable singularity at $\infty$: if $f$ were bounded, by Liouville’s theorem it would be constant, contradicting injectivity.
 
  Second, $f$ cannot have an essential singularity at $\infty$. Suppose it did, then by the Casorati–Weierstrass theorem, in any neighbourhood of $\infty$, $f(z)$ takes values dense in $\mathbb{C}$. In particular, for the open unit disk $B(0,1)$, $f(B(0,1))$ is open (by the open mapping theorem) and non‑empty. Its complement $\mathbb{C}\setminus f(B(0,1))$ is not dense (since $f(B(0,1))$ is open). But if $f$ had an essential singularity at $\infty$, the image of the exterior of a large disk (i.e. a neighbourhood of $\infty$) would be dense, hence it would intersect $f(B(0,1))$. This would contradict injectivity, because two distinct points (one inside the disk, one outside) would be mapped to the same value. Therefore $\infty$ cannot be an essential singularity.
 
-Hence the only possibility left is that $\infty$ is a pole of $f$. This means $f$ is a polynomial.  
-If $\deg f\ge2$, then $f'(z)$ has at least one zero, and near such a zero $f$ is not injective (since $f$ is locally $k$‑to‑1 with $k\ge2$).  
-Thus $\deg f=1$, i.e. $f(z)=az+b$ with $a\neq0$.
+Hence $\infty$ is a pole of $f$. This means $f$ is a polynomial. If $\deg f\ge2$, then $f'(z)$ has at least one zero, and near such a zero $f$ is not injective (since $f$ is locally $k$‑to‑1 with $k\ge2$). Thus $\deg f=1$, i.e. $f(z)=az+b$ with $a\neq0$.
 
 Such a linear function is clearly bijective on $\mathbb{C}$ (its inverse is $f^{-1}(w)=(w-b)/a$).
 
-**Conclusion:** $f(z)=az+b$, $a\neq0$, and $f$ is a bijection from $\mathbb{C}$ to $\mathbb{C}$.
+In conclusion, $f(z)=az+b$, $a\neq0$, and $f$ is a bijection from $\mathbb{C}$ to $\mathbb{C}$.
 
-___
-
-**3. (b) Entire functions satisfying $f(f(z))=z$ for all $z\in\mathbb{C}$.**
-
-First note that $f\circ f=\operatorname{id}$ implies $f$ is injective: if $f(z_1)=f(z_2)$, applying $f$ gives $z_1=z_2$.  
+**Find all entire functions $f$ with $f(f(z))=z$ for any $z\in\mathbb{C}$:**
+Note that $f\circ f=\operatorname{id}$ implies $f$ is injective: if $f(z_1)=f(z_2)$, applying $f$ gives $z_1=z_2$.  
 By part (a), any injective entire function is linear: $f(z)=az+b$ with $a\neq0$.
 
 Now impose the condition $f(f(z))=z$:
