@@ -107,4 +107,39 @@ ___
 >(c) $\dfrac{z}{(z^{2}+1)^{2}}$
 
 **Proof:**
-**(b)** Since $\tan z= \dfrac{\sin{z}}{\cos{z}}$, the singularities are $\pi /2 +k \pi,k\in \mathbb{Z}$
+**(b)** Since $\tan z= \dfrac{\sin{z}}{\cos{z}}$, the singularities are $\pi /2 +k \pi,k\in \mathbb{Z}$. And since $\pi /2 +k \pi,k\in \mathbb{Z}$ are single zeros of $\cos{z}$, we have
+$$
+\mathrm{Res}[ \dfrac{\sin{z}}{\cos{z}},\pi /2 +k \pi]=\left.\dfrac{\sin{z}}{(\cos{z})'}  \right|_{z=\pi /2 +k \pi} =-1.
+$$
+Therefore, the residue at any isolated singularity of $\tan z$ is $-1$.
+
+**(c)** Find isolated singularities: $z^{2}+1=0$ gives $z = \pm i$, both are poles of order $2$.
+
+At $z_0 = i$:
+$$
+\operatorname{Res}(f, i)
+= \lim_{z\to i} \frac{d}{dz}\!\left[ (z-i)^{2} \frac{z}{(z^{2}+1)^{2}} \right]
+= \lim_{z\to i} \frac{d}{dz}\!\left[ \frac{z}{(z+i)^{2}} \right].
+$$
+Let $g(z) = \dfrac{z}{(z+i)^{2}}$, then
+$$
+g'(z) = \frac{(z+i)^{2} - 2z(z+i)}{(z+i)^{4}}
+      = \frac{z^{2}+2iz-1-2z^{2}-2iz}{(z+i)^{4}}
+      = \frac{-z^{2}-1}{(z+i)^{4}}.
+$$
+Thus
+$$
+\operatorname{Res}(f, i) = g'(i) = \frac{-i^{2}-1}{(2i)^{4}}
+                       = \frac{1-1}{16} = 0.
+$$
+
+By symmetry (or a similar computation at $z=-i$), we also obtain
+$$
+\operatorname{Res}(f, -i) = 0.
+$$
+
+Therefore
+$$
+\operatorname{Res}\!\left(\frac{z}{(z^{2}+1)^{2}},\; i\right) = 0,\qquad
+\operatorname{Res}\!\left(\frac{z}{(z^{2}+1)^{2}},\; -i\right) = 0.
+```
