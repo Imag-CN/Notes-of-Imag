@@ -42,16 +42,29 @@ ___
 >Show that if $f(z)$ is a nonconstant entire function, then $e^{f(z)}$ has an essential singularity at $z=\infty$.
 
 **Proof:**
-Let $f(z)$ be a non‑constant entire function. Then $f(z)$ is either a polynomial of positive degree or a transcendental entire function.
+Assume for contradiction that $e^{f(z)}$ has a removable singularity or pole at $z=\infty$, then $e^{ f(z) }$ is meromorphic on $\hat{\mathbb{C}}$, thus $e^{ f(z) }$ must be a rational function. Since $e^{ f(z) }$ is an entire function, it must be a polynomial. A nonconstant polynomial must have a zero on $\mathbb{C}$, but $e^{ f(z) }\neq 0$, contradiction.
 
-**Case 1:** $f(z)$ is a polynomial of degree $n\ge 1$. Then
-$$f(z)=a_n z^n + a_{n-1}z^{n-1}+\dots+a_0,\quad a_n\neq0.$$
-Hence
-$$e^{f(z)}=e^{a_n z^n}\,e^{a_{n-1}z^{n-1}+\dots+a_0}.$$
-As $z\to\infty$, the factor $e^{a_n z^n}$ grows faster than any power of $z$ (if $a_n>0$) or oscillates wildly (if $a_n$ is not positive real). Consequently, $e^{f(z)}$ has an essential singularity at $\infty$.
+Therefore, $e^{f(z)}$ has an essential singularity at $z=\infty$.
+___
 
-*Case 2:* $f(z)$ is transcendental entire. Then $f(z)$ itself has an essential singularity at $\infty$ (see previous problem). The Great Picard theorem (or a simpler Casorati–Weierstrass argument) shows that $e^{f(z)}$ also has an essential singularity at $\infty$: for any $w\neq0$, the equation $e^{f(z)}=w$ has infinitely many solutions near $\infty$, which cannot happen for a pole or a removable singularity.
+>[!problem] [GAM] VI.3.4
+>Show that each branch of the following function is meromorphic at $\infty$, and obtain the series expansion for each branch at $\infty$.
+>$$
+>\sqrt{z^{2}-\frac{1}{z}}
+>$$
 
-Alternatively, one can argue by contradiction: if $e^{f(z)}$ had a pole or a removable singularity at $\infty$, then $f(z)=\log e^{f(z)}$ would be meromorphic at $\infty$, hence a rational function. But a non‑constant rational function that is entire must be a polynomial, contradicting the transcendence of $f(z)$.
+**Proof:**
+Expansion of two branches:
+$$
+f(z)=z^2\sqrt{ 1-z^{-3} }=\pm z^2\cdot \sum_{k=0}^{\infty}\binom{1 /2}{n}\left( -z^{-3} \right)^k =\pm\sum_{k=0}^{\infty}\binom{1 /2}{n} (-z)^{2-3k}
+$$
+The principal part is $\pm z$ (a simple pole in $1/z$), so both branches is meromorphic at $\infty$ with a simple pole at $\infty$.
+___
 
-In both cases, $e^{f(z)}$ has an essential singularity at $\infty$.
+>[!problem] [GAM] VI.4.2
+>Use the division algorithm to obtain the partial fractions decomposition of the following function.
+>$$
+>\frac{z^{6}}{(z^{2}+1)(z-1)^{2}}
+>$$
+
+**Solution:**
