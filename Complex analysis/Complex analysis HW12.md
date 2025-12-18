@@ -108,7 +108,10 @@ ___
 
 **Proof:**
 **(b)** Since $\tan z= \dfrac{\sin{z}}{\cos{z}}$, the singularities are
-$\pi /2 +k \pi,k\in \mathbb{Z}$. And since $\pi /2 +k \pi,k\in \mathbb{Z}$ are single zeros of $\cos{z}$, we have
+$$
+\pi /2 +k \pi,k\in \mathbb{Z}.
+$$
+And since $\pi /2 +k \pi,k\in \mathbb{Z}$ are single zeros of $\cos{z}$, we have
 $$
 \mathrm{Res}[ \dfrac{\sin{z}}{\cos{z}},\pi /2 +k \pi]=\left.\dfrac{\sin{z}}{(\cos{z})'}  \right|_{z=\pi /2 +k \pi} =-1.
 $$
