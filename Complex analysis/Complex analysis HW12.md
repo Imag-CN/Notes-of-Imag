@@ -68,3 +68,36 @@ ___
 >$$
 
 **Solution:**
+
+
+___
+
+>[!problem] [GAM] VII.1.1
+>Evaluate the following residues.
+>(d) $\operatorname{Res}\left[\dfrac{\sin z}{z^{2}},\,0\right]$
+>
+>(e) $\operatorname{Res}\left[\dfrac{\cos z}{z^{2}},\,0\right]$
+>
+>(g) $\operatorname{Res}\left[\dfrac{z}{\operatorname{Log}z},\,1\right]$
+
+**Solution:**
+**(d)** Expansion:
+$$
+\dfrac{\sin z}{z^2}=\dfrac{1}{z^2}\cdot(z- \dfrac{z^3}{6}+\cdots)=\dfrac{1}{z}- \dfrac{z}{6}+\cdots
+$$
+Thus $\operatorname{Res}\left[\dfrac{\sin z}{z^{2}},\,0\right]=1$.
+
+**(e)** Expansion:
+$$
+\dfrac{\cos z}{z^2}=\dfrac{1}{z^2}\cdot(1- \dfrac{z^2}{2}+\cdots)=\dfrac{1}{z^2}- \dfrac{1}{2}+\cdots
+$$
+Thus $\operatorname{Res}\left[\dfrac{\cos z}{z^{2}},\,0\right]=0$.
+
+**(g)** Since $1$ is a single zero of $\operatorname{Log}z$, we have
+$$
+\operatorname{Res}\left[\dfrac{z}{\log z},\,1\right]=\left. \dfrac{z}{(\operatorname{Log}z)'}\right|_{z=1}=1
+$$
+___
+
+
+
