@@ -353,3 +353,8 @@ f(z)=z\qquad\text{or}\qquad f(z)=-z+b\;(b\in\mathbb{C}).
 $$
 ___
 
+>[!problem]
+>Let $f$ be a meromorphic function on $\mathbb{C}$ which has a removable singularity or a pole at $\infty$. Let us view $f$ as a map from the extended complex plane $\widehat{\mathbb{C}}$ to itself. Show that if $f:\widehat{\mathbb{C}}\to\widehat{\mathbb{C}}$ is bijective (such an $f$ is called an automorphism of the extended complex plane $\widehat{\mathbb{C}}$), then $f$ is a fractional linear transformation.
+
+**Proof:**
+Since $f$ is bijective, we may assume $f(z_{0})=\infty$. Let $g(z)=f(z_{0}+1 /z)$
