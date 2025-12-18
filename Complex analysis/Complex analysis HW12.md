@@ -107,7 +107,8 @@ ___
 >(c) $\dfrac{z}{(z^{2}+1)^{2}}$
 
 **Proof:**
-**(b)** Since $\tan z= \dfrac{\sin{z}}{\cos{z}}$, the singularities are $\pi /2 +k \pi,k\in \mathbb{Z}$. And since $\pi /2 +k \pi,k\in \mathbb{Z}$ are single zeros of $\cos{z}$, we have
+**(b)** Since $\tan z= \dfrac{\sin{z}}{\cos{z}}$, the singularities are
+$\pi /2 +k \pi,k\in \mathbb{Z}$. And since $\pi /2 +k \pi,k\in \mathbb{Z}$ are single zeros of $\cos{z}$, we have
 $$
 \mathrm{Res}[ \dfrac{\sin{z}}{\cos{z}},\pi /2 +k \pi]=\left.\dfrac{\sin{z}}{(\cos{z})'}  \right|_{z=\pi /2 +k \pi} =-1.
 $$
@@ -117,29 +118,19 @@ Therefore, the residue at any isolated singularity of $\tan z$ is $-1$.
 
 At $z_0 = i$:
 $$
-\operatorname{Res}(f, i)
+\operatorname{Res}\left[  \dfrac{z}{(z^{2}+1)^{2}}, i \right]
 = \lim_{z\to i} \frac{d}{dz}\!\left[ (z-i)^{2} \frac{z}{(z^{2}+1)^{2}} \right]
-= \lim_{z\to i} \frac{d}{dz}\!\left[ \frac{z}{(z+i)^{2}} \right].
+=\left. \frac{-z^{2}-1}{(z+i)^{4}} \right|_{z=i}=0 .
 $$
-Let $g(z) = \dfrac{z}{(z+i)^{2}}$, then
+Similarly, we also obtain
 $$
-g'(z) = \frac{(z+i)^{2} - 2z(z+i)}{(z+i)^{4}}
-      = \frac{z^{2}+2iz-1-2z^{2}-2iz}{(z+i)^{4}}
-      = \frac{-z^{2}-1}{(z+i)^{4}}.
+\operatorname{Res}\left[  \dfrac{z}{(z^{2}+1)^{2}}, -i \right]
+=0
 $$
-Thus
+Therefore,
 $$
-\operatorname{Res}(f, i) = g'(i) = \frac{-i^{2}-1}{(2i)^{4}}
-                       = \frac{1-1}{16} = 0.
+\operatorname{Res}\!\left[\frac{z}{(z^{2}+1)^{2}},\; i\right] = 
+\operatorname{Res}\!\left[\frac{z}{(z^{2}+1)^{2}},\; -i\right] = 0.
 $$
+___
 
-By symmetry (or a similar computation at $z=-i$), we also obtain
-$$
-\operatorname{Res}(f, -i) = 0.
-$$
-
-Therefore
-$$
-\operatorname{Res}\!\left(\frac{z}{(z^{2}+1)^{2}},\; i\right) = 0,\qquad
-\operatorname{Res}\!\left(\frac{z}{(z^{2}+1)^{2}},\; -i\right) = 0.
-```
