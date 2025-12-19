@@ -361,4 +361,10 @@ Since $f$ is bijective, we may assume $f(z_{0})=\infty$, then $f(z)\in \mathbb{C
 
 If $z_{0}=\infty$, then $f$ is an entire and bijective function restricted on $\mathbb{C}$. By the last problem $f$ is a linear transform (thus a fractional linear transformation).
 
-If $z_{0}\neq \infty$, then $g(z)=f(z_{0}+1 /z)$ is an entire and bijective function restricted on $\mathbb{C}$. By the last problem $g$ is a linear transform. Suppose $g(z)=az+b,(a\neq 0)$, then $f(z)=$
+If $z_{0}\neq \infty$, then $g(z)=f(z_{0}+1 /z)$ is an entire and bijective function restricted on $\mathbb{C}$. By the last problem $g$ is a linear transform. Suppose $g(z)=az+b,(a\neq 0)$, then
+$$
+f(z)=g\left(  \dfrac{1}{z-z_{0}}\right)= \dfrac{bz+a-bz_{0}}{z-z_{0}}
+$$
+is a linear transformation.
+
+Therefore, an automorphism of the extended complex plane $\widehat{\mathbb{C}}$) is a fractional linear transformation.
