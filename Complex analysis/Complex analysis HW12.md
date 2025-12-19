@@ -68,8 +68,38 @@ ___
 >$$
 
 **Solution:**
+Let $q(z)=(z^{2}+1)(z-1)^{2}=z^{4}-2z^{3}+2z^{2}-2z+1$, then
+$$
+z^{6} = (z^{2}+2z+2)q(z) + (2z^{3}-z^2+2z-2),
+$$
+so $P_{\infty}(z)=z^{2}+2z+2$ and $r(z)=2z^{3}-z^2+2z-2$.
 
-
+Partial‑fractions for $r(z)/q(z)$ (poles: $z=\pm i$, double pole at $z=1$):
+$$
+\frac{2z^{3}-z^2+2z-2}{(z^{2}+1)(z-1)^{2}}
+= \frac{A}{z+i}+\frac{B}{z-i}+\frac{C}{z-1}+\frac{D}{(z-1)^{2}}.
+$$
+Multiply by $z+i$, set $z=-i$:
+$$
+A= \dfrac{2i+1-2i-2}{(-i-i)(-i-1)^2}= -\dfrac{1}{4}
+$$
+Multiply by $z-i$, set $z=i$:
+$$
+B= \dfrac{-2i+1+2i-2}{(i+i)(i-1)^2}= -\dfrac{1}{4}
+$$
+Multiply by $(z-1)^{2}$, set $z=1$:
+$$
+D=\frac{2-1+2-2}{1+1}= \dfrac{1}{2} .
+$$
+Differentiate after removing the factor for the double pole:
+$$
+C=\left.\frac{d}{dz}\!\left(\frac{2z^{3}-z^2+2z-2}{z^{2}+1}\right)\right|_{z=1}=- \dfrac{5}{4}.
+$$
+Therefore,
+$$
+\frac{z^{6}}{(z^{2}+1)(z-1)^{2}}
+= z^{2}+2z+2-\frac{1}{4(z+i)}-\frac{1}{4(z-i)}-\frac{5}{4(z-1)}+\frac{1}{(z-1)^{2}}.
+$$
 ___
 
 >[!problem] [GAM] VII.1.1
