@@ -41,9 +41,43 @@ ___
 >$$
 >Under regularity conditions, the asymptotic variance of the MLE is $I(\theta)^{-1}$.
 
-**Basic Steps:**
-1. Write the likelihood function $L(\theta)$.
-2. Take the logarithm to obtain $\ell(\theta)$.
-3. Differentiate $\ell(\theta)$ with respect to $\theta$, set the derivative to zero, and solve for $\hat{\theta}_{\text{MLE}}$.
-4. Verify second-order conditions to ensure a maximum.
-5. Compute the information matrix for inference (e.g., constructing confidence intervals).
+To ensure desirable asymptotic properties of the MLE (e.g., consistency, asymptotic normality, efficiency), the following **regularity conditions** are typically assumed:
+
+1.  **Identifiability:** The parameter $\theta$ is **identifiable**. That is, for $\theta_1 \neq \theta_2$, we have $f(x|\theta_1) \neq f(x|\theta_2)$ for some $x$.
+
+2.  **Common Support:** The support of the density $f(x|\theta)$ (i.e., the set $\{x: f(x|\theta) > 0\}$) does **not depend on $\theta$**. This ensures that the likelihood ratio is well-defined.
+
+3.  **Differentiability:** The log-likelihood $\ell(\theta) = \log f(x|\theta)$ is **at least twice differentiable** with respect to $\theta$ in the interior of the parameter space $\Theta$.
+
+4.  **Interchangeability:** The operations of **integration (or summation) and differentiation can be interchanged** with respect to $\theta$.
+
+5.  **Finite Information:** The **Fisher Information Matrix** $I(\theta)$ is **finite and positive definite** for all $\theta$ in the interior of $\Theta$.
+
+6. **Parameter Space:** $\Theta$ is a **compact** subset of $\mathbb{R}^k$ (to ensure the **existence** of the MLE). The true parameter $\theta_0$ is an **interior point** of $\Theta$ (to ensure that, for large $n$, the consistent estimator $\hat{\theta}_{\text{MLE}}$ lies in a neighborhood of $\theta_0$ where the log-likelihood is differentiable.).
+
+7.  **Uniqueness of MLE:** The maximum of the likelihood function is **unique** in the interior of $\Theta$.
+___
+
+>[!note] Coefficiency
+>$\hat{\theta}_n$ is **consistent** for $\theta_0$ if, for every $\epsilon > 0$,
+>$$
+>\lim_{n \to \infty} P( |\hat{\theta}_n - \theta_0| > \epsilon ) = 0.
+>$$
+>
+
+**Proof:**
+Define the sample and population criteria:
+$$
+M_n(\theta) = \frac{1}{n} \sum_{i=1}^n \log f(X_i|\theta), \quad M(\theta) = \mathbb{E}_{\theta_0}[\log f(X|\theta)].
+$$
+By the Kullback-Leibler inequality, $M(\theta) \le M(\theta_0)$ with equality **iff** $\theta = \theta_0$ (identifiability). So $\theta_0$ uniquely maximizes $M(\theta)$.
+
+By compactness and a uniform law of large numbers:
+$$
+\sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{p} 0.
+$$
+
+Since $\hat{\theta}_n$ maximizes $M_n(\theta)$ and $\theta_0$ uniquely maximizes $M(\theta)$, a standard extremum estimator result implies:
+$$
+\hat{\theta}_n \xrightarrow{p} \theta_0.
+$$
