@@ -133,11 +133,7 @@ ___
 >[!definition] Asymptotic Normality
 >Let $\{ \hat{\theta}_n \}$ be a sequence of estimators of a parameter $\theta_0 \in \mathbb{R}^k$.
 >
->$\hat{\theta}_n$ is **asymptotically normal** if there exists a sequence of positive definite matrices $\{ V_n \}$ (usually $V_n = n^{-1} V$ for some fixed $V$) such that
->$$
->V_n^{-1/2} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I_k),
->$$
->or equivalently,
+>$\hat{\theta}_n$ is **asymptotically normal** if
 >$$
 >\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, V),
 >$$
@@ -172,89 +168,62 @@ $$
 \left| \frac{\partial^3 \log f(x|\theta)}{\partial \theta_i \partial \theta_j \partial \theta_k} \right| \le H(x)
 $$
 for all $\theta$ in a neighborhood of $\theta_0$ and all $i, j, k$.
+___
 
-Then the MLE is asymptotically normal:
-$$
-\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I(\theta_0)^{-1}).
-$$
-
----
+>[!theorem]
+>If the regular conditions above hold, then the MLE is asymptotically normal:
+>$$
+>\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I(\theta_0)^{-1}).
+>$$
 
 **Proof:**
-
-1.  **First-Order Condition and Taylor Expansion**
-
-    Since $\hat{\theta}_n$ is consistent and $\theta_0$ is an interior point (R1), for $n$ large enough $\hat{\theta}_n$ lies in the interior with probability approaching 1. By (R2), the score function $s_n(\theta) = \frac{1}{n} \sum_{i=1}^n s(\theta; X_i)$ is differentiable, and at the maximum $\hat{\theta}_n$, we have the first-order condition:
-    $$
-    s_n(\hat{\theta}_n) = 0.
-    $$
-
-    Expand $s_n(\hat{\theta}_n)$ around $\theta_0$ using the mean value theorem (component-wise):
-    $$
-    0 = s_n(\hat{\theta}_n) = s_n(\theta_0) + J_n(\bar{\theta}_n) (\hat{\theta}_n - \theta_0),
-    $$
-    where $J_n(\theta) = \frac{1}{n} \sum_{i=1}^n \frac{\partial^2 \log f(X_i|\theta)}{\partial \theta \partial \theta^\top}$ is the sample average negative observed information, and $\bar{\theta}_n$ is a point on the line segment between $\hat{\theta}_n$ and $\theta_0$ (component-wise, so $\bar{\theta}_n \xrightarrow{p} \theta_0$ by consistency).
-
-2.  **Rearranging and Scaling**
-
-    Rearranging gives
-    $$
-    -J_n(\bar{\theta}_n) \cdot (\hat{\theta}_n - \theta_0) = s_n(\theta_0).
-    $$
-    Multiply both sides by $\sqrt{n}$:
-    $$
-    -J_n(\bar{\theta}_n) \cdot \sqrt{n} (\hat{\theta}_n - \theta_0) = \sqrt{n} \, s_n(\theta_0) = \frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i).
-    $$
-
-3.  **Asymptotic Behavior of the Score**
-
-    The random vectors $s(\theta_0; X_i)$ are i.i.d. with $\mathbb{E}[s(\theta_0; X_i)] = 0$ (by R3) and $\operatorname{Var}(s(\theta_0; X_i)) = I(\theta_0)$ (by R3, R4). By the multivariate central limit theorem (CLT),
-    $$
-    \frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i) \xrightarrow{d} N(0, I(\theta_0)).
-    $$
-
-4.  **Convergence of the Information Matrix**
-
-    By (R5) and the uniform law of large numbers (or the ergodic theorem with domination), $J_n(\theta)$ converges uniformly in probability to $-\mathbb{E}_{\theta_0}[\frac{\partial^2 \log f(X|\theta)}{\partial \theta \partial \theta^\top}] = I(\theta_0)$ in a neighborhood of $\theta_0$.
-
-    Since $\bar{\theta}_n \xrightarrow{p} \theta_0$, we have
-    $$
-    J_n(\bar{\theta}_n) \xrightarrow{p} -I(\theta_0).
-    $$
-    Therefore,
-    $$
-    -J_n(\bar{\theta}_n) \xrightarrow{p} I(\theta_0).
-    $$
-
-5.  **Applying Slutsky's Theorem**
-
-    Let $A_n = -J_n(\bar{\theta}_n)$ and $B_n = \frac{1}{\sqrt{n}} \sum s(\theta_0; X_i)$. We have
-    $$
-    A_n \xrightarrow{p} I(\theta_0) \quad \text{and} \quad B_n \xrightarrow{d} N(0, I(\theta_0)).
-    $$
-    From step 2, $\sqrt{n} (\hat{\theta}_n - \theta_0) = A_n^{-1} B_n$. By the continuous mapping theorem, $A_n^{-1} \xrightarrow{p} I(\theta_0)^{-1}$ (since matrix inversion is continuous at $I(\theta_0)$, which is positive definite by R4). Then by Slutsky's theorem,
-    $$
-    \sqrt{n} (\hat{\theta}_n - \theta_0) = A_n^{-1} B_n \xrightarrow{d} I(\theta_0)^{-1} \cdot N(0, I(\theta_0)).
-    $$
-    The distribution of $I(\theta_0)^{-1} Z$ for $Z \sim N(0, I(\theta_0))$ is $N(0, I(\theta_0)^{-1})$, because
-    $$
-    \operatorname{Cov}(I(\theta_0)^{-1} Z) = I(\theta_0)^{-1} \operatorname{Cov}(Z) I(\theta_0)^{-1} = I(\theta_0)^{-1} I(\theta_0) I(\theta_0)^{-1} = I(\theta_0)^{-1}.
-    $$
-
-6.  **Handling the Remainder (Rigorous Justification)**
-
-    The mean value theorem expansion is technically valid component-wise, but to ensure the remainder is negligible, we use (R6). A second-order Taylor expansion of the log-likelihood $\ell_n(\theta)$ around $\theta_0$ yields
-    $$
-    \ell_n(\hat{\theta}_n) - \ell_n(\theta_0) = s_n(\theta_0)^\top (\hat{\theta}_n - \theta_0) + \frac{1}{2} (\hat{\theta}_n - \theta_0)^\top \ell_n''(\tilde{\theta}_n) (\hat{\theta}_n - \theta_0),
-    $$
-    where $\tilde{\theta}_n$ lies between $\hat{\theta}_n$ and $\theta_0$. Since $\hat{\theta}_n$ maximizes $\ell_n$, the left side is nonnegative. Dividing by $n$ and rearranging, combined with domination (R5) and consistency, shows that $s_n(\theta_0) = -J_n(\bar{\theta}_n)(\hat{\theta}_n - \theta_0) + o_p(n^{-1/2})$, which is sufficient for the argument.
-
-    Alternatively, one can use a **quadratic mean differentiability** argument, which is more elegant but requires additional setup.
-
----
-
-**Conclusion:** Under the stated regularity conditions, the MLE satisfies
+Since $\hat{\theta}_n$ is consistent and $\theta_0$ is an interior point (R1), for $n$ large enough $\hat{\theta}_n$ lies in the interior with probability approaching $1$. By (R2), the score function $s_n(\theta) = \frac{1}{n} \sum_{i=1}^n s(\theta; X_i)$ is differentiable, and at the maximum $\hat{\theta}_n$, we have the first-order condition:
 $$
-\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I(\theta_0)^{-1}),
+s_n(\hat{\theta}_n) = 0.
 $$
-and is therefore asymptotically normal and efficient (attains the Cramér–Rao lower bound asymptotically).
+
+Expand $s_n(\hat{\theta}_n)$ around $\theta_0$ using the mean value theorem (component-wise):
+$$
+0 = s_n(\hat{\theta}_n) = s_n(\theta_0) + J_n(\bar{\theta}_n) (\hat{\theta}_n - \theta_0),
+$$
+where $J_n(\theta) = \frac{1}{n} \sum_{i=1}^n \frac{\partial^2 \log f(X_i|\theta)}{\partial \theta \partial \theta^\top}$ is the sample average negative observed information, and $\bar{\theta}_n$ is a point on the line segment between $\hat{\theta}_n$ and $\theta_0$ (component-wise, so $\bar{\theta}_n \xrightarrow{p} \theta_0$ by consistency).
+
+Rearranging gives:
+$$
+-J_n(\bar{\theta}_n) \cdot \sqrt{n} (\hat{\theta}_n - \theta_0) = \sqrt{n} \, s_n(\theta_0) = \frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i).
+$$
+The random vectors $s(\theta_0; X_i)$ are i.i.d. with $\mathbb{E}[s(\theta_0; X_i)] = 0$ (by R3) and $\operatorname{Var}(s(\theta_0; X_i)) = I(\theta_0)$ (by R3, R4). By the multivariate central limit theorem (CLT),
+$$
+\frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i) \xrightarrow{d} N(0, I(\theta_0)).
+$$
+
+By (R5) and the uniform law of large numbers (or the ergodic theorem with domination), $J_n(\theta)$ converges uniformly in probability to $-\mathbb{E}_{\theta_0}[\frac{\partial^2 \log f(X|\theta)}{\partial \theta \partial \theta^\top}] = I(\theta_0)$ in a neighborhood of $\theta_0$.
+
+Since $\bar{\theta}_n \xrightarrow{p} \theta_0$, we have
+$$
+J_n(\bar{\theta}_n) \xrightarrow{p} -I(\theta_0).
+$$
+Therefore,
+$$
+-J_n(\bar{\theta}_n) \xrightarrow{p} I(\theta_0).
+$$
+
+Let $A_n = -J_n(\bar{\theta}_n)$ and $B_n = \frac{1}{\sqrt{n}} \sum s(\theta_0; X_i)$. We have
+$$
+A_n \xrightarrow{p} I(\theta_0) \quad \text{and} \quad B_n \xrightarrow{d} N(0, I(\theta_0)).
+$$
+From step 2, $\sqrt{n} (\hat{\theta}_n - \theta_0) = A_n^{-1} B_n$. By the continuous mapping theorem, $A_n^{-1} \xrightarrow{p} I(\theta_0)^{-1}$ (since matrix inversion is continuous at $I(\theta_0)$, which is positive definite by R4). Then by Slutsky's theorem,
+$$
+\sqrt{n} (\hat{\theta}_n - \theta_0) = A_n^{-1} B_n \xrightarrow{d} I(\theta_0)^{-1} \cdot N(0, I(\theta_0)).
+$$
+The distribution of $I(\theta_0)^{-1} Z$ for $Z \sim N(0, I(\theta_0))$ is $N(0, I(\theta_0)^{-1})$, because
+$$
+\operatorname{Cov}(I(\theta_0)^{-1} Z) = I(\theta_0)^{-1} \operatorname{Cov}(Z) I(\theta_0)^{-1} = I(\theta_0)^{-1} I(\theta_0) I(\theta_0)^{-1} = I(\theta_0)^{-1}.
+$$
+
+The mean value theorem expansion is technically valid component-wise, but to ensure the remainder is negligible, we use (R6). A second-order Taylor expansion of the log-likelihood $\ell_n(\theta)$ around $\theta_0$ yields
+$$
+ \ell_n(\hat{\theta}_n) - \ell_n(\theta_0) = s_n(\theta_0)^\top (\hat{\theta}_n - \theta_0) + \frac{1}{2} (\hat{\theta}_n - \theta_0)^\top \ell_n''(\tilde{\theta}_n) (\hat{\theta}_n - \theta_0),
+    $$
+where $\tilde{\theta}_n$ lies between $\hat{\theta}_n$ and $\theta_0$. Since $\hat{\theta}_n$ maximizes $\ell_n$, the left side is nonnegative. Dividing by $n$ and rearranging, combined with domination (R5) and consistency, shows that $s_n(\theta_0) = -J_n(\bar{\theta}_n)(\hat{\theta}_n - \theta_0) + o_p(n^{-1/2})$, which is sufficient for the argument.
+___
