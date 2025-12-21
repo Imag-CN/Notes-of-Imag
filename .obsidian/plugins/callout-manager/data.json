@@ -2,13 +2,15 @@
   "callouts": {
     "custom": [
       "lemma",
-      "remark"
+      "remark",
+      "definition"
     ],
     "settings": {
       "lemma": [
         {
           "changes": {
-            "icon": "lucide-arrow-up-right-from-square"
+            "icon": "lucide-arrow-up-right-from-square",
+            "color": "208, 181, 48"
           }
         }
       ],
@@ -17,6 +19,13 @@
           "changes": {
             "icon": "lucide-flame",
             "color": "83, 223, 221"
+          }
+        }
+      ],
+      "definition": [
+        {
+          "changes": {
+            "icon": "lucide-book-text"
           }
         }
       ]

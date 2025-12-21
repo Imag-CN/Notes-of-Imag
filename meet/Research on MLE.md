@@ -1,6 +1,7 @@
 ___
+## 1. Basic definitions
 
->[!note] Likelihood Function
+>[!definition] Likelihood Function
 >For independent and identically distributed (i.i.d.) samples $X_1, X_2, \dots, X_n$ from a distribution with parameter $\theta$ and probability density (or mass) function $f(x|\theta)$, the **likelihood function** given observed data $x_1, x_2, \dots, x_n$ is defined as:
 >$$
 >L(\theta) = \prod_{i=1}^{n} f(x_i|\theta).
@@ -13,7 +14,7 @@ ___
 
 ___
 
->[!note] Maximum Likelihood Estimator (MLE)
+>[!definition] Maximum Likelihood Estimator (MLE)
 >The **maximum likelihood estimator** $\hat{\theta}_{\text{MLE}}$ of $\theta$ is the parameter value that maximizes the likelihood function $L(\theta)$ (or equivalently, the log-likelihood function $\ell(\theta)$), i.e.,
 >$$
 >\hat{\theta}_{\text{MLE}} = \arg\max_{\theta \in \Theta} L(\theta) = \arg\max_{\theta \in \Theta} \ell(\theta).
@@ -21,7 +22,7 @@ ___
 
 ___
 
->[!note] Score Function
+>[!definition] Score Function
 >The first derivative of the log-likelihood function with respect to $\theta$, denoted as:
 >$$
 >s(\theta) = \frac{\partial \ell(\theta)}{\partial \theta}.
@@ -30,7 +31,7 @@ ___
 
 ___
 
->[!note] Information Matrix
+>[!definition] Information Matrix
 >**Observed Information Matrix:** The negative second derivative of the log-likelihood function, i.e.,
 >$$
 >J(\theta) = -\frac{\partial^2 \ell(\theta)}{\partial \theta \partial \theta^\top}.
@@ -41,29 +42,15 @@ ___
 >$$
 >Under regularity conditions, the asymptotic variance of the MLE is $I(\theta)^{-1}$.
 
-To ensure desirable asymptotic properties of the MLE (e.g., consistency, asymptotic normality, efficiency), the following **regularity conditions** are typically assumed:
-
-1.  **Identifiability:** The parameter $\theta$ is **identifiable**. That is, for $\theta_1 \neq \theta_2$, we have $f(x|\theta_1) \neq f(x|\theta_2)$ for some $x$.
-
-2.  **Common Support:** The support of the density $f(x|\theta)$ (i.e., the set $\{x: f(x|\theta) > 0\}$) does **not depend on $\theta$**. This ensures that the likelihood ratio is well-defined.
-
-3.  **Differentiability:** The log-likelihood $\ell(\theta) = \log f(x|\theta)$ is **at least twice differentiable** with respect to $\theta$ in the interior of the parameter space $\Theta$.
-
-4.  **Interchangeability:** The operations of **integration (or summation) and differentiation can be interchanged** with respect to $\theta$.
-
-5.  **Finite Information:** The **Fisher Information Matrix** $I(\theta)$ is **finite and positive definite** for all $\theta$ in the interior of $\Theta$.
-
-6. **Parameter Space:** $\Theta$ is a **compact** subset of $\mathbb{R}^k$ (to ensure the **existence** of the MLE). The true parameter $\theta_0$ is an **interior point** of $\Theta$ (to ensure that, for large $n$, the consistent estimator $\hat{\theta}_{\text{MLE}}$ lies in a neighborhood of $\theta_0$ where the log-likelihood is differentiable.).
-
-7.  **Uniqueness of MLE:** The maximum of the likelihood function is **unique** in the interior of $\Theta$.
 ___
+## 2. Asymptotic Properties
+With those basic definition above, we prove some desirable asymptotic properties of the MLE.
+### 2.1 Consistency
 
->[!note] Consistency
->$\hat{\theta}_n$ is **consistent** for $\theta_0$ if, for every $\epsilon > 0$,
->$$
->\lim_{n \to \infty} P( |\hat{\theta}_n - \theta_0| > \epsilon ) = 0.
->$$
+>[!definition] Consistency
+>$\hat{\theta}_n$ is **(weakly) consistent** for $\theta_0$ if $\hat{\theta}_n$ converges to $\theta_0$ by problability.
 >
+>If $\hat{\theta}_n$ **almost surely** converges to $\theta_0$, we say $\hat{\theta}_n$ is **strongly consistent** for $\theta_0$
 
 To assure consistency of MLE, we need several assumptions:
 
@@ -91,16 +78,16 @@ $$
 
 ---
 
-To proof consistency we need the following lemma
+To proof consistency we need the following lemma:
 
-**Lemma 1 (Kullback–Leibler Inequality):**
-Under identifiability (A2) and integrability (A4), for any $\theta \in \Theta$,
-$$
+>[!lemma] Kullback–Leibler Inequality
+>Under identifiability (A2) and integrability (A4), for any $\theta \in \Theta$,
+>$$
 M(\theta) \le M(\theta_0),
-$$
-with equality if and only if $\theta = \theta_0$ ($P_{\theta_0}$-a.s.). Hence, $\theta_0$ is the **unique global maximizer** of $M(\theta)$ on $\Theta$.
+>$$
+>with equality if and only if $\theta = \theta_0$ ($P_{\theta_0}$-a.s.). Hence, $\theta_0$ is the **unique global maximizer** of $M(\theta)$ on $\Theta$.
 
-*Proof Sketch:* By Jensen's inequality,
+**Proof:** By Jensen's inequality,
 $$
 M(\theta) - M(\theta_0) = \mathbb{E}_{\theta_0} \left[ \log \frac{f(X|\theta)}{f(X|\theta_0)} \right] \le \log \mathbb{E}_{\theta_0} \left[ \frac{f(X|\theta)}{f(X|\theta_0)} \right] = \log 1 = 0.
 $$
@@ -108,53 +95,166 @@ Equality holds iff $f(X|\theta)/f(X|\theta_0) = 1$ a.s., i.e., $\theta = \theta_
 
 ---
 
-### 4. Consistency Proof
+>[!theorem]
+>Under assumptions (A1)–(A5), the MLE $\hat{\theta}_n$ is strongly consistent:
+>$$
+>\hat{\theta}_n \xrightarrow{a.s.} \theta_0.
+>$$
 
-**Theorem:** Under assumptions (A1)–(A5), the MLE $\hat{\theta}_n$ is strongly consistent:
+**Proof:**
+By compactness of $\Theta$ (A1) and upper semicontinuity of $\log f(x|\theta)$ (A3), $M_n(\theta)$ is an upper semicontinuous function on a compact set, so its supremum is attained. Therefore, $\hat{\theta}_n$ exists.
+
+By (A5), we have
 $$
-\hat{\theta}_n \xrightarrow{a.s.} \theta_0.
+\sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{a.s.} 0.
 $$
 
-*Proof:*
+Define $\eta = \sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)|$. Then $\eta \xrightarrow{a.s.} 0$. By definition of $\hat{\theta}_n$,
+$$
+ M_n(\hat{\theta}_n) \ge M_n(\theta_0).
+$$
+Thus,
+$$
+ M(\hat{\theta}_n) \ge M_n(\hat{\theta}_n) - \eta \ge M_n(\theta_0) - \eta \ge M(\theta_0) - 2\eta.
+$$
+Consequently,
+$$
+M(\theta_0) - M(\hat{\theta}_n) \le 2\eta \xrightarrow{a.s.} 0.
+ $$
+By continuity of $M(\theta)$ (which follows from (A3), (A4), and the dominated convergence theorem) and Kullback–Leibler Inequality ($\theta_0$ is the unique maximizer), combined with compactness of $\Theta$, we obtain $\hat{\theta}_n \xrightarrow{a.s.} \theta_0$. More rigorously: if $\hat{\theta}_n$ did not converge a.s. to $\theta_0$, there would exist a subsequence $\hat{\theta}_{n_k} \to \theta^* \neq \theta_0$. By upper semicontinuity, $\limsup M(\hat{\theta}_{n_k}) \le M(\theta^*)$. But from above, $M(\hat{\theta}_{n_k}) \to M(\theta_0)$, so $M(\theta^*) \ge M(\theta_0)$, contradicting Lemma 1. Hence $\hat{\theta}_n \xrightarrow{a.s.} \theta_0$.
 
-1.  **Existence:** By compactness of $\Theta$ (A1) and upper semicontinuity of $\log f(x|\theta)$ (A3), $M_n(\theta)$ is an upper semicontinuous function on a compact set, so its supremum is attained. Therefore, $\hat{\theta}_n$ exists.
+>[!remark]
+>Consistency of the MLE does not require differentiability. It only requires a compact parameter space, identifiability, some continuity (upper semicontinuity) of the log-likelihood, and an integrable envelope to guarantee uniform convergence of the sample average log-likelihood to its expectation. Once uniform convergence holds, the Kullback–Leibler inequality ensures $\theta_0$ is the unique maximizer, and the MLE naturally converges to it.
 
-2.  **Uniform Convergence:** By (A5),
-    $$
-    \sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{a.s.} 0.
-    $$
+___
 
-3.  **Consistency of Extremum Estimators:** Define $\eta = \sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)|$. Then $\eta \xrightarrow{a.s.} 0$. By definition of $\hat{\theta}_n$,
-    $$
-    M_n(\hat{\theta}_n) \ge M_n(\theta_0).
-    $$
-    Thus,
-    $$
-    M(\hat{\theta}_n) \ge M_n(\hat{\theta}_n) - \eta \ge M_n(\theta_0) - \eta \ge M(\theta_0) - 2\eta.
-    $$
-    Consequently,
-    $$
-    M(\theta_0) - M(\hat{\theta}_n) \le 2\eta \xrightarrow{a.s.} 0.
-    $$
-    By continuity of $M(\theta)$ (which follows from (A3), (A4), and the dominated convergence theorem) and Lemma 1 ($\theta_0$ is the unique maximizer), combined with compactness of $\Theta$, we obtain $\hat{\theta}_n \xrightarrow{a.s.} \theta_0$. More rigorously: if $\hat{\theta}_n$ did not converge a.s. to $\theta_0$, there would exist a subsequence $\hat{\theta}_{n_k} \to \theta^* \neq \theta_0$. By upper semicontinuity, $\limsup M(\hat{\theta}_{n_k}) \le M(\theta^*)$. But from above, $M(\hat{\theta}_{n_k}) \to M(\theta_0)$, so $M(\theta^*) \ge M(\theta_0)$, contradicting Lemma 1. Hence $\hat{\theta}_n \xrightarrow{a.s.} \theta_0$.
+### 2.2 Asymptotic Normality
+
+>[!definition] Asymptotic Normality
+>Let $\{ \hat{\theta}_n \}$ be a sequence of estimators of a parameter $\theta_0 \in \mathbb{R}^k$.
+>
+>$\hat{\theta}_n$ is **asymptotically normal** if there exists a sequence of positive definite matrices $\{ V_n \}$ (usually $V_n = n^{-1} V$ for some fixed $V$) such that
+>$$
+>V_n^{-1/2} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I_k),
+>$$
+>or equivalently,
+>$$
+>\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, V),
+>$$
+>where $V$ is a positive semidefinite matrix called the **asymptotic variance matrix**.
+
+Assume the MLE $\hat{\theta}_n$ is **consistent** ($\hat{\theta}_n \xrightarrow{p} \theta_0$) and the following regularity conditions hold in a neighborhood of $\theta_0$:
+
+**(R1) Interior Point:** $\theta_0$ is an interior point of the parameter space $\Theta \subset \mathbb{R}^k$.
+
+**(R2) Differentiability:** The log-likelihood $\ell(\theta) = \log f(x|\theta)$ is **twice continuously differentiable** in $\theta$.
+
+**(R3) Interchange of Integration and Differentiation:** The score function $s(\theta) = \frac{\partial \ell(\theta)}{\partial \theta}$ satisfies
+$$
+\mathbb{E}_{\theta}[s(\theta)] = 0,
+$$
+and the Fisher information matrix
+$$
+I(\theta) = \operatorname{Var}_{\theta}(s(\theta)) = -\mathbb{E}_{\theta}\left[ \frac{\partial^2 \ell(\theta)}{\partial \theta \partial \theta^\top} \right]
+$$
+exists and is finite.
+
+**(R4) Positive Definite Information:** $I(\theta_0)$ is **positive definite**.
+
+**(R5) Dominance for the Second Derivative:** There exists an integrable function $M(x)$ such that
+$$
+\left\| \frac{\partial^2 \log f(x|\theta)}{\partial \theta \partial \theta^\top} \right\| \le M(x)
+$$
+for all $\theta$ in a neighborhood of $\theta_0$, where $\|\cdot\|$ is a matrix norm.
+
+**(R6) Third-Derivative Control (Cramér's Condition):** $\log f(x|\theta)$ is three times differentiable, and there exists an integrable function $H(x)$ such that
+$$
+\left| \frac{\partial^3 \log f(x|\theta)}{\partial \theta_i \partial \theta_j \partial \theta_k} \right| \le H(x)
+$$
+for all $\theta$ in a neighborhood of $\theta_0$ and all $i, j, k$.
+
+Then the MLE is asymptotically normal:
+$$
+\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I(\theta_0)^{-1}).
+$$
 
 ---
 
-### 5. Weak Consistency Version
+**Proof:**
 
-If (A5) is replaced by uniform convergence in probability,
-$$
-\sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{p} 0,
-$$
-then weak consistency follows: $\hat{\theta}_n \xrightarrow{p} \theta_0$. The proof is analogous, replacing almost sure convergence with convergence in probability.
+1.  **First-Order Condition and Taylor Expansion**
+
+    Since $\hat{\theta}_n$ is consistent and $\theta_0$ is an interior point (R1), for $n$ large enough $\hat{\theta}_n$ lies in the interior with probability approaching 1. By (R2), the score function $s_n(\theta) = \frac{1}{n} \sum_{i=1}^n s(\theta; X_i)$ is differentiable, and at the maximum $\hat{\theta}_n$, we have the first-order condition:
+    $$
+    s_n(\hat{\theta}_n) = 0.
+    $$
+
+    Expand $s_n(\hat{\theta}_n)$ around $\theta_0$ using the mean value theorem (component-wise):
+    $$
+    0 = s_n(\hat{\theta}_n) = s_n(\theta_0) + J_n(\bar{\theta}_n) (\hat{\theta}_n - \theta_0),
+    $$
+    where $J_n(\theta) = \frac{1}{n} \sum_{i=1}^n \frac{\partial^2 \log f(X_i|\theta)}{\partial \theta \partial \theta^\top}$ is the sample average negative observed information, and $\bar{\theta}_n$ is a point on the line segment between $\hat{\theta}_n$ and $\theta_0$ (component-wise, so $\bar{\theta}_n \xrightarrow{p} \theta_0$ by consistency).
+
+2.  **Rearranging and Scaling**
+
+    Rearranging gives
+    $$
+    -J_n(\bar{\theta}_n) \cdot (\hat{\theta}_n - \theta_0) = s_n(\theta_0).
+    $$
+    Multiply both sides by $\sqrt{n}$:
+    $$
+    -J_n(\bar{\theta}_n) \cdot \sqrt{n} (\hat{\theta}_n - \theta_0) = \sqrt{n} \, s_n(\theta_0) = \frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i).
+    $$
+
+3.  **Asymptotic Behavior of the Score**
+
+    The random vectors $s(\theta_0; X_i)$ are i.i.d. with $\mathbb{E}[s(\theta_0; X_i)] = 0$ (by R3) and $\operatorname{Var}(s(\theta_0; X_i)) = I(\theta_0)$ (by R3, R4). By the multivariate central limit theorem (CLT),
+    $$
+    \frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i) \xrightarrow{d} N(0, I(\theta_0)).
+    $$
+
+4.  **Convergence of the Information Matrix**
+
+    By (R5) and the uniform law of large numbers (or the ergodic theorem with domination), $J_n(\theta)$ converges uniformly in probability to $-\mathbb{E}_{\theta_0}[\frac{\partial^2 \log f(X|\theta)}{\partial \theta \partial \theta^\top}] = I(\theta_0)$ in a neighborhood of $\theta_0$.
+
+    Since $\bar{\theta}_n \xrightarrow{p} \theta_0$, we have
+    $$
+    J_n(\bar{\theta}_n) \xrightarrow{p} -I(\theta_0).
+    $$
+    Therefore,
+    $$
+    -J_n(\bar{\theta}_n) \xrightarrow{p} I(\theta_0).
+    $$
+
+5.  **Applying Slutsky's Theorem**
+
+    Let $A_n = -J_n(\bar{\theta}_n)$ and $B_n = \frac{1}{\sqrt{n}} \sum s(\theta_0; X_i)$. We have
+    $$
+    A_n \xrightarrow{p} I(\theta_0) \quad \text{and} \quad B_n \xrightarrow{d} N(0, I(\theta_0)).
+    $$
+    From step 2, $\sqrt{n} (\hat{\theta}_n - \theta_0) = A_n^{-1} B_n$. By the continuous mapping theorem, $A_n^{-1} \xrightarrow{p} I(\theta_0)^{-1}$ (since matrix inversion is continuous at $I(\theta_0)$, which is positive definite by R4). Then by Slutsky's theorem,
+    $$
+    \sqrt{n} (\hat{\theta}_n - \theta_0) = A_n^{-1} B_n \xrightarrow{d} I(\theta_0)^{-1} \cdot N(0, I(\theta_0)).
+    $$
+    The distribution of $I(\theta_0)^{-1} Z$ for $Z \sim N(0, I(\theta_0))$ is $N(0, I(\theta_0)^{-1})$, because
+    $$
+    \operatorname{Cov}(I(\theta_0)^{-1} Z) = I(\theta_0)^{-1} \operatorname{Cov}(Z) I(\theta_0)^{-1} = I(\theta_0)^{-1} I(\theta_0) I(\theta_0)^{-1} = I(\theta_0)^{-1}.
+    $$
+
+6.  **Handling the Remainder (Rigorous Justification)**
+
+    The mean value theorem expansion is technically valid component-wise, but to ensure the remainder is negligible, we use (R6). A second-order Taylor expansion of the log-likelihood $\ell_n(\theta)$ around $\theta_0$ yields
+    $$
+    \ell_n(\hat{\theta}_n) - \ell_n(\theta_0) = s_n(\theta_0)^\top (\hat{\theta}_n - \theta_0) + \frac{1}{2} (\hat{\theta}_n - \theta_0)^\top \ell_n''(\tilde{\theta}_n) (\hat{\theta}_n - \theta_0),
+    $$
+    where $\tilde{\theta}_n$ lies between $\hat{\theta}_n$ and $\theta_0$. Since $\hat{\theta}_n$ maximizes $\ell_n$, the left side is nonnegative. Dividing by $n$ and rearranging, combined with domination (R5) and consistency, shows that $s_n(\theta_0) = -J_n(\bar{\theta}_n)(\hat{\theta}_n - \theta_0) + o_p(n^{-1/2})$, which is sufficient for the argument.
+
+    Alternatively, one can use a **quadratic mean differentiability** argument, which is more elegant but requires additional setup.
 
 ---
 
-### 6. Remarks
-
-*   **Upper Semicontinuity vs. Continuity:** If $\log f(x|\theta)$ is continuous in $\theta$, (A3) holds automatically. Upper semicontinuity is weaker and allows for some boundary points.
-*   **Integrable Envelope (A4):** Crucial for the uniform law of large numbers. It controls tail behavior, ensuring uniform convergence.
-*   **Compactness (A1):** Essential; otherwise, the maximizer of $M_n(\theta)$ may not exist or may escape to infinity. Some generalizations to non-compact $\Theta$ require additional assumptions that $\theta_0$ is a "well-separated" maximizer and control the behavior of $M(\theta)$ as $\|\theta\| \to \infty$.
-*   **Identifiability (A2):** Without it, $\theta_0$ is not unique, and consistency is meaningless.
-
-**Summary:** Consistency of the MLE does not require differentiability. It only requires a compact parameter space, identifiability, some continuity (upper semicontinuity) of the log-likelihood, and an integrable envelope to guarantee uniform convergence of the sample average log-likelihood to its expectation. Once uniform convergence holds, the Kullback–Leibler inequality ensures $\theta_0$ is the unique maximizer, and the MLE naturally converges to it.
+**Conclusion:** Under the stated regularity conditions, the MLE satisfies
+$$
+\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, I(\theta_0)^{-1}),
+$$
+and is therefore asymptotically normal and efficient (attains the Cramér–Rao lower bound asymptotically).
