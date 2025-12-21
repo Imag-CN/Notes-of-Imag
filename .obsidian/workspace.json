@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Complex analysis HW12"
             }
+          },
+          {
+            "id": "05ac8309d0e83b18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "meet/Research on MLE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Research on MLE"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,11 +197,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "659ae78406fac190",
+  "active": "05ac8309d0e83b18",
   "lastOpenFiles": [
+    "meet/Proof of Tychonoff's Theorem using Nets.md",
+    "meet/Research on MLE.md",
+    "meet/Primitive element theorem and counterexample.md",
+    "meet/Picking triangle.md",
+    "meet/Gambler's ruin problem.md",
+    "meet/Hausdorff space with no metric.md",
+    "meet/A continuous function with divergent Fourier series.md",
+    "meet/Differential structure.md",
+    "meet/Uncorrelation and independence of normal distribution.md",
+    "meet/​Topologist's sine curve.md",
+    "meet/The equivalence condition of sequentially compact and compact.md",
+    "meet/Submanifold with Boundary.md",
+    "meet/Sigma-algebra.md",
+    "Complex analysis/Complex analysis HW8.md",
+    "attachments/Pasted image 20251008231937.png",
+    "Complex analysis/Complex analysis HW12.md",
     "attachments/Pasted image 20251219004354.png",
     "attachments/4ccff81599c79cdd74c2c0917b37c08e.jpg",
-    "Complex analysis/Complex analysis HW12.md",
     "Complex analysis/Complex analysis HW10.md",
     "Complex analysis/Complex analysis HW1.md",
     "Probability and statistic homework/Probability and statistic HW7.md",
@@ -194,23 +224,10 @@
     "Topology and geometry homework/Topology and geometry HW11.md",
     "Complex analysis/Complex analysis HW11.md",
     "度量与全序的相似, 不同与统一.md",
-    "meet/​Topologist's sine curve.md",
     "Probability and statistic homework/Probability and statistic EX.md",
     "meet/Separation axioms of topological groups.md",
-    "meet/Proof of Tychonoff's Theorem using Nets.md",
-    "meet/Picking triangle.md",
     "Complex analysis/Complex analysis HW6.md",
     "Complex analysis/Complex analysis HW3.md",
-    "meet/A continuous function with divergent Fourier series.md",
-    "Complex analysis/Complex analysis HW9.md",
-    "不存在万用的比较判别法.md",
-    "关于双周期函数的一些问题.md",
-    "哈代不等式（Hardy-Landau）.md",
-    "满足柯西-黎曼方程但不复可微的例子.md",
-    "有理逼近.md",
-    "Decay rate of Fourier coefficients.md",
-    "Topology and geometry homework/Topology and geometry HW10.md",
-    "数分三/数分三作业四.md",
     "未命名",
     "attachments/8ee6a5ae-2640-44c5-8443-260ae0dc8349.png",
     "attachments/Pasted image 20251106075329.png",
@@ -220,7 +237,6 @@
     "attachments/Pasted image 20251012155231.png",
     "attachments/Pasted image 20251017114611.png",
     "attachments/Pasted image 20251009112200.png",
-    "attachments/image-2025-09-21T13-57-17Z.png",
     "attachments",
     "未命名.canvas",
     "未命名.base",
