@@ -194,13 +194,17 @@
       "bases:创建新数据库": false,
       "random-note:开始漫游笔记": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "callout-manager:Insert Callout": false
     }
   },
   "active": "05ac8309d0e83b18",
   "lastOpenFiles": [
-    "meet/Proof of Tychonoff's Theorem using Nets.md",
+    "meet/Separation axioms of topological groups.md",
     "meet/Research on MLE.md",
+    "meet/The equivalence condition of sequentially compact and compact.md",
+    "meet/Sigma-algebra.md",
+    "meet/Proof of Tychonoff's Theorem using Nets.md",
     "meet/Primitive element theorem and counterexample.md",
     "meet/Picking triangle.md",
     "meet/Gambler's ruin problem.md",
@@ -209,9 +213,7 @@
     "meet/Differential structure.md",
     "meet/Uncorrelation and independence of normal distribution.md",
     "meet/​Topologist's sine curve.md",
-    "meet/The equivalence condition of sequentially compact and compact.md",
     "meet/Submanifold with Boundary.md",
-    "meet/Sigma-algebra.md",
     "Complex analysis/Complex analysis HW8.md",
     "attachments/Pasted image 20251008231937.png",
     "Complex analysis/Complex analysis HW12.md",
@@ -225,7 +227,6 @@
     "Complex analysis/Complex analysis HW11.md",
     "度量与全序的相似, 不同与统一.md",
     "Probability and statistic homework/Probability and statistic EX.md",
-    "meet/Separation axioms of topological groups.md",
     "Complex analysis/Complex analysis HW6.md",
     "Complex analysis/Complex analysis HW3.md",
     "未命名",

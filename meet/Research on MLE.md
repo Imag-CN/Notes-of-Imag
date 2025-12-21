@@ -58,26 +58,104 @@ To ensure desirable asymptotic properties of the MLE (e.g., consistency, asympto
 7.  **Uniqueness of MLE:** The maximum of the likelihood function is **unique** in the interior of $\Theta$.
 ___
 
->[!note] Coefficiency
+>[!note] Consistency
 >$\hat{\theta}_n$ is **consistent** for $\theta_0$ if, for every $\epsilon > 0$,
 >$$
 >\lim_{n \to \infty} P( |\hat{\theta}_n - \theta_0| > \epsilon ) = 0.
 >$$
 >
 
-**Proof:**
-Define the sample and population criteria:
-$$
-M_n(\theta) = \frac{1}{n} \sum_{i=1}^n \log f(X_i|\theta), \quad M(\theta) = \mathbb{E}_{\theta_0}[\log f(X|\theta)].
-$$
-By the Kullback-Leibler inequality, $M(\theta) \le M(\theta_0)$ with equality **iff** $\theta = \theta_0$ (identifiability). So $\theta_0$ uniquely maximizes $M(\theta)$.
+To assure consistency of MLE, we need several assumptions:
 
-By compactness and a uniform law of large numbers:
+**(A1) Compact Parameter Space**: $\Theta$ is a **compact** subset of $\mathbb{R}^k$.
+
+**(A2) Identifiability:** For any $\theta_1 \neq \theta_2$, $P_{\theta_1} \neq P_{\theta_2}$. That is,
 $$
-\sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{p} 0.
+\theta_1 \neq \theta_2 \quad \Longrightarrow \quad f(x|\theta_1) \neq f(x|\theta_2) \quad \text{on a set of positive measure}.
 $$
 
-Since $\hat{\theta}_n$ maximizes $M_n(\theta)$ and $\theta_0$ uniquely maximizes $M(\theta)$, a standard extremum estimator result implies:
+**(A3) Continuity:** For each $x$, the function $\theta \mapsto \log f(x|\theta)$ is **upper semicontinuous** on $\Theta$.
+
+**(A4) Integrable Envelope:** There exists an integrable function $m(x)$ (w.r.t. $P_{\theta_0}$) such that for all $\theta \in \Theta$,
 $$
-\hat{\theta}_n \xrightarrow{p} \theta_0.
+|\log f(x|\theta)| \le m(x).
 $$
+Furthermore, $\mathbb{E}_{\theta_0}[\log f(X|\theta_0)] > -\infty$.
+
+**(A5) Uniform Convergence of Sample Averages:**
+$$
+\sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{a.s.} 0.
+$$
+>[!tip]
+> Contents Remark
+>Under (A1), (A3), and (A4), a uniform law of large numbers (e.g., via the theory of Glivenko–Cantelli classes) guarantees (A5).
+
+---
+
+To 
+
+**Lemma 1 (Kullback–Leibler Inequality):**
+Under identifiability (A2) and integrability (A4), for any $\theta \in \Theta$,
+$$
+M(\theta) \le M(\theta_0),
+$$
+with equality if and only if $\theta = \theta_0$ ($P_{\theta_0}$-a.s.). Hence, $\theta_0$ is the **unique global maximizer** of $M(\theta)$ on $\Theta$.
+
+*Proof Sketch:* By Jensen's inequality,
+$$
+M(\theta) - M(\theta_0) = \mathbb{E}_{\theta_0} \left[ \log \frac{f(X|\theta)}{f(X|\theta_0)} \right] \le \log \mathbb{E}_{\theta_0} \left[ \frac{f(X|\theta)}{f(X|\theta_0)} \right] = \log 1 = 0.
+$$
+Equality holds iff $f(X|\theta)/f(X|\theta_0) = 1$ a.s., i.e., $\theta = \theta_0$.
+
+---
+
+### 4. Consistency Proof
+
+**Theorem:** Under assumptions (A1)–(A5), the MLE $\hat{\theta}_n$ is strongly consistent:
+$$
+\hat{\theta}_n \xrightarrow{a.s.} \theta_0.
+$$
+
+*Proof:*
+
+1.  **Existence:** By compactness of $\Theta$ (A1) and upper semicontinuity of $\log f(x|\theta)$ (A3), $M_n(\theta)$ is an upper semicontinuous function on a compact set, so its supremum is attained. Therefore, $\hat{\theta}_n$ exists.
+
+2.  **Uniform Convergence:** By (A5),
+    $$
+    \sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{a.s.} 0.
+    $$
+
+3.  **Consistency of Extremum Estimators:** Define $\eta = \sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)|$. Then $\eta \xrightarrow{a.s.} 0$. By definition of $\hat{\theta}_n$,
+    $$
+    M_n(\hat{\theta}_n) \ge M_n(\theta_0).
+    $$
+    Thus,
+    $$
+    M(\hat{\theta}_n) \ge M_n(\hat{\theta}_n) - \eta \ge M_n(\theta_0) - \eta \ge M(\theta_0) - 2\eta.
+    $$
+    Consequently,
+    $$
+    M(\theta_0) - M(\hat{\theta}_n) \le 2\eta \xrightarrow{a.s.} 0.
+    $$
+    By continuity of $M(\theta)$ (which follows from (A3), (A4), and the dominated convergence theorem) and Lemma 1 ($\theta_0$ is the unique maximizer), combined with compactness of $\Theta$, we obtain $\hat{\theta}_n \xrightarrow{a.s.} \theta_0$. More rigorously: if $\hat{\theta}_n$ did not converge a.s. to $\theta_0$, there would exist a subsequence $\hat{\theta}_{n_k} \to \theta^* \neq \theta_0$. By upper semicontinuity, $\limsup M(\hat{\theta}_{n_k}) \le M(\theta^*)$. But from above, $M(\hat{\theta}_{n_k}) \to M(\theta_0)$, so $M(\theta^*) \ge M(\theta_0)$, contradicting Lemma 1. Hence $\hat{\theta}_n \xrightarrow{a.s.} \theta_0$.
+
+---
+
+### 5. Weak Consistency Version
+
+If (A5) is replaced by uniform convergence in probability,
+$$
+\sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{p} 0,
+$$
+then weak consistency follows: $\hat{\theta}_n \xrightarrow{p} \theta_0$. The proof is analogous, replacing almost sure convergence with convergence in probability.
+
+---
+
+### 6. Remarks
+
+*   **Upper Semicontinuity vs. Continuity:** If $\log f(x|\theta)$ is continuous in $\theta$, (A3) holds automatically. Upper semicontinuity is weaker and allows for some boundary points.
+*   **Integrable Envelope (A4):** Crucial for the uniform law of large numbers. It controls tail behavior, ensuring uniform convergence.
+*   **Compactness (A1):** Essential; otherwise, the maximizer of $M_n(\theta)$ may not exist or may escape to infinity. Some generalizations to non-compact $\Theta$ require additional assumptions that $\theta_0$ is a "well-separated" maximizer and control the behavior of $M(\theta)$ as $\|\theta\| \to \infty$.
+*   **Identifiability (A2):** Without it, $\theta_0$ is not unique, and consistency is meaningless.
+
+**Summary:** Consistency of the MLE does not require differentiability. It only requires a compact parameter space, identifiability, some continuity (upper semicontinuity) of the log-likelihood, and an integrable envelope to guarantee uniform convergence of the sample average log-likelihood to its expectation. Once uniform convergence holds, the Kullback–Leibler inequality ensures $\theta_0$ is the unique maximizer, and the MLE naturally converges to it.

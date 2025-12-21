@@ -1,0 +1,30 @@
+{
+  "callouts": {
+    "custom": [
+      "lemma",
+      "remark"
+    ],
+    "settings": {
+      "lemma": [
+        {
+          "changes": {
+            "icon": "lucide-arrow-up-right-from-square"
+          }
+        }
+      ],
+      "remark": [
+        {
+          "changes": {
+            "icon": "lucide-flame",
+            "color": "83, 223, 221"
+          }
+        }
+      ]
+    }
+  },
+  "calloutDetection": {
+    "obsidian": true,
+    "theme": true,
+    "snippet": true
+  }
+}
