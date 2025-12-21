@@ -227,3 +227,51 @@ $$
     $$
 where $\tilde{\theta}_n$ lies between $\hat{\theta}_n$ and $\theta_0$. Since $\hat{\theta}_n$ maximizes $\ell_n$, the left side is nonnegative. Dividing by $n$ and rearranging, combined with domination (R5) and consistency, shows that $s_n(\theta_0) = -J_n(\bar{\theta}_n)(\hat{\theta}_n - \theta_0) + o_p(n^{-1/2})$, which is sufficient for the argument.
 ___
+
+### 2.3 Asymptotic Efficiency
+
+>[!definition] Asymptotic Efficiency
+>An estimator $\hat{\theta}_n$ of a parameter $\theta_0 \in \mathbb{R}^k$ is **asymptotically efficient** if it is:
+>1.  **Consistent**: $\hat{\theta}_n \xrightarrow{p} \theta_0$.
+>2.  **Asymptotically normal**: $\sqrt{n} (\hat{\theta}_n - \theta_0) \xrightarrow{d} N(0, V)$.
+>3.  **Attains the Cramér–Rao lower bound (CRLB) asymptotically**: Its asymptotic variance matrix $\Sigma(\theta_0)$ equals the inverse of the Fisher information matrix per observation, i.e.,$$\Sigma(\theta_0) = I(\theta_0)^{-1},$$
+>where $I(\theta_0) = \mathbb{E}_{\theta_0}[s(\theta_0) s(\theta_0)^\top]$ is the Fisher information matrix for a single observation, and $s(\theta) = \frac{\partial}{\partial \theta} \log f(X|\theta)$ is the score function.
+>
+>Equivalently, $\hat{\theta}_n$ is **asymptotically efficient** if, for any other consistent and asymptotically normal estimator $\tilde{\theta}_n$ with asymptotic variance $\tilde{\Sigma}(\theta_0)$, the difference $\tilde{\Sigma}(\theta_0) - I(\theta_0)^{-1}$ is positive semidefinite. This means $\hat{\theta}_n$ has the "smallest" asymptotic covariance matrix in the Loewner order.
+
+---
+
+>[!theorem]
+>Under the same regularity conditions (R1)–(R6) as for asymptotic normality, the MLE $\hat{\theta}_n$ is asymptotically efficient.
+
+**Proof:**
+The asymptotic normality proof already gives the asymptotic distribution $N(0, I(\theta_0)^{-1})$. To establish efficiency, we need to show that $I(\theta_0)^{-1}$ is indeed the Cramér–Rao lower bound for any unbiased estimator, and that the MLE attains it asymptotically.
+
+
+Under regularity conditions (R2)-(R3), for any unbiased estimator $\tilde{\theta}_n$ of $\theta_0$ based on $n$ i.i.d. observations, we have
+$$
+\operatorname{Cov}_{\theta_0}(\tilde{\theta}_n) \ge \frac{1}{n} I(\theta_0)^{-1},
+$$
+in the sense that $\operatorname{Cov}_{\theta_0}(\tilde{\theta}_n) - \frac{1}{n} I(\theta_0)^{-1}$ is positive semidefinite. Here $n I(\theta_0)$ is the Fisher information for the full sample.
+
+From the asymptotic normality proof, we have
+$$
+\sqrt{n} (\hat{\theta}_n - \theta_0) \approx I(\theta_0)^{-1} \cdot \frac{1}{\sqrt{n}} \sum_{i=1}^n s(\theta_0; X_i),
+$$
+and $\frac{1}{\sqrt{n}} \sum s(\theta_0; X_i) \xrightarrow{d} N(0, I(\theta_0))$. This representation shows that the MLE is asymptotically linear with influence function $\psi(X_i) = I(\theta_0)^{-1} s(\theta_0; X_i)$.
+
+The asymptotic variance of $\hat{\theta}_n$ is
+$$
+\operatorname{Var}(\psi(X_i)) = I(\theta_0)^{-1} \operatorname{Var}(s(\theta_0; X_i)) I(\theta_0)^{-1} = I(\theta_0)^{-1} I(\theta_0) I(\theta_0)^{-1} = I(\theta_0)^{-1}.
+$$
+Since $\sqrt{n} (\hat{\theta}_n - \theta_0)$ converges to $N(0, I(\theta_0)^{-1})$, the asymptotic variance is exactly the CRLB.
+
+Consider any other consistent and asymptotically normal estimator $\tilde{\theta}_n$ with asymptotic variance $\tilde{\Sigma}(\theta_0)$. Under the same model, the convolution theorem (Hájek–Le Cam) implies that the asymptotic distribution of any regular estimator can be written as the convolution of $N(0, I(\theta_0)^{-1})$ with some other distribution, meaning its asymptotic covariance matrix is at least $I(\theta_0)^{-1}$ in positive semidefinite order:
+$$
+\tilde{\Sigma}(\theta_0) \ge I(\theta_0)^{-1}.
+$$
+Since the MLE achieves $I(\theta_0)^{-1}$, it is efficient.
+>[!remark]
+>Consistency conditions (compact parameter space, identifiability, upper semicontinuity) are **global and topological**, ensuring existence and convergence of the extremum. Asymptotic normality/efficiency conditions (interior point, second/third-order differentiability, positive definite information matrix) are **local and smooth**, enabling a local quadratic expansion.
+>
+Consistency allows the parameter to be on the boundary. Asymptotic normality **requires an interior point**; otherwise, the Taylor expansion fails and the limiting distribution is non-standard.
