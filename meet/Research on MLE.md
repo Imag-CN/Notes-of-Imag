@@ -86,13 +86,12 @@ Furthermore, $\mathbb{E}_{\theta_0}[\log f(X|\theta_0)] > -\infty$.
 $$
 \sup_{\theta \in \Theta} |M_n(\theta) - M(\theta)| \xrightarrow{a.s.} 0.
 $$
->[!tip]
-> Contents Remark
+>[!remark]
 >Under (A1), (A3), and (A4), a uniform law of large numbers (e.g., via the theory of Glivenko–Cantelli classes) guarantees (A5).
 
 ---
 
-To 
+To proof consistency we need the following lemma
 
 **Lemma 1 (Kullback–Leibler Inequality):**
 Under identifiability (A2) and integrability (A4), for any $\theta \in \Theta$,
