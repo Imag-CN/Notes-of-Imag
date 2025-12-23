@@ -139,11 +139,65 @@ $$
 $$
 n=\cos \theta \cdot N+\sin\theta \cdot h,B=\sin\theta \cdot N-\cos\theta \cdot h.\tag{\dagger}
 $$
-
+![[Pasted image 20251223231756.png]]
 Differentiating $\cos \theta = \langle N, n \rangle$ by $s$ yields:
 $$
 -\sin\theta \cdot\dfrac{d}{ds}\theta=\left< \dfrac{dN}{ds} ,n \right> +\left< N, -kt-\tau B\right> = \left< \dfrac{dN}{ds} ,n \right>-\tau \left< N,B \right> 
 $$
-Substituting
+Substituting by $(\dagger)$ gives
+$$
+-\sin\theta \cdot\dfrac{d}{ds}\theta=\left< \dfrac{dN}{ds} , \cos \theta \cdot N+\sin\theta \cdot h\right>-\tau \left< N,\sin\theta \cdot N-\cos\theta \cdot h \right>
+=\sin\theta\left\langle \frac{dN}{ds}, h \right\rangle-\sin\theta \cdot\tau
+$$
+By definition we know $\left\langle \frac{dN}{ds}(0), h \right\rangle=\tau_{g}$, therefore,
+$$
+-\sin\theta \cdot\dfrac{d}{ds}\theta=\sin\theta \cdot(\tau_{g}-\tau)
+$$
+This proves the conclusion.
+
 **c.**
-A curve is a line of curvature if and only if its tangent direction is everywhere a principal direction. From part (a), $\tau_g = (k_1 - k_2) \cos\varphi \sin\varphi$. For a line of curvature, the tangent direction is always along a principal direction, so $\varphi = 0$ or $\pi/2$ modulo $\pi$. Then $\cos\varphi \sin\varphi = 0$, so $\tau_g = 0$ identically. Conversely, if $\tau_g = 0$ identically, then $(k_1 - k_2) \cos\varphi \sin\varphi = 0$. At non-umbilic points ($k_1 \neq k_2$), this implies $\cos\varphi \sin\varphi = 0$, so $\varphi = 0$ or $\pi/2$ modulo $\pi$, meaning the tangent is always along a principal direction, hence a line of curvature. At umbilic points, all directions are principal, so the curve is trivially a line of curvature. Thus, lines of curvature are exactly curves with $\tau_g \equiv 0$. 
+A curve is a line of curvature if and only if its tangent direction is everywhere a principal direction. From **a.** we know $\tau_g = (k_1 - k_2) \cos\varphi \sin\varphi$. For a line of curvature, the tangent direction is always along a principal direction, so $\varphi = 0$ or $\pi/2$ modulo $\pi$. Then $\cos\varphi \sin\varphi = 0$, so $\tau_g = 0$ identically. Conversely, if $\tau_g = 0$ identically, then $(k_1 - k_2) \cos\varphi \sin\varphi = 0$. At non-umbilic points ($k_1 \neq k_2$), this implies $\cos\varphi \sin\varphi = 0$, so $\varphi = 0$ or $\pi/2$ modulo $\pi$, meaning the tangent is always along a principal direction, hence a line of curvature. At umbilic points, all directions are principal, so the curve is trivially a line of curvature. Thus, lines of curvature are exactly curves with $\tau_g \equiv 0$. 
+___
+
+>[!problem] Problem 6
+>Show that at the origin $(0,0,0)$ of the hyperboloid $z=axy$ we have $K=-a^2$ and $H=0$.
+
+**Proof:**
+Let the surface be given by $\mathbf{r}(x,y) = (x, y, a x y)$.
+
+Compute the first fundamental form coefficients:
+$$
+\mathbf{r}_x = (1, 0, a y),\quad \mathbf{r}_y = (0, 1, a x),
+$$
+$$
+E = \mathbf{r}_x \cdot \mathbf{r}_x = 1 + a^2 y^2,\quad F = \mathbf{r}_x \cdot \mathbf{r}_y = a^2 x y,\quad G = \mathbf{r}_y \cdot \mathbf{r}_y = 1 + a^2 x^2.
+$$
+
+At the origin $(0,0,0)$: $E = 1,F = 0,G = 1$.
+
+Compute the unit normal vector $\mathbf{N}$:
+$$
+\mathbf{r}_x \times \mathbf{r}_y = (-a y, -a x, 1),\quad \|\mathbf{r}_x \times \mathbf{r}_y\| = \sqrt{a^2 y^2 + a^2 x^2 + 1}
+$$
+At $(0,0,0)$: $\mathbf{N} = (0, 0, 1)$.
+
+Compute the second fundamental form coefficients:
+$$
+\mathbf{r}_{xx} = (0, 0, 0),\quad \mathbf{r}_{xy} = (0, 0, a),\quad \mathbf{r}_{yy} = (0, 0, 0),
+$$
+$$
+L = \mathbf{N} \cdot \mathbf{r}_{xx} = 0,\quad M = \mathbf{N} \cdot \mathbf{r}_{xy} = a\quad N = \mathbf{N} \cdot \mathbf{r}_{yy} = 0
+$$
+
+At $(0,0,0)$: $L = 0, M = a, N = 0$.
+
+Compute $K$ and $H$ at the origin:
+$$
+K = \frac{LN - M^2}{EG - F^2} = \frac{0 \cdot 0 - a^2}{1 \cdot 1 - 0} = -a^2,
+$$
+$$
+H = \frac{1}{2} \frac{EN - 2FM + GL}{EG - F^2} = \frac{1}{2} \frac{1 \cdot 0 - 2 \cdot 0 \cdot a + 1 \cdot 0}{1} = 0.
+$$
+Therefore, at the origin $(0,0,0)$ of the hyperboloid $z=axy$ we have $K=-a^2$ and $H=0$.
+___
+
