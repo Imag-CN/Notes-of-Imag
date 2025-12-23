@@ -201,3 +201,206 @@ $$
 Therefore, at the origin $(0,0,0)$ of the hyperboloid $z=axy$ we have $K=-a^2$ and $H=0$.
 ___
 
+>[!problem] Problem 7
+>Determine the asymptotic curves and the lines of curvature of the helicoid
+>$$
+>x=v \cos u, y=v \sin u, z=c u, 
+>$$
+>and show that its mean curvature is zero.
+
+**Solution:**
+Compute the first and second fundamental forms:
+$$
+\mathbf{r}_u = (-v \sin u, v \cos u, c),\quad\mathbf{r}_v = (\cos u, \sin u, 0),
+$$
+$$
+\mathbf{r}_{uu} = (-v \cos u, -v \sin u, 0),\quad \mathbf{r}_{uv} = (-\sin u, \cos u, 0),\quad \mathbf{r}_{vv} = (0, 0, 0),
+$$
+$$
+\mathbf{r}_u \times \mathbf{r}_v = (-c \sin u, c \cos u, -v),\quad |\mathbf{r}_u \times \mathbf{r}_v| = \sqrt{c^2 + v^2},\quad\mathbf{N} = \dfrac{\mathbf{r}_u \times \mathbf{r}_v}{|\mathbf{r}_u \times \mathbf{r}_v|} = \dfrac{(-c \sin u, c \cos u, -v)}{\sqrt{c^2 + v^2}}
+$$
+$$
+E = \mathbf{r}_u \cdot \mathbf{r}_u = v^2 + c^2,\quad F = \mathbf{r}_u \cdot \mathbf{r}_v = 0,\quad G = \mathbf{r}_v \cdot \mathbf{r}_v = 1,
+$$
+$$
+L = \mathbf{N} \cdot \mathbf{r}_{uu} = 0,\quad M = \mathbf{N} \cdot \mathbf{r}_{uv} = -\frac{c}{\sqrt{c^2+v^2}},\quad N = \mathbf{N} \cdot \mathbf{r}_{vv} = 0.
+$$
+
+**Mean curvature $H$:**
+$$
+H = \frac{EN - 2FM + GL}{2(EG - F^2)} = \frac{(v^2+c^2) \cdot 0 - 2 \cdot 0 \cdot M + 1 \cdot 0}{2((v^2+c^2) \cdot 1 - 0)} = 0.
+$$
+Thus, $H = 0$ everywhere.
+
+**Asymptotic curves:**
+They satisfy $L (du)^2 + 2M du dv + N (dv)^2 = 0$.
+Since $L = N = 0$, the equation becomes $2M du dv = 0$, i.e., $M du dv = 0$.
+Given $M = -\frac{c}{\sqrt{c^2+v^2}} \neq 0$ for $c \neq 0$, we have $du \cdot dv = 0$.
+This gives two families: $du = 0$ and $dv = 0$.
+Thus, asymptotic curves are given by
+$$
+x=v \cos C, y=v \sin C, z=c C, 
+$$
+or
+$$
+x=C \cos u, y=C \sin u, z=c u
+$$
+for constants $C$.
+
+**Lines of curvature:**
+They satisfy $\begin{vmatrix} (dv)^2 & -du dv & (du)^2 \\ E & F & G \\ L & M & N \end{vmatrix} = 0$.
+Plugging in the coefficients:
+ $$
+ \begin{vmatrix} (dv)^2 & -du dv & (du)^2 \\ v^2+c^2 & 0 & 1 \\ 0 & M & 0 \end{vmatrix} = 0.
+ $$
+Expanding gives: 
+$$
+M[(v^2+c^2)(du)^2 - (dv)^2] = 0.
+$$
+Since $M \neq 0$, we have $(v^2+c^2)(du)^2 - (dv)^2 = 0$, i.e., $dv = \pm \sqrt{v^2+c^2} du$.
+Separating variables: $\frac{dv}{\sqrt{v^2+c^2}} = \pm du$.
+Integrating: $\ln\left|v + \sqrt{v^2+c^2}\right| = \pm u + \text{constant}$.
+Therefore, the lines of curvature are given by
+$$
+x=v\cdot\cos(\ln\left|v + \sqrt{v^2+c^2}\right|-C), y=v\cdot\sin(\ln\left|v + \sqrt{v^2+c^2}\right|-C), z=c(\ln\left|v + \sqrt{v^2+c^2}\right|-C),
+$$
+or
+$$
+x=v\cdot\cos(\ln\left|v + \sqrt{v^2+c^2}\right|-C), y=-v\cdot\sin(\ln\left|v + \sqrt{v^2+c^2}\right|-C),z=c(C-\ln\left|v + \sqrt{v^2+c^2}\right|)
+$$
+for constants $C$.
+___
+
+>[!problem] Problem 8
+>Determine the asymptotic curves of the catenoid
+>$$
+>\mathbf{x}(u, v)=(\cosh v\cos u,\cosh v\sin u,v).
+>$$
+
+**Solution**:
+Compute the first and second fundamental forms:
+$$
+\mathbf{x}_u = (-\cosh v \sin u,\ \cosh v \cos u,\ 0),\quad \mathbf{x}_v = (\sinh v \cos u,\ \sinh v \sin u,\ 1),
+$$
+$$
+\mathbf{x}_{uu} = (-\cosh v \cos u,\ -\cosh v \sin u,\ 0),\quad \mathbf{x}_{uv} = (-\sinh v \sin u,\ \sinh v \cos u,\ 0),
+$$
+$$
+\mathbf{x}_{vv} = (\cosh v \cos u,\ \cosh v \sin u,\ 0).
+$$
+$$
+\mathbf{x}_u \times \mathbf{x}_v= (\cosh v \cos u,\ \cosh v \sin u,\ -\cosh v \sinh v),\quad ||\mathbf{x}_u \times \mathbf{x}_v|| =  \cosh^2 v.
+$$
+$$
+\mathbf{N} = \dfrac{\mathbf{x}_u \times \mathbf{x}_v}{||\mathbf{x}_u \times \mathbf{x}_v||} = \dfrac{1}{\cosh v} (\cos u,\ \sin u,\ -\sinh v),
+$$
+$$
+E = \mathbf{x}_u \cdot \mathbf{x}_u  = \cosh^2 v,\quad F = \mathbf{x}_u \cdot \mathbf{x}_v  = 0,\quad G = \mathbf{x}_v \cdot \mathbf{x}_v= \cosh^2 v,
+$$
+$$
+L = \mathbf{x}_{uu} \cdot \mathbf{N} = -1,\quad M = \mathbf{x}_{uv} \cdot \mathbf{N}  = 0,\quad N = \mathbf{x}_{vv} \cdot \mathbf{N} = 1.
+$$
+Asymptotic curves satisfy the differential equation:
+$$ L (du)^2 + 2M du dv + N (dv)^2 = 0. $$
+Substituting $L=-1$, $M=0$, $N=1$:
+$$
+-(du)^2 + (dv)^2 = 0 \implies (dv)^2 = (du)^2 \implies dv = \pm du.
+$$
+
+Integrate: $v = \pm u + C$, where $C$ is a constant.
+
+Thus, asymptotic curves are given by
+$$
+x=\cosh (u+C)\cos u,y=\cosh (u+C)\sin u,z=u+C,
+$$
+or
+$$
+x=\cosh (-u+C)\cos u,y=\cosh (-u+C)\sin u,z=-u+C,
+$$
+for constants $C$.
+___
+
+>[!problem] Problem 9
+>(Surfaces of Revolution with Constant Curvature.)
+>($\varphi(v)\cos u,\varphi(v)\sin u,\psi(v)$) is given as a surface of revolution with constant Gaussian curvature $K$.
+>
+>To determine the functions $\varphi$ and $\psi$, choose the parameter $v$ in such a way that $(\varphi^{\prime})^{2}+(\psi^{\prime})^{2}=1$ (geometrically, this means that $v$ is the arc length of the generating curve $(\varphi(v),\psi(v))$).
+>
+>Show that
+>
+>**a.** $\varphi$ satisfies $\varphi^{\prime\prime}+K\varphi=0$ and $\psi$ is given by $\psi=\int\sqrt{1-(\varphi^{\prime})^{2}}\,dv$; thus, $0<u<2\pi$, and the domain of $v$ is such that the last integral makes sense.
+>
+>**b.** All surfaces of revolution with constant curvature $K=1$ which intersect perpendicularly the plane $xOy$ are given by
+>$$\varphi(v)=C\cos v,\qquad\psi(v)=\int_{0}^{v}\sqrt{1-C^{2}\sin^{2}v}\,dv,$$
+>where $C$ is a constant $(C=\varphi(0))$.
+>Determine the domain of $v$ and draw a rough sketch of the profile of the surface in the $xz$ plane for the cases $C=1$, $C>1$, $C<1$.
+>Observe that $C=1$ gives a sphere.
+>
+>**c.** All surfaces of revolution with constant curvature $K=-1$ may be given by one of the following types:
+>$$
+>\begin{align*}
+>1.\,\varphi(v)&=C\cosh v,\\
+>\psi(v)&=\int_{0}^{v}\sqrt{1-C^{2}\sinh^{2}v}\,dv.\\
+>2.\,\varphi(v)&=C\sinh v,\\
+>\psi(v)&=\int_{0}^{v}\sqrt{1-C^{2}\cosh^{2}v}\,dv.\\
+>3.\,\varphi(v)&=e^{v},\\
+>\psi(v)&=\int_{0}^{v}\sqrt{1-e^{2v}}\,dv.
+>\end{align*}
+>$$
+>Determine the domain of $v$ and draw a rough sketch of the profile of the surface in the $xz$ plane.
+>
+>**d.** The surface of type 3 in part c is the pseudosphere of Exercise 6.
+>
+>**e.** The only surfaces of revolution with $K\equiv 0$ are the right circular cylinder, the right circular cone, and the plane.
+
+**Proof:**
+
+___
+
+
+>[!problem] Problem 10
+>Let $F\colon\mathbb{R}^{3}\to\mathbb{R}^{3}$ be the map (a similarity) defined by $F(p)=cp$, $p\in\mathbb{R}^{3}$, $c$ a positive constant. Let $S\subset\mathbb{R}^{3}$ be a regular surface and set $F(S)=\bar{S}$. Show that $\bar{S}$ is a regular surface, and find formulas relating the Gaussian and mean curvatures, $K$ and $H$, of $S$ with the Gaussian and mean curvatures, $\bar{K}$ and $\bar{H}$, of $\bar{S}$.
+
+**Solution:**
+We first show that $\bar{S}$ is a regular surface:
+Let $\mathbf{x}\colon U\subset\mathbb{R}^2\to S$ be a regular parametrization of $S$. Define $\bar{\mathbf{x}}=F\circ\mathbf{x}\colon U\to\bar{S}$ by $\bar{\mathbf{x}}(u,v)=c\mathbf{x}(u,v)$. Then $\bar{\mathbf{x}}$ is smooth. Its differential $d\bar{\mathbf{x}}_{(u,v)}=c\,d\mathbf{x}_{(u,v)}$ is injective because $c>0$ and $d\mathbf{x}$ is injective (since $\mathbf{x}$ is regular). Also $\bar{\mathbf{x}}$ is a homeomorphism onto its image (since $F$ is a homeomorphism). Hence $\bar{\mathbf{x}}$ is a regular parametrization, so $\bar{S}$ is a regular surface.
+
+Let $\mathbf{x}_u,\mathbf{x}_v$ be the partials of $\mathbf{x}$. For $\bar{\mathbf{x}}=c\mathbf{x}$, we have
+$$
+\bar{\mathbf{x}}_u=c\mathbf{x}_u,\quad \bar{\mathbf{x}}_v=c\mathbf{x}_v.
+$$
+$$
+\bar{E}=\bar{\mathbf{x}}_u\cdot\bar{\mathbf{x}}_u=c^2(\mathbf{x}_u\cdot\mathbf{x}_u)=c^2E,\quad \bar{F}=c^2F,\quad \bar{G}=c^2G.
+$$
+Normal vector of $\bar{S}$: 
+$$
+\bar{\mathbf{N}}=\frac{\bar{\mathbf{x}}_u\times\bar{\mathbf{x}}_v}{|\bar{\mathbf{x}}_u\times\bar{\mathbf{x}}_v|}
+=\frac{c^2(\mathbf{x}_u\times\mathbf{x}_v)}{c^2|\mathbf{x}_u\times\mathbf{x}_v|}
+=\mathbf{N},
+$$
+since $c>0$.
+
+Second fundamental form coefficients:
+$$\bar{L}=\bar{\mathbf{x}}_{uu}\cdot\bar{\mathbf{N}}=c\mathbf{x}_{uu}\cdot\mathbf{N}=cL,\quad \bar{M}=cM,\quad \bar{N}=cN.
+$$
+
+Gaussian curvature:
+$$
+\bar{K}=\frac{\bar{L}\bar{N}-\bar{M}^2}{\bar{E}\bar{G}-\bar{F}^2}
+=\frac{(cL)(cN)-(cM)^2}{(c^2E)(c^2G)-(c^2F)^2}
+=\frac{c^2(LN-M^2)}{c^4(EG-F^2)}
+=\frac{1}{c^2}K.
+$$
+
+Mean curvature:
+$$
+\bar{H}=\frac{\bar{E}\bar{N}-2\bar{F}\bar{M}+\bar{G}\bar{L}}{2(\bar{E}\bar{G}-\bar{F}^2)}
+=\frac{(c^2E)(cN)-2(c^2F)(cM)+(c^2G)(cL)}{2c^4(EG-F^2)}
+=\frac{c^3(EN-2FM+GL)}{2c^4(EG-F^2)}
+=\frac{1}{c}H.
+$$
+
+In conclusion, $\bar{S}$ is regular, and the curvatures are related by
+$$
+\bar{K} = \frac{1}{c^2} K, \qquad \bar{H} = \frac{1}{c} H.
+$$
