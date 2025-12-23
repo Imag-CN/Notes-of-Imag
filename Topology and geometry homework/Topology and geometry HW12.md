@@ -107,7 +107,7 @@ $$
 ___
 
 >[!problem] Problem 5
->Let $C \subset S$ be a regular curve in $S$. Let $p \in C$ and $\alpha(s)$ be a parametrization of $C$ in $p$ by arc length so that $\alpha(0) = p$. Choose in $T_{p}(S)$ an orthonormal positive basis $\{t, h\}$, where $t = \alpha'(0)$. The geodesic torsion $\tau_{g}$ of $C \subset S$ at p is defined by
+>Let $C \subset S$ be a regular curve in $S$. Let $p \in C$ and $\alpha(s)$ be a parametrization of $C$ in $p$ by arc length so that $\alpha(0) = p$. Choose in $T_{p}(S)$ an orthonormal positive basis $\{t, h\}$, where $t = \alpha'(0)$. The geodesic torsion $\tau_{g}$ of $C \subset S$ at $p$ is defined by
 >
 >$$ \tau_{g} = \left\langle \frac{dN}{ds}(0), h \right\rangle. $$
 >
@@ -124,3 +124,17 @@ ___
 >**c.** The lines of curvature of S are characterized by having geodesic torsion identically zero.
 
 **Proof:**
+**a.** Let $\{e_1, e_2\}$ be the principal directions at $p$ with corresponding principal curvatures $k_1, k_2$, and let $N$ be the unit normal. Then $dN_p(e_1) = -k_1 e_1$, $dN_p(e_2) = -k_2 e_2$.
+The tangent vector $t$ can be written as $t = \cos\varphi \, e_1 + \sin\varphi \, e_2$. The vector $h$ is chosen such that $\{t, h\}$ is a positive orthonormal basis of $T_p(S)$. Thus $h = -\sin\varphi \, e_1 + \cos\varphi \, e_2$.
+Now compute $\tau_g = \langle \frac{dN}{ds}(0), h \rangle$. Since $\frac{dN}{ds} = dN_p(t)$, we have
+$$
+\frac{dN}{ds} = dN_p(\cos\varphi \, e_1 + \sin\varphi \, e_2) = -k_1\cos\varphi \, e_1 - k_2\sin\varphi \, e_2.
+$$
+Then
+$$
+\tau_g = \langle -k_1\cos\varphi \, e_1 - k_2\sin\varphi \, e_2, \, -\sin\varphi \, e_1 + \cos\varphi \, e_2 \rangle = k_1\cos\varphi\sin\varphi - k_2\sin\varphi\cos\varphi = (k_1 - k_2)\cos\varphi\sin\varphi.
+$$
+
+
+**(c).**
+A curve is a line of curvature if and only if its tangent direction is everywhere a principal direction. From part (a), $\tau_g = (k_1 - k_2) \cos\varphi \sin\varphi$. For a line of curvature, the tangent direction is always along a principal direction, so $\varphi = 0$ or $\pi/2$ modulo $\pi$. Then $\cos\varphi \sin\varphi = 0$, so $\tau_g = 0$ identically. Conversely, if $\tau_g = 0$ identically, then $(k_1 - k_2) \cos\varphi \sin\varphi = 0$. At non-umbilic points ($k_1 \neq k_2$), this implies $\cos\varphi \sin\varphi = 0$, so $\varphi = 0$ or $\pi/2$ modulo $\pi$, meaning the tangent is always along a principal direction, hence a line of curvature. At umbilic points, all directions are principal, so the curve is trivially a line of curvature. Thus, lines of curvature are exactly curves with $\tau_g \equiv 0$. 
