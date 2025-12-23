@@ -72,3 +72,36 @@ $$
 Since $\mathbf{T}\cdot\mathbf{n}_2 = 0$ and $\mathbf{n}_1\cdot\mathbf{T}=0$, we get $0 = \beta(\mathbf{n}_1\cdot\mathbf{N})$. Since $\mathbf{n}_1$ and $\mathbf{n}_2$ are at constant angle $\theta$, and $\mathbf{N}$ is in the tangent plane of $S_2$, $\mathbf{n}_1$ generally has a component along $\mathbf{N}$ (unless $\theta=0$ or $\pi$, trivial cases). Thus $\beta = 0$. Therefore $\frac{d}{ds}\mathbf{n}_2 = -\lambda_2 \mathbf{T}$, meaning $C$ is a line of curvature of $S_2$.
 ___
 
+>[!problem] Problem 4
+>Let $\lambda_{1}, \ldots, \lambda_{m}$ be the normal curvatures at $p \in S$ along directions making angles $0$, $2\pi / m$, $\ldots$, $(m-1)2\pi / m$ with a principal direction. Prove that
+>
+>$$ \lambda_{1} + \cdots + \lambda_{m} = m H, $$
+>
+>where $H$ is the mean curvature at $p$.
+
+**Proof：**
+Let $k_1$ and $k_2$ be the principal curvatures at $p$, and let $\varphi$ be the angle a given direction makes with the first principal direction. By Euler's formula, the normal curvature in the direction $\varphi$ is:
+$$
+\lambda(\varphi) = k_1 \cos^2\varphi + k_2 \sin^2\varphi.
+$$
+The given directions correspond to $\varphi_j = (j-1)\frac{2\pi}{m}$ for $j=1,\dots,m$. Therefore,
+$$
+\lambda_j = \lambda(\varphi_j) = k_1 \cos^2\varphi_j + k_2 \sin^2\varphi_j.
+$$
+Summing over $j$:
+$$
+\sum_{j=1}^m \lambda_j = k_1 \sum_{j=1}^m \cos^2\varphi_j + k_2 \sum_{j=1}^m \sin^2\varphi_j.
+$$
+We need to evaluate the sums $\sum_{j=1}^m \cos^2\varphi_j$ and $\sum_{j=1}^m \sin^2\varphi_j$. Since $\varphi_j$ are equally spaced angles on the circle, we have the known identities (for $m \ge 1$):
+$$
+\sum_{j=1}^m \cos^2\varphi_j = \sum_{j=1}^m \frac{1+\cos(2\varphi_j)}{2} = \frac{m}{2} + \frac12 \sum_{j=1}^m \cos\left(2\cdot (j-1)\frac{2\pi}{m}\right) = \frac{m}{2} + \frac12 \sum_{j=0}^{m-1} \cos\left(j\frac{4\pi}{m}\right).
+$$
+The sum $\sum_{j=0}^{m-1} \cos\left(j\frac{4\pi}{m}\right)$ is the real part of the geometric series $\sum_{j=0}^{m-1} e^{i j\frac{4\pi}{m}}$. For $m>2$, $\frac{4\pi}{m}$ is not an integer multiple of $2\pi$ unless $m=1,2$. If $m=1$ or $m=2$, direct computation shows the result holds. For $m>2$, the geometric series sums to $\frac{1-e^{i4\pi}}{1-e^{i4\pi/m}}=0$ because $e^{i4\pi}=1$. Thus, the sum is 0. Similarly,
+$$
+\sum_{j=1}^m \sin^2\varphi_j = \sum_{j=1}^m \frac{1-\cos(2\varphi_j)}{2} = \frac{m}{2} - \frac12 \sum_{j=1}^m \cos(2\varphi_j) = \frac{m}{2}.
+$$
+Therefore,
+$$
+\sum_{j=1}^m \lambda_j = k_1 \cdot \frac{m}{2} + k_2 \cdot \frac{m}{2} = \frac{m}{2}(k_1+k_2) = m H,
+$$
+since the mean curvature $H = \frac{k_1+k_2}{2}$. This completes the proof.
