@@ -121,7 +121,7 @@ ___
 >\frac{d\theta}{ds} = \tau - \tau_{g}.
 >$$
 >
->**c.** The lines of curvature of S are characterized by having geodesic torsion identically zero.
+>**c.** The lines of curvature of $S$ are characterized by having geodesic torsion identically zero.
 
 **Proof:**
 **a.** Let $\{e_1, e_2\}$ be the principal directions at $p$ with corresponding principal curvatures $k_1, k_2$, and let $N$ be the unit normal. Then $dN_p(e_1) = -k_1 e_1$, $dN_p(e_2) = -k_2 e_2$.
@@ -135,7 +135,15 @@ $$
 \tau_g = \langle -k_1\cos\varphi \, e_1 - k_2\sin\varphi \, e_2, \, -\sin\varphi \, e_1 + \cos\varphi \, e_2 \rangle = (k_1 - k_2)\cos\varphi\sin\varphi.
 $$
 
-**b.** 
+**b.** Let $B=t\times n$, then by Frenet frame, $\dfrac{d}{ds} n=-kt-\tau B$, where $k$ is the curvature of $C$. Since $N,h,n,B$ are all orthogonal to $t$, they all lie in $\mathrm{span}\{ N,h \}$. Since $n \bot B,h\bot N,\cos\theta=\left< N,n \right>$ and $n\times B=h\times N=t$ (which indicates the orientation), we can observe the graph to yield 
+$$
+n=\cos \theta \cdot N+\sin\theta \cdot h,B=\sin\theta \cdot N-\cos\theta \cdot h.\tag{\dagger}
+$$
 
-**(c).**
+Differentiating $\cos \theta = \langle N, n \rangle$ by $s$ yields:
+$$
+-\sin\theta \cdot\dfrac{d}{ds}\theta=\left< \dfrac{dN}{ds} ,n \right> +\left< N, -kt-\tau B\right> = \left< \dfrac{dN}{ds} ,n \right>-\tau \left< N,B \right> 
+$$
+Substituting
+**c.**
 A curve is a line of curvature if and only if its tangent direction is everywhere a principal direction. From part (a), $\tau_g = (k_1 - k_2) \cos\varphi \sin\varphi$. For a line of curvature, the tangent direction is always along a principal direction, so $\varphi = 0$ or $\pi/2$ modulo $\pi$. Then $\cos\varphi \sin\varphi = 0$, so $\tau_g = 0$ identically. Conversely, if $\tau_g = 0$ identically, then $(k_1 - k_2) \cos\varphi \sin\varphi = 0$. At non-umbilic points ($k_1 \neq k_2$), this implies $\cos\varphi \sin\varphi = 0$, so $\varphi = 0$ or $\pi/2$ modulo $\pi$, meaning the tangent is always along a principal direction, hence a line of curvature. At umbilic points, all directions are principal, so the curve is trivially a line of curvature. Thus, lines of curvature are exactly curves with $\tau_g \equiv 0$. 
