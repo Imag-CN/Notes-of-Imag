@@ -3,7 +3,8 @@
     "custom": [
       "lemma",
       "remark",
-      "definition"
+      "definition",
+      "awesome"
     ],
     "settings": {
       "lemma": [
@@ -26,6 +27,14 @@
         {
           "changes": {
             "icon": "lucide-book-text"
+          }
+        }
+      ],
+      "awesome": [
+        {
+          "changes": {
+            "icon": "lucide-laugh",
+            "color": "227, 107, 167"
           }
         }
       ]
