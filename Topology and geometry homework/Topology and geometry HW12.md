@@ -79,7 +79,7 @@ ___
 >
 >where $H$ is the mean curvature at $p$.
 
-**Proof：**
+**Proof:**
 Let $k_1$ and $k_2$ be the principal curvatures at $p$, and let $\varphi$ be the angle a given direction makes with the first principal direction. By Euler's formula, the normal curvature in the direction $\varphi$ is:
 $$
 \lambda(\varphi) = k_1 \cos^2\varphi + k_2 \sin^2\varphi.
@@ -92,16 +92,35 @@ Summing over $j$:
 $$
 \sum_{j=1}^m \lambda_j = k_1 \sum_{j=1}^m \cos^2\varphi_j + k_2 \sum_{j=1}^m \sin^2\varphi_j.
 $$
-We need to evaluate the sums $\sum_{j=1}^m \cos^2\varphi_j$ and $\sum_{j=1}^m \sin^2\varphi_j$. Since $\varphi_j$ are equally spaced angles on the circle, we have the known identities (for $m \ge 1$):
+Since $\varphi_j$ are equally spaced angles on the circle, we known for $m \ge 1$:
 $$
-\sum_{j=1}^m \cos^2\varphi_j = \sum_{j=1}^m \frac{1+\cos(2\varphi_j)}{2} = \frac{m}{2} + \frac12 \sum_{j=1}^m \cos\left(2\cdot (j-1)\frac{2\pi}{m}\right) = \frac{m}{2} + \frac12 \sum_{j=0}^{m-1} \cos\left(j\frac{4\pi}{m}\right).
+\sum_{j=1}^m \cos^2\varphi_j = \sum_{j=1}^m \frac{1+\cos(2\varphi_j)}{2} = \frac{m}{2} + \frac12 \sum_{j=1}^m \cos(2\varphi_j)= \dfrac{m}{2}
 $$
-The sum $\sum_{j=0}^{m-1} \cos\left(j\frac{4\pi}{m}\right)$ is the real part of the geometric series $\sum_{j=0}^{m-1} e^{i j\frac{4\pi}{m}}$. For $m>2$, $\frac{4\pi}{m}$ is not an integer multiple of $2\pi$ unless $m=1,2$. If $m=1$ or $m=2$, direct computation shows the result holds. For $m>2$, the geometric series sums to $\frac{1-e^{i4\pi}}{1-e^{i4\pi/m}}=0$ because $e^{i4\pi}=1$. Thus, the sum is 0. Similarly,
 $$
 \sum_{j=1}^m \sin^2\varphi_j = \sum_{j=1}^m \frac{1-\cos(2\varphi_j)}{2} = \frac{m}{2} - \frac12 \sum_{j=1}^m \cos(2\varphi_j) = \frac{m}{2}.
 $$
+
 Therefore,
 $$
-\sum_{j=1}^m \lambda_j = k_1 \cdot \frac{m}{2} + k_2 \cdot \frac{m}{2} = \frac{m}{2}(k_1+k_2) = m H,
+\sum_{j=1}^m \lambda_j = k_1 \cdot \frac{m}{2} + k_2 \cdot \frac{m}{2}  = m H.
 $$
-since the mean curvature $H = \frac{k_1+k_2}{2}$. This completes the proof.
+___
+
+>[!problem] Problem 5
+>Let $C \subset S$ be a regular curve in $S$. Let $p \in C$ and $\alpha(s)$ be a parametrization of $C$ in $p$ by arc length so that $\alpha(0) = p$. Choose in $T_{p}(S)$ an orthonormal positive basis $\{t, h\}$, where $t = \alpha'(0)$. The geodesic torsion $\tau_{g}$ of $C \subset S$ at p is defined by
+>
+>$$ \tau_{g} = \left\langle \frac{dN}{ds}(0), h \right\rangle. $$
+>
+>Prove that
+>
+>**a.** $\tau_{g} = (k_{1} - k_{2}) \cos \varphi \sin \varphi$, where $\varphi$ is the angle from $e_{1}$ to $t$.
+>
+>**b.** If $\tau$ is the torsion of $C$, $n$ is the (principal) normal vector of $C$ and $\cos \theta = \langle N, n \rangle$, then
+>
+>$$
+>\frac{d\theta}{ds} = \tau - \tau_{g}.
+>$$
+>
+>**c.** The lines of curvature of S are characterized by having geodesic torsion identically zero.
+
+**Proof:**
