@@ -132,9 +132,10 @@ $$
 $$
 Then
 $$
-\tau_g = \langle -k_1\cos\varphi \, e_1 - k_2\sin\varphi \, e_2, \, -\sin\varphi \, e_1 + \cos\varphi \, e_2 \rangle = k_1\cos\varphi\sin\varphi - k_2\sin\varphi\cos\varphi = (k_1 - k_2)\cos\varphi\sin\varphi.
+\tau_g = \langle -k_1\cos\varphi \, e_1 - k_2\sin\varphi \, e_2, \, -\sin\varphi \, e_1 + \cos\varphi \, e_2 \rangle = (k_1 - k_2)\cos\varphi\sin\varphi.
 $$
 
+**b.** 
 
 **(c).**
 A curve is a line of curvature if and only if its tangent direction is everywhere a principal direction. From part (a), $\tau_g = (k_1 - k_2) \cos\varphi \sin\varphi$. For a line of curvature, the tangent direction is always along a principal direction, so $\varphi = 0$ or $\pi/2$ modulo $\pi$. Then $\cos\varphi \sin\varphi = 0$, so $\tau_g = 0$ identically. Conversely, if $\tau_g = 0$ identically, then $(k_1 - k_2) \cos\varphi \sin\varphi = 0$. At non-umbilic points ($k_1 \neq k_2$), this implies $\cos\varphi \sin\varphi = 0$, so $\varphi = 0$ or $\pi/2$ modulo $\pi$, meaning the tangent is always along a principal direction, hence a line of curvature. At umbilic points, all directions are principal, so the curve is trivially a line of curvature. Thus, lines of curvature are exactly curves with $\tau_g \equiv 0$. 
