@@ -397,11 +397,12 @@ Sketch:
 ![[Pasted image 20251224214958.png]]
 
 
-**c.** $K=-1$: Solve $\varphi''-\varphi=0$, $\varphi(v)=A\cosh v+B\sinh v$.
-* Type 1: $\varphi(v)=C\cosh v$. Then $\psi'(v)=\sqrt{1-C^2\sinh^2 v}$. Domain: $1-C^2\sinh^2 v\ge0$ $\Rightarrow$ $|\sinh v|\le1/|C|$, bounded $v$.
-* Type 2: $\varphi(v)=C\sinh v$. Then $\psi'(v)=\sqrt{1-C^2\cosh^2 v}$. Domain: $1-C^2\cosh^2 v\ge0$ $\Rightarrow$ $\cosh v\le1/|C|$. Since $\cosh v\ge1$, need $1/|C|\ge1$ i.e., $|C|\le1$. Then $|v|\le\operatorname{arccosh}(1/|C|)$ if $|C|>0$, else degenerate.
-* Type 3: $\varphi(v)=e^v$. Then $\psi'(v)=\sqrt{1-e^{2v}}$. Domain: $1-e^{2v}\ge0$ $\Rightarrow$ $v\le0$.
-Profiles: Type 1: bell-shaped. Type 2: symmetric about origin? Actually, for $C=1$, $\varphi(v)=\sinh v$, $\psi'(v)=\sqrt{1-\cosh^2 v}=i\sinh v$, so not real except $v=0$; so typically $|C|<1$ gives a bounded curve. Type 3: tractrix profile (see part d).
+**c.** Solving $\varphi''-\varphi=0$ gives $\varphi(v)=Ae^{ v }+Be^{ -v }$.
+* Case 1: $AB>0$. Then we can substitute $v$ with $\pm v+C_{0}$ for some constant $C_{0}$ to make $\varphi(v)$ has the form $C\cosh(v)$. Domain: $1-C^2\sinh^2 v>0\Rightarrow v\in(-\mathrm{arcsinh} \dfrac{1}{C},\mathrm{arcsinh} \dfrac{1}{C})$.
+* Type 2: $AB<0$. Then we can substitute $v$ with $\pm v+C_{0}$ for some constant $C_{0}$ to make $\varphi(v)$ has the form $C\sinh(v)$. Domain: $\sinh(v)>0,1-C^2\cosh^2 v>0\Rightarrow v\in(0,\mathrm{arccosh} \dfrac{1}{C})$ if $C>1$, otherwise $v\in\left( 0,+\infty \right)$.
+* Type 3: $AB=0$. Then we can substitute $v$ with $\pm v+C_{0}$ for some constant $C_{0}$ to make $\varphi(v)$ has the form $e^{ v }$. Domain: $1-e^{ 2v } >0\Rightarrow v\in(0,+\infty)$.
+![[Pasted image 20251224221027.png]]
+
 
 **d.** Type 3: $\varphi(v)=e^v$, $\psi(v)=\int_0^v\sqrt{1-e^{2v}}dv$ for $v\le0$. Let $t=e^v$, then $\varphi=t$, $\psi=\int_1^t\sqrt{1-s^2}\frac{ds}{s}$ (after change), which is the tractrix: tangent segment from curve to $z$-axis has length 1. Rotating gives the pseudosphere (Exercise 6).
 
