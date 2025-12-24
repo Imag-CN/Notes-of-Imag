@@ -387,17 +387,13 @@ K = \frac{LN - M^2}{EG - F^2} = \dfrac{-\varphi (v)\psi'(v)(\varphi''(v)\psi'(v)
 $$
 The simplifying uses relation $\varphi'\varphi''+\psi'\psi''=0$. Therefore, $\varphi^{\prime\prime}+K\varphi=0$.
 
-**b.** Solving $\varphi''+\varphi=0$ gives $\varphi(v)=C \cos(v+C_{0})$, where $C$ and $C_{0}$ are constant. The different values of $C_{0}$ only cause the curve to shift vertically, so we can simply assume $C_{0}=0$.
+**b.** Solving $\varphi''+\varphi=0$ gives $\varphi(v)=C \cos(v+C_{0})$, where $C$ and $C_{0}$ are constant. The different values of $C_{0}$ only cause the curve to shift vertically, so we can simply assume $C_{0}=0$. (Actually, it's better to let $u$ be $C\sin\theta$ because $v$ is already the arc length parameter. We would better let $v\geq 0$ and $u(0)=0$.)
 
-Since we have already assumed that $\varphi(v)\geq 0$
+Since we have already assumed that $\varphi(v)\geq 0$, we can let $u\in[-\pi /2, \pi /2]$.
 
-Perpendicular intersection with $z=0$ implies generating curve meets $z=0$ orthogonally. Choose $v=0$ at intersection: $\psi(0)=0$, tangent vertical, so $\varphi'(0)=0$, $\psi'(0)=\pm1$. By symmetry, take $\varphi$ even, so $B=0$, $\varphi(v)=C\cos v$ with $C=\varphi(0)$. Then $\psi'(v)=\sqrt{1-(\varphi'(v))^2}=\sqrt{1-C^2\sin^2 v}$, so $\psi(v)=\int_0^v\sqrt{1-C^2\sin^2 v}dv$.
-Domain: Need $\sqrt{1-C^2\sin^2 v}$ real, and $\varphi(v)\ge0$ (radius nonnegative).
-* $C=1$: $\psi(v)=\int_0^v|\cos v|dv$, $v\in[-\frac{\pi}{2},\frac{\pi}{2}]$ gives a hemisphere; full sphere by symmetry.
-* $C<1$: $\sqrt{1-C^2\sin^2 v}>0$ for all $v$, but $\varphi(v)=C\cos v\ge0$ requires $\cos v\ge0$, so $v\in[-\frac{\pi}{2},\frac{\pi}{2}]$ (mod $2\pi$).
-* $C>1$: Need $|\sin v|\le1/C$, so $|v|\le\arcsin(1/C)$; also $\cos v\ge0$ for $\varphi\ge0$, so $v\in[-\arcsin(1/C),\arcsin(1/C)]$.
-Profiles: $C=1$: semicircle. $C<1$: flatter curve. $C>1$: curve with vertical tangents at $v=\pm\arcsin(1/C)$.
-
+Sketch:
+![[Pasted image 20251224211626.png]]
+![[Pasted image 20251224211650.png]]
 **c.** $K=-1$: Solve $\varphi''-\varphi=0$, $\varphi(v)=A\cosh v+B\sinh v$.
 * Type 1: $\varphi(v)=C\cosh v$. Then $\psi'(v)=\sqrt{1-C^2\sinh^2 v}$. Domain: $1-C^2\sinh^2 v\ge0$ $\Rightarrow$ $|\sinh v|\le1/|C|$, bounded $v$.
 * Type 2: $\varphi(v)=C\sinh v$. Then $\psi'(v)=\sqrt{1-C^2\cosh^2 v}$. Domain: $1-C^2\cosh^2 v\ge0$ $\Rightarrow$ $\cosh v\le1/|C|$. Since $\cosh v\ge1$, need $1/|C|\ge1$ i.e., $|C|\le1$. Then $|v|\le\operatorname{arccosh}(1/|C|)$ if $|C|>0$, else degenerate.
