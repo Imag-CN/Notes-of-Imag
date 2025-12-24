@@ -355,15 +355,34 @@ ___
 
 **Proof:**
 **a.** From $(\varphi')^2+(\psi')^2=1$, $\psi'=\pm\sqrt{1-(\varphi')^2}$, so $\psi=\int\sqrt{1-(\varphi')^2}dv$.
-Coefficients: $E=\varphi^2$, $F=0$, $G=1$, $\mathbf{N}=(-\psi'\cos u,-\psi'\sin u,\varphi')$.
-$L=\varphi\psi'$, $M=0$, $N=\varphi''\psi'-\varphi'\psi''$.
-$K=\frac{LN-M^2}{EG-F^2}=\frac{\varphi\psi'(\varphi''\psi'-\varphi'\psi'')}{\varphi^2}=\frac{\psi'(\varphi''\psi'-\varphi'\psi'')}{\varphi}$.
-From $(\varphi')^2+(\psi')^2=1$, differentiate: $\varphi'\varphi''+\psi'\psi''=0$ $\Rightarrow$ $\psi''=-\frac{\varphi'\varphi''}{\psi'}$.
-Substitute:$$
-K=\frac{\psi'[\varphi''\psi'-\varphi'(-\frac{\varphi'\varphi''}{\psi'})]}{\varphi}
-=\frac{\varphi''[(\psi')^2+(\varphi')^2]}{\varphi}=\frac{\varphi''}{\varphi}.
+WLOG we let $\varphi(v)\geq0$.
+Compute the first and second fundamental forms:
 $$
-So $\varphi''=K\varphi$, i.e., $\varphi''+K\varphi=0$.
+\mathbf{r}_u = (-\varphi(v)\sin u,\varphi(v)\cos u,0),\quad\mathbf{r}_v = (\varphi'(v)\cos u,\varphi'(v)\sin u,\psi'(v)),
+$$
+$$
+\mathbf{r}_{uu} = (-\varphi(v)\cos u,-\varphi(v)\sin u,0),\quad \mathbf{r}_{uv} = (-\varphi(v)'\sin u,\varphi(v)'\cos u,0),
+$$
+$$
+\mathbf{r}_{vv} = (\varphi''(v)\cos u,\varphi''(v)\sin u,\psi''(v)),
+$$
+$$
+\mathbf{r}_u \times \mathbf{r}_v = (\psi'(v)\varphi(v)\cos u,\psi'(v)\varphi(v)\sin u,-\varphi'(v)\varphi(v)),\quad |\mathbf{r}_u \times \mathbf{r}_v| = \varphi(v),
+$$
+$$
+\quad \mathbf{N} = \dfrac{\mathbf{r}_u \times \mathbf{r}_v}{|\mathbf{r}_u \times \mathbf{r}_v|} = (\psi'(v)\cos u,\psi'(v)\sin u,-\varphi'(v))
+$$
+$$
+E = \mathbf{r}_u \cdot \mathbf{r}_u = (\varphi(v))^2,\quad F = \mathbf{r}_u \cdot \mathbf{r}_v = 0,\quad G = \mathbf{r}_v \cdot \mathbf{r}_v = 1,
+$$
+$$
+L = \mathbf{N} \cdot \mathbf{r}_{uu} = -\varphi (v)\psi'(v),\quad M = \mathbf{N} \cdot \mathbf{r}_{uv} = 0,\quad N = \mathbf{N} \cdot \mathbf{r}_{vv} = \varphi''(v)\psi'(v)-\varphi'(v)\psi''(v).
+$$
+Coumpute $K$:
+$$
+K = \frac{LN - M^2}{EG - F^2} = -\varphi (v)\psi'(v)(\varphi''(v)\psi'(v)-\varphi'(v)\psi''(v))
+$$
+
 
 **b.** $K=1$: Solve $\varphi''+\varphi=0$, $\varphi(v)=A\cos v+B\sin v$.
 Perpendicular intersection with $z=0$ implies generating curve meets $z=0$ orthogonally. Choose $v=0$ at intersection: $\psi(0)=0$, tangent vertical, so $\varphi'(0)=0$, $\psi'(0)=\pm1$. By symmetry, take $\varphi$ even, so $B=0$, $\varphi(v)=C\cos v$ with $C=\varphi(0)$. Then $\psi'(v)=\sqrt{1-(\varphi'(v))^2}=\sqrt{1-C^2\sin^2 v}$, so $\psi(v)=\int_0^v\sqrt{1-C^2\sin^2 v}dv$.
