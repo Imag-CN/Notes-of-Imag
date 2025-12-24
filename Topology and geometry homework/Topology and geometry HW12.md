@@ -392,7 +392,9 @@ The simplifying uses relation $\varphi'\varphi''+\psi'\psi''=0$. Therefore, $\va
 Since we have already assumed that $\varphi(v)\geq 0$, we can let $v\in[-\pi /2, \pi /2]$. For $C=1$, we can let the the domain of $v$ be exactly $[-\pi /2, \pi /2]$, and this gives a sphere. For $C<1$, we may let the the domain of $v$ be $(-\pi /2, \pi /2)$ to ensure that the surface is regular. For $C>1$, we may let the the domain of $v$ be $\left( -\arcsin \dfrac{1}{C^2}, \arcsin \dfrac{1}{C^2} \right)$ to ensure that $1-C^2\sin\theta>0$. 
 
 Sketch:
-
+![[Pasted image 20251224214846.png]]
+![[Pasted image 20251224214857.png]]
+![[Pasted image 20251224214958.png]]
 
 
 **c.** $K=-1$: Solve $\varphi''-\varphi=0$, $\varphi(v)=A\cosh v+B\sinh v$.
