@@ -402,8 +402,9 @@ Sketch:
 * Type 2: $AB<0$. Then we can substitute $v$ with $\pm v+C_{0}$ for some constant $C_{0}$ to make $\varphi(v)$ has the form $C\sinh(v)$. Domain: $\sinh(v)>0,1-C^2\cosh^2 v>0\Rightarrow v\in(0,\mathrm{arccosh} \dfrac{1}{C})$ if $C>1$, otherwise $v\in\left( 0,+\infty \right)$.
 * Type 3: $AB=0$. Then we can substitute $v$ with $\pm v+C_{0}$ for some constant $C_{0}$ to make $\varphi(v)$ has the form $e^{ v }$. Domain: $1-e^{ 2v } >0\Rightarrow v\in(0,+\infty)$.
 ![[Pasted image 20251224221027.png]]
+![[Pasted image 20251224222024.png]]
 
-
+![[Pasted image 20251224221853.png]]
 **d.** Type 3: $\varphi(v)=e^v$, $\psi(v)=\int_0^v\sqrt{1-e^{2v}}dv$ for $v\le0$. Let $t=e^v$, then $\varphi=t$, $\psi=\int_1^t\sqrt{1-s^2}\frac{ds}{s}$ (after change), which is the tractrix: tangent segment from curve to $z$-axis has length 1. Rotating gives the pseudosphere (Exercise 6).
 
 **e.** $K=0$: $\varphi''=0$, so $\varphi(v)=Av+B$.
