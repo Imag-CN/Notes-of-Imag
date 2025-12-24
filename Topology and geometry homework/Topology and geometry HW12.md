@@ -405,7 +405,7 @@ Sketch:
 ![[Pasted image 20251224222024.png]]
 
 ![[Pasted image 20251224221853.png]]
-**d.** Type 3: $\varphi(v)=e^v$, $\psi(v)=\int_0^v\sqrt{1-e^{2v}}dv$ for $v\le0$. Let $t=e^v$, then $\varphi=t$, $\psi=\int_1^t\sqrt{1-s^2}\frac{ds}{s}$ (after change), which is the tractrix: tangent segment from curve to $z$-axis has length 1. Rotating gives the pseudosphere (Exercise 6).
+**d.** Type 3: $\varphi(v)=e^v$, $\psi(v)=\int_0^v\sqrt{1-e^{2v}}dv=\sqrt{ 1-e^{2v} }-\mathrm{arctanh}\sqrt{ 1-e^{2v} }$. Let $t=e^v$, then $\varphi=t$, $\psi=\sqrt{ 1-t^2 }-\mathrm{arctanh}\sqrt{ 1-t^{2} }$ , which is the equation of tractrix. Rotating gives the pseudosphere.
 
 **e.** $K=0$: $\varphi''=0$, so $\varphi(v)=Av+B$.
 Case 1: $A=0$, $\varphi$ constant. Then $\psi'=\pm1$, so $\psi$ linear. Surface: right circular cylinder (if $B\neq0$).
@@ -414,7 +414,6 @@ Case 2: $A\neq0$, $\psi'=\sqrt{1-A^2}$ constant.
 - If $|A|=1$, $\psi'=0$, $\psi$ constant, generating line perpendicular to axis: plane.
 Thus only these three.
 ___
-
 
 >[!problem] Problem 10
 >Let $F\colon\mathbb{R}^{3}\to\mathbb{R}^{3}$ be the map (a similarity) defined by $F(p)=cp$, $p\in\mathbb{R}^{3}$, $c$ a positive constant. Let $S\subset\mathbb{R}^{3}$ be a regular surface and set $F(S)=\bar{S}$. Show that $\bar{S}$ is a regular surface, and find formulas relating the Gaussian and mean curvatures, $K$ and $H$, of $S$ with the Gaussian and mean curvatures, $\bar{K}$ and $\bar{H}$, of $\bar{S}$.
