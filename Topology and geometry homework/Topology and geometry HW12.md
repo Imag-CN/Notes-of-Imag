@@ -331,7 +331,9 @@ ___
 >**a.** $\varphi$ satisfies $\varphi^{\prime\prime}+K\varphi=0$ and $\psi$ is given by $\psi=\int\sqrt{1-(\varphi^{\prime})^{2}}\,dv$; thus, $0<u<2\pi$, and the domain of $v$ is such that the last integral makes sense.
 >
 >**b.** All surfaces of revolution with constant curvature $K=1$ which intersect perpendicularly the plane $xOy$ are given by
->$$\varphi(v)=C\cos v,\qquad\psi(v)=\int_{0}^{v}\sqrt{1-C^{2}\sin^{2}v}\,dv,$$
+>$$
+>\varphi(v)=C\cos v,\qquad\psi(v)=\int_{0}^{v}\sqrt{1-C^{2}\sin^{2}v}\,dv,
+>$$
 >where $C$ is a constant $(C=\varphi(0))$.
 >Determine the domain of $v$ and draw a rough sketch of the profile of the surface in the $xz$ plane for the cases $C=1$, $C>1$, $C<1$.
 >Observe that $C=1$ gives a sphere.
@@ -355,7 +357,8 @@ ___
 
 **Proof:**
 **a.** From $(\varphi')^2+(\psi')^2=1$, $\psi'=\pm\sqrt{1-(\varphi')^2}$, so $\psi=\int\sqrt{1-(\varphi')^2}dv$.
-WLOG we let $\varphi(v)\geq0$.
+Differentiating $(\varphi')^2+(\psi')^2=1$ gives $\varphi'\varphi''+\psi'\psi''=0$
+WLOG we assume $\varphi(v)\geq0$.
 Compute the first and second fundamental forms:
 $$
 \mathbf{r}_u = (-\varphi(v)\sin u,\varphi(v)\cos u,0),\quad\mathbf{r}_v = (\varphi'(v)\cos u,\varphi'(v)\sin u,\psi'(v)),
@@ -380,11 +383,14 @@ L = \mathbf{N} \cdot \mathbf{r}_{uu} = -\varphi (v)\psi'(v),\quad M = \mathbf{N}
 $$
 Coumpute $K$:
 $$
-K = \frac{LN - M^2}{EG - F^2} = -\varphi (v)\psi'(v)(\varphi''(v)\psi'(v)-\varphi'(v)\psi''(v))
+K = \frac{LN - M^2}{EG - F^2} = \dfrac{-\varphi (v)\psi'(v)(\varphi''(v)\psi'(v)-\varphi'(v)\psi''(v))}{(\varphi(v))^2}=-\dfrac{\varphi''(v)}{\varphi (v)}
 $$
+The simplifying uses relation $\varphi'\varphi''+\psi'\psi''=0$. Therefore, $\varphi^{\prime\prime}+K\varphi=0$.
 
+**b.** Solving $\varphi''+\varphi=0$ gives $\varphi(v)=C \cos(v+C_{0})$, where $C$ and $C_{0}$ are constant. The different values of $C_{0}$ only cause the curve to shift vertically, so we can simply assume $C_{0}=0$.
 
-**b.** $K=1$: Solve $\varphi''+\varphi=0$, $\varphi(v)=A\cos v+B\sin v$.
+Since we have already assumed that $\varphi(v)\geq 0$
+
 Perpendicular intersection with $z=0$ implies generating curve meets $z=0$ orthogonally. Choose $v=0$ at intersection: $\psi(0)=0$, tangent vertical, so $\varphi'(0)=0$, $\psi'(0)=\pm1$. By symmetry, take $\varphi$ even, so $B=0$, $\varphi(v)=C\cos v$ with $C=\varphi(0)$. Then $\psi'(v)=\sqrt{1-(\varphi'(v))^2}=\sqrt{1-C^2\sin^2 v}$, so $\psi(v)=\int_0^v\sqrt{1-C^2\sin^2 v}dv$.
 Domain: Need $\sqrt{1-C^2\sin^2 v}$ real, and $\varphi(v)\ge0$ (radius nonnegative).
 * $C=1$: $\psi(v)=\int_0^v|\cos v|dv$, $v\in[-\frac{\pi}{2},\frac{\pi}{2}]$ gives a hemisphere; full sphere by symmetry.
