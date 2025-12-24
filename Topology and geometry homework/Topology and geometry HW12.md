@@ -339,11 +339,11 @@ ___
 >**c.** All surfaces of revolution with constant curvature $K=-1$ may be given by one of the following types:
 >$$
 >\begin{align*}
->1.\,\varphi(v)&=C\cosh v,\\
+>\mathrm{1.}\,\varphi(v)&=C\cosh v,\\
 >\psi(v)&=\int_{0}^{v}\sqrt{1-C^{2}\sinh^{2}v}\,dv.\\
->2.\,\varphi(v)&=C\sinh v,\\
+>\mathrm{2.}\,\varphi(v)&=C\sinh v,\\
 >\psi(v)&=\int_{0}^{v}\sqrt{1-C^{2}\cosh^{2}v}\,dv.\\
->3.\,\varphi(v)&=e^{v},\\
+>\mathrm{3.}\,\varphi(v)&=e^{v},\\
 >\psi(v)&=\int_{0}^{v}\sqrt{1-e^{2v}}\,dv.
 >\end{align*}
 >$$
@@ -354,7 +354,39 @@ ___
 >**e.** The only surfaces of revolution with $K\equiv 0$ are the right circular cylinder, the right circular cone, and the plane.
 
 **Proof:**
+**a.** From $(\varphi')^2+(\psi')^2=1$, $\psi'=\pm\sqrt{1-(\varphi')^2}$, so $\psi=\int\sqrt{1-(\varphi')^2}dv$.
+Coefficients: $E=\varphi^2$, $F=0$, $G=1$, $\mathbf{N}=(-\psi'\cos u,-\psi'\sin u,\varphi')$.
+$L=\varphi\psi'$, $M=0$, $N=\varphi''\psi'-\varphi'\psi''$.
+$K=\frac{LN-M^2}{EG-F^2}=\frac{\varphi\psi'(\varphi''\psi'-\varphi'\psi'')}{\varphi^2}=\frac{\psi'(\varphi''\psi'-\varphi'\psi'')}{\varphi}$.
+From $(\varphi')^2+(\psi')^2=1$, differentiate: $\varphi'\varphi''+\psi'\psi''=0$ $\Rightarrow$ $\psi''=-\frac{\varphi'\varphi''}{\psi'}$.
+Substitute:$$
+K=\frac{\psi'[\varphi''\psi'-\varphi'(-\frac{\varphi'\varphi''}{\psi'})]}{\varphi}
+=\frac{\varphi''[(\psi')^2+(\varphi')^2]}{\varphi}=\frac{\varphi''}{\varphi}.
+$$
+So $\varphi''=K\varphi$, i.e., $\varphi''+K\varphi=0$.
 
+**b.** $K=1$: Solve $\varphi''+\varphi=0$, $\varphi(v)=A\cos v+B\sin v$.
+Perpendicular intersection with $z=0$ implies generating curve meets $z=0$ orthogonally. Choose $v=0$ at intersection: $\psi(0)=0$, tangent vertical, so $\varphi'(0)=0$, $\psi'(0)=\pm1$. By symmetry, take $\varphi$ even, so $B=0$, $\varphi(v)=C\cos v$ with $C=\varphi(0)$. Then $\psi'(v)=\sqrt{1-(\varphi'(v))^2}=\sqrt{1-C^2\sin^2 v}$, so $\psi(v)=\int_0^v\sqrt{1-C^2\sin^2 v}dv$.
+Domain: Need $\sqrt{1-C^2\sin^2 v}$ real, and $\varphi(v)\ge0$ (radius nonnegative).
+* $C=1$: $\psi(v)=\int_0^v|\cos v|dv$, $v\in[-\frac{\pi}{2},\frac{\pi}{2}]$ gives a hemisphere; full sphere by symmetry.
+* $C<1$: $\sqrt{1-C^2\sin^2 v}>0$ for all $v$, but $\varphi(v)=C\cos v\ge0$ requires $\cos v\ge0$, so $v\in[-\frac{\pi}{2},\frac{\pi}{2}]$ (mod $2\pi$).
+* $C>1$: Need $|\sin v|\le1/C$, so $|v|\le\arcsin(1/C)$; also $\cos v\ge0$ for $\varphi\ge0$, so $v\in[-\arcsin(1/C),\arcsin(1/C)]$.
+Profiles: $C=1$: semicircle. $C<1$: flatter curve. $C>1$: curve with vertical tangents at $v=\pm\arcsin(1/C)$.
+
+**c.** $K=-1$: Solve $\varphi''-\varphi=0$, $\varphi(v)=A\cosh v+B\sinh v$.
+* Type 1: $\varphi(v)=C\cosh v$. Then $\psi'(v)=\sqrt{1-C^2\sinh^2 v}$. Domain: $1-C^2\sinh^2 v\ge0$ $\Rightarrow$ $|\sinh v|\le1/|C|$, bounded $v$.
+* Type 2: $\varphi(v)=C\sinh v$. Then $\psi'(v)=\sqrt{1-C^2\cosh^2 v}$. Domain: $1-C^2\cosh^2 v\ge0$ $\Rightarrow$ $\cosh v\le1/|C|$. Since $\cosh v\ge1$, need $1/|C|\ge1$ i.e., $|C|\le1$. Then $|v|\le\operatorname{arccosh}(1/|C|)$ if $|C|>0$, else degenerate.
+* Type 3: $\varphi(v)=e^v$. Then $\psi'(v)=\sqrt{1-e^{2v}}$. Domain: $1-e^{2v}\ge0$ $\Rightarrow$ $v\le0$.
+Profiles: Type 1: bell-shaped. Type 2: symmetric about origin? Actually, for $C=1$, $\varphi(v)=\sinh v$, $\psi'(v)=\sqrt{1-\cosh^2 v}=i\sinh v$, so not real except $v=0$; so typically $|C|<1$ gives a bounded curve. Type 3: tractrix profile (see part d).
+
+**d.** Type 3: $\varphi(v)=e^v$, $\psi(v)=\int_0^v\sqrt{1-e^{2v}}dv$ for $v\le0$. Let $t=e^v$, then $\varphi=t$, $\psi=\int_1^t\sqrt{1-s^2}\frac{ds}{s}$ (after change), which is the tractrix: tangent segment from curve to $z$-axis has length 1. Rotating gives the pseudosphere (Exercise 6).
+
+**e.** $K=0$: $\varphi''=0$, so $\varphi(v)=Av+B$.
+Case 1: $A=0$, $\varphi$ constant. Then $\psi'=\pm1$, so $\psi$ linear. Surface: right circular cylinder (if $B\neq0$).
+Case 2: $A\neq0$, $\psi'=\sqrt{1-A^2}$ constant.
+- If $|A|<1$, $\psi$ linear, generating curve is straight line not parallel to axis: right circular cone.
+- If $|A|=1$, $\psi'=0$, $\psi$ constant, generating line perpendicular to axis: plane.
+Thus only these three.
 ___
 
 
