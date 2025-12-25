@@ -59,3 +59,36 @@ $$
 $$
 ___
 
+>[!problem] [GAM] VII.2.9
+>Show that
+>$$
+>\int_{-\infty}^{\infty} \frac{\sin^{2} x}{x^{2}+1} \, dx = \frac{\pi}{2} \left[ 1 - \frac{1}{e^{2}} \right].
+>$$
+
+**Proof:**
+We have
+$$\int_{-\infty}^{\infty} \frac{\sin^2 x}{x^2+1} dx = \int_{-\infty}^{\infty} \frac{1 - \cos 2x}{2(x^2+1)} dx = \frac12 \int_{-\infty}^{\infty} \frac{dx}{x^2+1} - \frac12 \int_{-\infty}^{\infty} \frac{\cos 2x}{x^2+1} dx.$$
+
+First integral:
+$$\int_{-\infty}^{\infty} \frac{dx}{x^2+1} = \left.\arctan x \right|_{-\infty}^{\infty} = \pi.$$
+
+Second integral:
+Consider $J = \int_{-\infty}^{\infty} \frac{\cos 2x}{x^2+1} dx$.
+Write $\cos 2x = \operatorname{Re}(e^{2ix})$ and use the complex function
+$$f(z) = \frac{e^{2iz}}{z^2+1} = \frac{e^{2iz}}{(z-i)(z+i)}.$$
+
+Integrate $f$ over the real axis and the upper semicircle.
+The only pole in the upper half-plane is $z = i$ (simple pole).
+Residue at $z = i$:
+$$\operatorname{Res}(f; i) = \frac{e^{2i \cdot i}}{i+i} = \frac{e^{-2}}{2i}.$$
+
+By the residue theorem and Jordan's lemma,
+$$\int_{-\infty}^{\infty} f(x) dx = 2\pi i \cdot \frac{e^{-2}}{2i} = \pi e^{-2}.$$
+Taking the real part gives $J = \pi e^{-2}$.
+
+Therefore,
+$$
+\int_{-\infty}^{\infty} \frac{\sin^2 x}{x^2+1} dx = \frac12 \cdot \pi - \frac12 \cdot \pi e^{-2}  = \frac{\pi}{2} \left[ 1 - \frac{1}{e^2} \right].
+$$
+___
+
