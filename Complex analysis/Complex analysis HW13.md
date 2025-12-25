@@ -6,7 +6,7 @@ ___
 >\int_{-\infty}^{\infty} \frac{dx}{x^{4}+1} = \frac{\pi}{\sqrt{2}}.
 >$$
 
-**Solution:**
+**Prove:**
 Let $f(z) = \dfrac{1}{z^4 + 1}$.
 The poles of $f$ are the solutions of $z^4 = -1 = e^{i\pi(1+2k)}$ for $k \in \mathbb{Z}$.
 Thus, $z_k = e^{i\pi(1+2k)/4}$ for $k = 0, 1, 2, 3$.
@@ -27,6 +27,35 @@ $$
 Therefore,
 $$
 \int_{-\infty}^{\infty} \frac{dx}{x^4+1} = \frac{\pi}{\sqrt{2}}.
+$$
+___
+
+>[!problem] [GAM] VII.2.8
+>Show that
+>$$
+>\int_{-\infty}^{\infty} \frac{\cos x}{(1+x^2)^2} \, dx = \frac{\pi}{e}.
+>$$
+
+**Proof:**
+Consider the complex function
+$$f(z) = \frac{e^{iz}}{(1+z^2)^2} = \frac{e^{iz}}{(z-i)^2 (z+i)^2}.$$
+
+$f$ has double poles at $z = i$ and $z = -i$.
+We integrate over a contour consisting of the real axis from $-R$ to $R$ and the upper semicircle $C_R$ of radius $R$.
+For $z$ on $C_R$, $|e^{iz}| = e^{-\operatorname{Im} z} \le 1$, and $\dfrac{1}{(1+z^2)^2} \to 0$ as $|z| \to \infty$, so by Jordan's lemma the integral over $C_R$ vanishes as $R \to \infty$.
+Thus,
+$$
+\int_{-\infty}^{\infty} \frac{\cos x}{(1+x^2)^2} \, dx= \operatorname{Re}\left( 2\pi i \operatorname{Res}(f; i) \right),
+$$
+since only the pole at $z = i$ (in the upper half-plane) contributes.
+
+Compute the residue at the double pole $z = i$:
+$$
+\operatorname{Res}(f; i) = \left. \dfrac{d}{dz} (z-i)^2 g(z) \right|_{z=i}= \dfrac{1}{2ie}.
+$$
+Thus,
+$$
+\int_{-\infty}^{\infty} \frac{\cos x}{(1+x^2)^2} \, dx = \frac{\pi}{e}.
 $$
 ___
 
