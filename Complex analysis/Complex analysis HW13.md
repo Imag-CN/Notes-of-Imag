@@ -127,3 +127,131 @@ $$
 \int_{0}^{\pi} \frac{\sin^2 \theta}{a + \cos \theta} \, d\theta = \pi \left[ a - \sqrt{a^2 - 1} \right].
 $$
 ___
+
+>[!problem] [GAM] VII.4.3
+>By integrating around the keyhole contour, show that
+>$$
+>\int_{0}^{\infty}\frac{\log x}{x^{a}(x+1)}dx=\frac{\pi^{2}\cos (\pi a)}{\sin ^{2}(\pi a)},\quad 0<a<1.
+>$$
+
+**Proof:**
+Denote
+$$
+I = \int_{0}^{\infty} \frac{\log x}{x^a (x+1)} dx, \quad 0<a<1.
+$$
+
+Let $f(z) = \frac{(\log z)^2}{z^a (z+1)}$, where we take the branch of $\log z$ with $0 < \arg z < 2\pi$.
+Then $\log z = \ln|z| + i\arg z$, and $z^a = e^{a \log z} = e^{a(\ln|z| + i\arg z)}$.
+We integrate $f(z)$ around a keyhole contour consisting of:
+- an outer large circle $C_R$ of radius $R$,
+- an inner small circle $C_\epsilon$ of radius $\epsilon$,
+- and two line segments just above and below the positive real axis.
+
+On the segment just above the real axis, $\arg z = 0$, so $\log z = \ln x$, $z^a = x^a$.
+On the segment just below the real axis, $\arg z = 2\pi$, so $\log z = \ln x + 2\pi i$, and $z^a = e^{a(\ln x + 2\pi i)} = x^a e^{2\pi i a}$.
+
+Therefore, the contributions from the two line segments are:
+- Above: $\int_{\epsilon}^{R} \frac{(\ln x)^2}{x^a (x+1)} dx$.
+- Below: $\int_{R}^{\epsilon} \frac{(\ln x + 2\pi i)^2}{x^a e^{2\pi i a} (x+1)} (-dx) = e^{-2\pi i a} \int_{\epsilon}^{R} \frac{(\ln x + 2\pi i)^2}{x^a (x+1)} dx$.
+
+As $R \to \infty$ and $\epsilon \to 0$, the integrals over $C_R$ and $C_\epsilon$ vanish (since $0<a<1$ and the integrand decays sufficiently).
+Hence, by the residue theorem,
+$$
+\int_{0}^{\infty} \frac{(\ln x)^2}{x^a (x+1)} dx - e^{-2\pi i a} \int_{0}^{\infty} \frac{(\ln x + 2\pi i)^2}{x^a (x+1)} dx = 2\pi i \operatorname{Res}(f; -1).
+$$
+
+The pole at $z=-1$ is simple.
+Since $\arg(-1) = \pi$ on our branch, $\log(-1) = \ln 1 + i\pi = i\pi$, and $(-1)^a = e^{a(i\pi)} = e^{i\pi a}$.
+Thus,
+$$
+\operatorname{Res}(f; -1) = \left. \frac{(\log z)^2}{z^a} \right|_{z=-1} = \frac{(i\pi)^2}{e^{i\pi a}} = -\frac{\pi^2}{e^{i\pi a}}.
+$$
+
+Therefore,
+$$
+\int_{0}^{\infty} \frac{(\ln x)^2}{x^a (x+1)} dx - e^{-2\pi i a} \int_{0}^{\infty} \frac{(\ln x + 2\pi i)^2}{x^a (x+1)} dx = 2\pi i \left( -\frac{\pi^2}{e^{i\pi a}} \right) = -2\pi i \pi^2 e^{-i\pi a}.
+$$
+
+Let $J = \int_{0}^{\infty} \frac{\ln x}{x^a (x+1)} dx$ and $K = \int_{0}^{\infty} \frac{dx}{x^a (x+1)}$.
+Then the left-hand side becomes:
+$$
+\int \frac{(\ln x)^2}{x^a (x+1)} dx - e^{-2\pi i a} \int \frac{(\ln x)^2 + 4\pi i \ln x - 4\pi^2}{x^a (x+1)} dx.
+$$
+That is,
+$$
+(1 - e^{-2\pi i a}) \int \frac{(\ln x)^2}{x^a (x+1)} dx - 4\pi i e^{-2\pi i a} J + 4\pi^2 e^{-2\pi i a} K = -2\pi^3 i e^{-i\pi a}.
+$$
+
+However, it is easier to separate the terms involving $(\ln x)^2$, $\ln x$, and constant.
+Write $(\ln x + 2\pi i)^2 = (\ln x)^2 + 4\pi i \ln x - 4\pi^2$.
+Then the equation becomes:
+$$
+\int \frac{(\ln x)^2}{x^a (x+1)} dx - e^{-2\pi i a} \left( \int \frac{(\ln x)^2}{x^a (x+1)} dx + 4\pi i J - 4\pi^2 K \right) = -2\pi^3 i e^{-i\pi a}.
+$$
+So,
+$$
+(1 - e^{-2\pi i a}) \int \frac{(\ln x)^2}{x^a (x+1)} dx - 4\pi i e^{-2\pi i a} J + 4\pi^2 e^{-2\pi i a} K = -2\pi^3 i e^{-i\pi a}. \quad (1)
+$$
+
+We also know the standard integral:
+$$
+K = \int_{0}^{\infty} \frac{dx}{x^a (x+1)} = \frac{\pi}{\sin(\pi a)}, \quad 0<a<1.
+$$
+
+Now, we can obtain another equation by considering the integral of $g(z) = \frac{\log z}{z^a (z+1)}$ around the same keyhole contour.
+Let $I = J$ be our desired integral.
+Then, by a similar calculation:
+$$
+\int_{0}^{\infty} \frac{\ln x}{x^a (x+1)} dx - e^{-2\pi i a} \int_{0}^{\infty} \frac{\ln x + 2\pi i}{x^a (x+1)} dx = 2\pi i \operatorname{Res}(g; -1).
+$$
+Here $\operatorname{Res}(g; -1) = \frac{\log(-1)}{(-1)^a} = \frac{i\pi}{e^{i\pi a}}$.
+Thus,
+$$
+J - e^{-2\pi i a} (J + 2\pi i K) = 2\pi i \cdot \frac{i\pi}{e^{i\pi a}} = -\frac{2\pi^2}{e^{i\pi a}}.
+$$
+So,
+$$
+(1 - e^{-2\pi i a}) J - 2\pi i e^{-2\pi i a} K = -2\pi^2 e^{-i\pi a}. \quad (2)
+$$
+
+From (2), we can solve for $J$.
+First, note $1 - e^{-2\pi i a} = e^{-i\pi a} (e^{i\pi a} - e^{-i\pi a}) = e^{-i\pi a} \cdot 2i \sin(\pi a)$.
+Also $e^{-i\pi a} / e^{-i\pi a} = 1$, but careful.
+
+Equation (2):
+$$
+(1 - e^{-2\pi i a}) J = 2\pi i e^{-2\pi i a} K - 2\pi^2 e^{-i\pi a}.
+$$
+Divide by $1 - e^{-2\pi i a}$:
+$$
+J = \frac{2\pi i e^{-2\pi i a} K - 2\pi^2 e^{-i\pi a}}{1 - e^{-2\pi i a}}.
+$$
+
+Substitute $K = \frac{\pi}{\sin(\pi a)}$ and simplify:
+$1 - e^{-2\pi i a} = 2i e^{-i\pi a} \sin(\pi a)$.
+Then
+$$
+J = \frac{2\pi i e^{-2\pi i a} \cdot \frac{\pi}{\sin(\pi a)} - 2\pi^2 e^{-i\pi a}}{2i e^{-i\pi a} \sin(\pi a)}.
+$$
+Multiply numerator and denominator by $e^{i\pi a}$:
+$$
+J = \frac{2\pi i e^{-i\pi a} \cdot \frac{\pi}{\sin(\pi a)} - 2\pi^2}{2i \sin(\pi a)} = \frac{ \frac{2\pi^2 i e^{-i\pi a}}{\sin(\pi a)} - 2\pi^2 }{2i \sin(\pi a)}.
+$$
+Factor $2\pi^2$:
+$$
+J = \frac{2\pi^2 \left( \frac{i e^{-i\pi a}}{\sin(\pi a)} - 1 \right)}{2i \sin(\pi a)} = \frac{\pi^2 \left( \frac{i e^{-i\pi a}}{\sin(\pi a)} - 1 \right)}{i \sin(\pi a)}.
+$$
+Write $i e^{-i\pi a} = i (\cos(\pi a) - i \sin(\pi a)) = i \cos(\pi a) + \sin(\pi a)$.
+Thus,
+$$
+\frac{i e^{-i\pi a}}{\sin(\pi a)} - 1 = \frac{i \cos(\pi a) + \sin(\pi a)}{\sin(\pi a)} - 1 = \frac{i \cos(\pi a)}{\sin(\pi a)} + 1 - 1 = \frac{i \cos(\pi a)}{\sin(\pi a)}.
+$$
+Hence,
+$$
+J = \frac{\pi^2 \cdot \frac{i \cos(\pi a)}{\sin(\pi a)}}{i \sin(\pi a)} = \frac{\pi^2 \cos(\pi a)}{\sin^2(\pi a)}.
+$$
+
+Therefore,
+$$
+\int_{0}^{\infty} \frac{\log x}{x^a (x+1)} dx = \frac{\pi^2 \cos(\pi a)}{\sin^2(\pi a)}, \quad 0<a<1.
+$$

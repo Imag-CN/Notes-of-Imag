@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "关于度量, 全序的有界, 完备, 紧性的探讨.md",
+                "file": "Complex analysis/Complex analysis HW13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "关于度量, 全序的有界, 完备, 紧性的探讨 的出链列表"
+              "title": "Complex analysis HW13 的出链列表"
             }
           },
           {
@@ -171,11 +171,12 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
