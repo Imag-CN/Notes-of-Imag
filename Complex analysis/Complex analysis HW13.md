@@ -92,3 +92,38 @@ $$
 $$
 ___
 
+>[!problem] [GAM] VII.3.3
+>Show using residue theory that
+>$$
+>\int_{0}^{\pi} \frac{\sin^2 \theta}{a + \cos \theta} \, d\theta = \pi \left[ a - \sqrt{a^2 - 1} \right], \quad a > 1.
+>$$
+
+**Proof:**
+Let $I = \int_{0}^{\pi} \frac{\sin^2 \theta}{a + \cos \theta} d\theta$, $a>1$.
+
+Set $z = e^{i\theta}$, then $d\theta = \frac{dz}{iz}$,$\cos \theta = \frac{z + z^{-1}}{2} = \frac{z^2+1}{2z}$,$\sin \theta = \frac{z - z^{-1}}{2i} = \frac{z^2-1}{2iz}$.
+Thus
+$$I = \int_{0}^{\pi} \frac{\sin^2 \theta}{a+\cos\theta} d\theta =\dfrac{1}{2} \int_{-\pi}^{\pi} \frac{\sin^2 \theta}{a+\cos\theta} d\theta= \frac{i}{4} \int_{|z|=1} \frac{(z^2-1)^2}{z^2(z^2+2az+1)} \, dz.$$
+Let $g=\frac{(z^2-1)^2}{z^2(z^2+2az+1)}$. $z^2(z^2+2az+1)=0$ gives $z=0$ or $z = -a \pm \sqrt{a^2-1}$. $z=0$ and $z_{1}=-a+\sqrt{ a^2-1 }$ are both inside the contour, but $z_{2}=-a-\sqrt{ a^2-1 }$ is not.
+
+Compute residue:
+$$
+\operatorname{Res}(g; 0) =\left. \dfrac{d}{dz} z^2 g(z) \right|_{z=i}= -2a
+$$
+$$
+\operatorname{Res}(g; z_1) = \left. (z-z_{1})g(z) \right|_{z=z_{1}} = \frac{2 (a z_1 + 1)^2}{z_1^2 (z_1+a)}=2z_{1}+2a.
+$$
+Therefore, by the residue theorem,
+$$
+\int_{|z|=1} g(z) dz = 2\pi i \cdot (\operatorname{Res}(g; 0)+\operatorname{Res}(g; z_{1}))  = 4\pi i z_{1}.
+$$
+
+Then
+$$
+I = \frac{i}{4} \int_{|z|=1} g(z) dz = \frac{i}{4} \cdot 4\pi i z_{1} = -\pi z_{1}
+$$
+Substituting $z_{1}=-a+\sqrt{ a^2-1 }$ gives the conclusion:
+$$
+\int_{0}^{\pi} \frac{\sin^2 \theta}{a + \cos \theta} \, d\theta = \pi \left[ a - \sqrt{a^2 - 1} \right].
+$$
+___
