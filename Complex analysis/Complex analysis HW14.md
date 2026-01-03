@@ -103,3 +103,112 @@ ___
 >[!problem] [GAM] VIII.2.4
 >Fix a complex number $\lambda$ such that $|\lambda|<1$. For $n\geq 1$, show that $(z-1)^n e^{z}-\lambda$ has $n$ zeros satisfying $|z-1|<1$ and no other zeros in the right half-plane. Determine the multiplicity of the zeros.
 
+**Solution:**
+Let $f(z) = (z-1)^n e^z - \lambda$ with $|\lambda| < 1$, $n \geq 1$. Take $g(z) = (z-1)^n e^z$, $h(z) = -\lambda$。
+
+On $|z-1| = 1$:
+$|g(z)| = |z-1|^n |e^z| = e^{\operatorname{Re}(z)} \geq 1$ (minimum at $z=0$, $\operatorname{Re}(z)=0$).
+Since $|\lambda| < 1$, $|h(z)| = |\lambda| < 1 \leq |g(z)|$.
+
+By Rouché, $f$ and $g$ have the same number of zeros in $|z-1|<1$. $g(z)$ has a zero of order $n$ at $z=1$, so $f$ has $n$ zeros in $|z-1|<1$ (counting multiplicities).
+
+For $\operatorname{Re}(z) > 0$ and $|z-1| \geq 1$:
+$|(z-1)^n e^z| = |z-1|^n e^{\operatorname{Re}(z)} \geq 1 \cdot e^{\operatorname{Re}(z)} > 1 > |\lambda|$.
+So $|f(z)| \geq |(z-1)^n e^z| - |\lambda| > 0$, thus $f(z)$ has no zeros for $\operatorname{Re}(z) > 0$.
+
+Thus all zeros in $\operatorname{Re}(z) > 0$ satisfy $|z-1|<1$, and there are exactly $n$ of them.
+
+Derivative: $f'(z) = (z-1)^{n-1}e^z[n + (z-1)]$.
+If $f(z_0)=0$ with $\operatorname{Re}(z_0) > 0$, then $z_0 \neq 1$ (since $f(1) = -\lambda \neq 0$).  
+If $n + (z_0-1) = 0$, then $z_0 = 1-n$, but $\operatorname{Re}(1-n) \leq 0$.  
+Thus $f'(z_0) \neq 0$ for all zeros, so all $n$ zeros are simple.
+___
+
+>[!problem] [GAM] IX.1.1
+>Let $f(z)$ be analytic and satisfy $|f(z)|\leq M$ for $|z-z_{0}|<R$. Show that if $f(z)$ has a zero of order $m$ at $z_{0}$, then
+>
+>$$
+>|f(z)|\leq\frac{M}{R^{m}}|z-z_{0}|^{m},\quad|z-z_{0}|<R.
+>$$
+>
+>Show that equality holds at some point $z\neq z_{0}$ only when $f(z)$ is a constant multiple of $(z-z_{0})^{m}$.
+
+**Proof:**
+Since $f(z)$ has a zero of order $m$ at $z_0$, we can write
+$$
+f(z) = (z-z_0)^m g(z)
+$$
+where $g(z)$ is analytic in $|z-z_0| < R$ and $g(z_0) \neq 0$.
+
+For $0 < r < R$, on the circle $|z-z_0| = r$ we have
+$$
+|f(z)| = |z-z_0|^m |g(z)| = r^m |g(z)| \leq M
+\quad\Rightarrow\quad |g(z)| \leq \frac{M}{r^m}.
+$$
+By the maximum modulus principle, this inequality holds for all $|z-z_0| \leq r$. Letting $r \to R^-$, we obtain
+$$
+|g(z)| \leq \frac{M}{R^m}, \quad |z-z_0| < R.
+$$
+Therefore,
+$$
+|f(z)| = |z-z_0|^m |g(z)| \leq \frac{M}{R^m} |z-z_0|^m, \quad |z-z_0| < R.
+$$
+
+If equality holds at some $z_1 \neq z_0$, i.e.,
+$$
+|f(z_1)| = \frac{M}{R^m} |z_1 - z_0|^m,
+$$
+then
+$$
+|g(z_1)| = \frac{M}{R^m}.
+$$
+Since $|g(z)| \leq M/R^m$ in $|z-z_0| < R$, the maximum modulus principle implies that $|g(z)|$ is constant, i.e., $g(z) \equiv c$ for some constant $c$ with $|c| = M/R^m$. Hence
+$$
+f(z) = c (z-z_0)^m.
+$$
+Conversely, if $f(z) = c (z-z_0)^m$ with $|c| = M/R^m$, then equality holds for all $z$.
+___
+
+>[!problem] [GAM] IX.1.1
+>Let $f(z)$ be analytic on $|z|<1$ with $|f(z)|\leq 1$ and $|f(0)|=r>0$. Show that
+>
+>$$|f(z)|\geq\frac{r-|z|}{1-r|z|},\quad|z|<r.$$
+>
+>When does equality occur?
+
+**Proof:**
+Let $a = f(0)$, with $a = re^{i\theta}$.
+
+Consider the automorphism of the unit disk:
+$$
+\phi(w) = \frac{w - a}{1 - \overline{ a } w}.
+$$
+Then $\phi(a) = 0$, and $|\phi(w)| \leq 1$ for $|w| \leq 1$.
+
+Define $g(z) = \phi(f(z)) = \dfrac{f(z) - a}{1 - \overline{ a } f(z)}$, then:
+- $g$ is analytic on $|z| < 1$ (since $|f(z)| \leq 1$).
+- $|g(z)| \leq 1$ on $|z| < 1$ (as composition of disk self-maps).
+- $g(0) = \phi(f(0)) = \phi(a) = 0$.
+
+By Schwarz lemma, $|g(z)| \leq |z|$ for $|z| < 1$.
+
+Thus
+$$
+\left|\frac{f(z) - a}{1 - \overline{ a } f(z)}\right| \leq |z|.
+$$
+By the triangle inequality we have
+$$
+|f(z)-a|\leq |f(z)|-|a|=|f(z)|-r\quad\text{and}\quad|1-\overline{ a }f(z)|\geq 1+|\overline{ a }f(z)|=1+r|f(z)|
+$$
+Thus
+$$
+\dfrac{|f(z)|-r}{1+r|f(z)|}\leq|z|
+$$
+Rearranging:
+$$
+|f(z)| \geq \frac{r - |z|}{1 - r|z|}.
+$$
+
+**Equality condition:**
+Equality obvious holds for every $f$ at $z=0$.
+Further, equality at other points requires $|g(z_0)| = |z_0|$ for some $z_0$ with $|z_0| < r$. By Schwarz lemma, this happens iff $g(z) = e^{i\theta_{0}} z$ for some real $\theta_{0}$. Then $\phi(f(z))=e^{i\theta_{0}} z$, $f(z)=e^{i\theta_{0}} z\,\circ \phi^{-1}(z)$. Therefore $f$ is any automorphisim on unit disk.
