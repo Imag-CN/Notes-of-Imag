@@ -210,5 +210,6 @@ $$
 $$
 
 **Equality condition:**
-Equality obvious holds for every $f$ at $z=0$.
-Further, equality at other points requires $|g(z_0)| = |z_0|$ for some $z_0$ with $|z_0| < r$. By Schwarz lemma, this happens iff $g(z) = e^{i\theta_{0}} z$ for some real $\theta_{0}$. Then $\phi(f(z))=e^{i\theta_{0}} z$, $f(z)=e^{i\theta_{0}} z\,\circ \phi^{-1}(z)$. Therefore $f$ is any automorphisim on unit disk.
+Equality obviously holds for every $f$ at $z=0$.
+
+At other points, equality requires $|g(z_0)| = |z_0|$ for some $z_0$ with $|z_0| < r$. By Schwarz lemma, this happens iff $g(z) = e^{i\theta_{0}} z$ for some real $\theta_{0}$. Then $\phi(f(z))=e^{i\theta_{0}} z$, $f(z)=\phi^{-1}(e^{i\theta_{0}}z)$. Therefore $f$ is any automorphism on unit disk. The holding of equality $|f(z_0)| = \frac{r - |z_0|}{1 - r|z_0|}$ also needs the two triangle inequality to hole, thus $z_0$ needs to satisfies $\mathrm{Arg}(e^{i\theta_{0}}z_0) = \pi$ (so that $e^{i\theta_{0}}z_0 = -|z_0|$).
