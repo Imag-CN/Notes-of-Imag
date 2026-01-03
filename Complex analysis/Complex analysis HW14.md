@@ -21,3 +21,15 @@ Construct contour as the following graph:
 where $R$ is a sufficiently large positive number.
 
 Since $P(z)$ is positive on the real axis, $\Delta_{\gamma_{1}}\mathrm{Arg}\,P(z)=0$.
+
+Write $P(z)=z^4Q(z)$, where $Q(z)=1+ \dfrac{2z^2-z+1}{z^4}$. When $|z|=R$ is sufficient large, $|Q(z)-1|<1/2$, so $\Delta_{\gamma_{2}}\mathrm{Arg}\,Q(z)=0$. Thus 
+$$
+\Delta_{\gamma_{2}}\mathrm{Arg}\,P(z)=\Delta_{\gamma_{2}}\mathrm{Arg}\,z^4+\Delta_{\gamma_{2}}\mathrm{Arg}\,Q(z)=2\pi.
+$$
+On $\gamma_{3}$:
+$$
+\begin{align}
+\Delta_{\gamma_{3}}\mathrm{Arg}\,P(z)&=\mathrm{Arg}\,P(0)-\mathrm{Arg}\,P(iR) \\
+
+\end{align}
+$$
