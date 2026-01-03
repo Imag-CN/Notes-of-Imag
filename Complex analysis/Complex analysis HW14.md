@@ -169,17 +169,13 @@ $$
 Conversely, if $f(z) = c (z-z_0)^m$ with $|c| = M/R^m$, then equality holds for all $z$.
 ___
 
->[!problem] [GAM] IX.1.1
->Let $f(z)$ be analytic on $|z|<1$ with $|f(z)|\leq 1$ and $|f(0)|=r>0$. Show that
+>[!problem] [GAM] IX.1.5
+>Let $f(z)$ be analytic and satisfies $|f(z)|\leq 1$ for $|z|<1$. Show that if $|f(0)|\geq r$, then $|f(z)|\geq\dfrac{r-|z|}{1-r|z|}$ for $|z|<r$.
 >
->$$|f(z)|\geq\frac{r-|z|}{1-r|z|},\quad|z|<r.$$
->
->When does equality occur?
+>Determine for which functions $f(z)$ equality holds at some point $z_{0}$ with $|z_{0}|<r$.
 
 **Proof:**
-Let $a = f(0)$, with $a = re^{i\theta}$.
-
-Consider the automorphism of the unit disk:
+Let $a = f(0)$. Consider the automorphism of the unit disk:
 $$
 \phi(w) = \frac{w - a}{1 - \overline{ a } w}.
 $$
@@ -198,7 +194,7 @@ $$
 $$
 By the triangle inequality we have
 $$
-|f(z)-a|\leq |f(z)|-|a|=|f(z)|-r\quad\text{and}\quad|1-\overline{ a }f(z)|\geq 1+|\overline{ a }f(z)|=1+r|f(z)|
+|f(z)-a|\leq |f(z)|-|a|\leq|f(z)|-r\quad\text{and}\quad|1-\overline{ a }f(z)|\geq 1+|\overline{ a }f(z)|\geq 1+r|f(z)|
 $$
 Thus
 $$
@@ -212,4 +208,93 @@ $$
 **Equality condition:**
 Equality obviously holds for every $f$ at $z=0$.
 
-At other points, equality requires $|g(z_0)| = |z_0|$ for some $z_0$ with $|z_0| < r$. By Schwarz lemma, this happens iff $g(z) = e^{i\theta_{0}} z$ for some real $\theta_{0}$. Then $\phi(f(z))=e^{i\theta_{0}} z$, $f(z)=\phi^{-1}(e^{i\theta_{0}}z)$. Therefore $f$ is any automorphism on unit disk. The holding of equality $|f(z_0)| = \frac{r - |z_0|}{1 - r|z_0|}$ also needs the two triangle inequality to hole, thus $z_0$ needs to satisfies $\mathrm{Arg}(e^{i\theta_{0}}z_0) = \pi$ (so that $e^{i\theta_{0}}z_0 = -|z_0|$).
+At other points, equality requires $|g(z_0)| = |z_0|$ for some $z_0$ with $|z_0| < r$. By Schwarz lemma, this happens iff $g(z) = e^{i\theta} z$ for some real $\theta$. Then $\phi(f(z))=e^{i\theta} z$, $f(z)=\phi^{-1}(e^{i\theta}z)$. Therefore $f$ is any automorphism on unit disk (can be written as the form above).
+___
+
+>[!problem] [GAM] IX.1.6
+>Let $f(z)$ be a conformal map of the open unit disk onto a domain $D$. Show that the distance from $f(0)$ to the boundary of $D$ is estimated by $\operatorname{dist}(f(0),\partial D)\leq |f^{\prime}(0)|$.
+
+**Proof:**
+Let $a = f(0)$ and $d = \operatorname{dist}(a, \partial D) = \inf_{w \in \partial D} |a-w| > 0$.
+
+Consider the disk $B(a, d) = \{w \in \mathbb{C}: |w-a| < d\}$. By definition of $d$, we have $B(a, d) \subset D$.
+
+Define the function
+$$
+g(z) = \frac{f(z) - a}{d}.
+$$
+Since $f: \mathbb{D} \to D$ is conformal and $B(a,d) \subset D$, we have $|f(z)-a| < d$ for all $z \in \mathbb{D}$ (strict inequality because $f(z)$ lies in the interior of $D$). Thus $|g(z)| < 1$ for all $z \in \mathbb{D}$.
+
+Also $g(0) = (f(0)-a)/d = 0$.
+
+Therefore, $g: \mathbb{D} \to \mathbb{D}$ is analytic and $g(0)=0$. By Schwarz's lemma,
+$$
+|g'(0)| \leq 1.
+$$
+
+But
+$$
+g'(z) = \frac{f'(z)}{d} \quad \Rightarrow \quad g'(0) = \frac{f'(0)}{d}.
+$$
+Hence
+$$
+\frac{|f'(0)|}{d} \leq 1 \quad \Rightarrow \quad |f'(0)| \leq d = \operatorname{dist}(f(0), \partial D).
+$$
+
+Thus we have proved the inequality
+$$
+|f'(0)| \leq \operatorname{dist}(f(0), \partial D).
+$$
+___
+
+>[!problem]
+>Suppose $f(z)$ and $g(z)$ are analytic on $\overline{B(z_{0},r)}$ and neither function has a zero on $|z-z_{0}|=r$. Let $Z_{f}$ (respectively $Z_{g}$) denote the number of zeros of $f$ (respectively $g$) inside $|z-z_{0}|<r$, counting multiplicities. Show that if
+>
+>$$
+>|f(z)+g(z)|<|f(z)|+|g(z)|,\quad |z-z_{0}|=r,
+>$$
+>
+>then $Z_{f}=Z_{g}$.
+
+**Solution:**
+Let $h(z) = \frac{f(z)}{g(z)}$, which is analytic on a neighbourhood of the circle $|z-z_0| = r$ (since $g(z) \neq 0$ on the circle).  
+
+The condition  
+$$|f(z)+g(z)| < |f(z)|+|g(z)|, \quad |z-z_0| = r,$$  
+implies that on the circle, we have  
+$$f(z) \neq t\, g(z) \quad \text{for any real } t \geq 0.$$  
+Equivalently, $h(z) = f(z)/g(z)$ never takes a non‑negative real value on $|z-z_0| = r$.
+
+Thus $h(z)$ is positive on the circle, then  
+$$
+\Delta_{|z|=r}\mathrm{Arg}\,h(z)=\frac{1}{2\pi i} \oint_{|z-z_0|=r} \frac{h'(z)}{h(z)}\,dz = 0.
+$$
+
+And by the argument principle,
+$$
+\frac{1}{2\pi i} \oint \frac{h'(z)}{h(z)}\,dz = Z_f - Z_g,
+$$
+Hence $Z_f - Z_g = 0$, i.e. $Z_f = Z_g$.
+___
+
+>[!problem]
+>Let $D\subset\mathbb{C}$ be a domain and let $f(z)$ be an injective analytic function on $D$. Suppose the closed disk $B(a,\rho)$ is contained in $D$. For $w\in f(B(a,\rho))$, apply the residue theorem to prove the following formula for the inverse function $f^{-1}$ of $f$:
+>
+>$$
+>f^{-1}(w)=\frac{1}{2\pi i}\int_{|\xi-a|=\rho}\frac{\xi f^{\prime}(\xi)}{f(\xi)-w}\,d\xi.
+>$$
+
+**Proof:**
+Let $w \in f(B(a,\rho))$. Since $f$ is injective analytic, there is a unique $z_0 \in B(a,\rho)$ with $f(z_0)=w$, i.e., $z_0 = f^{-1}(w)$.
+
+Consider the meromorphic function $F(\xi)=\dfrac{\xi f'(\xi)}{f(\xi)-w}$ on $|\xi-a|\leq \rho$.  
+Its only singularity inside the disk is a simple pole at $\xi=z_0$ (because $f(\xi)-w$ has a simple zero at $\xi=z_0$, and $f'(z_0)\neq0$ since $f$ is injective).
+
+Residue at $\xi=z_0$:
+$$
+\operatorname{Res}(F,z_0)=\lim_{\xi\to z_0}(\xi-z_0)\frac{\xi f'(\xi)}{f(\xi)-w}=z_0\frac{f'(z_0)}{f'(z_0)}=z_0.
+$$
+By the residue theorem,
+$$
+\frac{1}{2\pi i}\int_{|\xi-a|=\rho}F(\xi)\,d\xi=z_0=f^{-1}(w).
+$$
