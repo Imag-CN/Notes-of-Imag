@@ -175,37 +175,61 @@ ___
 >Determine for which functions $f(z)$ equality holds at some point $z_{0}$ with $|z_{0}|<r$.
 
 **Proof:**
+We need to prove a lemma first:
+___
+
+>[!lemma]
+>For $z,w\in \mathbb{D}$, we have
+>$$
+>\dfrac{||z|-|w||}{1-|z||w|}\leq \left| \dfrac{z-w}{1-\overline{ w }z} \right| \leq \dfrac{|z|+|w|}{1+|z||w|},
+>$$
+>and the first equality holds if and only if $z$ and $w$ are in the same directions; the second equality holds if and only if $z$ and $w$ are in opposite directions.
+
+The statement is trivial when $z=0$ or $w=0$. When $z,w \neq 0$, we let $a=|z|,b=|w|$ and $\theta=\mathrm{Arg}\,z-w$.
+
+Then
+$$
+\begin{align}
+\left| \dfrac{z-w}{1-\overline{ w }z} \right|^2&= \dfrac{a^2+b^2-2ab\cos\theta}{1+a^2b^2-2ab\cos\theta} \\
+&=1- \dfrac{a^2b^2+1-a^2-b^2}{1+a^2b^2-2ab\cos\theta} \\
+&=1- \dfrac{(1-a^2)(1-b^2)}{1+a^2b^2-2ab\cos\theta}
+\end{align}
+$$
+Since $(1-a^2)(1-b^2)>0$ and $1+a^2b^2-2ab\cos\theta=1+|z||w|>0$, $\left| \dfrac{z-w}{1-\overline{ w }z} \right|^2$ is monotonically decreasing with respect to $\cos\theta$, so it attains its maximal value when $\cos\theta=-1$ and attains its minimal value when $\cos\theta=1$. This proves the lemma.
+
+>[!remark]
+>This is a result on Poincare disk.
+
+___
+Continue the proof:
 Let $a=f(0)$, $|a|\geq r$. Define $g(z)=\dfrac{f(z)-a}{1-\bar{a}f(z)}$. Then $g:\mathbb{D}\to\mathbb{D}$ analytic, $g(0)=0$.
 
 By Schwarz lemma: $|g(z)|\leq|z|$, i.e.
 $$
-\left|\frac{f(z)-a}{1-\bar{a}f(z)}\right|\leq|z|.
+|z|\geq\left|\frac{f(z)-a}{1-\bar{a}f(z)}\right|.
 $$
 By lemma we have 
 $$
-|w-a|\leq|z||1-\bar{a}w|.
-$$
-By triangle inequality,
-$$
-|a|-|w|\leq|w-a|.
+\left|\frac{f(z)-a}{1-\bar{a}f(z)}\right|\geq \dfrac{||f(z)|-|a||}{1-|f(z)||a|}\geq\dfrac{|a|-|f(z)|}{1-|f(z)||a|}.
 $$
 Then
 $$
-|a|-|w|\leq|z|(1+|a||w|)\Rightarrow|a|-|z|\leq|w|(1+|a||z|).
+|z|\geq\dfrac{|a|-|f(z)|}{1-|f(z)||a|}
 $$
-Thus
+Rearranging gives
 $$
-|f(z)|=|w|\geq\frac{|a|-|z|}{1+|a||z|}\geq\frac{r-|z|}{1-r|z|}.
+|f(z)|\geq\frac{|a|-|z|}{1+|a||z|}\geq\frac{r-|z|}{1-r|z|}.
 $$
 **Equality:**
-First we need $|f(0)|=|a|=r$. Then the equality holds for every $f$ at $z=0$.
+First we require $|f(0)|=|a|=r$. Then the equality holds for every $f$ at $z=0$.
 
-$|g(z_0)|=|z_0|$ for some $z_0\neq0$ iff $g(z)=e^{i\theta}z$, i.e.
+Then we consider when the equality holds at some point other than $z=0$. By Schwarz lemma we have: $|g(z_0)|=|z_0|$ for some $z_0\neq0$ iff $g(z)=e^{i\theta}z$, i.e.
 $$
 f(z)=\frac{a+e^{i\theta}z}{1+\bar{a}e^{i\theta}z},\quad |a|\geq r.
 $$
 In other words, $f$ is any automorphism on unit disk.
-Considering the triangle inequality, equality holds along radius opposite to $a$'s direction.
+
+By the lemma, equality also needs $f(z_{0})$ and $a$ are in the same direction; and the equality $||f(z_{0})|-|a||=|a|-|f(z_{0})|$ requires $|a|\geq |f(z_{0})|$.
 ___
 
 >[!problem] [GAM] IX.1.6
