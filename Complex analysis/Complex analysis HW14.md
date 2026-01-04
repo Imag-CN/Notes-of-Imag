@@ -181,7 +181,7 @@ By Schwarz lemma: $|g(z)|\leq|z|$, i.e.
 $$
 \left|\frac{f(z)-a}{1-\bar{a}f(z)}\right|\leq|z|.
 $$
-For fixed $z$, set $w=f(z)$. Then
+By lemma we have 
 $$
 |w-a|\leq|z||1-\bar{a}w|.
 $$
@@ -309,7 +309,6 @@ Thus $h(z)$ is positive on the circle, then
 $$
 \Delta_{|z|=r}\mathrm{Arg}\,h(z)= 0.
 $$
-
 And by the argument principle,
 $$
 \Delta_{|z|=r}\mathrm{Arg}\,h(z)= \Delta_{|z|=r}\mathrm{Arg}\,f(z)-\Delta_{|z|=r}\mathrm{Arg}\,g(z)= Z_f - Z_g,
