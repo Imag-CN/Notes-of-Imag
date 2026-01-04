@@ -175,40 +175,37 @@ ___
 >Determine for which functions $f(z)$ equality holds at some point $z_{0}$ with $|z_{0}|<r$.
 
 **Proof:**
-Let $a = f(0)$, then $|a|\geq r$. Consider the automorphism of the unit disk:
-$$
-\phi(w) = \frac{w - a}{1 - \overline{ a } w}.
-$$
-Then $\phi(a) = 0$, and $|\phi(w)| \leq 1$ for $|w| \leq 1$.
+Let $a=f(0)$, $|a|\geq r$. Define $g(z)=\dfrac{f(z)-a}{1-\bar{a}f(z)}$. Then $g:\mathbb{D}\to\mathbb{D}$ analytic, $g(0)=0$.
 
-Define $g(z) = \phi(f(z)) = \dfrac{f(z) - a}{1 - \overline{ a } f(z)}$, then:
-- $g$ is analytic on $|z| < 1$ (since $|f(z)| \leq 1$).
-- $|g(z)| \leq 1$ on $|z| < 1$ (as composition of disk self-maps).
-- $g(0) = \phi(f(0)) = \phi(a) = 0$.
-
-By Schwarz lemma, $|g(z)| \leq |z|$ for $|z| < 1$.
-
-Thus
+By Schwarz lemma: $|g(z)|\leq|z|$, i.e.
 $$
-\left|\frac{f(z) - a}{1 - \overline{ a } f(z)}\right| \leq |z|.
+\left|\frac{f(z)-a}{1-\bar{a}f(z)}\right|\leq|z|.
 $$
-By the triangle inequality we have
+For fixed $z$, set $w=f(z)$. Then
 $$
-|f(z)-a|\geq |a|-|f(z)|\geq r-|f(z)|\quad\text{and}\quad|1-\overline{ a }f(z)|\leq 1+|\overline{ a }f(z)|\leq 1+r|f(z)|
+|w-a|\leq|z||1-\bar{a}w|.
+$$
+By triangle inequality,
+$$
+|a|-|w|\leq|w-a|\leq|z||1-\bar{a}w|\leq|z|(1+|a||w|).
+$$
+Then
+$$
+|a|-|w|\leq|z|(1+|a||w|)\Rightarrow|a|-|z|\leq|w|(1+|a||z|).
 $$
 Thus
 $$
-\dfrac{|f(z)|-r}{1+r|f(z)|}\leq|z|
+|f(z)|=|w|\geq\frac{|a|-|z|}{1+|a||z|}\geq\frac{r-|z|}{1-r|z|}.
 $$
-Rearranging:
-$$
-|f(z)| \geq \frac{r - |z|}{1 - r|z|}.
-$$
+**Equality:**
+First we need $|f(0)|=|a|=r$. Then the equality holds for every $f$ at $z=0$.
 
-**Equality condition:**
-Equality obviously holds for every $f$ at $z=0$.
-
-At other points, equality requires $|g(z_0)| = |z_0|$ for some $z_0$ with $|z_0| < r$. By Schwarz lemma, this happens iff $g(z) = e^{i\theta} z$ for some real $\theta$. Then $\phi(f(z))=e^{i\theta} z$, $f(z)=\phi^{-1}(e^{i\theta}z)$. Therefore $f$ is any automorphism on unit disk (can be written as the form above).
+$|g(z_0)|=|z_0|$ for some $z_0\neq0$ iff $g(z)=e^{i\theta}z$, i.e.
+$$
+f(z)=\frac{a+e^{i\theta}z}{1+\bar{a}e^{i\theta}z},\quad |a|\geq r.
+$$
+In other words, $f$ is any automorphism on unit disk.
+Considering the triangle inequality, equality holds along radius opposite to $a$'s direction.
 ___
 
 >[!problem] [GAM] IX.1.6
