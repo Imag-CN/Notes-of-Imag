@@ -247,6 +247,14 @@ $$
 $$
 ___
 
+>[!problem] [SL] 4.5.12
+>(Carathéodory 不等式) 设 $f\in H(B(0,R))\cap C(\overline{B(0,R)})$, $M(r)=\max_{|z|=r}|f(z)|$, $A(r)=\max_{|z|=r}\operatorname{Re}f(z)$ $(0\leqslant r\leqslant R)$. 证明:
+>
+>$$M(r)\leqslant\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|,\quad\forall r\in[0,R).$$
+
+
+___
+
 >[!problem]
 >Suppose $f(z)$ and $g(z)$ are analytic on $\overline{B(z_{0},r)}$ and neither function has a zero on $|z-z_{0}|=r$. Let $Z_{f}$ (respectively $Z_{g}$) denote the number of zeros of $f$ (respectively $g$) inside $|z-z_{0}|<r$, counting multiplicities. Show that if
 >
@@ -267,12 +275,12 @@ Equivalently, $h(z) = f(z)/g(z)$ never takes a non‑negative real value on $|z-
 
 Thus $h(z)$ is positive on the circle, then  
 $$
-\Delta_{|z|=r}\mathrm{Arg}\,h(z)=\frac{1}{2\pi i} \oint_{|z-z_0|=r} \frac{h'(z)}{h(z)}\,dz = 0.
+\Delta_{|z|=r}\mathrm{Arg}\,h(z)= 0.
 $$
 
 And by the argument principle,
 $$
-\frac{1}{2\pi i} \oint \frac{h'(z)}{h(z)}\,dz = Z_f - Z_g,
+\Delta_{|z|=r}\mathrm{Arg}\,h(z)= \Delta_{|z|=r}\mathrm{Arg}\,f(z)-\Delta_{|z|=r}\mathrm{Arg}\,g(z)= Z_f - Z_g,
 $$
 Hence $Z_f - Z_g = 0$, i.e. $Z_f = Z_g$.
 ___
