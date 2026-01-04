@@ -175,7 +175,7 @@ ___
 >Determine for which functions $f(z)$ equality holds at some point $z_{0}$ with $|z_{0}|<r$.
 
 **Proof:**
-Let $a = f(0)$. Consider the automorphism of the unit disk:
+Let $a = f(0)$, then $|a|\geq r$. Consider the automorphism of the unit disk:
 $$
 \phi(w) = \frac{w - a}{1 - \overline{ a } w}.
 $$
@@ -194,7 +194,7 @@ $$
 $$
 By the triangle inequality we have
 $$
-|f(z)-a|\geq |f(z)|-|a|\geq|f(z)|-r\quad\text{and}\quad|1-\overline{ a }f(z)|\leq 1+|\overline{ a }f(z)|\leq 1+r|f(z)|
+|f(z)-a|\geq |a|-|f(z)|\geq r-|f(z)|\quad\text{and}\quad|1-\overline{ a }f(z)|\leq 1+|\overline{ a }f(z)|\leq 1+r|f(z)|
 $$
 Thus
 $$
