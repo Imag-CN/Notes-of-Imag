@@ -194,7 +194,7 @@ $$
 $$
 By the triangle inequality we have
 $$
-|f(z)-a|\leq |f(z)|-|a|\leq|f(z)|-r\quad\text{and}\quad|1-\overline{ a }f(z)|\geq 1+|\overline{ a }f(z)|\geq 1+r|f(z)|
+|f(z)-a|\geq |f(z)|-|a|\geq|f(z)|-r\quad\text{and}\quad|1-\overline{ a }f(z)|\leq 1+|\overline{ a }f(z)|\leq 1+r|f(z)|
 $$
 Thus
 $$
