@@ -187,7 +187,7 @@ $$
 $$
 By triangle inequality,
 $$
-|a|-|w|\leq|w-a|\leq|z||1-\bar{a}w|\leq|z|(1+|a||w|).
+|a|-|w|\leq|w-a|.
 $$
 Then
 $$
