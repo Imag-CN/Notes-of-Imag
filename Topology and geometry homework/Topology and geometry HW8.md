@@ -107,10 +107,10 @@ What surface is represented by a regular $2n$-gon with the edges identified in p
 **Solution:**
 The surface is orientable since it contains no Mobius bands.
 Compute Euler characteristic
-- Vertices: $V = \dfrac{(-1)^n+1}{2}$
+- Vertices: $V = \dfrac{(-1)^n+3}{2}$
 - Edges: $E = n$
 - Faces: $F = 1$
-Thus $\chi = V - E + F = \dfrac{(-1)^n+3}{2}-n$.
+Thus $\chi = V - E + F = \dfrac{(-1)^n+5}{2}-n$.
 
 Therefore the surface is the connected sum of $\lfloor \frac{n}{2} \rfloor$ tori (specifically a sphere if $n=1$).
 ___
