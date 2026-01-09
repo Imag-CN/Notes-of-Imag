@@ -32,7 +32,7 @@ ___
 >
 >where $\lambda_{1}$ and $\lambda_{2}$ are the normal curvatures at $p$, along the tangent line to $C$, of $S_{1}$ and $S_{2}$, respectively, and $\theta$ is the angle made up by the normal vectors of $S_{1}$ and $S_{2}$ at $p$.
 
-**Proof:** 
+**Proof:**
 Let $\mathbf{n}_1, \mathbf{n}_2$ be unit normals to $S_1, S_2$ at $p$, $\mathbf{T}$ the unit tangent to $C$, and $\mathbf{k}_g=\mathbf{T}'=k\mathbf{N}$ the curvature vector of $C$. Then $\lambda_1=\mathbf{k}_g\cdot\mathbf{n}_1$, $\lambda_2=\mathbf{k}_g\cdot\mathbf{n}_2$. Let $\cos\theta=\mathbf{n}_1\cdot\mathbf{n}_2$.
 
 Since $C$ lies on both surfaces, $\mathbf{T}$ is orthogonal to both $\mathbf{n}_{1}$ and $\mathbf{n}_{2}$. Therefore, $\mathbf{k}_g$ (as it is orthogonal to $\mathbf{T}$,) lies in the span of $\mathbf{n}_1$ and $\mathbf{n}_2$:
