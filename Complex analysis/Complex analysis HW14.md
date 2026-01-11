@@ -274,15 +274,13 @@ ___
 >$$M(r)\leqslant\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|,\quad\forall r\in[0,R).$$
 
 **证明:**
-不失一般性地, 设 $R=1$. 记 $B=A(1)=\max_{|z|=1}\operatorname{Re}f(z)$.
+记 $B=A(R)-A(0)=\max_{|z|=R}\operatorname{Re}f(z)-\mathrm{Re}\,f(0)$.
 
-令 $g(z)=B-f(z)$, 则 $\operatorname{Re}g(z)\ge0$ 在 $|z|=1$ 上, 由最大模原理, 在 $|z|<1$ 内 $\operatorname{Re}g(z)\ge0$, 即 $g$ 将单位圆盘映到右半平面 $\{\operatorname{Re}w\ge0\}$.
-
-$T(w)=\frac{w-1}{w+1}$ 将右半平面 $\{\operatorname{Re}w\ge0\}$ 映到单位圆盘 $|T(w)|\le1$, 且 $T(1)=0$.
+令 $g(z)=f(Rz)-f(0)$, 则 $\operatorname{Re}g(z)\ge0$ 在 $|z|=1$ 上, 由调和函数的最大模原理, 在 $|z|<1$ 内 $\operatorname{Re}g(z)\ge0$, 即 $g$ 将单位圆盘映到右半平面 $\{\operatorname{Re}w\ge0\}$.
 
 令
 $$
-h(z)=T(g(z))=\frac{g(z)-1}{g(z)+1}=\frac{B-f(z)-1}{B-f(z)+1}.
+h(z)=\frac{g(z)+B}{g(z)-B}.
 $$
 则 $h\in H(\mathbb{D})$, $|h(z)|\le1$, 且
 $$
@@ -290,7 +288,7 @@ h(0)=\frac{B-f(0)-1}{B-f(0)+1}.
 $$
 对 $h$ 用 Schwarz 引理: $|h(z)|\le|z|$, 即
 $$
-\left|\frac{B-f(z)-1}{B-f(z)+1}\right|\le|z|.
+\left|\frac{f(z)-B}{f(z)+1}\right|\le|z|.
 $$
 由此解得
 $$
