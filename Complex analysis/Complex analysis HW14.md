@@ -281,7 +281,9 @@ ___
 $T(w)=\frac{w-1}{w+1}$ 将右半平面 $\{\operatorname{Re}w\ge0\}$ 映到单位圆盘 $|T(w)|\le1$, 且 $T(1)=0$.
 
 令
-$$h(z)=T(g(z))=\frac{g(z)-1}{g(z)+1}=\frac{B-f(z)-1}{B-f(z)+1}.$$
+$$
+h(z)=T(g(z))=\frac{g(z)-1}{g(z)+1}=\frac{B-f(z)-1}{B-f(z)+1}.
+$$
 则 $h\in H(\mathbb{D})$, $|h(z)|\le1$, 且
 $$
 h(0)=\frac{B-f(0)-1}{B-f(0)+1}.
