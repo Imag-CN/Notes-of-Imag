@@ -271,43 +271,43 @@ ___
 >[!problem] [SL] 4.5.12
 >(Carathéodory 不等式) 设 $f\in H(B(0,R))\cap C(\overline{B(0,R)})$, $M(r)=\max_{|z|=r}|f(z)|$, $A(r)=\max_{|z|=r}\operatorname{Re}f(z)$ $(0\leqslant r\leqslant R)$. 证明:
 >
->$$M(r)\leqslant\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|,\quad\forall r\in[0,R).$$
+>$$
+>M(r)\leqslant\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|,\quad\forall r\in[0,R).
+>$$
 
 **证明:**
-记 $B=A(R)-A(0)=\max_{|z|=R}\operatorname{Re}f(z)-\mathrm{Re}\,f(0)$.
-
-令 $g(z)=f(Rz)-f(0)$, 则 $\operatorname{Re}g(z)\ge0$ 在 $|z|=1$ 上, 由调和函数的最大模原理, 在 $|z|<1$ 内 $\operatorname{Re}g(z)\ge0$, 即 $g$ 将单位圆盘映到右半平面 $\{\operatorname{Re}w\ge0\}$.
+记 $B=A(R)-A(0)=\max_{|z|=R}\operatorname{Re}f(z)-\mathrm{Re}\,f(0)$. 令 $g(z)=f(Rz)-f(0)$, 则 $\operatorname{Re}g(z)\ge B$ 在 $|z|=1$ 上, 由调和函数的最大模原理, 在 $|z|<1$ 内 $\operatorname{Re}g(z)\leq B$, 且 $B\geq0$.
 
 令
 $$
-h(z)=\frac{g(z)+B}{g(z)-B}.
+h(z)=\frac{g(z)}{g(z)-2B}.
 $$
-则 $h\in H(\mathbb{D})$, $|h(z)|\le1$, 且
+则 $h\in H(\mathbb{D})$, $h(0)=0$, 且
 $$
-h(0)=\frac{B-f(0)-1}{B-f(0)+1}.
+\mathrm{Im}\,g(z)=\mathrm{Im}\,(g(z)-2B),\quad\mathrm{Re}\,g(z)\leq B,B\geq{0}\implies \mathrm{Re}\,|g(z)|\leq \mathrm{Re}\,|(g(z)-2B)|
+$$
+$$
+\implies |g(z)|\leq|g(z)-2B|\implies|h(z)|\leq{1}.
 $$
 对 $h$ 用 Schwarz 引理: $|h(z)|\le|z|$, 即
 $$
-\left|\frac{f(z)-B}{f(z)+1}\right|\le|z|.
+\left|\frac{f(Rz)-f(0)}{f(Rz)-f(0)-2B}\right|\le|z|.
 $$
-由此解得
+由此得
 $$
-|B-f(z)|\le\frac{1+|z|}{1-|z|}|B-f(0)|-\frac{2|z|}{1-|z|}B.
+|f(Rz)-f(0)|\le|z|\cdot|f(Rz)-f(0)-2B|\leq|z|\cdot(|f(Rz)-f(0)|+|2B|).
 $$
-
-由三角不等式 $|f(z)|\le|B-f(z)|+B$, 代入上式得
-$$|f(z)|\le\frac{1+|z|}{1-|z|}|B-f(0)|+\frac{1-|z|}{1-|z|}B.$$
-但 $|B-f(0)|\le B+|f(0)|$, 故
-$$|f(z)|\le\frac{1+|z|}{1-|z|}(B+|f(0)|)+B.$$
-
-化简得
 $$
-|f(z)|\le\frac{2|z|}{1-|z|}B+\frac{1+|z|}{1-|z|}|f(0)|.
+\implies |f(Rz)-f(0)|\leq \dfrac{|2Bz|}{1-|z|}\implies|f(Rz)|\leq|f(0)|+\dfrac{|2Bz|}{1-|z|}
+$$
+又由于 $|B|=A(R)-A(0)\leq A(R)-|f(0)|$, 所以
+$$
+|f(Rz)|\leq\dfrac{2|z|}{1-|z|}\cdot A(R)+\dfrac{1+|z|}{1-|z|}\cdot |f(0)|
 $$
 
-此即 $R=1$ 时的 Carathéodory 不等式. 对一般的 $R$, 用 $f(Rz)$ 代 $f(z)$, 得
+取遍 $\{ z:|z|= \dfrac{r}{R} \}$ 即可得到:
 $$
-M(r)\le\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|.
+M(r)\leqslant\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|,\quad\forall r\in[0,R).
 $$
 ___
 
