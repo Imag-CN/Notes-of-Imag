@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Complex analysis/Complex analysis HW14.md",
+                "file": "Complex analysis/Complex analysis HW15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Complex analysis HW14"
+              "title": "Complex analysis HW15"
             }
           }
         ]
@@ -195,10 +195,12 @@
   },
   "active": "05ac8309d0e83b18",
   "lastOpenFiles": [
+    "Complex analysis/Complex analysis HW1.md",
+    "Complex analysis/Complex analysis HW15.md",
+    "Complex analysis/Complex analysis HW14.md",
     "Complex analysis/Complex analysis HW13.md",
     "Complex analysis/Complex analysis HW11.md",
     "Complex analysis/Complex analysis HW12.md",
-    "Complex analysis/Complex analysis HW14.md",
     "Topology and geometry homework/Topology and geometry HW12.md",
     "Topology and geometry homework/Topology and geometry HW13.md",
     "Topology and geometry homework/Topology and geometry HW9.md",
@@ -210,7 +212,6 @@
     "Complex analysis/Complex analysis HW10.md",
     "Complex analysis/Complex analysis HW8.md",
     "Complex analysis/Complex analysis HW3.md",
-    "Complex analysis/Complex analysis HW1.md",
     "attachments/Pasted image 20260103222321.png",
     "Probability and statistic homework/Probability and statistic HW5.md",
     "Complex analysis/Complex analysis HW9.md",
@@ -230,7 +231,6 @@
     "meet/Sigma-algebra.md",
     "meet/Proof of Tychonoff's Theorem using Nets.md",
     "meet/Primitive element theorem and counterexample.md",
-    "meet/Picking triangle.md",
     "未命名",
     "Topology and geometry homework/未命名",
     "attachments",
