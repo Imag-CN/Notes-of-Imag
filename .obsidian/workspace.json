@@ -46,9 +46,21 @@
               "icon": "lucide-file",
               "title": "Morse 理论相关"
             }
+          },
+          {
+            "id": "0a0c84d13c42e4e7",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.11.5"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -220,7 +232,7 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "f4cc22ed15f60048",
+  "active": "0a0c84d13c42e4e7",
   "lastOpenFiles": [
     "Morse 理论相关.md",
     "Complex analysis/Complex analysis HW9.md",
