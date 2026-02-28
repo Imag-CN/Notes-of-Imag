@@ -43,6 +43,3 @@ ___
 1. **Poincaré Lemma**: On contractible $M$, $H^k_{\text{dR}}(M) = 0$ for $k > 0$.
 2. **de Rham Theorem**: $H^*_{\text{dR}}(M) \cong H^*(M; \mathbb{R})$ (singular cohomology with real coefficients).
 3. **Methodology**: Local-to-global (Mayer-Vietoris) and homotopy tools simplify computations.
-
-## Figures (if referenced)
-[](@replace=1)
