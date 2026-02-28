@@ -51,12 +51,14 @@
             "id": "e920b3d4e6eb08ec",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.12.4"
+                "file": "meet/De Rham Theory.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.12.4"
+              "icon": "lucide-file",
+              "title": "De Rham Theory"
             }
           }
         ],
@@ -234,8 +236,9 @@
   },
   "active": "e920b3d4e6eb08ec",
   "lastOpenFiles": [
-    "meet/A continuous function with divergent Fourier series.md",
+    "meet/Differential structure.md",
     "meet/De Rham Theory.md",
+    "meet/A continuous function with divergent Fourier series.md",
     "Morse 理论相关.md",
     "Complex analysis/Complex analysis HW9.md",
     "Complex analysis/Complex analysis HW15.md",
@@ -269,7 +272,6 @@
     "attachments/Pasted image 20251224214536.png",
     "meet/Research on MLE.md",
     "meet/Separation axioms of topological groups.md",
-    "meet/The equivalence condition of sequentially compact and compact.md",
     "未命名",
     "Topology and geometry homework/未命名",
     "attachments",

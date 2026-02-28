@@ -1,5 +1,6 @@
 ___
-- **Differential forms**: On a smooth manifold $M$, a $k$-form is an antisymmetric $k$-covariant tensor field, locally expressed as:
+>[!definition] Differential forms
+>On a smooth manifold $M$, a $k$-form is an antisymmetric $k$-covariant tensor field, locally expressed as:
   $$\omega = \sum f_{i_1 \dots i_k} dx^{i_1} \wedge \dots \wedge dx^{i_k}$$
   where $f_{i_1 \dots i_k}$ are smooth functions and $\wedge$ is the wedge product.
 
