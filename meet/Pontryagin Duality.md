@@ -30,24 +30,19 @@ ___
 >
 
 **Corollary**: Countable locally compact Hausdorff groups are discrete.
+___
 
-### 4.2 Uniform Structures
-- **Definition**: The left/right uniformities on $G$ make it a uniform space.
-- **Proposition**: The topology induced by the uniformity agrees with the original topology.
+>[!definition] Dual Group
+>Let $G$ be a **locally compact abelian (LCA) topological group**. The **dual group** (or character group) of $G$, denoted $\Gamma$ or $G^*$, is defined as:
+>$$
+>\Gamma = \{\gamma: G \to \mathbb{T} \mid \gamma \text{ is a continuous homomorphism}\}
+>$$
 
----
+**Example**: $\mathbb{Z}^* \cong \mathbb{T}$, $\mathbb{T}^* \cong \mathbb{Z}$.
 
-## §5. Duality Preview
-### 5.1 Character Group
-- The **dual group** $\Gamma = G^*$ consists of continuous homomorphisms $\gamma: G \to \mathbb{T}$.
-- **Example**: $\mathbb{Z}^* \cong \mathbb{T}$, $\mathbb{T}^* \cong \mathbb{Z}$.
+>[!problem] Pontryagin Duality
+>For LCA-groups, the canonical map $\alpha:G \to \Gamma^*$:
+>$$
+>\alpha(g)(\gamma) = \gamma(g) \quad \text{for all } g \in G, \gamma \in \Gamma.$$
+>is a topological isomorphism.
 
-### 5.2 Pontryagin Duality (Preview)
-- **Theorem**: For LCA-groups, the canonical map $G \to \Gamma^*$ is a topological isomorphism.
-
----
-
-## Key Results Summary
-1. **Subgroup Structure**: Closed subgroups of $\mathbb{R}^n$ are isomorphic to $\mathbb{R}^a \times \mathbb{Z}^b$ (Theorem 4).
-2. **Duality Foundation**: Compact/discrete groups satisfy duality (Theorems 15–16).
-3. **Applications**: Kronecker’s theorem on Diophantine approximation (Theorem 28).
