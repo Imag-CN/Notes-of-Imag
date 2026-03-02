@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meet/Pontryagin Duality.md",
+                "file": "Algebraic topology homework/Algebraic topology HW1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pontryagin Duality"
+              "title": "Algebraic topology HW1"
             }
           }
         ],
@@ -236,8 +236,11 @@
   },
   "active": "e920b3d4e6eb08ec",
   "lastOpenFiles": [
-    "meet/De Rham Theory.md",
+    "物理/HW1-徐伯桅-2024571008.md",
+    "Algebraic topology homework/Algebraic topology HW1.md",
     "meet/Pontryagin Duality.md",
+    "Algebraic topology homework",
+    "meet/De Rham Theory.md",
     "meet/Differential structure.md",
     "meet/A continuous function with divergent Fourier series.md",
     "Morse 理论相关.md",
@@ -261,7 +264,6 @@
     "Complex analysis/Complex analysis HW3.md",
     "attachments/Pasted image 20260103222321.png",
     "Probability and statistic homework/Probability and statistic HW5.md",
-    "不存在万用的比较判别法.md",
     "attachments/Pasted image 20251224222024.png",
     "attachments/Pasted image 20251224221853.png",
     "attachments/Pasted image 20251224221834.png",
@@ -271,8 +273,6 @@
     "attachments/Pasted image 20251224214857.png",
     "attachments/Pasted image 20251224214846.png",
     "attachments/Pasted image 20251224214536.png",
-    "meet/Research on MLE.md",
-    "未命名",
     "Topology and geometry homework/未命名",
     "attachments",
     "未命名.canvas",
