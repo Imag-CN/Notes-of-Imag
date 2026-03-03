@@ -20,3 +20,10 @@ Check: $F(s, 0) = f_0(s)$ and $F(s, 1) = f_1(s)$. Continuity follows from the gl
 Thus, $f_0 \simeq f_1$.
 ___
 
+> [!problem] [HAT] 1.1.5
+> Show that for a space $X$, the following three conditions are equivalent:
+> (a) Every map $S^1 \to X$ is homotopic to a constant map, with image a point.
+> (b) Every map $S^1 \to X$ extends to a map $D^2 \to X$.
+> (c) $\pi_1(X, x_0) = 0$ for all $x_0 \in X$.
+> Deduce that a space $X$ is simply-connected iff all maps $S^1 \to X$ are homotopic.
+
