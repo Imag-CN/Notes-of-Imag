@@ -53,12 +53,10 @@ By left‑multiplying a sequence of upper‑triangular elementary matrices, we c
 **Uniqueness:**
 Suppose $A = B_1 P B_2 = B_1' P' B_2'$, where $B_1, B_1', B_2, B_2'$ are invertible upper‑triangular matrices and $P, P'$ are permutation matrices.  
 
-Let $e_j$ be the $j$-th standard basis vector. Since $B_2$ are invertible upper‑triangular, if $v = B_2 e_j$, then $v_k = 0$ for $k > j$ and $v_{j}\neq 0$; similarly for $B_2'$.  
+Let $e_i$ be the $i$-th standard basis vector. Assume, for sake of contradiction, that $Pe_{i}\neq P'e_{i}$ for some $i\leq n$. Then we'll have $Pe_{i}=e_{j}, P'e_{i}=e_{j'}$ where $j\neq j'$. WOLG we suppose $j>j'$.
 
-Denote $P(i)$ as the index such that $P e_{i}=e_{P(i)}$. Left‑multiplying by the upper‑triangular $B_1$ does not introduce nonzero entries in rows $> \max\{P(1),\dots,P(j)\}$. Consequently, the last nonzero row of $A e_j = B_1 P B_2 e_j$ is precisely row $\max\{P(1),\dots,P(j)\}$. The same argument with $P'$ shows that the last nonzero row of $A e_j$ is also row $\max\{P'(1),\dots,P'(j)\}$.  
+$A = B_1 P B_2 = B_1' P' B_2'$ yields $P C_{2}=C_{1}P'$, with $C_{2}=B_2  B_2'^{-1},C_{1}= B_{1}^{-1}B_1'$. Since $B_1, B_1', B_2, B_2'$ are invertible upper‑triangular matrices, $C_{1},C_{2}$ are this type of matrices as well. 
 
-Hence for all $j$,  
-$$
-\max\{P(1),\dots,P(j)\} = \max\{P'(1),\dots,P'(j)\}.
-$$
-Therefore, $P=P'$.
+Let $v=C_{1}P'e_{i}=PC_{2}e_{i}=v_{1}e_{1}+\dots+v_ne_{n}.$ On one hand, $v=C_{1}P'e_{i}=C_{1}e_{j'}$, which is the $j'$-th column of $C_{1}$. And since $C_{1}$ is upper‑triangular, $v_k = 0$ for $k > j'$, which in particular means $v_{j}=0$. On the other hand, $C_{2}e_{i}$ is the $i$-th column of $C_{1}$, whose $i$-th coordinate is non-zero (as $C_{2}$ is invertible upper‑triangular). However, left-multiplying by $P$ sends the $i$-th coordinate of $C_{2}e_{i}$ to the $j$-th coordinate, which means $v_{j}\neq 0$, contradictory.
+
+Therefore, $Pe_{i}=P'e_{i}$ for any $i\leq n$, so $P=P'$.
