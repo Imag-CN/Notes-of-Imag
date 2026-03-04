@@ -30,13 +30,8 @@ ___
 > Deduce that a space $X$ is simply-connected iff all maps $S^1 \to X$ are homotopic.
 
 **Proof:**
-We show (a) $\iff$ (b) $\iff$ (c).
->$(a) \iff (b)$: Consider the inclusion $i: S^1 \hookrightarrow D^2$. A map $f: S^1 \to X$ extends to $F: D^2 \to X$ iff $f = F \circ i$.
->  - (b) $\implies$ (a): Given an extension $F: D^2 \to X$ of $f$, then $f = F \circ i$ and $i$ is homotopic to a constant map (since $D^2$ is contractible). Thus $f$ is homotopic to a constant.
->  - (a) $\implies$ (b): Given $f: S^1 \to X$, let $H: S^1 \times I \to X$ be a homotopy with $H_0 = f$, $H_1 = \text{const}_{x_0}$. Define $F: D^2 \to X$ by $F(re^{2\pi i t}) = H(e^{2\pi i t}, 1-r)$. This extends $f$.
->
->$(b) \iff (c)$: For a based map $f: (S^1, 1) \to (X, x_0)$, $[f] = 0$ in $\pi_1(X, x_0)$ iff $f$ extends to a map $D^2 \to X$ (standard result). Condition (c) says every based loop is nullhomotopic, equivalent to every based $S^1 \to X$ extends to $D^2$. But (b) is stronger: it requires every (free) map $S^1 \to X$ extends. We show they are equivalent.
->  - (b) $\implies$ (c): Trivial, by restricting to based maps.
->  - (c) $\implies$ (b): Given $f: S^1 \to X$, pick a point $p \in S^1$ and let $x_0 = f(p)$. Choose a path $\gamma$ in $S^1$ from $p$ to $1$ (e.g., an arc). Define a based loop $g: (S^1, 1) \to (X, x_0)$ by $g(z) = f(\gamma \cdot z \cdot \bar{\gamma})$ (up to parametrization). Since $\pi_1(X, x_0)=0$, $g$ extends to $G: D^2 \to X$. Then $f$ extends via a homeomorphism $D^2 \to S^1 \times I / S^1 \times \{1\}$ (cone) constructed using $\gamma$.
->
->Deduction: $X$ is simply-connected iff it is path-connected and $\pi_1(X)=0$. By (c), $\pi_1(X)=0$ iff all based loops are nullhomotopic. Path-connected plus (a) (all free maps $S^1 \to X$ are homotopic to constants) implies simply-connected. Conversely, simply-connected implies (c), hence (a). The homotopy in (a) is free, so the statement holds.
+We show that (a) $\implies$ (b) $\implies$ (c) $\implies$ (a).
+
+**(a) $\implies$ (b):** Given $f: S^1 \to X$, let $H: S^1 \times I \to X$ be a homotopy with $H_0 = f$, $H_1 = \text{const}_{x_0}$. Define $F: D^2 \to X$ by $F(re^{2\pi i t}) = H(e^{2\pi i t}, 1-r)$. This extends $f$.
+
+**(b) $\implies$ (c):** Given $f_{1},f_{2}: S^1 \to X$ with base point $x_{0}$ and with extension
