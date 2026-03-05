@@ -97,4 +97,10 @@ $$
 Then $L(f, [0,1]) = L(g, [0,1]) =-1$, $L(f + g, [0,1])=0$, and $U(f, [0,1]) = U(g, [0,1])=1$, $U(f + g, [0,1])=0$. This satisfies the given conditions.
 ___
 
+> [!problem] [SHE] 6A.6
+> (a) Prove that if $V$ is a metric space, $f \in V$, and $r > 0$, then $\overline{B(f, r)} \subset \overline{B}(f, r)$.  
+> (b) Give an example of a metric space $V$, $f \in V$, and $r > 0$ such that $\overline{B(f, r)} \neq \overline{B}(f, r)$.
 
+**Proof:**
+**(a)** By definition we have $B(f, r) \subset \overline{B}(f, r)$. The closure $\overline{B(f, r)}$ is the smallest closed set containing $B(f,r)$, and $\overline{B}(f, r)$ is a closed set containing $B(f,r)$, thus $\overline{B(f, r)} \subset \overline{B}(f, r)$.
+**(b)** Let $V$ be a set containing at least two elements, and equip it with discrete metric
