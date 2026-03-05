@@ -103,4 +103,6 @@ ___
 
 **Proof:**
 **(a)** By definition we have $B(f, r) \subset \overline{B}(f, r)$. The closure $\overline{B(f, r)}$ is the smallest closed set containing $B(f,r)$, and $\overline{B}(f, r)$ is a closed set containing $B(f,r)$, thus $\overline{B(f, r)} \subset \overline{B}(f, r)$.
-**(b)** Let $V$ be a set containing at least two elements, and equip it with discrete metric
+**(b)** Let $V$ be a set containing at least two elements, and equip it with discrete metric (then it has the discrete topology). Let $f \in V$, then $B(f,1)= \{ f \}$, and $\overline{ B }(f,1)=V$. However, ${f}$ itself is a closed set, thus $\overline{ B(f,r) }=\{ f \}$ . Therefore $\overline{B(f, r)} \neq \overline{B}(f, r)$.
+___
+
