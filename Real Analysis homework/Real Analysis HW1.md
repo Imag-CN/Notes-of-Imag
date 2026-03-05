@@ -87,9 +87,14 @@ ___
 > where $L(f, [0,1])$ and $U(f, [0,1])$ denote the lower and upper Riemann integrals of $f$ on $[0,1]$, respectively.
 
 **Proof:**
-Let $A=\mathbb{Q}\cap[0,1]$, $B=(\mathbb{Q}+\sqrt{ 2 })\cap[0,1]$ and $C=[0,1]\setminus(A\cap B)$, where
+Define $f, g: [0,1] \to \mathbb{R}$:
 $$
-\mathbb{Q}+\sqrt{ 2 }:=\{ x :x-\sqrt{ 2 }\in \mathbb{Q} \}.
+f(x)=\begin{cases}
+-1,&x \in \mathbb{Q} \\
+1,&x \in \mathbb{R}\setminus \mathbb{Q}
+\end{cases}\quad,g(x)=-f(x).
 $$
-It is easy to show that $A,B,C$ are all dense subsets of $[0,1]$ and $[0,1]=A\sqcup B\sqcup C$.
-Define
+Then $L(f, [0,1]) = L(g, [0,1]) =-1$, $L(f + g, [0,1])=0$, and $U(f, [0,1]) = U(g, [0,1])=1$, $U(f + g, [0,1])=0$. This satisfies the given conditions.
+___
+
+
