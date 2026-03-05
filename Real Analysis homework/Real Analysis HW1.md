@@ -75,3 +75,16 @@ $$
 Therefore, $f$ is Riemann integrable (i.e., $L(f)=U(f)$) if and only if $L(-f)=-L(f)$.
 ___
 
+> [!problem] [SHE] 1B.4
+> Construct an example of bounded functions $f, g: [0,1] \to \mathbb{R}$ such that
+> $$
+> L(f, [0,1]) + L(g, [0,1]) < L(f + g, [0,1])
+> $$
+> and
+> $$
+> U(f + g, [0,1]) < U(f, [0,1]) + U(g, [0,1]),
+> $$
+> where $L(f, [0,1])$ and $U(f, [0,1])$ denote the lower and upper Riemann integrals of $f$ on $[0,1]$, respectively.
+
+**Proof:**
+Let $A=\mathbb{Q}\cap[0,1],B=\sqrt{ 2 }\mathbb{Q}\cap[0,1]$ and 
