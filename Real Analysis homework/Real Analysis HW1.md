@@ -106,3 +106,38 @@ ___
 **(b)** Let $V$ be a set containing at least two elements, and equip it with discrete metric (then it has the discrete topology). Let $f \in V$, then $B(f,1)= \{ f \}$, and $\overline{ B }(f,1)=V$. However, ${f}$ itself is a closed set, thus $\overline{ B(f,r) }=\{ f \}$ . Therefore $\overline{B(f, r)} \neq \overline{B}(f, r)$.
 ___
 
+> [!problem] [SHE] 2A.2
+> Suppose $A \subset \mathbb{R}$ and $t \in \mathbb{R}$. Let $tA = \{ta : a \in A\}$. Prove that $|tA| = |t|\,|A|$.  
+
+**Proof:**
+**Case 1.** $t=0$.
+Then $tA=\{0\}$ or $\varnothing$, so $|tA|=0$.
+RHS is $0 \cdot |A|=0$ (by convention $0\cdot\infty=0$). Equality holds.
+**Case 2.** $t\neq0$.
+- For an interval $I=(a,b)$, $tI$ is $(ta,tb)$ or $(tb,ta)$; $|tI|=|t|(b-a)=|t|\,|I|$.
+- For an open set $G=\bigcup_k I_k$ (disjoint intervals), $tG=\bigcup_k tI_k$ disjoint, so
+$|tG|=\sum_k |tI_k|=\sum_k |t|\,|I_k|=|t|\,|G|$.
+- For any $A\subset\mathbb{R}$, by definition of outer measure,
+$$\begin{align}
+|tA|&=\inf\{|tG|:A\subset G,\;G\text{ open}\}\\
+&=\inf\{|t|\,|G|:A\subset G,\;G\text{ open}\}\\
+&=|t|\,\inf\{|G|:A\subset G,\;G\text{ open}\}\\
+&=|t|\,|A|.
+\end{align} $$
+Thus $|tA|=|t|\,|A|$ for all $A$ and all $t$.
+___
+
+> [!problem] [SHE] 2A.3
+> Prove that if $A, B \subset \mathbb{R}$ and $|A| < \infty$, then $|B \setminus A| \geq |B| - |A|$.
+
+**Proof:**
+Since $B = (B \setminus A) \cup (B \cap A)$ and the two sets are disjoint, we have
+$$ |B| \leq |B \setminus A| + |B \cap A| $$
+by the countable subadditivity of outer measure.
+
+Because $B \cap A \subset A$, monotonicity gives $|B \cap A| \leq |A|$. Hence
+$$ |B| \leq |B \setminus A| + |A|. $$
+Now subtract $|A|$ (which is finite, so subtraction is safe) to obtain
+$$
+|B| - |A| \leq |B \setminus A|.
+$$
