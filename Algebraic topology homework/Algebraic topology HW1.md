@@ -30,8 +30,13 @@ ___
 > Deduce that a space $X$ is simply-connected iff all maps $S^1 \to X$ are homotopic.
 
 **Proof:**
-We show that (a) $\implies$ (b) $\implies$ (c) $\implies$ (a).
+**(a) $\Rightarrow$ (b):** Let $f: S^1 \to X$. Given (a), $f \simeq c$ (constant map). Let $H: S^1 \times I \to X$ be the homotopy with $H_0=f, H_1=c$. Define $\tilde{f}: D^2 \to X$ as $\tilde{f}(r\theta) = H(\theta, 1-r)$ for $r \in [0,1], \theta \in S^1$. This extends $f$ because when $r=1$, $\tilde{f}(\theta)=H(\theta, 0)=f(\theta)$.
 
-**(a) $\implies$ (b):** Given $f: S^1 \to X$, let $H: S^1 \times I \to X$ be a homotopy with $H_0 = f$, $H_1 = \text{const}_{x_0}$. Define $F: D^2 \to X$ by $F(re^{2\pi i t}) = H(e^{2\pi i t}, 1-r)$. This extends $f$.
+**(b) $\Rightarrow$ (c):** Let $[f] \in \pi_1(X, x_0)$, represented by a loop $f: S^1 \to X$ with $f(1)=x_0$. By (b), $f$ extends to $F: D^2 \to X$. Define $H: S^1 \times I \to X$ by $H(\theta, t) = F((1-t)\theta + t\cdot 0)$ (radial contraction in $D^2$ to the center $F(0)$). Then $H$ is a path homotopy from $f$ to the constant loop at $F(0)$. Since $f$ is a loop at $x_0$, $H(1, t)=x_0$ for all $t$, forcing $F(0)=x_0$. Thus $[f]=0$.
 
-**(b) $\implies$ (c):** Given $f_{1},f_{2}: S^1 \to X$ with base point $x_{0}$ and with extension
+**(c) $\Rightarrow$ (a):** Let $f: S^1 \to X$. Pick a basepoint $x_0 = f(1)$. Then $f$ represents an element of $\pi_1(X, x_0)=0$, so $f$ is path-homotopic to the constant loop at $x_0$. A path-homotopy is in particular a homotopy (ignoring basepoints), so (a) holds.
+___
+
+> [!problem] [HAT] 1.1.10
+> From the isomorphism $\pi_1(X \times Y, (x_0, y_0)) \approx \pi_1(X, x_0) \times \pi_1(Y, y_0)$ it follows that loops in $X \times \{y_0\}$ and $\{x_0\} \times Y$ represent commuting elements of $\pi_1(X \times Y, (x_0, y_0))$. Construct an explicit homotopy demonstrating this.
+
