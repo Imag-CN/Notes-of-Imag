@@ -34,7 +34,7 @@ ___
 
 **(b) $\Rightarrow$ (c):** Let $[f] \in \pi_1(X, x_0)$, represented by a loop $f: S^1 \to X$ with $f(1)=x_0$. By (b), $f$ extends to $F: D^2 \to X$. Define $H: S^1 \times I \to X$ by $H(\theta, t) = F((1-t)\theta + t\cdot 0)$ (radial contraction in $D^2$ to the center $F(0)$). Then $H$ is a path homotopy from $f$ to the constant loop at $F(0)$. Since $f$ is a loop at $x_0$, $H(1, t)=x_0$ for all $t$, forcing $F(0)=x_0$. Thus $[f]=0$.
 
-**(c) $\Rightarrow$ (a):** Let $f: S^1 \to X$. Pick a basepoint $x_0 = f(1)$. Then $f$ represents an element of $\pi_1(X, x_0)=0$, so $f$ is path-homotopic to the constant loop at $x_0$. A path-homotopy is in particular a homotopy (ignoring basepoints), so (a) holds.
+**(c) $\Rightarrow$ (a):** Let $f: S^1 \to X$. Pick a basepoint $x_0 = f(1)$. Then $f$ represents an element of $\pi_1(X, x_0)=0$, so $f$ is path-homotopic to the constant loop at $x_0$, so (a) holds.
 ___
 
 > [!problem] [HAT] 1.1.10
