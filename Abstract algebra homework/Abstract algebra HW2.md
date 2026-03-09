@@ -3,8 +3,8 @@ ___
 >[!problem] Problem 1
 >Denote $a_n$ to be the number of subgroups of the symmetric group $S_n$. Write computer programs to find values of $a_n$ until $n$ is so large that the program no longer stops. Give estimates of $a_n$ when $n$ tends to infinity.
 
->[!note] Mathematica code:
->```mathematica
+**Mathematica code:**
+```mathematica
 >SubgroupsOfSn[n_] := 
  Module[{elements, id, mul, inv, subgrps, stack, closure, canonical, 
    getClosure, getCanonical, isSubgroup, subgrpSet, count, g, h, 
@@ -25,7 +25,51 @@ ___
    If[! KeyExistsQ[subgrpSet, canon], subgrpSet[canon] = True; count++; For[i = 1, i <= Length[elements], i++, g = elements[[i]]; If[! MemberQ[closure, g, 1], newSet = Union[closure, {g}]; stack = Append[stack, newSet];]]]];
   count]
 Print[subgrpCount]
->```
+```
 
+**Results:** $a_{1}=1,a_{2}=2,a_{3}=6,a_{4}=30,a_{5}=156$.
+**Estimate:** $2^n\leq a_{n}\leq 2^{n!-1}$.
+___
 
-$dd$
+>[!problem] Problem 2
+>Try to find the definition of topological groups. A topological group is both a topological space and a group, and the topological structure and the group structure are compatible.
+
+**Answer:** A topological group is a group endowed with topology such that multiplication and taking inverse are continuous maps.
+___
+
+>[!problem] Problem 3
+>Write the quaternion group in matrices over the real numbers.
+
+**Answer:**
+$$
+1=\begin{pmatrix}
+1&0&0&0 \\
+0&1&0&0 \\
+0&0&1&0 \\
+0&0&0&1
+\end{pmatrix},
+i=\begin{pmatrix}
+0&-1&0&0 \\
+1&0&0&0 \\
+0&0&0&-1 \\
+0&0&1&0
+\end{pmatrix},
+$$
+$$
+j=\begin{pmatrix}
+0&0&-1&0 \\
+0&0&0&-1 \\
+1&0&0&0 \\
+0&1&0&0
+\end{pmatrix},
+k=\begin{pmatrix}
+0&0&0&-1 \\
+0&0&1&0 \\
+0&-1&0&0 \\
+1&0&0&0
+\end{pmatrix}.
+$$
+___
+
+>[!problem] Problem 3
+>Classify groups of order $6$.
