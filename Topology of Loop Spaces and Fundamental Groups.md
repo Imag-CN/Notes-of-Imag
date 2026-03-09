@@ -5,24 +5,18 @@ ___
 >2.  The fundamental group $\pi_1(X, x_0)$ is the set of homotopy classes of loops, $\Omega(X, x_0)/\simeq$.
 >3.  The quotient map $q: \Omega(X, x_0) \to \pi_1(X, x_0)$, sending a loop to its homotopy class, induces the **quotient topology** on $\pi_1(X, x_0)$. This topology is also called the **compact-open topology** on $\pi_1$.
 
-**Why is this the most natural topology?**
+>[!remark]
+>The standard group operations (concatenation, inversion) on $\Omega(X, x_0)$ are continuous in the compact-open topology. The quotient topology is the coarsest topology on $\pi_1$ that makes these induced operations continuous, turning $\pi_1(X, x_0)$ into a topological group.
 
-This construction is natural for two key reasons:
+___
 
-•   **Continuity of Operations:** The standard group operations (concatenation, inversion) on $\Omega(X, x_0)$ are continuous in the compact-open topology. The quotient topology is the coarsest topology on $\pi_1$ that makes these induced operations continuous, turning $\pi_1(X, x_0)$ into a topological group.
-
-•   **Functoriality:** It ensures that $\pi_1$ behaves well as a functor from pointed topological spaces to topological groups, as shown in the following theorem.
->___
->[!problem]
->**Continuity of the Induced Homomorphism**
->
->**Theorem:** Let $f: (X, x_0) \to (Y, y_0)$ be a continuous map of pointed spaces. The induced group homomorphism
->$f_*: \pi_1(X, x_0) \to \pi_1(Y, y_0)$
+>[!problem] Continuity of the Induced Homomorphism
+>Let $f: (X, x_0) \to (Y, y_0)$ be a continuous map of pointed spaces. The induced group homomorphism $f_*: \pi_1(X, x_0) \to \pi_1(Y, y_0)$
 >is continuous with respect to the compact-open topologies on the fundamental groups.
 >
 >Thus, $\pi_1: \mathbf{Top}_* \to \mathbf{TopGrp}$ is a functor.
->
->**Proof Sketch:**
+
+**Proof Sketch:**
 >
 >4.  The map $f$ induces a map on the loop spaces: $\hat{f}: \Omega(X, x_0) \to \Omega(Y, y_0)$ by $\hat{f}(\gamma) = f \circ \gamma$.
 >5.  **Key Fact:** Precomposition with a continuous map is continuous in the compact-open topology. Therefore, $\hat{f}$ is continuous.
