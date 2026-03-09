@@ -25,5 +25,7 @@ ___
    If[! KeyExistsQ[subgrpSet, canon], subgrpSet[canon] = True; count++; For[i = 1, i <= Length[elements], i++, g = elements[[i]]; If[! MemberQ[closure, g, 1], newSet = Union[closure, {g}]; stack = Append[stack, newSet];]]]];
   count]
 Print[subgrpCount]
+>```
 
 
+$dd$
