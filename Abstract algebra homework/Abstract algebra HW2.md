@@ -77,7 +77,7 @@ ___
 **Answer:** $C_{6}$ and $S_{3}$. (Consider order of group elements.)
 ___
 
->[!problem] Problem 4
+>[!problem] Problem 5
 >Let $\pi(x)$ be the number of prime numbers less than $x$. Write computer programs to find the shape of the function $\pi(x)$.
 
 **Mathematica code:**
