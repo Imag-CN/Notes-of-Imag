@@ -71,5 +71,20 @@ k=\begin{pmatrix}
 $$
 ___
 
->[!problem] Problem 3
+>[!problem] Problem 4
 >Classify groups of order $6$.
+
+**Answer:** $C_{6}$ and $S_{3}$. (Consider order of group elements.)
+___
+
+>[!problem] Problem 4
+>Let $\pi(x)$ be the number of prime numbers less than $x$. Write computer programs to find the shape of the function $\pi(x)$.
+
+**Mathematica code:**
+```mathematica
+Plot[{PrimePi[x], x/Log[x]}, {x, 2, 200},
+ PlotLegends -> {"\[Pi](x)", "x/log(x)"}]
+```
+
+**Graph:**
+![[Pasted image 20260309212035.png]]
