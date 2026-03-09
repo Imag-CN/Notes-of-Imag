@@ -34,10 +34,10 @@ This construction is natural for two key reasons:
 >\end{array}$$
 >where $q_X, q_Y$ are the quotient maps.
 >7.  Since $\hat{f}$ is continuous and $q_Y$ is a quotient map, the map $f_*$ is continuous. (If $h \circ q$ is continuous and $q$ is a quotient map, then $h$ is continuous; here, $f_* \circ q_X = q_Y \circ \hat{f}$).
->___
->[!problem]
+___
+
+>[!problem] 
 >**The Product Problem: A Topological Counterexample**
->
 >Algebraically, for path-connected spaces, we have an isomorphism:
 >$\pi_1(X \times Y, (x_0, y_0)) \cong \pi_1(X, x_0) \times \pi_1(Y, y_0)$.
 >
@@ -46,7 +46,8 @@ This construction is natural for two key reasons:
 >**The Topologies Involved:**
 >•   Left side ($\pi_1(X \times Y)$): The compact-open topology (quotient of $\Omega(X \times Y)$).
 >•   Right side ($\pi_1(X) \times \pi_1(Y)$): The product topology of the compact-open topologies on each factor.
->
+
+
 >**Why They Differ:**
 >The discrepancy arises from the nature of the subbases defining these topologies.
 >•   A subbasis for the compact-open topology on $\Omega(X \times Y)$ uses sets of the form $\langle K, U \rangle$, where $K \subset I$ is compact and $U \subset X \times Y$ is open.
