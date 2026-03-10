@@ -1,3 +1,5 @@
+___
+
 >[!problem]
 >Let $f$ be a $2\pi$-periodic function on $\mathbb{R}$.  
 >For $n \geq 1$, define Fourier coefficients  

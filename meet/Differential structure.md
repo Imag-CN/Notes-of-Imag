@@ -1,4 +1,5 @@
 ___
+
 > [!problem]
 > Let $M$ be a topological manifold. Given an $C^r$-atlas $\mathcal{A}$ on $M$, prove that there exists a unique $C^r$-differentiable structure (i.e. a maximal atlas) $\mathcal{D}$ on $M$ that contains $\mathcal{A}$.
 
