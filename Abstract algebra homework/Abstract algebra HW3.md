@@ -18,7 +18,7 @@ Let $g = (g_{pq})$, $g^{-1} = (h_{pq})$. Then $(M_{ij})_{pq} = g_{pi}h_{jq}$. Th
 
 We prove $g$ is upper triangular. For column 1 ($i=1$), take $j>1$. Then $g_{p1}h_{j1}=0$ for all $p \ge 1$. Since rows of $g^{-1}$ are independent, some $h_{j1} \neq 0$ for $j>1$, so $g_{p1}=0$ for all $p>1$. By induction, assume columns $1,\dots,k-1$ are zero below the diagonal. For column $k$, take $j>k$. Then $g_{pk}h_{jk}=0$ for all $p \ge k$. Because the submatrix of $g^{-1}$ in rows $>k$ and columns $\ge k$ is non‑singular, for each $p>k$ we can choose $j>k$ with $h_{jk} \neq 0$, forcing $g_{pk}=0$. Hence $g$ is upper triangular, i.e., $g \in B$.
 
-**(ii)** Yes for $n=1$ (trivial) but no for $n\geq_{2}$. Because
+**(ii)** Yes for $n=1$ (trivial), but no for $n\geq_{2}$. Because
 $$
 \begin{pmatrix}
 1&0 \\
@@ -42,7 +42,7 @@ And for a matrix of order $n>2$, consider the block diagonal construction consis
 **(iii)**
 Consider
 $$
-1\to B \hookrightarrow U \overset{f}{\to}T
+1\to B \hookrightarrow U \overset{f}{\to}T\to 1
 $$
 where $\hookrightarrow$ is the inclusion map and $f$ is the map which takes the diagonal.
 ___
@@ -59,4 +59,9 @@ ___
 
 **Proof:**
 **(i)** 
+
+
+
+
+___
 
