@@ -1,9 +1,9 @@
 ___
 
->[!question] What is the outer measure of a Vitali Set?
->
+>[!question] The outer measure of a Vitali Set
+>What values can the outer measure of a Vitali set on $[0,1]$ take?
 
-
+As 
 
 
 
