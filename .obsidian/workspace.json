@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW3.md",
+                "file": "Algebraic topology homework/Algebraic topology HW2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abstract algebra HW3"
+              "title": "Algebraic topology HW2"
             }
           }
         ]
@@ -176,7 +176,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,9 +196,10 @@
   },
   "active": "e920b3d4e6eb08ec",
   "lastOpenFiles": [
-    "Abstract algebra homework/Abstract algebra HW1.md",
-    "Abstract algebra homework/Abstract algebra HW3.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
+    "Algebraic topology homework/Algebraic topology HW2.md",
+    "Abstract algebra homework/Abstract algebra HW3.md",
+    "Abstract algebra homework/Abstract algebra HW1.md",
     "meet/Differential structure.md",
     "有理逼近.md",
     "随机变量的分解.md",
@@ -220,7 +222,6 @@
     "Decay rate of Fourier coefficients.md",
     "Dirichlet 核的积分的极限.md",
     "Morse 理论相关.md",
-    "The Topology on Loop Spaces and Fundamental Groups.md",
     "attachments/Pasted image 20260309212035.png",
     "attachments/Pasted image 20251224214846.png",
     "attachments/Pasted image 20251224221027.png",
