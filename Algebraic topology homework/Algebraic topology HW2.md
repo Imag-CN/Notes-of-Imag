@@ -10,7 +10,6 @@ ___
 > Let $X \subset \mathbb{R}^m$ be the union of convex open sets $X_1, \cdots, X_n$ such that $X_i \cap X_j \cap X_k \neq \emptyset$ for all $i, j, k$. Show that $X$ is simply-connected.
 
 
-
 ___
 
 > [!problem] [HAT] 1.2.4
