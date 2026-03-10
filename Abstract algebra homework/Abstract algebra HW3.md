@@ -11,3 +11,31 @@ ___
 
 **Proof: (i)**
 **($\Rightarrow$)** 
+
+**(ii)** Yes for $n=1$ (trivial) but no for $n\geq_{2}$. Because
+$$
+\begin{pmatrix}
+1&0 \\
+-1&1 \\
+\end{pmatrix}\cdot
+\begin{pmatrix}
+1&1 \\
+0&1 \\
+\end{pmatrix}\cdot
+\begin{pmatrix}
+1&0 \\
+1&1 \\
+\end{pmatrix}=
+\begin{pmatrix}
+2&1 \\
+-1&0 \\
+\end{pmatrix}\not\in B.
+$$
+And for a matrix of order $n>2$, consider the block diagonal construction consisting of the $2$-order matrix mentioned above and the $(n-2)$-order identity matrix.
+
+**(iii)**
+Consider
+$$
+1\to B \hookrightarrow U \overset{f}{\to}T
+$$
+where $\hookrightarrow$ is the inclusion map and $f$ is taking diagonal.
