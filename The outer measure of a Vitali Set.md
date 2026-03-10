@@ -5,7 +5,9 @@ ___
 
 
 
-Let $\mathfrak{c}$ denote the cardinal of the continuum and wellorder the Borel subsets of $[0, 1]$ as $(B_\alpha)_{\alpha < c}$. We build by transfinite recursion a sequence $(x_\alpha)_{\alpha < c}$ of elements of $[0, 1]$ such that:
+
+
+Let $\mathfrak{c}$ denote the cardinal of the continuum and wellorder the Borel subsets of $[0, 1]$ as $(B_\alpha)_{\alpha < \mathfrak{c}}$. We build by transfinite recursion a sequence $(x_\alpha)_{\alpha < c}$ of elements of $[0, 1]$ such that:
 
 (a) $x_\alpha$ is Vitali inequivalent to $x_\beta$ for all $\beta < \alpha$, and
 
