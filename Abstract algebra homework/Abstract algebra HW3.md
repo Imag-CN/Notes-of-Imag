@@ -9,5 +9,5 @@ ___
 > 
 > (iii) Fit $B$, $U$, $T$ into a short exact sequence.
 
-**Proof:**
-**(i)** 
+**Proof: (i)** 
+**($\Rightarrow$)** $$
