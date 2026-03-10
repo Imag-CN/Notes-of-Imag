@@ -1,5 +1,9 @@
 ___
 
+>[!question] What is the outer measure of a Vitali Set?
+>
+
+
 
 Let $\mathfrak{c}$ denote the cardinal of the continuum and wellorder the Borel subsets of $[0, 1]$ as $(B_\alpha)_{\alpha < c}$. We build by transfinite recursion a sequence $(x_\alpha)_{\alpha < c}$ of elements of $[0, 1]$ such that:
 

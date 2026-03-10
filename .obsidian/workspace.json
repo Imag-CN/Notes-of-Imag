@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Outer measure of Vitali Sets.md",
+                "file": "The outer measure of a Vitali Set.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Outer measure of Vitali Sets"
+              "title": "The outer measure of a Vitali Set"
             }
           }
         ],
@@ -211,10 +211,12 @@
   },
   "active": "2b5c1e8e9e328ba7",
   "lastOpenFiles": [
-    "Algebraic topology homework/Algebraic topology HW2.md",
-    "Outer measure of Vitali Sets.md",
+    "Steiniz 定理.md",
     "Abstract algebra homework/Abstract algebra HW3.md",
+    "Abstract algebra homework/Abstract algebra HW2.md",
+    "Algebraic topology homework/Algebraic topology HW2.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
+    "The outer measure of a Vitali Set.md",
     "Abstract algebra homework/Abstract algebra HW1.md",
     "meet/Differential structure.md",
     "有理逼近.md",
@@ -234,9 +236,7 @@
     "哈代不等式（Hardy-Landau）.md",
     "Seminar notes on Complex Algebraic Curves.md",
     "Crofton 定理以及一个应用.md",
-    "Steiniz 定理.md",
     "Decay rate of Fourier coefficients.md",
-    "Dirichlet 核的积分的极限.md",
     "attachments/Pasted image 20260309212035.png",
     "attachments/Pasted image 20251224214846.png",
     "attachments/Pasted image 20251224221027.png",
