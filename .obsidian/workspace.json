@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The outer measure of a Vitali Set.md",
+                "file": "Abstract algebra homework/Abstract algebra HW2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The outer measure of a Vitali Set"
+              "title": "Abstract algebra HW2"
             }
           }
         ],
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "The outer measure of a Vitali Set.md",
+                "file": "Abstract algebra homework/Abstract algebra HW2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "The outer measure of a Vitali Set 的反向链接列表"
+              "title": "Abstract algebra HW2 的反向链接列表"
             }
           },
           {
@@ -154,12 +154,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "The outer measure of a Vitali Set.md",
+                "file": "Abstract algebra homework/Abstract algebra HW2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "The outer measure of a Vitali Set 的出链列表"
+              "title": "Abstract algebra HW2 的出链列表"
             }
           },
           {
@@ -193,13 +193,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "The outer measure of a Vitali Set.md",
+                "file": "Abstract algebra homework/Abstract algebra HW2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "The outer measure of a Vitali Set 的大纲"
+              "title": "Abstract algebra HW2 的大纲"
             }
           }
         ],
@@ -227,6 +227,7 @@
   },
   "active": "e920b3d4e6eb08ec",
   "lastOpenFiles": [
+    "The outer measure of a Vitali Set.md",
     "Pi Day 卡牌游戏 Card Game.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
     "conflict-files-obsidian-git.md",
@@ -235,7 +236,6 @@
     "拉格朗日反演与贝尔多项式.md",
     "幂级数边界的收敛点集.md",
     "attachments/Pasted image 20260309212035.png",
-    "The outer measure of a Vitali Set.md",
     "The Topology on Loop Spaces and Fundamental Groups.md",
     "Crofton 定理以及一个应用.md",
     "Algebraic topology homework/Algebraic topology HW2.md",
