@@ -8,21 +8,47 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e920b3d4e6eb08ec",
+            "id": "05ac8309d0e83b18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic topology homework/Algebraic topology HW2.md",
+                "file": "Complex analysis/Complex analysis HW14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebraic topology HW2"
+              "title": "Complex analysis HW14"
             }
           },
           {
-            "id": "2b5c1e8e9e328ba7",
+            "id": "9f5b1bcb2fad3dd9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.11.4"
+            }
+          },
+          {
+            "id": "f4cc22ed15f60048",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "meet/De Rham Theory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "De Rham Theory"
+            }
+          },
+          {
+            "id": "e920b3d4e6eb08ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,23 +60,9 @@
               "icon": "lucide-file",
               "title": "The outer measure of a Vitali Set"
             }
-          },
-          {
-            "id": "9986503944a96827",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pi Day 卡牌游戏 Card Game.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pi Day 卡牌游戏 Card Game"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Topological Properties of Fundamental Groups.md",
+                "file": "The outer measure of a Vitali Set.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Topological Properties of Fundamental Groups 的反向链接列表"
+              "title": "The outer measure of a Vitali Set 的反向链接列表"
             }
           },
           {
@@ -142,12 +154,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Topological Properties of Fundamental Groups.md",
+                "file": "The outer measure of a Vitali Set.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Topological Properties of Fundamental Groups 的出链列表"
+              "title": "The outer measure of a Vitali Set 的出链列表"
             }
           },
           {
@@ -181,23 +193,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Topological Properties of Fundamental Groups.md",
+                "file": "The outer measure of a Vitali Set.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Topological Properties of Fundamental Groups 的大纲"
-            }
-          },
-          {
-            "id": "dd05dd9abb042a69",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "title": "The outer measure of a Vitali Set 的大纲"
             }
           }
         ],
@@ -223,54 +225,54 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "9986503944a96827",
+  "active": "e920b3d4e6eb08ec",
   "lastOpenFiles": [
-    "The outer measure of a Vitali Set.md",
     "Pi Day 卡牌游戏 Card Game.md",
-    "Abstract algebra homework/Abstract algebra HW3.md",
-    "Steiniz 定理.md",
-    "Abstract algebra homework/Abstract algebra HW2.md",
-    "Algebraic topology homework/Algebraic topology HW2.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
-    "Abstract algebra homework/Abstract algebra HW1.md",
-    "meet/Differential structure.md",
-    "有理逼近.md",
+    "conflict-files-obsidian-git.md",
+    "非整数阶积分与导数.md",
     "随机变量的分解.md",
-    "Complex analysis homework/Complex analysis HW10.md",
-    "Complex analysis homework/Complex analysis HW7.md",
-    "Complex analysis homework/Complex analysis HW14.md",
-    "Complex analysis homework/Complex analysis HW13.md",
-    "meet/De Rham Theory.md",
-    "meet/Sigma-algebra.md",
-    "meet/Separation axioms of topological groups.md",
-    "meet/Research on MLE.md",
     "拉格朗日反演与贝尔多项式.md",
-    "满足柯西-黎曼方程但不复可微的例子.md",
-    "度量与全序的相似, 不同与统一.md",
-    "不存在万用的比较判别法.md",
-    "哈代不等式（Hardy-Landau）.md",
-    "Seminar notes on Complex Algebraic Curves.md",
-    "Crofton 定理以及一个应用.md",
+    "幂级数边界的收敛点集.md",
     "attachments/Pasted image 20260309212035.png",
-    "attachments/Pasted image 20251224214846.png",
-    "attachments/Pasted image 20251224221027.png",
-    "attachments/Pasted image 20251224221853.png",
-    "attachments/Pasted image 20251224222024.png",
-    "attachments/Pasted image 20260103222321.png",
-    "attachments/Pasted image 20251224214958.png",
-    "attachments/Pasted image 20251009214425.png",
-    "attachments/Pasted image 20251009112200.png",
-    "attachments/4ccff81599c79cdd74c2c0917b37c08e.jpg",
+    "The outer measure of a Vitali Set.md",
+    "The Topology on Loop Spaces and Fundamental Groups.md",
+    "Crofton 定理以及一个应用.md",
+    "Algebraic topology homework/Algebraic topology HW2.md",
+    "Abstract algebra homework/Abstract algebra HW3.md",
+    "Abstract algebra homework/Abstract algebra HW2.md",
+    "三种积分技巧的统一与不同.md",
+    "Decay rate of Fourier coefficients.md",
+    "物理/HW1-徐伯桅-2024571008.md",
+    "物理",
+    "Real Analysis homework/Real Analysis HW1.md",
+    "Abstract algebra homework/Abstract algebra HW1.md",
+    "未命名.md",
     "Real Analysis homework",
+    "Topology and geometry homework/Topology and geometry HW9.md",
     "Abstract algebra homework",
+    "meet/Pontryagin Duality.md",
     "Algebraic topology homework",
+    "meet/De Rham Theory.md",
+    "meet/Differential structure.md",
+    "meet/A continuous function with divergent Fourier series.md",
+    "Morse 理论相关.md",
+    "Complex analysis homework/Complex analysis HW9.md",
+    "attachments/Pasted image 20260103222321.png",
+    "attachments/Pasted image 20251224222024.png",
+    "attachments/Pasted image 20251224221853.png",
+    "attachments/Pasted image 20251224221834.png",
+    "attachments/Pasted image 20251224221540.png",
+    "attachments/Pasted image 20251224221027.png",
+    "attachments/Pasted image 20251224214958.png",
+    "attachments/Pasted image 20251224214857.png",
+    "attachments/Pasted image 20251224214846.png",
     "Topology and geometry homework/未命名",
     "attachments",
     "未命名.canvas",
     "未命名.base",
     "meet/未命名",
     "物理/图",
-    "物理",
     "Topology and geometry homework/graph"
   ]
 }
