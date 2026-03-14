@@ -86,3 +86,8 @@ ___
 > Suppose $\mathcal{S}$ is the smallest $\sigma$-algebra on $\mathbb{R}$ containing $\{(r, r+1) : r \in \mathbb{Q}\}$. Prove that $\mathcal{S}$ is the collection of Borel subsets of $\mathbb{R}$.
 
 **Proof:**
+Let $\mathcal{B}$ denote the Borel $\sigma$-algebra on $\mathbb{R}$. Since each interval $(r, r+1)$ (with $r \in \mathbb{Q}$) is open, it belongs to $\mathcal{B}$. Hence $\mathcal{S} \subset \mathcal{B}$.
+
+For the reverse inclusion, we show that every open interval $(a,b)$ belongs to $\mathcal{S}$. Let $r_n$ be a rational sequence decreasing to $a$. Then $(a,b) = \bigcup_{n=1}^\infty (r_n, r_n+1) \cap (-\infty, b)$. Since $(-\infty, b) = \bigcup_{m} (q_m, q_m+1)$ for some rational $q_m$ approaching $b$, and $\mathcal{S}$ is closed under countable intersections and unions, $(a,b) \in \mathcal{S}$. Therefore all open intervals are in $\mathcal{S}$, and so $\mathcal{B} \subset \mathcal{S}$.
+
+Thus $\mathcal{S} = \mathcal{B}$.
