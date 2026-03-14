@@ -114,7 +114,7 @@ ___
 
 **Proof:**
 Let $A$ be the set described. For each $n \in \mathbb{N}$, let
-$$E_n = \{x \in \mathbb{R} : \text{the $n$th digit in some decimal expansion of $x$ is 5}\}.$$
+$$E_n = \{x \in \mathbb{R} : \text{the $n$-th digit in the decimal expansion of $x$ is 5}\}.$$
 Each $E_n$ is a countable union of intervals (since fixing a digit gives a countable union of intervals of length $10^{-n}$), hence Borel.
 
 The set of numbers whose decimal expansion contains infinitely many $5$'s is
@@ -170,3 +170,12 @@ We verify the three conditions for a $\sigma$-algebra:
 Therefore $\mathcal{S}_A$ is a $\sigma$-algebra on $X$.
 ___
 
+> [!problem]
+> Let $2^{\mathbb{Z}^+}$ denote the $\sigma$-algebra on $\mathbb{Z}^+$ consisting of all subsets of $\mathbb{Z}^+$.
+> Suppose $\mu$ is a measure on $(\mathbb{Z}^+, 2^{\mathbb{Z}^+})$. Prove that there is a sequence $w_1, w_2, \dots$ in $[0, \infty]$ such that
+> $$
+> \mu(E) = \sum_{k \in E} w_k
+> $$
+> for every set $E \subset \mathbb{Z}^+$.
+
+**Proof:**
