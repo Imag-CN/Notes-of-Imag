@@ -131,7 +131,7 @@ ___
 > Show that $\mathcal{S}$ is a $\sigma$-algebra on $X$.
 
 **Proof:**
-**(a)** We verify the three conditions for a $\sigma$-algebra:
+We verify the three conditions for a $\sigma$-algebra:
 
 1. $X \in \mathcal{S}$: Let $K = \mathbb{Z}^+$, then $\bigcup_{k \in \mathbb{Z}^+} E_k = X \in \mathcal{S}$.
 
@@ -144,3 +144,29 @@ ___
    Since $\bigcup_{n=1}^\infty K_n \subset \mathbb{Z}^+$, this union is in $\mathcal{S}$.
 
 Thus $\mathcal{S}$ is a $\sigma$-algebra on $X$.
+___
+
+> [!problem] [SHE] 2B.16(a)
+> Suppose $\mathcal{S}$ is a $\sigma$-algebra on a set $X$ and $A \subset X$. Let
+> $$\mathcal{S}_A = \{ E \in \mathcal{S} : A \subset E \text{ or } A \cap E = \varnothing \}.$$
+> 
+>Prove that $\mathcal{S}_A$ is a $\sigma$-algebra on $X$.
+
+**Proof:**
+We verify the three conditions for a $\sigma$-algebra:
+
+1. $X \in \mathcal{S}_A$: Since $X \in \mathcal{S}$ and $A \subset X$, we have $X \in \mathcal{S}_A$.
+
+2. Closed under complement: Let $E \in \mathcal{S}_A$. There are two cases:
+   - If $A \subset E$, then $A \cap E^c = \varnothing$ (because $A$ is contained in $E$), so $E^c \in \mathcal{S}_A$.
+   - If $A \cap E = \varnothing$, then $A \subset E^c$ (since $A$ is disjoint from $E$), so $E^c \in \mathcal{S}_A$.
+   In both cases, $E^c \in \mathcal{S}_A$.
+
+3. Closed under countable unions: Let $\{E_n\} \subset \mathcal{S}_A$. Consider $\bigcup_n E_n$. Two cases:
+   - If there exists some $n_0$ such that $A \subset E_{n_0}$, then $A \subset \bigcup_n E_n$, so $\bigcup_n E_n \in \mathcal{S}_A$.
+   - Otherwise, $A \cap E_n = \varnothing$ for all $n$, so $A \cap (\bigcup_n E_n) = \varnothing$, hence $\bigcup_n E_n \in \mathcal{S}_A$.
+   Thus $\bigcup_n E_n \in \mathcal{S}_A$.
+
+Therefore $\mathcal{S}_A$ is a $\sigma$-algebra on $X$.
+___
+
