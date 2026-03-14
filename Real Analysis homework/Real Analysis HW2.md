@@ -88,6 +88,24 @@ ___
 **Proof:**
 Let $\mathcal{B}$ denote the Borel $\sigma$-algebra on $\mathbb{R}$. Since each interval $(r, r+1)$ (with $r \in \mathbb{Q}$) is open, it belongs to $\mathcal{B}$. Hence $\mathcal{S} \subset \mathcal{B}$.
 
-For the reverse inclusion, we show that every open interval $(a,b)$ belongs to $\mathcal{S}$. Let $r_n$ be a rational sequence decreasing to $a$. Then $(a,b) = \bigcup_{n=1}^\infty (r_n, r_n+1) \cap (-\infty, b)$. Since $(-\infty, b) = \bigcup_{m} (q_m, q_m+1)$ for some rational $q_m$ approaching $b$, and $\mathcal{S}$ is closed under countable intersections and unions, $(a,b) \in \mathcal{S}$. Therefore all open intervals are in $\mathcal{S}$, and so $\mathcal{B} \subset \mathcal{S}$.
+We show that every open interval $(a,b)$ belongs to $\mathcal{S}$. Let $r_n$ be a rational sequence decreasing to $a$. Then $(a,b) = \bigcup_{n=1}^\infty (r_n, r_n+1) \cap (-\infty, b)$. Since $(-\infty, b) = \bigcup_{m} (q_m, q_m+1)$ for some rational $q_m$ approaching $b$, and $\mathcal{S}$ is closed under countable intersections and unions, $(a,b) \in \mathcal{S}$. Therefore all open intervals are in $\mathcal{S}$, and so $\mathcal{B} \subset \mathcal{S}$.
 
 Thus $\mathcal{S} = \mathcal{B}$.
+___
+
+> [!problem] [SHE] 2B.8
+> Prove that the collection of Borel subsets of $\mathbb{R}$ is dilation invariant. More precisely, prove that if $B \subset \mathbb{R}$ is a Borel set and $t \in \mathbb{R}$, then $tB$ (which is defined to be $\{tb : b \in B\}$) is a Borel set.
+
+**Proof:**
+Let $\mathcal{C}$ be the collection of all subsets $E \subset \mathbb{R}$ such that $tE$ is a Borel set for every $t \in \mathbb{R}$. We show that $\mathcal{C}$ contains all open intervals and is a $\sigma$-algebra, hence contains the Borel $\sigma$-algebra.
+
+If $I = (a,b)$ is an open interval, then $tI$ is an open interval or empty, hence Borel. So all open intervals are in $\mathcal{C}$.
+
+Check $\mathcal{C}$ is a $\sigma$-algebra:
+- $\mathbb{R} \in \mathcal{C}$ because $t\mathbb{R} = \mathbb{R}$ (for $t\neq0$) or $\varnothing$ (for $t=0$), both Borel.
+- If $E \in \mathcal{C}$, then $tE^c = (tE)^c$ (if $t\neq0$; if $t=0$, it's $\mathbb{R}$ or $\varnothing$), a Borel set, so $E^c \in \mathcal{C}$.
+- If $E_n \in \mathcal{C}$ for $n\ge1$, then $t\big(\bigcup_n E_n\big) = \bigcup_n tE_n$, a countable union of Borel sets, hence Borel, so $\bigcup_n E_n \in \mathcal{C}$.
+
+Thus $\mathcal{C}$ is a $\sigma$-algebra containing all open intervals, therefore contains the Borel $\sigma$-algebra. Hence for any Borel set $B$, $B \in \mathcal{C}$, i.e. $tB$ is Borel for all $t$.
+___
+
