@@ -102,9 +102,9 @@ Let $\mathcal{C}$ be the collection of all subsets $E \subset \mathbb{R}$ such t
 If $I = (a,b)$ is an open interval, then $tI$ is an open interval or empty, hence Borel. So all open intervals are in $\mathcal{C}$.
 
 Check $\mathcal{C}$ is a $\sigma$-algebra:
-- $\mathbb{R} \in \mathcal{C}$ because $t\mathbb{R} = \mathbb{R}$ (for $t\neq0$) or $\varnothing$ (for $t=0$), both Borel.
-- If $E \in \mathcal{C}$, then $tE^c = (tE)^c$ (if $t\neq0$; if $t=0$, it's $\mathbb{R}$ or $\varnothing$), a Borel set, so $E^c \in \mathcal{C}$.
-- If $E_n \in \mathcal{C}$ for $n\ge1$, then $t\big(\bigcup_n E_n\big) = \bigcup_n tE_n$, a countable union of Borel sets, hence Borel, so $\bigcup_n E_n \in \mathcal{C}$.
+1. $\mathbb{R} \in \mathcal{C}$ because $t\mathbb{R} = \mathbb{R}$ (for $t\neq0$) or $\varnothing$ (for $t=0$), both Borel.
+2. If $E \in \mathcal{C}$, then $tE^c = (tE)^c$ (if $t\neq0$; if $t=0$, it's $\mathbb{R}$ or $\varnothing$), a Borel set, so $E^c \in \mathcal{C}$.
+3. If $E_n \in \mathcal{C}$ for $n\ge1$, then $t\big(\bigcup_n E_n\big) = \bigcup_n tE_n$, a countable union of Borel sets, hence Borel, so $\bigcup_n E_n \in \mathcal{C}$.
 
 Thus $\mathcal{C}$ is a $\sigma$-algebra containing all open intervals, therefore contains the Borel $\sigma$-algebra. Hence for any Borel set $B$, $B \in \mathcal{C}$, i.e. $tB$ is Borel for all $t$.
 ___
