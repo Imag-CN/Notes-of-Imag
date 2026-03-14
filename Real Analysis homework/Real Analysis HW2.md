@@ -109,3 +109,15 @@ Check $\mathcal{C}$ is a $\sigma$-algebra:
 Thus $\mathcal{C}$ is a $\sigma$-algebra containing all open intervals, therefore contains the Borel $\sigma$-algebra. Hence for any Borel set $B$, $B \in \mathcal{C}$, i.e. $tB$ is Borel for all $t$.
 ___
 
+> [!problem] [SHE] 2B.10
+> Show that the set of real numbers that have a decimal expansion with the digit $5$ appearing infinitely often is a Borel set.
+
+**Proof:**
+Let $A$ be the set described. For each $n \in \mathbb{N}$, let
+$$E_n = \{x \in \mathbb{R} : \text{the $n$th digit in some decimal expansion of $x$ is 5}\}.$$
+Each $E_n$ is a countable union of intervals (since fixing a digit gives a countable union of intervals of length $10^{-n}$), hence Borel.
+
+The set of numbers whose decimal expansion contains infinitely many $5$'s is
+$$A = \bigcap_{k=1}^\infty \bigcup_{n=k}^\infty E_n.$$
+This is a countable intersection of countable unions of Borel sets, hence Borel.
+___
