@@ -121,3 +121,26 @@ The set of numbers whose decimal expansion contains infinitely many $5$'s is
 $$A = \bigcap_{k=1}^\infty \bigcup_{n=k}^\infty E_n.$$
 This is a countable intersection of countable unions of Borel sets, hence Borel.
 ___
+
+> [!problem] [SHE] 2B.15(a)
+> Suppose $X$ is a set and $E_1, E_2, \dots$ is a disjoint sequence of subsets of $X$ such that
+> $$\bigcup_{k=1}^{\infty} E_k = X.$$
+> Let
+> $$\mathcal{S} = \left\{ \bigcup_{k \in K} E_k : K \subset \mathbb{Z}^+ \right\}.$$
+> 
+> Show that $\mathcal{S}$ is a $\sigma$-algebra on $X$.
+
+**Proof:**
+**(a)** We verify the three conditions for a $\sigma$-algebra:
+
+1. $X \in \mathcal{S}$: Let $K = \mathbb{Z}^+$, then $\bigcup_{k \in \mathbb{Z}^+} E_k = X \in \mathcal{S}$.
+
+2. Closed under complement: Take $A = \bigcup_{k \in K} E_k \in \mathcal{S}$. Since the $E_k$ are disjoint, $X = \bigcup_{k=1}^\infty E_k$, we have
+   $$A^c = \bigcup_{k \in \mathbb{Z}^+ \setminus K} E_k.$$
+   Since $\mathbb{Z}^+ \setminus K \subset \mathbb{Z}^+$, $A^c \in \mathcal{S}$.
+
+3. Closed under countable unions: Let $A_n = \bigcup_{k \in K_n} E_k \in \mathcal{S}$, $n=1,2,\dots$. Then
+   $$\bigcup_{n=1}^\infty A_n = \bigcup_{n=1}^\infty \bigcup_{k \in K_n} E_k = \bigcup_{k \in \bigcup_{n=1}^\infty K_n} E_k.$$
+   Since $\bigcup_{n=1}^\infty K_n \subset \mathbb{Z}^+$, this union is in $\mathcal{S}$.
+
+Thus $\mathcal{S}$ is a $\sigma$-algebra on $X$.
