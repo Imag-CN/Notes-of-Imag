@@ -53,3 +53,15 @@ ___
 > Prove that if $I_1, I_2, \dots$ is a disjoint sequence of open intervals, then
 > $$\left| \bigcup_{k=1}^{\infty} I_k \right| = \sum_{k=1}^{\infty} \ell(I_k).$$
 
+**Proof:**
+Let $E=\bigcup_{k=1}^{\infty} I_k$. Since the intervals are disjoint, we have $\sum_{k=1}^n \ell(I_k) = \left|\bigcup_{k=1}^n I_k \right|$ for all $n$. By monotonicity and countable subadditivity of outer measure,
+$$
+\sum_{k=1}^n \ell(I_k) = \left|\bigcup_{k=1}^n I_k\right| \le |E| \le \sum_{k=1}^\infty \ell(I_k).
+$$
+Letting $n \to \infty$ gives
+$$
+\sum_{k=1}^\infty \ell(I_k) \le |E| \le \sum_{k=1}^\infty \ell(I_k),
+$$
+hence equality holds.
+___
+
