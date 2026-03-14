@@ -65,3 +65,9 @@ $$
 hence equality holds.
 ___
 
+> [!problem]
+> Suppose $r_1, r_2, \dots$ is a sequence that contains every rational number. Let
+> $$F = \mathbb{R} \setminus \bigcup_{k=1}^{\infty} \left( r_k - \frac{1}{2^k},\, r_k + \frac{1}{2^k} \right).$$
+> (a) Show that $F$ is a closed subset of $\mathbb{R}$.
+> (b) Prove that if $I$ is an interval contained in $F$, then $I$ contains at most one element.
+> (c) Prove that $|F| = \infty$.
