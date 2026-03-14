@@ -65,9 +65,24 @@ $$
 hence equality holds.
 ___
 
-> [!problem]
+> [!problem] [SHE] 2A.12
 > Suppose $r_1, r_2, \dots$ is a sequence that contains every rational number. Let
 > $$F = \mathbb{R} \setminus \bigcup_{k=1}^{\infty} \left( r_k - \frac{1}{2^k},\, r_k + \frac{1}{2^k} \right).$$
 > (a) Show that $F$ is a closed subset of $\mathbb{R}$.
 > (b) Prove that if $I$ is an interval contained in $F$, then $I$ contains at most one element.
 > (c) Prove that $|F| = \infty$.
+
+**Proof:**
+**(a)** The set $\bigcup_{k=1}^\infty (r_k - 1/2^k, r_k + 1/2^k)$ is a union of open intervals, hence it is open. Therefore its complement $F$ is closed.
+
+**(b)** Suppose $I$ is an interval containing at least two distinct points $x<y$ in $F$. Then the rationals are dense in $\mathbb{R}$, so there exists a rational $r$ with $x<r<y$. Since $r$ is rational, it appears in the sequence as $r=r_k$ for some $k$. But then $r_k \in (r_k - 1/2^k, r_k + 1/2^k)$, hence $r_k \notin F$, contradicting that the whole open interval $(x,y)$ (and thus $r$) is in $I \subset F$. Therefore $I$ cannot contain two distinct points.
+
+**(c)** We estimate the measure of the complement. Let $U = \bigcup_{k=1}^\infty (r_k - 1/2^k, r_k + 1/2^k)$. Then
+$$|U| \le \sum_{k=1}^\infty \ell(r_k - 1/2^k, r_k + 1/2^k) = \sum_{k=1}^\infty \frac{2}{2^k} = 2.$$
+Hence $|\mathbb{R} \setminus U| = |F| = \infty$ because $\mathbb{R}$ has infinite measure and removing a set of finite measure leaves the complement with infinite measure.
+___
+
+> [!problem] [SHE] 2B.5
+> Suppose $\mathcal{S}$ is the smallest $\sigma$-algebra on $\mathbb{R}$ containing $\{(r, r+1) : r \in \mathbb{Q}\}$. Prove that $\mathcal{S}$ is the collection of Borel subsets of $\mathbb{R}$.
+
+**Proof:**
