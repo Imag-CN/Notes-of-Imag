@@ -170,7 +170,7 @@ We verify the three conditions for a $\sigma$-algebra:
 Therefore $\mathcal{S}_A$ is a $\sigma$-algebra on $X$.
 ___
 
-> [!problem]
+> [!problem] [SHE] 2C.2
 > Let $2^{\mathbb{Z}^+}$ denote the $\sigma$-algebra on $\mathbb{Z}^+$ consisting of all subsets of $\mathbb{Z}^+$.
 > Suppose $\mu$ is a measure on $(\mathbb{Z}^+, 2^{\mathbb{Z}^+})$. Prove that there is a sequence $w_1, w_2, \dots$ in $[0, \infty]$ such that
 > $$
@@ -179,3 +179,42 @@ ___
 > for every set $E \subset \mathbb{Z}^+$.
 
 **Proof:**
+Define $w_k = \mu(\{k\})$ for each $k \in \mathbb{Z}^+$. Since $\mu$ is a measure, $w_k \in [0, \infty]$.
+
+For any $E \subset \mathbb{Z}^+$, we can write $E = \bigcup_{k \in E} \{k\}$, a disjoint countable union. By countable additivity of $\mu$,
+$$\mu(E) = \mu\left(\bigcup_{k \in E} \{k\}\right) = \sum_{k \in E} \mu(\{k\}) = \sum_{k \in E} w_k.$$
+
+Thus the sequence $(w_k)$ satisfies the required property.
+___
+
+>[!definition]
+>An outer measure $\mu^*$ on a non-empty set $X$ is a function
+>$$
+>\mu^* : \mathcal{P}(X) \to [0, \infty]
+>$$
+>that satisfies  
+>(i) $\mu^*(\emptyset) = 0$;  
+>(ii) $\mu^*(A) \leq \mu^*(B)$ if $A, B$ are subsets of $X$ with $A \subseteq B$;  
+>(iii) $\mu^*\left( \bigcup_{n=1}^{\infty} A_n \right) \leq \bigcup_{n=1}^{\infty} \mu^*(A_n)$ if $A_n$ ($n \in \mathbb{N}$) are subsets of $X$.
+
+> [!problem]
+> Let $\mathcal{E}$ be a family of sets of $X$, and $\ell : \mathcal{E} \to [0, \infty]$.
+> Suppose that $\emptyset, X \in \mathcal{E}$ and $\ell(\emptyset) = 0$.
+> For any $A \subseteq X$, define
+> $$\mu^*(A) = \inf\left\{ \sum_{n=1}^{\infty} \ell(I_n) : I_n \in \mathcal{E} \, (n \in \mathbb{N}),\ A \subseteq \bigcup_{n=1}^{\infty} I_n \right\}.$$
+> Prove that $\mu^*$ is an outer measure.
+
+**Proof:**
+We verify three conditions of an outer measure:
+
+1. $\mu^*(\emptyset) = 0$: Since $\emptyset \in \mathcal{E}$ and $\ell(\emptyset)=0$, the covering $\{I_n\}$ with $I_1 = \emptyset$ and $I_n = \emptyset$ for $n \ge 2$ gives $\sum_{n=1}^\infty \ell(I_n)=0$. Hence $\mu^*(\emptyset)=0$.
+
+2. Monotonicity: If $A \subseteq B \subseteq X$, then every covering of $B$ also covers $A$. Thus the infimum for $A$ is taken over a larger set than that for $B$, so $\mu^*(A) \le \mu^*(B)$.
+
+3. Countable subadditivity: Let $\{A_n\}_{n=1}^\infty$ be subsets of $X$. If $\sum_{n=1}^\infty \mu^*(A_n)=\infty$, the inequality holds trivially. Otherwise, fix $\varepsilon>0$. For each $n$, choose a covering $\{I_{n,k}\}_{k=1}^\infty \subset \mathcal{E}$ of $A_n$ such that
+   $$\sum_{k=1}^\infty \ell(I_{n,k}) \le \mu^*(A_n) + \frac{\varepsilon}{2^n}.$$
+   Then $\{I_{n,k}\}_{n,k \ge 1}$ is a countable covering of $\bigcup_n A_n$, and
+   $$\mu^*\left(\bigcup_{n=1}^\infty A_n\right) \le \sum_{n=1}^\infty\sum_{k=1}^\infty \ell(I_{n,k}) \le \sum_{n=1}^\infty \left(\mu^*(A_n) + \frac{\varepsilon}{2^n}\right) = \sum_{n=1}^\infty \mu^*(A_n) + \varepsilon.$$
+   Since $\varepsilon>0$ was arbitrary, $\mu^*\left(\bigcup_n A_n\right) \le \sum_n \mu^*(A_n)$.
+
+Thus $\mu^*$ is an outer measure.
