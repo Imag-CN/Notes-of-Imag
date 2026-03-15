@@ -61,21 +61,20 @@ ___
 **(i)** Suppose $c\in C$ is an element of order $n$, then $s(c)\in B$ is of order $n$ since $v \circ s= \mathrm{Id}_{C}$.
 Consider the sequence:
 $$
-1\to 2\mathbb{Z} \hookrightarrow \mathbb{Z} \overset{ \mathrm{mod}2 }{ \to } \mathbb{Z}/2\mathbb{Z}\to_{1}
+1\to 2\mathbb{Z} \hookrightarrow \mathbb{Z} \overset{ \mathrm{mod}2 }{ \to } \mathbb{Z}/2\mathbb{Z}\to{1}
 $$
 $\bar{1}$ is of order $2$ but there is no element of order $2$ in $\mathbb{Z}$, thus right splitting does not exist. 
 
-**(ii)** 
+**(ii)** Since $v$ is surjective, for any $c\in C$ we can choose $b_{c}\in B$ such that $v(b_{c})=c$.
+
+Let $s(c)=u(r(b_{c}))^{-1} b_{c}$, then $s$ is a group homomorphism and $v \circ s=\mathrm{Id}_{A}$.
 
 **(iii)** Suppose $b\in B$ is an element of order $n$, then $r(b)\in A$ is of order $n$ since $r \circ u= \mathrm{Id}_{A}$.
-Consider the exact sequence:
 Consider the sequence:
 $$
-1 \to C_{2} \xrightarrow{u} A \rtimes_\varphi C \xrightarrow{v} C \to 1
+1 \to C_{3} \to S_{3} \to C_{2} \to 1
 $$
-where $A$ is non-abelian, $C$ acts on $A$ via $\varphi: C \to \operatorname{Aut}(A)$, and $A \rtimes_\varphi C$ is the semidirect product. The maps are $u(a)=(a,1_C)$ and $v(a,c)=c$. A right splitting $s: C \to A \rtimes C$ is given by $s(c)=(1_A, c)$, which is a homomorphism because $s(c_1 c_2) = (1, c_1 c_2) = (1, c_1)(1, c_2) = s(c_1) s(c_2)$ (since the action on the identity is trivial). But a left splitting $r: A \rtimes C \to A$ with $r \circ u = \operatorname{Id}_A$ would require $r(a,1)=a$ for all $a \in A$. For $r$ to be a homomorphism, we need $r((a_1, c_1)(a_2, c_2)) = r(a_1, c_1) r(a_2, c_2)$. The product in the semidirect product is $(a_1, c_1)(a_2, c_2) = (a_1 \varphi(c_1)(a_2), c_1 c_2)$. Applying $r$, we get $r(a_1 \varphi(c_1)(a_2), c_1 c_2) = a_1 a_2$. This forces $\varphi(c_1)(a_2) = a_2$ for all $c_1, a_2$, i.e., the action is trivial. So if we choose a nontrivial action, no such $r$ exists. Concrete example: take $A=S_3$, $C=\mathbb{Z}/2\mathbb{Z}$ with the nontrivial action (conjugation by a transposition). Then the right splitting exists as above, but there is no left splitting because the action is nontrivial.
-
-
-
+Let $x^{3}=y^{2}=1$ and $x^{2}y=yx$, then $C_{3}= <x>,C_{2}= <y>, S_{3}= <x,y>$.
+The right splitting exists (consider the inclusion map), but the left splitting doesn't exist since $y\in S_{3}$ is an element of order $2$ while there's no element of order $2$ in $C_{3}$.
 ___
 
