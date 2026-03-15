@@ -90,3 +90,13 @@ ___
 >
 >(iii) Give an example in which $A$ and $C$ are abelian but $B$ is not.
 
+**Proof:**
+**(i)** Exactness gives $u$ injective, $v$ surjective, and $\operatorname{Im} u = \ker v$. Then $B/A \cong C$, so $|B| = |A| \cdot |C|$.
+
+**(ii)** For each $c \in C$, pick $b_c$ with $v(b_c) = c$. The map $\varphi: A \times C \to B$, $\varphi(a, c) = u(a) b_c$, is bijective. Since $A \times C$ is finite, $B$ is finite.
+
+**(iii)** Consider the sequence:
+$$
+1 \to C_{3} \to S_{3} \to C_{2} \to 1
+$$
+$C_{2},C_{3}$ is abelian while $S_{3}$ is not.
