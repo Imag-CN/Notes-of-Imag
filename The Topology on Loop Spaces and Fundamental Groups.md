@@ -11,7 +11,7 @@ ___
 >
 >Let $f: (X, x_0) \to (Y, y_0)$ be a continuous map. It induces a map on the level of loop spaces: $\hat{f}: \Omega(X, x_0) \to \Omega(Y, y_0)$ defined by
 >$$
->\hat{f}(\gamma) = f \circ \gamma \text{ for any } $\gamma \in \Omega(X, x_0).
+>\hat{f}(\gamma) = f \circ \gamma \text{ for any } \gamma \in \Omega(X, x_0).
 >$$
 
 **Key Property:** The map $\hat{f}$ is **continuous** in the compact-open topology.
