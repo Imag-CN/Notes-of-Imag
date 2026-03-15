@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW4.md",
+                "file": "Helly 定理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abstract algebra HW4"
+              "title": "Helly 定理"
             }
           }
         ],
@@ -224,17 +224,24 @@
   },
   "active": "3b5cd887d2c72fe9",
   "lastOpenFiles": [
+    "Helly定理.md.tmp.26152.1773596420048",
+    "Helly定理.md.tmp.26152.1773596331528",
+    "The outer measure of a Vitali Set.md",
+    "度量与全序的相似, 不同与统一.md",
+    "Helly定理.md.tmp.26152.1773596318793",
+    "Helly 定理.md",
+    "Seminar notes on Complex Algebraic Curves.md",
+    "Helly定理.md.tmp.26152.1773596068169",
+    "Dirichlet 核的积分的极限.md",
+    "Abstract algebra homework/Abstract algebra HW4.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
     "The Topology on Loop Spaces and Fundamental Groups.md",
     "π 克牌挑战 (Pi Card Challenge).md",
     "Weierstrass p-function and Riemann Surfaces.md",
-    "Seminar notes on Complex Algebraic Curves.md",
-    "Dirichlet 核的积分的极限.md",
     "Decay rate of Fourier coefficients.md",
     "哈代不等式（Hardy-Landau）.md",
     "关于双周期函数的一些问题.md",
     "不存在万用的比较判别法.md",
-    "Abstract algebra homework/Abstract algebra HW4.md",
     "Algebraic topology homework/Algebraic topology HW2.md",
     "Abstract algebra homework/Abstract algebra HW3.md",
     "Abstract algebra homework/Abstract algebra HW2.md",
@@ -243,13 +250,9 @@
     "满足柯西-黎曼方程但不复可微的例子.md",
     "拉格朗日反演与贝尔多项式.md",
     "非整数阶积分与导数.md",
-    "度量与全序的相似, 不同与统一.md",
     "conflict-files-obsidian-git.md",
     "幂级数边界的收敛点集.md",
     "三种积分技巧的统一与不同.md",
-    "有理逼近.md",
-    "The outer measure of a Vitali Set.md",
-    "Steiniz 定理.md",
     "attachments/Pasted image 20260309212035.png",
     "attachments/Pasted image 20251224214846.png",
     "attachments/Pasted image 20251224221027.png",
@@ -267,9 +270,6 @@
     "attachments",
     "未命名.canvas",
     "未命名.base",
-    "meet/未命名",
-    "物理/图",
-    "物理",
-    "Topology and geometry homework/graph"
+    "meet/未命名"
   ]
 }
