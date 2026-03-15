@@ -78,3 +78,15 @@ Let $x^{3}=y^{2}=1$ and $x^{2}y=yx$, then $C_{3}= <x>,C_{2}= <y>, S_{3}= <x,y>$.
 The right splitting exists (consider the inclusion map), but the left splitting doesn't exist since $y\in S_{3}$ is an element of order $2$ while there's no element of order $2$ in $C_{3}$.
 ___
 
+>[!problem]
+>Consider a short exact sequence of groups
+>$$
+>1 \longrightarrow A \xrightarrow{u} B \xrightarrow{v} C \longrightarrow 1
+>$$
+>
+>(i) Suppose $B$ is finite. Prove that $|B| = |A| \cdot |C|$.
+>
+>(ii) Suppose both $A$ and $C$ are finite. Prove that $B$ is finite.
+>
+>(iii) Give an example in which $A$ and $C$ are abelian but $B$ is not.
+
