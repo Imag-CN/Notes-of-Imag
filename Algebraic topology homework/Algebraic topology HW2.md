@@ -19,20 +19,13 @@ ___
 > Let $X \subset \mathbb{R}^m$ be the union of convex open sets $X_1, \cdots, X_n$ such that $X_i \cap X_j \cap X_k \neq \emptyset$ for all $i, j, k$. Show that $X$ is simply-connected.
 
 **Proof:**
-Let $X^{(n)} = \bigcup_{i=1}^n X_i$. Proof by induction on $n$.
+Proof by induction on $n$. Let $X^{(k)} = \bigcup_{i=1}^k X_i$. The base case $n=1$ is trivial since a convex set is simply-connected.
 
-Base case $n=1$: $X^{(1)} = X_1$ is convex, hence simply-connected.
+For any $x, y \in X^{(n-1)} \cap X_n$, there exist $i, j$ such that $x \in X_i \cap X_n$ and $y \in X_j \cap X_n$. Since $X_i \cap X_j \cap X_n \neq \varnothing$, pick $z$ in this triple intersection. Then $[x, z] \subset X_i \cap X_n$ and $[z, y] \subset X_j \cap X_n$, so $x$ and $y$ are connected by a path in $(X_i \cap X_n) \cup (X_j \cap X_n) \subset X^{(n-1)} \cap X_n$.
 
-Assume $X^{(n-1)}$ is simply-connected. Let $X^{(n)} = X^{(n-1)} \cup X_n$.
-Choose a point $p \in \bigcap_{i=1}^{n-1} (X_i \cap X_n)$ (nonempty: for any $i,j$, $X_i \cap X_j \cap X_n \neq \varnothing$, and intersections of convex sets that pairwise intersect have a common point).
+Let $f: I \to X^{(n)}$ be a loop. Subdivide $I$ into $0 = t_0 < t_1 < \dots < t_m = 1$ such that each $f([t_{k-1}, t_k])$ lies entirely in $X^{(n-1)}$ or in $X_n$. For each segment with image in $X_n$, we can homotope it (relative endpoints) within $X_n$ to a path in $X^{(n-1)} \cap X_n$, because $X_n$ is simply-connected and $f(t_{k-1}), f(t_k) \in X^{(n-1)} \cap X_n$ (which is path-connected). This yields a loop $g$ homotopic to $f$ and entirely contained in $X^{(n-1)}$.
 
-Let $f$ be a loop in $X^{(n)}$ based at $p$. Subdivide $I$ so each subsegment lies in $X^{(n-1)}$ or $X_n$.
-
-For each subsegment $f|_{[t_{k-1}, t_k]} \subset X_n$, replace it with a path in $X^{(n-1)} \cap X_n$ connecting $f(t_{k-1})$ and $f(t_k)$, homotopic within $X_n$ (possible because $X_n$ is simply-connected and $X^{(n-1)} \cap X_n$ is path-connected, as a union of pairwise intersecting convex sets $X_i \cap X_n$).
-
-This yields a loop $g$ homotopic to $f$ and entirely contained in $X^{(n-1)}$. By induction, $g$ is null-homotopic in $X^{(n-1)}$, hence $f$ is null-homotopic in $X^{(n)}$.
-
-Thus $X^{(n)}$ is simply-connected.
+Since $X^{(n-1)}$ is simply-connected by the induction hypothesis, $g$ (and hence $f$) is null-homotopic in $X^{(n-1)}$, and thus in $X^{(n)}$. Therefore, $X^{(n)}$ is simply-connected. By induction, $X$ is simply-connected.
 ___
 
 > [!problem] [HAT] 1.2.4
