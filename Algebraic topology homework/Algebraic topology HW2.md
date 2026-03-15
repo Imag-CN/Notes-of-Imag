@@ -38,3 +38,18 @@ ___
 > [!problem] [HAT] 1.2.4
 > Let $X \subset \mathbb{R}^3$ be the union of $n$ lines through the origin. Compute $\pi_1(\mathbb{R}^3 - X)$.
 
+**Proof:**
+Let $X = \bigcup_{i=1}^n L_i$, where each $L_i$ is a line through the origin in $\mathbb{R}^3$.
+
+Consider the radial deformation retraction $r: \mathbb{R}^3 \setminus X \to S^2 \setminus X$ given by $r(x) = x / \|x\|$. 
+
+Each line $L_i$ intersects $S^2$ in a pair of antipodal points. Thus $S^2 \cap X$ consists of $2n$ distinct points. Therefore, $S^2 \setminus X = S^2 \setminus \{2n \text{ points}\}$.
+
+The space $S^2$ minus $2n$ points is homeomorphic to a plane (e.g., via stereographic projection from one of the removed points) with $2n-1$ points removed. The fundamental group of a plane with $k$ points removed is the free group $\mathbb{F}_k$ on $k$ generators. Hence,
+$$
+\pi_1(S^2 \setminus X) \cong \mathbb{F}_{2n-1}.
+$$
+Since deformation retraction induces an isomorphism of fundamental groups, we conclude
+$$\pi_1(\mathbb{R}^3 \setminus X) \cong \mathbb{F}_{2n-1}.$$
+___
+
