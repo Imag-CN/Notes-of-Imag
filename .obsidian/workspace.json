@@ -199,13 +199,24 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "369bd269e9dcc34a",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 294.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,17 +230,23 @@
       "random-note:开始漫游笔记": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-git:Open Git source control": false,
-      "callout-manager:Insert Callout": false
+      "callout-manager:Insert Callout": false,
+      "claudian:Open Claudian": false
     }
   },
   "active": "3b5cd887d2c72fe9",
   "lastOpenFiles": [
-    "README.md",
+    "有理逼近.md",
+    "随机变量的分解.md",
+    "哈代不等式（Hardy-Landau）.md",
+    "度量与全序的相似, 不同与统一.md",
+    "不存在万用的比较判别法.md",
+    "非整数阶积分与导数.md",
     "Helly 定理.md",
+    "README.md",
     "Helly定理.md.tmp.26152.1773596420048",
     "Helly定理.md.tmp.26152.1773596331528",
     "The outer measure of a Vitali Set.md",
-    "度量与全序的相似, 不同与统一.md",
     "Helly定理.md.tmp.26152.1773596318793",
     "Seminar notes on Complex Algebraic Curves.md",
     "Helly定理.md.tmp.26152.1773596068169",
@@ -240,9 +257,7 @@
     "π 克牌挑战 (Pi Card Challenge).md",
     "Weierstrass p-function and Riemann Surfaces.md",
     "Decay rate of Fourier coefficients.md",
-    "哈代不等式（Hardy-Landau）.md",
     "关于双周期函数的一些问题.md",
-    "不存在万用的比较判别法.md",
     "Algebraic topology homework/Algebraic topology HW2.md",
     "Abstract algebra homework/Abstract algebra HW3.md",
     "Abstract algebra homework/Abstract algebra HW2.md",
@@ -250,10 +265,7 @@
     "Real Analysis homework/Real Analysis HW1.md",
     "满足柯西-黎曼方程但不复可微的例子.md",
     "拉格朗日反演与贝尔多项式.md",
-    "非整数阶积分与导数.md",
     "conflict-files-obsidian-git.md",
-    "幂级数边界的收敛点集.md",
-    "三种积分技巧的统一与不同.md",
     "attachments/Pasted image 20260309212035.png",
     "attachments/Pasted image 20251224214846.png",
     "attachments/Pasted image 20251224221027.png",
