@@ -13,8 +13,8 @@ ___
 取 $x^{(i)}\in\bigcap_{F\in\mathcal{F}}F_i$, 则对每个 $F\in\mathcal{F}$, 存在 $x_F^{(i)}\in F$ 使得 $\pi_i(x_F^{(i)})=x^{(i)}$. 考虑 $\{x_F^{(i)}:i=1, \dots, d\}$ 的凸包, 该凸包含于每个 $F$, 故 $\bigcap_{F\in\mathcal{F}}F\neq\varnothing$.
 
 >[!remark] Helly 定理 - 无限维推广
->设 $X$ 是一个线性空间, $\mathcal{F}$ 是 $X$ 中的一族凸集, 且 $\mathcal{F}$ 满足：
->1. $\mathcal{F}$ 的任意有限子族的交集都非空；
->2. $\bigcap_{F \in \mathcal{F}} \text{cl}(F) \neq \varnothing$（其中 $\text{cl}(F)$ 表示 $F$ 的闭包）.
+>设 $X$ 是一个实数域上的拓扑向量空间, $\mathcal{F}$ 是 $X$ 中的一族凸集, 且 $\mathcal{F}$ 满足:
+>1. $\mathcal{F}$ 的任意有限子族的交集都非空;
+>2. $\bigcap_{F \in \mathcal{F}} \overline{F} \neq \varnothing$（其中 $\overline{F}$ 表示 $F$ 在 $X$ 的拓扑下的闭包）.
 >
 >则 $\bigcap_{F \in \mathcal{F}} F \neq \varnothing$.
