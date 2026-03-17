@@ -1,12 +1,68 @@
 ___
 
+>[!lemma]
+>Let $X,Y,Z$ be vector spaces,
+>
+>(i) Let $f\in \operatorname{Hom}(Y,Z)$ and $f\cdot\operatorname{Hom}(X,Y):=\{ f\cdot \phi:\phi \in \operatorname{Hom}(X,Y)\}$, then
+>$$
+>f\cdot\operatorname{Hom}(X,Y)=\operatorname{Hom}(X,\operatorname{Im}f)
+>$$
+>(ii) If $X$ is finite-dimensional, then for any family of subspaces $\{X_i\}$,
+>$$
+>\operatorname{Hom}\left( X,\sum_{i}X_{i} \right)=\sum_{i}\operatorname{Hom}\left( X,X_{i} \right)
+>$$
+
+**Proof**
+
+**(i)** Let $\pi:Y\twoheadrightarrow \operatorname{Im}f$, $\pi(y)=f(y)$, where we regard $f$ as a surjection onto its image. Then $f\cdot \operatorname{Hom}(X,Y)=\pi\cdot \operatorname{Hom}(X,Y)\subseteq \operatorname{Hom}(X,\operatorname{Im}f)$ is clear.
+
+For the reverse inclusion, consider the short exact sequence
+$$
+0\to \ker \pi \to Y \xrightarrow{\pi} \operatorname{Im}f \to 0.
+$$
+Since every short exact sequence of vector spaces splits, there exists $s:\operatorname{Im}f\to Y$ with $\pi\circ s=\operatorname{id}_{\operatorname{Im}f}$. Now for any $\psi\in \operatorname{Hom}(X,\operatorname{Im}f)$, let $\phi:=s\circ \psi\in \operatorname{Hom}(X,Y)$. Then $f\circ \phi=\pi\circ s\circ \psi=\psi$. Hence every element of $\operatorname{Hom}(X,\operatorname{Im}f)$ lies in $f\cdot \operatorname{Hom}(X,Y)$.
+
+Therefore, $f\cdot \operatorname{Hom}(X,Y)=\operatorname{Hom}(X,\operatorname{Im}f)$.
+
+>[!remark]
+>The prove can also be done by taking a basis. This lemma is dependent on Axiom of Choice for infinite-dimensional vector spaces. In the proof above, the conclusion that "every short exact sequence of vector spaces splits" is dependent on Axiom of Choice.
+
+**(ii)** The inclusion $\sum_i \operatorname{Hom}(X,X_i)\subseteq \operatorname{Hom}\!\left(X,\sum_i X_i\right)$ is obvious.
+
+For the reverse inclusion, let $g\in \operatorname{Hom}\!\left(X,\sum_i X_i\right)$. Since $X$ is finite-dimensional, so is $g(X)$. Choose a basis $y_1,\dots,y_n$ of $g(X)$. Each $y_j\in \sum_i X_i$, so each $y_j$ is a finite sum of vectors from the $X_i$s. Hence there exist finitely many indices $i_1,\dots,i_m$ such that
+$$
+y_1,\dots,y_n\in X_{i_1}+\cdots+X_{i_m}.
+$$
+Therefore $g(X)\subseteq X_{i_1}+\cdots+X_{i_m}$. Choose a basis $e_1,\dots,e_r$ of $X$. For each $k$ write $g(e_k)=x_{1k}+\cdots+x_{mk}$, with $x_{jk}\in X_{i_j}$. Define linear maps $g_j:X\to X_{i_j}$ by $g_j(e_k)=x_{jk}$ ($1\le k\le r$) and extend linearly. Then $g=g_1+\cdots+g_m$, so $g\in \sum_i \operatorname{Hom}(X,X_i)$.
+
+Therefore, $\operatorname{Hom}\!\left(X,\sum_i X_i\right)=\sum_i \operatorname{Hom}(X,X_i)$.
+___
+
 >[!problem]
->Given $V$ a linear space with $\mathrm{dim}V\geq 2$. Determine all the maximal right ideals of $\mathrm{Hom}(V,V)$.
+>Let $V$ be a finite-dimensional vector space with $\operatorname{dim}V\geq 2$. Determine all the maximal right ideals of $\operatorname{Hom}(V,V)$.
 
 **Proof:**
 Let $I$ be a right ideal of $\operatorname{Hom}(V,V)$ and set $W=\sum_{f\in I}\operatorname{Im}f$. Clearly $I\subseteq\operatorname{Hom}(V,W)$. 
 
-Conversely, take $g\in\operatorname{Hom}(V,W)$. For any $v\in V$, there exist finitely many $f_i\in I$ and $v_i\in V$ with $g(v)=\sum_i f_i(v_i)$ (this can be done by choosing $\{ f_{a}(v_{\alpha}) \}$ as a basis of $W$ and considering the decomposition of $g(v)$ under this basis). Fix a basis $\{e_\alpha\}$ of $V$. For each basis vector $e_\alpha$ with $g(e_\alpha)\neq0$, choose $f_{\alpha,j}\in I$ and $w_{\alpha,j}\in V$ such that $g(e_\alpha)=\sum_j f_{\alpha,j}(w_{\alpha,j})$. Define $h_{\alpha,j}\in\operatorname{Hom}(V,V)$ by $h_{\alpha,j}(e_\alpha)=w_{\alpha,j}$ and $h_{\alpha,j}(e_\beta)=0$ for $\beta\neq\alpha$. Then $F_{\alpha,j}:=f_{\alpha,j}\circ h_{\alpha,j}\in I$ satisfies $F_{\alpha,j}(e_\alpha)=f_{\alpha,j}(w_{\alpha,j})$ and $F_{\alpha,j}(e_\beta)=0$ for $\beta\neq\alpha$. Let $G_\alpha=\sum_j F_{\alpha,j}\in I$, so $G_\alpha(e_\beta)=0$ for $\beta\neq\alpha$ and $G_\alpha(e_\alpha)=g(e_\alpha)$. Since $g$ has finite‑dimensional image, only finitely many $e_\alpha$ have $g(e_\alpha)\neq0$. Hence $G:=\sum_\alpha G_\alpha$ is a finite sum in $I$, and $G(e_\alpha)=g(e_\alpha)$ for all $\alpha$, so $G=g$. Thus $g\in I$ and $I=\operatorname{Hom}(V,W)$.
+Conversely, for any $f\in I$, by lemma (i) we have $I\supseteq f\cdot\operatorname{Hom}(V,V)=\operatorname{Hom}(V,\operatorname{Im}f)$. And by lemma (ii) we have $I\supseteq \sum_{f\in I} \operatorname{Hom}(V,\operatorname{Im}f)= \operatorname{Hom}\left( V,\sum_{f\in I}\operatorname{Im}f \right)$ (those are both finite sum because $V$ is finite-dimensional), therefore $I\supseteq\operatorname{Hom}(V,W)$. Thus $I=\operatorname{Hom}(V,W)$.
 
-Therefore every right ideal of $\operatorname{Hom}(V,V)$ is of the form $\operatorname{Hom}(V,W)$ for a subspace $W\subseteq V$. Since $\operatorname{Hom}(V,W_1)\subseteq\operatorname{Hom}(V,W_2)$ iff $W_1\subseteq W_2$, the maximal right ideals correspond exactly to those $W$ with $\operatorname{codim} W=1$.
+Therefore, *(Statement $1$)* every right ideal of $\operatorname{Hom}(V,V)$ is of the form $\operatorname{Hom}(V,W)$ with a subspace $W\subseteq V$. Since $\operatorname{Hom}(V,W_1)\subseteq\operatorname{Hom}(V,W_2)$ iff $W_1\subseteq W_2$, *(Statement 2)* every maximal right ideal is of the form $\operatorname{Hom}( V,W)$ with $\operatorname{codim} W=1$.
+___
 
+>[!failure]
+>In infinite-dimensional vector spaces, the problem becomes more complicated. We show lemma(ii), statement $1\&2$ all fails in infinite-dimensional vector spaces.
+
+**Counter example:**
+Let $V_{n}=\operatorname{span}{e_{n}},n\geq 1$. Consider 
+$$
+V=\bigoplus_{n\geq{1}}V_{n}
+$$
+Then the identity map is in $\operatorname{Hom}(V,V)=\operatorname{Hom}\left( V,\sum_{n\geq_{1}}V_{n} \right)$, whose rank is infinity.
+
+However, elements in $\sum_{n\geq_{1}}\operatorname{Hom}\left( V,V_{n} \right)$ has finite rank (because they are all finite sum of linear transforms of rank $1$), thus $\operatorname{Hom}\left( V,\sum_{n\geq_{1}}V_{n} \right)\neq\sum_{n\geq_{1}}\operatorname{Hom}\left( V,V_{n} \right)$, lemma(ii) fails.
+
+Consider all the linear transforms of finite rank, they consists of a right ideal. Assume it can be written as $\operatorname{Hom}(V,W)$ for some $W \subseteq V$, then whether $\operatorname{dim}W$ is finite or infinite will both lead to contradiction, thus statement $1$ fails.
+
+By lemma(1) we know that $\sum_{n\geq_{1}}\operatorname{Hom}\left( V,V_{n} \right)$ is the ideal generated by $\{ V_{n} \}_{n\geq 1}$, and we have shown that the identity map is not in this ideal (which means it is not the unit ideal). Consider a maximal ideal $M\supseteq\sum_{n\geq_{1}}\operatorname{Hom}\left( V,V_{n} \right)$, and assume $M=\operatorname{Hom}(V,W)$ for some $W \subseteq V$. Then $\mathrm{Im}\,M=W$. However, $V_{n}=\mathrm{Im}\,(\operatorname{Hom}\left( V,V_{n} \right))\subseteq \mathrm{Im}\,M$ for $n\geq {1}$, thus $V=\bigoplus_{n\geq{1}}V_{n}\subseteq M$, contradiction, thus statement $2$ fails.
+
+A countable set of linearly independent vectors can be found in any infinite-dimensional vector space. Therefore, this construction can be implemented in any infinite-dimensional vector space.
