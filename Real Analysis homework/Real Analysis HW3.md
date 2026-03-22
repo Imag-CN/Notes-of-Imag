@@ -86,6 +86,26 @@ Then $\mu(X)=1=\nu(X)$, and
 
 Thus $\mu(A)=\nu(A)$ for all $A \in \mathcal{A}$, but $\mu \ne \nu$.
 ___
+
+>[!problem] [SHE] 2C.12
+>Suppose $X$ is a set and $\mathcal{S}$ is the $\sigma$-algebra of all subsets $E$ of $X$ such that $E$ is countable or $X \setminus E$ is countable. Give a complete description of the set of all measures on $(X, \mathcal{S})$.
+
+**Solution:**
+Let $\mu$ be a measure on $(X,\mathcal{S})$. Let $X_0 = \{x \in X : \mu(\{x\}) > 0\}$, this set is countable. Define $a_x = \mu(\{x\})$ for $x \in X_0$, and let $\beta = \mu(X \setminus X_0)$.
+
+Then for any $E \in \mathcal{S}$:
+1. If $E$ is countable, $\mu(E) = \sum_{x \in E \cap X_0} a_x$.
+2. If $E$ is co-countable, $\mu(E) = \beta + \sum_{x \in E \cap X_0} a_x$.
+3. 
+Equivalently, for all $E \in \mathcal{S}$,
+$$
+\mu(E) = \sum_{x \in E \cap X_0} a_x + \beta \cdot 1_{E \text{ is co-countable}}.
+$$
+Here $\beta \in [0,\infty]$, $a_x \in [0,\infty]$, and $\sum_{x \in X_0} a_x$ can be finite or infinite independently of $\beta$.
+
+Thus, every measure on $(X,\mathcal{S})$ is of this form.
+___
+
 >[!problem] [SHE] 5A.2
 >Suppose $(X, \mathcal{S})$ is a measurable space. Prove that if $E \in \mathcal{S} \otimes \mathcal{S}$, then
 >$$
