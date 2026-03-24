@@ -87,49 +87,34 @@ If $n=1$, we have $Sp(2,k)=SL(2,k)$, which is discussed previously, so we assume
 We prove every symplectic transvection (which generates $Sp(2n,k)$) in $Sp(2n,k)$ belongs to the commutator subgroup $[Sp(2n,k),Sp(2n,k)]$. Then $Sp(2n,k)$ is perfect.
 
 **Proof:**
-Fix a symplectic basis $e_1,\dots,e_n,f_1,\dots,f_n$ with $\langle e_i,f_j\rangle=\delta_{ij}$.  
-The transvection $T_{e_1,\lambda}$ acts as
-$$
-T_{e_1,\lambda}(x)=x+\lambda\langle x,e_1\rangle e_1.
-$$
-In matrix form (with respect to the ordered basis $e_1,f_1,e_2,f_2,\dots$) it is
+Let $u\neq0$ and $\lambda\in k$. Choose a symplectic basis $\{e_1,f_1,e_2,f_2,\dots\}$where $u=e_1$.
+
+In the ordered basis $(e_1,f_1,e_2,f_2,\dots)$, the transvection $T_{e_1,\lambda}$ is
 $$
 T_{e_1,\lambda}=
 \begin{pmatrix}
-1 & \lambda & 0 & 0 \\
-0 & 1  & 0 & 0 \\
-0 & 0  & 1 & 0 \\
-0 & 0  & 0 & 1
+1&\lambda&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&0&1
 \end{pmatrix}\oplus I_{2n-4}.
 $$
-Now define two elements of $Sp(2n,k)$ by
+Define
 $$
 g=
 \begin{pmatrix}
-1 & 1 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1
+1&\lambda&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&0&1
 \end{pmatrix}\oplus I_{2n-4},
 \qquad
 h=
 \begin{pmatrix}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 1 \\
-0 & 0 & 0 & 1
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&1\\
+0&0&0&1
 \end{pmatrix}\oplus I_{2n-4}.
 $$
-Both $g$ and $h$ are symplectic transvections (with respect to the vectors $e_1$ and $e_2$, respectively). A direct matrix multiplication gives
-$$
-[g,h]=ghg^{-1}h^{-1}=
-\begin{pmatrix}
-1 & 1 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1
-\end{pmatrix}\oplus I_{2n-4}
-=T_{e_1,1}.
-$$
-Replacing the entry $1$ in the definition of $g$ by an arbitrary $\lambda\in k$ yields $[g,h]=T_{e_1,\lambda}$.  
-Since any symplectic transvection $T_{u,\lambda}$ is conjugate to some $T_{e_1,\lambda}$ by an element of $Sp(2n,k)$, and conjugation preserves commutators, it follows that every transvection lies in $[Sp(2n,k),Sp(2n,k)]$.
+Both $g$ and $h$ are symplectic transvections, hence $g,h\in Sp(2n,k)$. A direct matrix multiplication shows $[g,h]=T_{e_1,\lambda}$.
