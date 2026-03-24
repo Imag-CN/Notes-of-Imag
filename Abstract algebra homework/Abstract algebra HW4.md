@@ -117,8 +117,4 @@ so $[S_n, S_n] \subseteq A_n$.
 
 For $G=S_n$,
 - If $n=1,2$, $S_n$ is abelian, so $[S_n,S_n]=\{1\}$.
-- If $n=3$, $[S_3,S_3]=A_3\cong C_3$.
-- If $n\ge5$, $[S_n,S_n]=A_n$ (since $A_n$ is simple and non‑abelian, and $S_n/A_n\cong C_2$ is abelian).
-- The case $n=4$: $[S_4,S_4]=A_4$ (one can check that all 3‑cycles are commutators, and they generate $A_4$).
-
-Therefore, $[S_n, S_n] = A_n$.
+- If $n\geq3$, then for any distinct $i,j,k\in \{ 1,\dots,n \}$, $(ij)(jk)(ij)(jk)=(kji)$, thus $[S_n,S_n]$ contains all the $3$-cycles. And since all the $3$-cycles generates $A_{n}$, we have $[S_n, S_n] = A_n$.
