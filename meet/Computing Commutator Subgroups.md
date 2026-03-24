@@ -26,5 +26,33 @@ for distinct $i,j,k\in \{ 1,\dots,n \}$. All generators are in $[SL(n,k),SL(n,k)
 
 ___
 
-**(2)** 
+**(2)** For $n\leq 2$, we have $SO(n,k)$ is abelian, it has trivial commutator subgroup.
 
+To discuss the situation when $n\geq_{3}$, we shall first introduce an invariant:
+
+>[!definition] Spinor Norm
+>Let $F$ be a field, and let $V$ be a finite-dimensional vector space over $F$ equipped with a non-degenerate quadratic form $q: V \to F$. Let $O(q)$ denote the orthogonal group of $q$.
+>
+>For any anisotropic vector $v \in V$ (i.e., $q(v) \neq 0$), the reflection $\tau_v$ in $v$ is defined by
+>$$
+>\tau_v(x) = x - \frac{b_q(x, v)}{q(v)} v, \quad x \in V,
+>$$
+>where $b_q(x, y) = q(x+y) - q(x) - q(y)$ is the associated symmetric bilinear form. Every element $g \in O(q)$ can be written as a product of such reflections (Cartan–Dieudonné theorem):
+>$$
+>g = \tau_{v_1} \tau_{v_2} \cdots \tau_{v_k},
+>$$
+>with each $v_i$ anisotropic.
+>
+>The **spinor norm** of $g$ is the element $\theta(g) \in F^*/(F^*)^2$ defined by
+>$$
+>\theta(g) = q(v_1) q(v_2) \cdots q(v_k) \cdot (F^*)^2.
+>$$
+>It is independent of the choice of reflection factorization of $g$. The map
+>$$
+>\theta: O(q) \to F^*/(F^*)^2
+>$$
+>is a group homomorphism. Its kernel is denoted by $\Omega(q)$, the subgroup of orthogonal transformations with spinor norm $1$.
+
+Here we only consider $q$ as the most standard quadratic form $q(x)=x_{1}^{2}+\dots+x_{n}^{2}$.
+
+It's obvious that $[SO(n,k):SO(n,k)]\subseteq \Omega(q) \subseteq SO(n,k)$.
