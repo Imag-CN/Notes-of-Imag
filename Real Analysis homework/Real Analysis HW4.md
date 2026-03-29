@@ -16,50 +16,12 @@ ___
 > [!problem] [SHE] 2D.2
 >Prove that there exists a bounded set $A \subset \mathbf{R}$ such that $|F| \leq |A| - 1$ for every closed set $F \subset A$.
 
-> [!proof]  
-> **Construction of the example.**  
-> Let $X = \mathbb{R}$, $\mathcal{S} = \mathcal{B}(\mathbb{R})$ (the Borel $\sigma$-algebra), and let $A \subset \mathbb{R}$ be a non-Borel set (e.g., a Vitali set or a Bernstein set; such a set exists under the Axiom of Choice).  
-
-> For each $t \in \mathbb{R}$, define  
-> $$
-> f_t(x) = 
-> \begin{cases}
-> 1, & \text{if } x = t \text{ and } t \in A,\\[4pt]
-> 0, & \text{otherwise}.
-> \end{cases}
-> 
-$$
-
-> **Step 1. Each $f_t$ is $\mathcal{S}$-measurable.**  
-> Fix $t$. If $t \in A$, then $f_t^{-1}(\{1\}) = \{t\}$ (a closed, hence Borel, set) and $f_t^{-1}(\{0\}) = \mathbb{R}\setminus\{t\} \in \mathcal{B}(\mathbb{R})$.  
-> If $t \notin A$, then $f_t^{-1}(\{1\}) = \varnothing$ and $f_t^{-1}(\{0\}) = \mathbb{R}$, both Borel.  
-> Thus $f_t$ is Borel measurable for every $t$.
-
-> **Step 2. The supremum $f(x) = \sup_{t\in\mathbb{R}} f_t(x)$ is not $\mathcal{S}$-measurable.**  
-> By definition,
-> $$
-> f(x) = 
-> \begin{cases}
-> 1, & \text{if } x \in A,\\[4pt]
-> 0, & \text{if } x \notin A,
-> \end{cases}
-> 
-$$
-> i.e. $f = \mathbf{1}_A$ (the indicator function of $A$).  
-> Since $A$ is not Borel, $f^{-1}(\{1\}) = A \notin \mathcal{B}(\mathbb{R})$, so $f$ is not $\mathcal{S}$-measurable.
-
-> Therefore $(X,\mathcal{S}) = (\mathbb{R},\mathcal{B}(\mathbb{R}))$ together with the family $\{f_t\}_{t\in\mathbb{R}}$ defined above provides the required example. ∎
-
-
-___
-**Construction**: Under the Continuum Hypothesis (CH), a Lusin set exists. Let $L \subset [0,1]$ be a Lusin set: $|L| = \mathfrak{c}$, and for every meager set $M \subset \mathbb{R}$, $|L \cap M| \le \aleph_0$. Take $A = L$. Then $A$ is bounded and $|A| = \mathfrak{c}$.
-
-**Existence proof of Lusin set (CH)**:
-Let $\{M_\alpha : \alpha < \omega_1\}$ enumerate all meager $F_\sigma$ subsets of $\mathbb{R}$ (under CH, there are exactly $\mathfrak{c} = \aleph_1$ such sets). Construct $L = \{x_\alpha : \alpha < \omega_1\}$ by transfinite recursion:
+**Proof:**
+Let $\{M_\alpha : \alpha < \omega_1\}$ enumerate all meager $F_\sigma$ subsets of $\mathbb{R}$ (under CH, there are exactly $\mathfrak{c} = \aleph_1$ such sets). Construct $A = \{x_\alpha : \alpha < \omega_1\}$ by transfinite recursion:
 - At step $\alpha$, the set $\bigcup_{\beta < \alpha} M_\beta$ is meager, so its complement is co-meager, hence uncountable. Pick $x_\alpha \in [0,1] \setminus \bigl(\bigcup_{\beta < \alpha} M_\beta \cup \{x_\beta : \beta < \alpha\}\bigr)$.
-Then $L$ is a Lusin set: if $M$ is meager, it is contained in some meager $F_\sigma$ set $M_\alpha$, so $L \cap M \subset \{x_\beta : \beta \le \alpha\}$ is countable.
+Then $A$ is a Lusin set: if $M$ is meager, it is contained in some meager $F_\sigma$ set $M_\alpha$, so $A \cap M \subset \{x_\beta : \beta \le \alpha\}$ is countable.
 
-**Proof for $A$**: Let $F \subset A$ be closed. Since $L$ contains no interval, $F$ has empty interior, so $F$ is nowhere dense, hence meager. By the Lusin property, $|F| = |F \cap L| \le \aleph_0$. Thus $|F| < |A|$, so $|F| \le |A|-1$ holds.
+Let $F \subset A$ be closed. Since $L$ contains no interval, $F$ has empty interior, so $F$ is nowhere dense, hence meager. By the Lusin property, $|F| = |F \cap L| \le \aleph_0$. Thus $|F| < |A|$, so $|F| \le |A|-1$ holds.
 ___
 
 > [!problem] [SHE] 2D.6
