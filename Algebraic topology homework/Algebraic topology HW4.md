@@ -72,4 +72,4 @@ ___
 
 Suppose $\Phi_X([f]) = \Phi_X([g])$, so $f,g$ are basepoint-free homotopic via $F$ with $F(0,t)=F(1,t)=\gamma(t)$. Define $H(s,t) = \gamma(t)^{-1} \cdot F(s,t).$ Then $H(0,t)=H(1,t)=e$, $H(s,0)=f(s)$, $H(s,1)=g(s)$. So $H$ is a based homotopy. Hence $\Phi_{X}$ is injective.
 
-**(iii)** Take $X=S^1\vee S^1$, $\pi_1=\langle a,b\rangle$. Let $f=a$, $g=bab^{-1}$. In $\pi_1$, $[f]\neq[g]$, but $f$ and $g$ are basepoint‑free homotopic (slide the basepoint along $b$). Thus $\Phi_X$ is not injective.
+**(iii)** Take $X=S^1\vee S^1$, $\pi_1=\langle a,b\rangle$. Let $f=a$, $g=bab^{-1}$. In $\pi_1$, $[f]\neq[g]$, but $f$ and $g$ are basepoint‑free homotopic (drag the basepoint along $b$). Thus $\Phi_X$ is not injective.
