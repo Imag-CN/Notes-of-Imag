@@ -68,6 +68,8 @@ ___
 **Proof:**
 **(i)** Let $[\gamma]^{bf}\in\pi_1^{bf}(X)$. Pick $\alpha$ from $x_0$ to $\gamma(0)$. Define $f=\alpha^{-1}*\gamma*\alpha\in\Omega(X,x_0)$. Then $f$ is basepoint‑free homotopic to $\gamma$ via a homotopy that shrinks $\alpha$ and $\alpha^{-1}$, so $\Phi_X([f])=[\gamma]^{bf}$.  
 
-**(ii)** Assume $X$ is a topological group, $x_0=e$. Suppose $\Phi_X([f])=\Phi_X([g])$, so $f,g$ are basepoint‑free homotopic via $F$ with $F(0,t)=F(1,t)=\gamma(t)$. Define $H(s,t)=\gamma(t)^{-1}F(s,t)$. Then $H$ is a based homotopy from $f$ to $g$. Hence $\Phi_X$ is injective.  
+**(ii)** Let $\varphi(x) = x_0^{-1} \cdot x$. Then $\varphi$ is a homeomorphism with $\varphi(x_0) = e$, and induces isomorphisms on $\pi_1$ and $\pi_1^{bf}$. So WLOG assume $x_0 = e$.
+
+Suppose $\Phi_X([f]) = \Phi_X([g])$, so $f,g$ are basepoint-free homotopic via $F$ with $F(0,t)=F(1,t)=\gamma(t)$. Define $H(s,t) = \gamma(t)^{-1} \cdot F(s,t).$ Then $H(0,t)=H(1,t)=e$, $H(s,0)=f(s)$, $H(s,1)=g(s)$. So $H$ is a based homotopy. Hence $\Phi_{X}$ is injective.
 
 **(iii)** Take $X=S^1\vee S^1$, $\pi_1=\langle a,b\rangle$. Let $f=a$, $g=bab^{-1}$. In $\pi_1$, $[f]\neq[g]$, but $f$ and $g$ are basepoint‑free homotopic (slide the basepoint along $b$). Thus $\Phi_X$ is not injective.
