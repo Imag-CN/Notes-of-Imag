@@ -96,3 +96,65 @@ $$
 Thus for any measurable $A$, inner measure = outer measure.
 ___
 
+> [!problem] [SHE] 2B.16(b)
+> Suppose $\mathcal{S}$ is a $\sigma$-algebra on a set $X$ and $A \subset X$. Let
+> $$\mathcal{S}_A = \{E \in \mathcal{S} : A \subset E \text{ or } A \cap E = \varnothing\}.$$
+> 
+>Suppose $f: X \to \mathbf{R}$ is a function. Prove that $f$ is measurable with respect to $\mathcal{S}_A$ if and only if $f$ is measurable with respect to $\mathcal{S}$ and $f$ is constant on $A$.
+
+**Proof:**
+**($\Rightarrow$)**: Suppose $f$ is $\mathcal{S}_A$-measurable.  
+- Since $\mathcal{S}_A \subset \mathcal{S}$, for any open $U \subset \mathbb{R}$, $f^{-1}(U) \in \mathcal{S}_A \subset \mathcal{S}$, so $f$ is $\mathcal{S}$-measurable.  
+- Assume $f$ is not constant on $A$. Then $\exists x_1, x_2 \in A$ with $f(x_1) \ne f(x_2)$. Choose $r$ between $f(x_1)$ and $f(x_2)$. Let $U = (-\infty, r)$. Then $x_1 \in f^{-1}(U)$ but $x_2 \notin f^{-1}(U)$, so $A \not\subset f^{-1}(U)$ and $A \cap f^{-1}(U) \neq \varnothing$. Hence $f^{-1}(U) \notin \mathcal{S}_A$, contradiction. Thus $f$ is constant on $A$.
+
+**($\Leftarrow$)**: Suppose $f$ is $\mathcal{S}$-measurable and $f|_A \equiv c$ (constant). For any open $U \subset \mathbb{R}$, $f^{-1}(U) \in \mathcal{S}$. Now:
+  - If $c \in U$, then $A \subset f^{-1}(U)$.
+  - If $c \notin U$, then $A \cap f^{-1}(U) = \varnothing$.
+In either case, $f^{-1}(U) \in \mathcal{S}_A$ by definition. Hence $f$ is $\mathcal{S}_A$-measurable.
+___
+
+> [!problem] [SHE] 2B.17
+> Suppose $X$ is a Borel subset of $\mathbb{R}$ and $f: X \to \mathbb{R}$ is a function such that
+> $$\{x \in X : f \text{ is not continuous at } x\}$$
+> is a countable set. Prove $f$ is a Borel measurable function.
+
+**Proof:**
+Let $D = \{x \in X : f \text{ is discontinuous at } x\}$, which is countable. Write $D = \{d_1, d_2, \dots\}$. Let $C = X \setminus D$, where $f$ is continuous.
+
+For any open $U \subset \mathbb{R}$, we have
+$$f^{-1}(U) = (f^{-1}(U) \cap C) \cup (f^{-1}(U) \cap D).$$
+
+- Since $f|_C$ is continuous, $f^{-1}(U) \cap C$ is open in $C$, hence Borel (because $C$ is Borel, and relatively open sets in a Borel set are Borel).
+- $f^{-1}(U) \cap D$ is countable (a subset of $D$), hence Borel.
+
+Thus $f^{-1}(U)$ is a union of two Borel sets, so Borel. Therefore $f$ is Borel measurable.
+___
+
+> [!problem] [SHE] 2B.19
+> Suppose $X$ is a nonempty set and $\mathcal{S}$ is the $\sigma$-algebra on $X$ consisting of all subsets of $X$ that are either countable or have a countable complement in $X$. Give a characterization of the $\mathcal{S}$-measurable real-valued functions on $X$.
+
+**Answer:** A function $f: X \to \mathbb{R}$ is $\mathcal{S}$-measurable if and only if it is constant except possibly on a countable set. In other words, there exists a constant $c \in \mathbb{R}$ such that the set $\{x \in X : f(x) \ne c\}$ is countable.
+
+**Proof:**
+ If $f$ is constant $c$ outside a countable set $C$, then for any $a \in \mathbb{R}$, $f^{-1}((a, \infty))$ is either a subset of $C$ (if $c \le a$) or contains the co-countable set $X \setminus C$ (if $c > a$), hence is in $\mathcal{S}$.
+
+Conversely, let $f$ be $\mathcal{S}$-measurable. Partition $\mathbb{R}$ into intervals $I_n=[n, n+1]$. Their preimages are in $\mathcal{S}$ and cover $X$. Since $X$ is uncountable (trivial if $X$ countable), at least one preimage, say $A=f^{-1}(I_m)$, is co-countable. Restrict to $I_m$ and repeatedly bisect. The preimage of at least one half is co-countable each time, yielding a nested sequence of intervals with intersection a point $\{c\}$. Then $f^{-1}(\{c\})$ is a countable intersection of co-countable sets, hence co-countable. Thus $\{x: f(x)\ne c\}$ is countable.
+___
+
+> [!problem] [SHE] 2B.20
+> Suppose $(X, \mathcal{S})$ is a measurable space and $f, g: X \to \mathbb{R}$ are $\mathcal{S}$-measurable functions. Prove that if $f(x) > 0$ for all $x \in X$, then $f^g$ (which is the function whose value at $x \in X$ equals $f(x)^{g(x)}$) is an $\mathcal{S}$-measurable function.
+
+**Proof:**
+Since $f(x) > 0$, we can write
+$$
+f(x)^{g(x)} = e^{g(x)\ln f(x)}.
+$$
+
+Because $f$ and $g$ are $\mathcal{S}$-measurable, $\ln f$ is measurable (composition of the measurable function $f$ with the continuous function $\ln:(0,\infty)\to\mathbb{R}$).  
+Hence $g\ln f$ is measurable (product of two measurable functions).  
+
+Finally, $e^{g\ln f}$ is measurable as the composition of the measurable function $g\ln f$ with the continuous exponential function $\exp:\mathbb{R}\to\mathbb{R}$.  
+
+Thus $f^g = e^{g\ln f}$ is $\mathcal{S}$-measurable.
+___
+
