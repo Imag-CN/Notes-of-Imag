@@ -72,5 +72,28 @@ ___
 
 Suppose $\Phi_X([f]) = \Phi_X([g])$, so $f,g$ are basepoint-free homotopic via $F$ with $F(0,t)=F(1,t)=\gamma(t)$. Define $H(s,t) = \gamma(t)^{-1} \cdot F(s,t).$ Then $H(0,t)=H(1,t)=e$, $H(s,0)=f(s)$, $H(s,1)=g(s)$. So $H$ is a based homotopy. Hence $\Phi_{X}$ is injective.
 
-**(iii)** Take $X=S^1\vee S^1$, $\pi_1=\langle a,b\rangle$. Let $f=a$, $g=bab^{-1}$. In $\pi_1$, $[f]\neq[g]$, but $f$ and $g$ are basepoint‑free homotopic (by dragging the basepoint along $b$). Thus $\Phi_X$ is not injective.
+**(iii)** Take $X=S^1\vee S^1$, $\pi_1=\langle a,b\rangle$. Let $f=a$, $g=bab^{-1}$. In $\pi_1$, $[f]\neq[g]$, but $f$ and $g$ are basepoint‑free homotopic (by dragging the basepoint along $b$. More precise construction is in the following remark). Thus $\Phi_X$ is not injective.
 ___
+
+>[!remark]
+>$\Phi_X$ is injective if and only if $\pi_1(X,x_0)$ is abelian.
+
+**Proof:**
+($\Rightarrow$) Assume $\Phi_X$ is injective. Let $[f],[h] \in \pi_1(X,x_0)$ be arbitrary. We will show $[h][f] = [f][h]$.
+
+Consider the loop $g = h f h^{-1}$. Construct a free homotopy $F: I \times I \to X$ between $f$ and $g$ as follows. For $(s,t) \in I \times I$, set
+$$
+F(s,t) =
+\begin{cases}
+h(3t\cdot s) & 0 \le s \le \frac{t}{3}, \\[4pt]
+f\!\left(\dfrac{s - t/3}{1 - 2t/3}\right) & \dfrac{t}{3} \le s \le 1 - \dfrac{t}{3}, \\[8pt]
+h^{-1}\!\bigl(3t(1-s)\bigr) & 1 - \dfrac{t}{3} \le s \le 1,
+\end{cases}
+$$
+with the convention that for $t=0$ the middle expression is simply $f(s)$ and the outer branches are constant at $x_0$.
+
+One checks that $F$ is continuous, $F(s,0) = f(s)$, $F(s,1) = g(s)$, and $F(0,t) = F(1,t) = h(t)$. Hence $[f]^{bf} = [g]^{bf}$.
+
+Since $\Phi_X$ is injective, $[f] = [g] = [h][f][h]^{-1}$, i.e. $[h][f] = [f][h]$. As $[f],[h]$ were arbitrary, $\pi_1(X,x_0)$ is abelian.
+
+($\Leftarrow$) Assume $\pi_1(X,x_0)$ is abelian. Let $[f],[g] \in \pi_1(X,x_0)$ with $\Phi_X([f]) = \Phi_X([g])$, i.e. $f$ and $g$ are freely homotopic. Let $F$ be such a free homotopy and put $\gamma(t) = F(0,t) = F(1,t)$. Then $\gamma$ is a loop based at $x_0$. Using the same construction as above (with $f$, $h = \gamma$, and the given $F$), one obtains a based homotopy between $g$ and $\gamma f \gamma^{-1}$. Hence $[g] = [\gamma][f][\gamma]^{-1}$. Because $\pi_1$ is abelian, $[\gamma][f][\gamma]^{-1} = [f]$, so $[g] = [f]$. Thus $\Phi_X$ is injective.
