@@ -16,6 +16,42 @@ ___
 > [!problem] [SHE] 2D.2
 >Prove that there exists a bounded set $A \subset \mathbf{R}$ such that $|F| \leq |A| - 1$ for every closed set $F \subset A$.
 
+> [!proof]  
+> **Construction of the example.**  
+> Let $X = \mathbb{R}$, $\mathcal{S} = \mathcal{B}(\mathbb{R})$ (the Borel $\sigma$-algebra), and let $A \subset \mathbb{R}$ be a non-Borel set (e.g., a Vitali set or a Bernstein set; such a set exists under the Axiom of Choice).  
+
+> For each $t \in \mathbb{R}$, define  
+> $$
+> f_t(x) = 
+> \begin{cases}
+> 1, & \text{if } x = t \text{ and } t \in A,\\[4pt]
+> 0, & \text{otherwise}.
+> \end{cases}
+> 
+$$
+
+> **Step 1. Each $f_t$ is $\mathcal{S}$-measurable.**  
+> Fix $t$. If $t \in A$, then $f_t^{-1}(\{1\}) = \{t\}$ (a closed, hence Borel, set) and $f_t^{-1}(\{0\}) = \mathbb{R}\setminus\{t\} \in \mathcal{B}(\mathbb{R})$.  
+> If $t \notin A$, then $f_t^{-1}(\{1\}) = \varnothing$ and $f_t^{-1}(\{0\}) = \mathbb{R}$, both Borel.  
+> Thus $f_t$ is Borel measurable for every $t$.
+
+> **Step 2. The supremum $f(x) = \sup_{t\in\mathbb{R}} f_t(x)$ is not $\mathcal{S}$-measurable.**  
+> By definition,
+> $$
+> f(x) = 
+> \begin{cases}
+> 1, & \text{if } x \in A,\\[4pt]
+> 0, & \text{if } x \notin A,
+> \end{cases}
+> 
+$$
+> i.e. $f = \mathbf{1}_A$ (the indicator function of $A$).  
+> Since $A$ is not Borel, $f^{-1}(\{1\}) = A \notin \mathcal{B}(\mathbb{R})$, so $f$ is not $\mathcal{S}$-measurable.
+
+> Therefore $(X,\mathcal{S}) = (\mathbb{R},\mathcal{B}(\mathbb{R}))$ together with the family $\{f_t\}_{t\in\mathbb{R}}$ defined above provides the required example. ∎
+
+
+___
 **Construction**: Under the Continuum Hypothesis (CH), a Lusin set exists. Let $L \subset [0,1]$ be a Lusin set: $|L| = \mathfrak{c}$, and for every meager set $M \subset \mathbb{R}$, $|L \cap M| \le \aleph_0$. Take $A = L$. Then $A$ is bounded and $|A| = \mathfrak{c}$.
 
 **Existence proof of Lusin set (CH)**:
@@ -187,3 +223,25 @@ ___
 > Give an example of a measurable space $(X, \mathcal{S})$ and a family $\{f_t\}_{t \in \mathbf{R}}$ such that each $f_t$ is an $\mathcal{S}$-measurable function from $X$ to $[0,1]$, but the function $f: X \to [0,1]$ defined by
 > $$f(x) = \sup\{f_t(x) : t \in \mathbf{R}\}$$
 > is not $\mathcal{S}$-measurable.
+
+**Proof:**
+Take $X = \mathbb{R}$, $\mathcal{S} = \mathcal{B}(\mathbb{R})$ (Borel $\sigma$-algebra). Let $A \subset \mathbb{R}$ be a non‑Borel set (e.g., a Vitali set). For each $t \in \mathbb{R}$, define
+$$
+f_t(x) = \begin{cases}
+1 & \text{if } x = t \text{ and } t \in A,\\
+0 & \text{otherwise.}
+\end{cases}
+$$
+
+- Each $f_t$ is $\mathcal{S}$-measurable because $f_t^{-1}(\{1\}) = \{t\}$ if $t \in A$, and $f_t^{-1}(\{1\}) = \varnothing$ if $t \notin A$; in both cases the preimage is a Borel set (a singleton or the empty set), and $f_t^{-1}(\{0\}) = \mathbb{R} \setminus f_t^{-1}(\{1\})$ is also Borel. Hence $f_t$ is Borel measurable.
+
+- The supremum $f(x) = \sup_{t\in\mathbb{R}} f_t(x)$ satisfies
+$$
+f(x) = \begin{cases}
+1 & \text{if } x \in A,\\
+0 & \text{if } x \notin A.
+\end{cases}
+$$
+Thus $f = \mathbf{1}_A$ (the indicator function of $A$). Since $A$ is not Borel, $f^{-1}(\{1\}) = A \notin \mathcal{B}(\mathbb{R})$, so $f$ is not $\mathcal{S}$-measurable.
+
+Therefore $(X, \mathcal{S}) = (\mathbb{R}, \mathcal{B}(\mathbb{R}))$ with the family $\{f_t\}_{t\in\mathbb{R}}$ as above gives the required example.
