@@ -97,3 +97,6 @@ One checks that $F$ is continuous, $F(s,0) = f(s)$, $F(s,1) = g(s)$, and $F(0,t)
 Since $\Phi_X$ is injective, $[f] = [g] = [h][f][h]^{-1}$, i.e. $[h][f] = [f][h]$. As $[f],[h]$ were arbitrary, $\pi_1(X,x_0)$ is abelian.
 
 ($\Leftarrow$) Assume $\pi_1(X,x_0)$ is abelian. Let $[f],[g] \in \pi_1(X,x_0)$ with $\Phi_X([f]) = \Phi_X([g])$, i.e. $f$ and $g$ are freely homotopic. Let $F$ be such a free homotopy and put $\gamma(t) = F(0,t) = F(1,t)$. Then $\gamma$ is a loop based at $x_0$. Using the same construction as above (with $f$, $h = \gamma$, and the given $F$), one obtains a based homotopy between $g$ and $\gamma f \gamma^{-1}$. Hence $[g] = [\gamma][f][\gamma]^{-1}$. Because $\pi_1$ is abelian, $[\gamma][f][\gamma]^{-1} = [f]$, so $[g] = [f]$. Thus $\Phi_X$ is injective.
+
+>[!remark]
+>
