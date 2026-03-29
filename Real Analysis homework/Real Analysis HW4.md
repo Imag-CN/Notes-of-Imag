@@ -13,3 +13,6 @@ For any $a \in \mathbb{R}$:
 Thus all sections are Borel, but $E \notin \mathcal{B} \otimes \mathcal{B}$.
 ___
 
+> [!problem] [SHE] 2D.2
+>Prove that there exists a bounded set $A \subset \mathbf{R}$ such that $|F| \leq |A| - 1$ for every closed set $F \subset A$.
+
