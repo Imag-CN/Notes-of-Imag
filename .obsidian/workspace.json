@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meet/Computing Commutator Subgroups.md",
+                "file": "Abstract algebra homework/Abstract algebra HW7.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Computing Commutator Subgroups"
+              "title": "Abstract algebra HW7"
             }
           }
         ]
@@ -186,10 +186,14 @@
   },
   "active": "5ba80245070c0f3b",
   "lastOpenFiles": [
-    "Abstract algebra homework/Abstract algebra HW5.md",
-    "meet/Computing Commutator Subgroups.md",
-    "Abstract algebra homework/Abstract algebra HW6.md",
     "Abstract algebra homework/Abstract algebra HW1.md",
+    "Abstract algebra homework/Abstract algebra HW7.md",
+    "Complex analysis homework/Complex analysis HW14.md",
+    "Abstract algebra homework/未命名",
+    "meet/A continuous function with divergent Fourier series.md",
+    "meet/Computing Commutator Subgroups.md",
+    "Abstract algebra homework/Abstract algebra HW5.md",
+    "Abstract algebra homework/Abstract algebra HW6.md",
     "Algebraic topology homework/Algebraic topology HW3.md",
     "Real Analysis homework/Real Analysis HW2.md",
     "Real Analysis homework/Real Analysis HW3.md",
@@ -209,9 +213,6 @@
     "拉格朗日反演与贝尔多项式.md",
     "度量与全序的相似, 不同与统一.md",
     "非整数阶积分与导数.md",
-    "meet/Gambler's ruin problem.md",
-    "Crofton 定理以及一个应用.md",
-    "Pi Day 卡牌游戏 Card Game.md",
     "attachments/Pasted image 20260309212035.png",
     "物理",
     "Real Analysis homework",
@@ -231,7 +232,6 @@
     "未命名.canvas",
     "未命名.base",
     "meet/未命名",
-    "物理/图",
-    "Topology and geometry homework/graph"
+    "物理/图"
   ]
 }
