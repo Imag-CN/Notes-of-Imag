@@ -23,7 +23,7 @@ ___
 
 For $n\leq 2$, we have $SO(n,k)$ is abelian, it has trivial commutator subgroup.
 
-To discuss the situation when $n\geq_{3}$, we shall first introduce an invariant:
+To discuss the situation when $n\geq {3}$, we shall first introduce an invariant:
 
 >[!definition] Spinor Norm
 >Let $F$ be a field, and let $V$ be a finite-dimensional vector space over $F$ equipped with a non-degenerate quadratic form $q: V \to F$. Let $O(q)$ denote the orthogonal group of $q$.
