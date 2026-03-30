@@ -64,3 +64,16 @@ $$
 Thus $\varphi(T_1 \circ T_2)(x) = (\varphi(T_1) \circ \varphi(T_2))(x)$ for all $x$, hence $\varphi(T_1 \circ T_2) = \varphi(T_1) \circ \varphi(T_2)$, and $\varphi$ is a group homomorphism. 
 ___
 
+> [!problem] Problem 3
+>Let $\Omega$ be an open subset of $\mathbb{C}$. Denote
+>$$
+>\mathbb{D} = \{ z \in \mathbb{C} \mid |z| < 1 \}
+>$$
+>$$
+>\mathbb{H} = \{ z \in \mathbb{C} \mid \operatorname{Im}(z) > 0 \}
+>$$
+> 
+> (i) Show that if $f: \Omega \to \Omega$ is holomorphic and bijective, then it is biholomorphic, i.e., there exists a holomorphic function $g: \Omega \to \Omega$ such that $f \circ g = g \circ f = \operatorname{Id}$. This shows that holomorphic bijective maps $\Omega \to \Omega$ form a group, denoted by $\operatorname{Aut}(\Omega)$.
+> 
+> (ii) Compute $\operatorname{Aut}(\mathbb{C})$, $\operatorname{Aut}(\mathbb{D})$ and $\operatorname{Aut}(\mathbb{H})$ and relate them with matrix groups.
+
