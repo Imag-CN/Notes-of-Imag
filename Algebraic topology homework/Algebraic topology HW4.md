@@ -99,4 +99,4 @@ Since $\Phi_X$ is injective, $[f] = [g] = [h][f][h]^{-1}$, i.e. $[h][f] = [f][h]
 ($\Leftarrow$) Assume $\pi_1(X,x_0)$ is abelian. Let $[f],[g] \in \pi_1(X,x_0)$ with $\Phi_X([f]) = \Phi_X([g])$, i.e. $f$ and $g$ are freely homotopic. Let $F$ be such a free homotopy and put $\gamma(t) = F(0,t) = F(1,t)$. Then $\gamma$ is a loop based at $x_0$. Using the same construction as above (with $f$, $h = \gamma$, and the given $F$), one obtains a based homotopy between $g$ and $\gamma f \gamma^{-1}$. Hence $[g] = [\gamma][f][\gamma]^{-1}$. Because $\pi_1$ is abelian, $[\gamma][f][\gamma]^{-1} = [f]$, so $[g] = [f]$. Thus $\Phi_X$ is injective.
 
 >[!remark]
->
+>Let $X$ be a path‑connected topological space, $\pi_1^{bf}(X)$ has a natural bijection with $H_{1}(X)$, we may endow a nature group onto $\pi_1^{bf}(X)$ by this bijection. We have proven in the last remark that the kernel of the canonical map $\Phi_X$ is $[\pi_{1}(X,x_{0}),\pi_{1}(X,x_{0})]$, the commutator subgroup of $\pi_{1}(X,x_{0})$, thus $H_{1}(X)$, or $\pi_1^{bf}(X)$ endowed with a group structure is actually the abelianization of $\pi_1(X)$.
