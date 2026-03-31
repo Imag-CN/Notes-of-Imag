@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meet/Continous but non-Lesbegue-Lesbegue Function.md",
+                "file": "meet/A Continuous but Non-Lebesgue-Lebesgue Function.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Continous but non-Lesbegue-Lesbegue Function"
+              "title": "A Continuous but Non-Lebesgue-Lebesgue Function"
             }
           }
         ]
@@ -187,7 +187,7 @@
   "active": "5ba80245070c0f3b",
   "lastOpenFiles": [
     "Abstract algebra homework/Abstract algebra HW8.md",
-    "meet/Continous but non-Lesbegue-Lesbegue Function.md",
+    "meet/A Continuous but Non-Lebesgue-Lebesgue Function.md",
     "Algebraic topology homework/Algebraic topology HW4.md",
     "Algebraic topology homework/Algebraic topology HW3.md",
     "Abstract algebra homework/Abstract algebra HW7.md",
