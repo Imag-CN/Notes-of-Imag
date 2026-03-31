@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic topology homework/Algebraic topology HW4.md",
+                "file": "meet/Continous but non-Lesbegue-Lesbegue Function.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebraic topology HW4"
+              "title": "Continous but non-Lesbegue-Lesbegue Function"
             }
           }
         ]
@@ -187,8 +187,9 @@
   "active": "5ba80245070c0f3b",
   "lastOpenFiles": [
     "Abstract algebra homework/Abstract algebra HW8.md",
-    "Algebraic topology homework/Algebraic topology HW3.md",
+    "meet/Continous but non-Lesbegue-Lesbegue Function.md",
     "Algebraic topology homework/Algebraic topology HW4.md",
+    "Algebraic topology homework/Algebraic topology HW3.md",
     "Abstract algebra homework/Abstract algebra HW7.md",
     "Real Analysis homework/Real Analysis HW4.md",
     "Real Analysis homework/Real Analysis HW1.md",
@@ -212,7 +213,6 @@
     "Steiniz 定理.md",
     "Decay rate of Fourier coefficients.md",
     "Morse 理论相关.md",
-    "幂级数边界的收敛点集.md",
     "attachments/Pasted image 20260309212035.png",
     "物理",
     "Real Analysis homework",
