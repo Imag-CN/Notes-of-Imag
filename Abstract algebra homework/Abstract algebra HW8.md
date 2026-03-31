@@ -77,3 +77,12 @@ ___
 > 
 > (ii) Compute $\operatorname{Aut}(\mathbb{C})$, $\operatorname{Aut}(\mathbb{D})$ and $\operatorname{Aut}(\mathbb{H})$ and relate them with matrix groups.
 
+**Proof:**
+**(i)** Let $f: \Omega \to \Omega$ be holomorphic and bijective. By the open mapping theorem, $f$ is an open map, so $f^{-1}$ is continuous. Since $f$ is injective, $f'(z) \neq 0$ for all $z \in \Omega$, so by the inverse function theorem $f^{-1}$ is holomorphic. Thus $f$ is biholomorphic, and $\operatorname{Aut}(\Omega)$ is a group.
+
+**(ii)** 
+1. $\operatorname{Aut}(\mathbb{C}) = \{f(z)=az+b \mid a\in\mathbb{C}^\times, b\in\mathbb{C}\} \cong GL(1,\mathbb{C})\ltimes\mathbb{C}$.
+2. $\operatorname{Aut}(\mathbb{D}) = \{f(z)=e^{i\theta}\frac{z-a}{1-\bar{a}z} \mid |a|<1,\theta\in\mathbb{R}\} \cong PSU(1,1) \cong PSL(2,\mathbb{R})$.
+3. $\operatorname{Aut}(\mathbb{H}) = \{f(z)=\frac{az+b}{cz+d} \mid a,b,c,d\in\mathbb{R}, ad-bc>0\} \cong PSL(2,\mathbb{R})$.
+
+These are all subgroups of Möbius transformations.
