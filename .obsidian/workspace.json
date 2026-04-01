@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meet/A Continuous but Non-Lebesgue-Lebesgue Function.md",
+                "file": "Abstract algebra homework/Abstract algebra HW9.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "A Continuous but Non-Lebesgue-Lebesgue Function"
+              "title": "Abstract algebra HW9"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "5ba80245070c0f3b",
   "lastOpenFiles": [
-    "Abstract algebra homework/Abstract algebra HW8.md",
     "meet/A Continuous but Non-Lebesgue-Lebesgue Function.md",
+    "Abstract algebra homework/Abstract algebra HW9.md",
+    "Abstract algebra homework/Abstract algebra HW8.md",
     "Algebraic topology homework/Algebraic topology HW4.md",
     "Algebraic topology homework/Algebraic topology HW3.md",
     "Abstract algebra homework/Abstract algebra HW7.md",
@@ -212,7 +213,6 @@
     "Helly 定理.md",
     "Steiniz 定理.md",
     "Decay rate of Fourier coefficients.md",
-    "Morse 理论相关.md",
     "attachments/Pasted image 20260309212035.png",
     "物理",
     "Real Analysis homework",
