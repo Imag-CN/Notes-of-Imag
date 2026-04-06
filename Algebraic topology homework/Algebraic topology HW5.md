@@ -54,4 +54,35 @@ Both $q: Y \to \widetilde{X}$ and $p: \widetilde{X} \to X$ are covering maps, th
 Thus $Y \to \widetilde{X}$ is a two‑sheeted covering space, but $Y \to X$ is not a covering space.
 ___
 
+> [!problem]
+> Let $X$ be a path-connected, locally path-connected space, $x_0 \in X$, and let $G$ be a left action of the fundamental group $\pi_1(X, x_0)$ on a set $F$.  
+> Let $p: \widetilde{X} \to X$ be a covering space such that the induced left action of $\pi_1(X, x_0)$ on the fiber $p^{-1}(x_0)$ is isomorphic to the given action $G$.  
+> Prove that $p: \widetilde{X} \to X$ is isomorphic as a covering space to the covering space $p_G: X_G \to X$ constructed in Part (1) — i.e., there exists a covering space isomorphism $f: \widetilde{X} \to X_G$ such that $p_G \circ f = p$, and $f$ preserves the basepoint and the group action.
 
+**Proof:**
+Let $f:(\widetilde{X},\tilde{x}_0)\to(X,x_0)$ and $g:(\widetilde{X}',\tilde{x}_0')\to(X,x_0)$ be the two covering spaces, with
+$$f_*(\pi_1(\widetilde{X},\tilde{x}_0))=H=g_*(\pi_1(\widetilde{X}',\tilde{x}_0')).$$
+
+Consider the identity map $\operatorname{id}_X:X\to X$. Apply the lifting criterion to the diagram
+$$
+\begin{array}{c}
+\widetilde{X} \xrightarrow{f} X \\
+\downarrow \exists ! \, h \\
+\widetilde{X}' \xrightarrow{g} X
+\end{array}
+$$
+The lifting criterion requires
+$$f_*(\pi_1(\widetilde{X},\tilde{x}_0))\subseteq g_*(\pi_1(\widetilde{X}',\tilde{x}_0')).$$
+This holds because both sides equal $H$. Hence there exists a unique lift $h:(\widetilde{X},\tilde{x}_0)\to(\widetilde{X}',\tilde{x}_0')$ such that $g\circ h=f$.
+
+Similarly, consider lifting $\operatorname{id}_X$ from $\widetilde{X}'$ to $\widetilde{X}$. The condition
+$$g_*(\pi_1(\widetilde{X}',\tilde{x}_0'))\subseteq f_*(\pi_1(\widetilde{X},\tilde{x}_0))$$
+also holds. So there exists a unique lift $k:(\widetilde{X}',\tilde{x}_0')\to(\widetilde{X},\tilde{x}_0)$ with $f\circ k=g$.
+
+Now $k\circ h:(\widetilde{X},\tilde{x}_0)\to(\widetilde{X},\tilde{x}_0)$ satisfies
+$$f\circ(k\circ h)=(f\circ k)\circ h=g\circ h=f.$$
+Also $k(h(\tilde{x}_0))=\tilde{x}_0$. The identity map $\operatorname{id}_{\widetilde{X}}$ satisfies the same conditions. By the unique lifting property, $k\circ h=\operatorname{id}_{\widetilde{X}}$. Similarly, $h\circ k=\operatorname{id}_{\widetilde{X}'}$. Hence $h$ is a homeomorphism.
+
+Since $g\circ h=f$ and $h$ is a homeomorphism, $h$ is an isomorphism of covering spaces. The construction is unique once basepoints are fixed.
+
+Thus the covering space corresponding to a given subgroup $H\leq\pi_1(X,x_0)$ is unique up to isomorphism.
