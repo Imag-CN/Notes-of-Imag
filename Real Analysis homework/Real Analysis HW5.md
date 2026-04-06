@@ -32,7 +32,7 @@ ___
 
 **Solution:**
 **(a)** $\Lambda(9/13) = 4/7$.
-**(b)** $\Lambda(0.93) = 45/64 = 0.703125$.
+**(b)** $\Lambda(0.93) = 7/16$.
 ___
 
 > [!problem] [SHE] 2D.21
@@ -43,7 +43,7 @@ ___
 **Solution:**
 **(a)** $\frac{1}{3} = 0.\overline{01}_2$ in binary. The unique ternary expansion in $C$ giving this binary is $0.\overline{02}_3 = \frac{1}{4}$. Since $\frac{1}{3}$ is not a dyadic rational, $\Lambda^{-1}(\{1/3\})$ is the singleton $\{\frac{1}{4}\}$.
 
-**(b)** $\frac{5}{16} = 0.0101_2$ (finite binary) = $0.01001111\ldots_2$. The corresponding ternary expansions in $C$ are $0.0202_3 = \frac{20}{27}$ and $0.02000222\ldots_3 = \frac{55}{81}$. Since $\frac{5}{16}$ is dyadic, $\Lambda$ is constant on the interval between these two points. Thus $\Lambda^{-1}(\{5/16\}) = [\frac{20}{27}, \frac{55}{81}]$.
+**(b)** $\frac{5}{16} = 0.0101_2$ (finite binary) = $0.01001111\ldots_2$. The corresponding ternary expansions in $C$ are $0.0202_3 = \frac{20}{81}$ and $0.02000222\ldots_3 = \frac{19}{81}$. Since $\frac{5}{16}$ is dyadic, $\Lambda$ is constant on the interval between these two points. Thus $\Lambda^{-1}(\{5/81\}) = [\frac{20}{27}, \frac{55}{81}]$.
 ___
 
 > [!problem] [SHE] 2D.23
