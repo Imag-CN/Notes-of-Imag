@@ -38,3 +38,19 @@ ___
 > 
 > Note that a composition of two covering spaces *does* have the unique path lifting property, however.
 
+**Proof:**
+Let $X$ be the shrinking wedge of circles. Its covering space $\widetilde{X}$ consists of the real line $\mathbb{R}$ with a copy of $X$ attached at each integer point $n \in \mathbb{Z}$. Let $p: \widetilde{X} \to X$ be the covering map that collapses each copy of $X$ to the basepoint of $X$.
+
+Take two disjoint copies $\widetilde{X}_0$, $\widetilde{X}_1$ of $\widetilde{X}$. Define an equivalence relation on $\widetilde{X}_0 \sqcup \widetilde{X}_1$ as follows: for $x$ in the real line of $\widetilde{X}$,
+- if $x \ge 0$, the two copies of the point $x$ are not identified;
+- if $x < 0$, identify the copy of $x$ in $\widetilde{X}_0$ with the copy of $x$ in $\widetilde{X}_1$ *after applying the involution that swaps the two copies*.
+
+Equivalently, $Y$ is the two‑sheeted cover of $\widetilde{X}$ that is trivial over the half‑line $[0,\infty)$ and non‑trivial over $(-\infty,0]$. The projection $q: Y \to \widetilde{X}$ is a two‑sheeted covering map.
+
+Consider the basepoint $x_0 \in X$. In $\widetilde{X}$, the preimage $p^{-1}(x_0)$ consists of the basepoints of all attached copies of $X$. In $Y$, the preimage of $x_0$ under the composition $p \circ q$ consists of two points for each integer $n \ge 0$, but for $n < 0$ the identification above makes the two points coincide in the limit as $n \to -\infty$. Consequently, any neighbourhood of $x_0$ in $X$ has a preimage in $Y$ that cannot be written as a disjoint union of sheets each homeomorphic to that neighbourhood. Hence the composition fails to be a local homeomorphism in the sense of covering spaces.
+
+Both $q: Y \to \widetilde{X}$ and $p: \widetilde{X} \to X$ are covering maps, therefore they have the unique path‑lifting property. The composition of two maps with the unique path‑lifting property also has that property, as noted in the problem.
+
+Thus $Y \to \widetilde{X}$ is a two‑sheeted covering space, but $Y \to X$ is not a covering space.
+___
+
