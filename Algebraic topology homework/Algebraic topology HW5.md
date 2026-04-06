@@ -54,3 +54,4 @@ Both $q: Y \to \widetilde{X}$ and $p: \widetilde{X} \to X$ are covering maps, th
 Thus $Y \to \widetilde{X}$ is a two‑sheeted covering space, but $Y \to X$ is not a covering space.
 ___
 
+
