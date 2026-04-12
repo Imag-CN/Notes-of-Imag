@@ -139,5 +139,32 @@ ___
 >Suppose $(X, \mathcal{S}, \mu)$ is a measure space and $f: X \rightarrow[0, \infty]$ is an $\mathcal{S}$-measurable function. Prove that
 >$$\int f \, d \mu>0 \quad \text { if and only if } \quad \mu(\{x \in X: f(x)>0\})>0.$$
 
+**Proof:**
+Let $E = \{x \in X : f(x) > 0\}$.
+
+($\Leftarrow$) Assume $\mu(E) > 0$.
+
+Define $E_n = \{x \in X : f(x) > 1/n\}$ for $n \in \mathbb{N}$. Then $E_n \uparrow E$, so $\mu(E_n) \uparrow \mu(E) > 0$. Thus there exists $N$ such that $\mu(E_N) > 0$.
+
+Since $f \ge \frac{1}{N} \chi_{E_N}$, we have
+$$
+\int f \, d\mu \ge \int \frac{1}{N} \chi_{E_N} \, d\mu = \frac{1}{N} \mu(E_N) > 0.
+$$
+
+($\Rightarrow$) Assume $\mu(E) = 0$, i.e., $f = 0$ $\mu$-almost everywhere. Then for any simple function $0 \le s \le f$, we have $s = 0$ $\mu$-a.e., so $\int s \, d\mu = 0$. By the definition of the integral of a nonnegative measurable function as the supremum of integrals of simple functions below it, we get
+$$
+\int f \, d\mu = 0.
+$$
+
+Hence $\int f \, d\mu = 0$ if $\mu(E)=0$.
+
+Thus $\int f \, d\mu > 0$ iff $\mu(E) > 0$.
+___
+
+>[!problem] [SHE] 3A.4
+>Give an example of a Borel measurable function $f:[0,1] \rightarrow(0, \infty)$ such that
+>$$L(f,[0,1])=0.$$
+
+
 
 
