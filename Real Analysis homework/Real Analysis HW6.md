@@ -182,7 +182,7 @@ f(x) = \frac{1}{2^n} \quad \text{if } x \in C_n \ (n \ge 0).
 $$
 Then $f(x) > 0$ for all $x$. $f$ is Borel measurable because
 $$
-f^{-1}((a,+\infty))=\big
+f^{-1}((a,+\infty))=\bigcup_{}
 $$
 
 Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish, i.e. $L(f,[0,1])=0.$
