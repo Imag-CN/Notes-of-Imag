@@ -43,30 +43,43 @@ ___
 >Give an example of a Borel measurable function $f$ from $\mathbf{R}$ to $\mathbf{R}$ such that there does not exist a set $B \subset \mathbf{R}$ such that $|\mathbf{R} \backslash B|=0$ and $f|_{B}$ is a continuous function on $B$.
 
 **Proof:**
-Let $\{J_m\}$ enumerate all subintervals of $\mathbb{R}$ with rational endpoints. In each $J_m$, construct a fat Cantor set $C_m$ with
-$$
-m(C_m) = \frac12 m(J_m).
-$$
-Define
-$$
-E = \bigcup_{m=1}^\infty C_m.
-$$
-- $E$ is Borel.
-- $E$ is dense (since each $J_m$ contains $C_m$).
-- $E^c$ is also dense: for any interval $I$, $I\setminus C_m$ is nonempty open in $I$, and we can arrange that it avoids other $C_{m'}$ in a dense way.
-- For any open interval $I$, choose $J_m \subset I$. Then
-  $$
-  m(E \cap I) \ge m(C_m) = \frac12 m(J_m) > 0,
-  $$
-  and
-  $$
-  m(E^c \cap I) = m(I) - m(E \cap I) \ge m(I) - \frac12 m(J_m) > 0
-  $$
-  (since $m(E \cap I) < m(I)$ by construction in subintervals).
+Let $C \subset [0,1]$ be a fat Cantor set with $m(C) > 0$. Define $f = \chi_C$ (the characteristic function of $C$).
 
-Take $f = \chi_E$, a Borel function. Suppose $\exists B$ with $m(\mathbb{R}\setminus B)=0$ and $f|_B$ continuous. Then $B$ is dense, and because $E$ and $E^c$ are dense and of positive measure in every interval, $B\cap E$ and $B\cap E^c$ are dense in $B$. Hence $f|_B$ takes both 0 and 1 densely near any point, so it cannot be continuous anywhere – contradiction.
+Since $C$ is closed, it is Borel; so $f$ is Borel measurable. It is obvious that every point of $C$ is a limit point of $C^c$ (the complement in $[0,1]$).
 
-Thus $f$ is the required function.
+Suppose there exists $B \subset \mathbb{R}$ with $m(\mathbb{R} \setminus B) = 0$ such that $f|_B$ is continuous. Because $m(C) > 0$, the set $B \cap C$ has positive measure. Let $x_0 \in B \cap C$ be a point of density of $B \cap C$ (which exists by Lebesgue density theorem). Since $x_0$ is a limit point of $C^c$, and $m(\mathbb{R} \setminus B) = 0$, we can find a sequence $\{y_n\} \subset B \cap C^c$ with $y_n \to x_0$. Then $f(y_n) = 0$ for all $n$, but $f(x_0) = 1$. Hence $f|_B$ is not continuous at $x_0$, contradiction.
+
+Therefore, no such $B$ exists, and $f = \chi_C$ is the required function.
 ___
 
+>[!problem] [SHE] 2E.14
+>Suppose $b_{1}, b_{2}, \ldots$ is a sequence of real numbers. Define $f: \mathbf{R} \rightarrow[0, \infty]$ by
+>$$
+>f(x)= \begin{cases}\displaystyle\sum_{k=1}^{\infty} \frac{1}{4^{k}\left|x-b_{k}\right|} & \text { if } x \notin\left\{b_{1}, b_{2}, \ldots\right\} \\ \infty & \text { if } x \in\left\{b_{1}, b_{2}, \ldots\right\}.\end{cases}
+>$$
+>Prove that
+>$$
+>\left|\left\{x \in \mathbf{R}: f(x)<1\right\}\right|=\infty.
+>$$
+
+**Proof:**
+Define intervals
+$$
+I_k = \left(b_k - \frac{1}{2^{k-1}}, b_k + \frac{1}{2^{k-1}}\right), \quad k \ge 1.
+$$
+Their total length is
+$$
+\sum_{k=1}^\infty |I_k| = \sum_{k=1}^\infty \frac{2}{2^{k-1}} = 4.
+$$
+
+Let $E = \bigcup_{k=1}^\infty I_k$. Then $|E| \le 4$, so $\mathbf{R} \setminus E$ has infinite measure.
+
+Take any $x \in \mathbf{R} \setminus E$. Then $|x - b_k| \ge \frac{1}{2^{k-1}}$ for all $k$, and $x \notin \{b_k\}$. Hence
+$$
+f(x) = \sum_{k=1}^\infty \frac{1}{4^k |x - b_k|}
+\le \sum_{k=1}^\infty \frac{1}{4^k \cdot 2^{-k+1}}
+= \sum_{k=1}^\infty \frac{1}{2^{k+1}} = \dfrac{1}{2}<1.
+$$
+Therefore, $\mathbf{R}\setminus E\subset\left\{x \in \mathbf{R}: f(x)<1\right\}$, then $\left|\left\{x \in \mathbf{R}: f(x)<1\right\}\right| \geq \left| \mathbf{R}\setminus E \right|=\infty$.
+___
 
