@@ -8,7 +8,7 @@ Assume $F$ is not closed. Then there exists a limit point $x_0$ of $F$ such that
 
 Define $f: F \to \mathbb{R}$ by $f(x) = \frac{1}{x - x_0}$. Since $x_0 \notin F$, $f$ is well-defined and continuous on $F$.
 
-Suppose there exists a continuous extension $\tilde{f}: \mathbb{R} \to \mathbb{R}$. Then $\tilde{f}|_F = f$. Since $x_0$ is a limit point of $F$, we can find strictly increasing or decreasing sequences $\{x_n\} \subset F$ such that $x_n \to x_0$. Then
+Suppose $f$ has a continuous extension $\tilde{f}: \mathbb{R} \to \mathbb{R}$. Since $x_0$ is a limit point of $F$, we can find strictly increasing or decreasing sequences $\{x_n\} \subset F$ such that $x_n \to x_0$. Then
 $$
 \lim_{n \to \infty} \tilde{f}(x_n) = \lim_{n \to \infty} \frac{1}{x_n - x_0} = \infty.
 $$
@@ -32,3 +32,7 @@ f(x)=\begin{cases}
 $$
 Since $x_0 \notin F$, $f$ is well-defined and continuous on $F$.
 
+Suppose $f$ has a continuous extension $\tilde{f}: \mathbb{R} \to \mathbb{R}$. Then
+$$
+\lim_{ n \to \infty } \tilde{f}(x_{n})=\lim_{ n \to \infty } f(x_{n}),\text{ which doesn't exist}.
+$$
