@@ -166,25 +166,22 @@ ___
 >$$L(f,[0,1])=0.$$
 
 **Proof:**
-Let $\sim$ be the equivalence relation on $[0,1]$ defined by $x \sim y \iff x-y \in \mathbb{Q}$.
-
-The equivalence classes are $C_\alpha = r_\alpha + \mathbb{Q} \ (\text{mod } 1)$，each dense in $[0,1]$.
+Let $\sim$ be the equivalence relation on $[0,1]$ defined by $x \sim y \iff x-y \in \mathbf{Q}$. The equivalence classes are $C_\alpha = r_\alpha + \mathbf{Q} \ (\text{mod } 1)$，each dense in $[0,1]$.
 
 Enumerate countably many distinct equivalence classes as $C_1, C_2, C_3, \dots$, define
 $$
 C_0 = [0,1] \setminus \bigcup_{n=1}^\infty C_n.
-$$ 
+$$
 Then $\{C_0, C_1, \dots, \}$ are disjoint, each is dense in $[0,1]$, and each is Borel.
 
 Now define
 $$
 f(x) = \frac{1}{2^n} \quad \text{if } x \in C_n \ (n \ge 0).
 $$
-Then $f(x) > 0$ for all $x$. $f$ is Borel measurable because
+Then $f(x) > 0$ for all $x$. $f$ is Borel measurable because for any $a\in \mathbf{R}$
 $$
-f^{-1}((a,+\infty))=\bigcup_{}
+f^{-1}((a,+\infty))=\bigcup_{n \text{ with } \frac{1}{2^n}>a}C_{n}.
 $$
-
 Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish, i.e. $L(f,[0,1])=0.$
 ___
 
