@@ -185,5 +185,16 @@ $$
 Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish, i.e. $L(f,[0,1])=0.$
 ___
 
+>[!problem] [SHE] 3A.8
+>Suppose $\lambda$ denotes Lebesgue measure on $\mathbf{R}$. Given an example of a sequence $f_{1}, f_{2}, \ldots$ of simple Borel measurable functions from $\mathbf{R}$ to $[0, \infty)$ such that
+>$$\lim _{k \rightarrow \infty} f_{k}(x)=0 \quad \text { for every } x \in \mathbf{R}$$
+>but
+>$$\lim _{k \rightarrow \infty} \int f_{k} d \lambda=1.$$
 
+**Proof:**
+Take $f_k = k \cdot \chi_{[0,1/k]}$, $k \ge 1$. Then:
+- $f_k$ is simple and Borel measurable.
+- For any $x$, if $k > 1/x$ when $x>0$, or $k$ large enough when $x\le0$, $f_k(x)=0$, so $f_k \to 0$ pointwise.
+- $\int f_k \, d\lambda = k \cdot (1/k) = 1$ for all $k$, hence $\lim \int f_k = 1$.
+___
 
