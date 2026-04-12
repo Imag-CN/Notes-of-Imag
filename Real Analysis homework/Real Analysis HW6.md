@@ -225,24 +225,27 @@ ___
 >for every nonempty open interval $I \subset \mathbf{R}$, where $\lambda$ denotes Lebesgue measure on $\mathbf{R}$.
 
 **Proof:**
-Enumerate $\mathbf{Q} = \{q_n\}_{n=1}^\infty$. Define
+Let $A$ be a fat Cantor set on $[0,1]$ with $\lambda(A)=1 / 2$. For any $I=(a,b)$, we define
 $$
-A_{n}=(q_{n}-2^{-n},q_{n}+2^{-n}),\quad A=\bigcup_{n=1}^{\infty}A_{n},
+Z_{I}=(a-b)\cdot (Z\cap(0,1))+a=\{ a+(b-a)x:x \in A \cap (0,1) \} \subset I.
 $$
-then $A$ is open and dense in $\mathbf{R}$ (since $A\supset \mathbf{Q}$). And for any interval $I\subset \mathbf{R}$, there exists some $n$ such that $A_{n}\subset A \cap I$.
+Then $Z_{I}$ is a closed and nowhere-dense set with $\lambda(Z_{I})=\lambda(I) / 2$. Define $f_{I}(x)= \dfrac{\chi_{Z_{I}}(x)}{\lambda(I)^{2}}$, then $\int \chi_{I} f_{I} \, d \lambda= \dfrac{1}{2 \lambda(I)}$.
 
-Define
+We define $f$ recursively:
+
+- First define $f|_{Z_{(n,n+1)}}=f_{(n,n+1)}$;
+- Where $f$ hasn't been define consists an open set, so we write it as the disjoint union of some open intervals $U_{k}$, and define $f|_{Z_{U_{k}}}=f_{U_{k}}$.
+- Repeating this process continually will eventually make fa measurable function defined on a set whose complement has measure zero. It is measurable because it is the limit of simple functions, and its complement has measure zero because each iteration halves the measure of the set where it is not yet defined on $[n,n+1]$.
+- For where $f$ has not been defined yet, we define $f(x)=1$.
+
+For any $I\subset \mathbf{R}$, there exists $I_{0} \subset I$ with $f=f_{I_{0}}$ and $\lambda(I_{0})$ arbitrarily small. And
 $$
-f(x)=\begin{cases}
-d(x,A^{c})^{-1}, &x \in A, \\
-1,&x \in A^{c},
-\end{cases}
+\int \chi_{I} f \, d \lambda\geq\int \chi_{I_{0}} f \, d \lambda=\int \chi_{I_{0}} f_{I_{0}} \, d \lambda= \dfrac{1}{2 \lambda(I_{0})}
 $$
-where $d$ is the Euclidean distance function.
-
-Then $f(\mathbf{R})\subset (0,\infty)$, 
-
-
+Therefore, 
+$$
+\int \chi_{I} f \, d \lambda=\infty.
+$$
 ___
 
 >[!problem] [SHE] 3A.14
