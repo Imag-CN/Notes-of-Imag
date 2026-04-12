@@ -9,8 +9,10 @@ $$
 H=\left< a^{2},b^{4},ab^{3},b^{3}ab^{2},b^{2}ab \right> ,
 $$
 $$
-N(H)=\left< a^{2},b^{4},ab^{3},b^{3}ab^{2},b^{2}ab,ab\right> 
+N(H)=\left< a^{2},b^{2},ab\right>.
 $$
 $$
-G(\tilde{X})=
+G(\tilde{X})=\mathbb{Z}/2\mathbb{Z}.
 $$
+___
+
