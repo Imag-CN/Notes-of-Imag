@@ -42,23 +42,8 @@ ___
 >[!problem] [SHE] 2E.12
 >Give an example of a Borel measurable function $f$ from $\mathbf{R}$ to $\mathbf{R}$ such that there does not exist a set $B \subset \mathbf{R}$ such that $|\mathbf{R} \backslash B|=0$ and $f|_{B}$ is a continuous function on $B$.
 
-**Construction of $E$**
-Let $\{I_n\}$ enumerate all open intervals with rational endpoints. In each $I_n$, construct disjoint "fat" Cantor sets $A_n, B_n \subset I_n$ with $m(A_n)=m(B_n)=\frac{1}{3}m(I_n)$. Set  
+**Proof:**
 
-$$
-E = \bigcup_n A_n, \quad F = \bigcup_n B_n.
-$$
-
-**Properties:**
-- $E$ and $F$ are disjoint Borel sets.
-- For any open interval $J$, choose $I_n \subset J$. Then $E\cap J \supset A_n$ and $F\cap J \supset B_n$, so $m(E\cap J)>0$ and $m(F\cap J)>0$. Since $F \subset E^c$, $m(E^c\cap J)>0$.
-- Hence $E$ and $E^c$ are dense and have positive measure in every open interval.
-
-**The function**
-
-Take $f = \chi_E$, Borel measurable. Suppose $\exists B$ with $m(\mathbb{R}\setminus B)=0$ and $f|_B$ continuous. Since $E$ and $E^c$ are dense and intersect every interval positively, $B\cap E$ and $B\cap E^c$ are both dense in $B$. Then $f|_B$ takes both $0$ and $1$ densely near any point of $B$, so it cannot be continuous anywhere — contradiction.
-
-Thus $f$ is the desired function.
 ___
 
 
