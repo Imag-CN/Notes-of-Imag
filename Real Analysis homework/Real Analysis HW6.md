@@ -224,3 +224,22 @@ ___
 >$$\int \chi_{I} f \, d \lambda=\infty$$
 >for every nonempty open interval $I \subset \mathbf{R}$, where $\lambda$ denotes Lebesgue measure on $\mathbf{R}$.
 
+**Proof:**
+Enumerate $\mathbf{Q} = \{q_n\}_{n=1}^\infty$. Define
+$$
+f(x) =
+\begin{cases}
+1,&x \in \mathbf{Q} \\
+\sum\limits_{n=1}^\infty \dfrac{1}{2^n} \cdot \dfrac{1}{|x - q_n|},&x \not\in \mathbf{Q}.\\
+\end{cases} 
+$$
+Then $f$ is Borel measurable and $f(x) > 0$ for all $x$.
+
+Let $I$ be any nonempty open interval. Choose $q_m \in I$ and $\delta>0$ such that $(q_m-\delta,\, q_m+\delta) \subset I$. Then
+$$
+\int_I f \, d\lambda
+\ge \int_{q_m-\delta}^{q_m+\delta} \frac{1}{2^m} \cdot \frac{1}{\sqrt{|x - q_m|}} \, dx
+= \frac{1}{2^m} \int_{-\delta}^\delta \frac{1}{\sqrt{|t|}} \, dt = \infty.
+$$
+
+Hence $\int_I f \, d\lambda = \infty$ for every nonempty open interval $I$.
