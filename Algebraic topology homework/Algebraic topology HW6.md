@@ -9,5 +9,8 @@ $$
 H=\left< a^{2},b^{4},ab^{3},b^{3}ab^{2},b^{2}ab \right> ,
 $$
 $$
-N(H)=\left< a^{2},b^{4},ab^{3},b^{3}ab^{2},b^{2}ab,b^{3}a,bab^{2},b^{2}ab \right> 
+N(H)=\left< a^{2},b^{4},ab^{3},b^{3}ab^{2},b^{2}ab,ab\right> 
+$$
+$$
+G(\tilde{X})=
 $$
