@@ -225,33 +225,43 @@ ___
 >for every nonempty open interval $I \subset \mathbf{R}$, where $\lambda$ denotes Lebesgue measure on $\mathbf{R}$.
 
 **Proof:**
-Enumerate $\mathbb{Q} = \{q_n\}_{n=1}^\infty$. Define
+Enumerate $\mathbf{Q} = \{q_n\}_{n=1}^\infty$. Define
 $$
-g_n(x) = 
-\begin{cases}
-\displaystyle \frac{1}{|x - q_n|}, & 0 < |x - q_n| \le 1, \\
-1, & |x - q_n| > 1.
+A_{n}=(q_{n}-2^{-n},q_{n}+2^{-n}),\quad A=\bigcup_{n=1}^{\infty}A_{n},
+$$
+then $A$ is open and dense in $\mathbf{R}$ (since $A\supset \mathbf{Q}$). And for any interval $I\subset \mathbf{R}$, there exists some $n$ such that $A_{n}\subset A \cap I$.
+
+Define
+$$
+f(x)=\begin{cases}
+d(x,A^{c})^{-1}, &x \in A, \\
+1,&x \in A^{c},
 \end{cases}
 $$
-Then $g_n$ is Borel measurable, $g_n(x) \ge 0$, and $g_n(q_n) = 1$ (or any finite value).
+where $d$ is the Euclidean distance function.
 
-Let
-$$
-f(x) = \sum_{n=1}^\infty \frac{1}{2^n} g_n(x).
-$$
+Then $f(\mathbf{R})\subset (0,\infty)$, 
 
-- The series converges for each $x$, because $g_n(x) \le \max\left(1, \frac{1}{|x-q_n|}\right)$ and for fixed $x$, only finitely many $n$ have $|x-q_n|$ small enough to make $1/|x-q_n| > 1$; in fact, for $2^{-n}$ factor, the series is dominated by $\sum 2^{-n} \cdot M_x < \infty$ where $M_x = \sup_n g_n(x) < \infty$ (since $g_n(x)$ is large only when $x$ is very close to $q_n$, but the weights $2^{-n}$ decay fast enough).
-- $f(x) > 0$ everywhere.
 
-Now fix a nonempty open interval $I$. Choose $q_m \in I$ and $\varepsilon > 0$ such that $(q_m-\varepsilon, q_m+\varepsilon) \subset I$ and $\varepsilon \le 1$. Then
-$$
-\int_I f \, d\lambda \ge \int_{q_m-\varepsilon}^{q_m+\varepsilon} \frac{1}{2^m} g_m(x) \, dx
-= \frac{1}{2^m} \int_{q_m-\varepsilon}^{q_m+\varepsilon} \frac{1}{|x-q_m|} \, dx
-$$
-because for $0 < |x-q_m| \le \varepsilon \le 1$, $g_m(x) = 1/|x-q_m|$.
+___
 
-The integral
+>[!problem] [SHE] 3A.14
+>Give an example to show that the Monotone Convergence Theorem can fail if the hypothesis of an increasing sequence of functions is replaced by a hypothesis of a decreasing sequence of functions.
+
+**Proof:**
+Define $f_n: \mathbb{R} \to [0, \infty)$ by
 $$
-\int_{q_m-\varepsilon}^{q_m+\varepsilon} \frac{1}{|x-q_m|} \, dx = 2 \int_0^\varepsilon \frac{1}{t} \, dt = \infty.
+f_n(x) = \chi_{[n, \infty)}(x) = 
+\begin{cases}
+1, & x \ge n, \\
+0, & x < n.
+\end{cases}
 $$
-Thus $\int_I f \, d\lambda = \infty$. ∎
+Then:
+- Each $f_n$ is Borel measurable and $f_n \ge 0$.
+- $\{f_n\}$ is decreasing: if $n \le m$, then $[m, \infty) \subset [n, \infty)$, so $f_n(x) \ge f_m(x)$ for all $x$.
+- For each fixed $x$, $f_n(x) = 0$ for all $n > x$, hence $\lim_{n\to\infty} f_n(x) = 0$ pointwise.
+But:
+$$
+\lim_{n\to\infty} \int f_n \, d\lambda = \infty \ne 0 = \int \lim_{n\to\infty} f_n \, d\lambda.
+$$
