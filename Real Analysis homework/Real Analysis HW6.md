@@ -225,21 +225,33 @@ ___
 >for every nonempty open interval $I \subset \mathbf{R}$, where $\lambda$ denotes Lebesgue measure on $\mathbf{R}$.
 
 **Proof:**
-Enumerate $\mathbf{Q} = \{q_n\}_{n=1}^\infty$. Define
+Enumerate $\mathbb{Q} = \{q_n\}_{n=1}^\infty$. Define
 $$
-f(x) =
+g_n(x) = 
 \begin{cases}
-1,&x \in \mathbf{Q} \\
-\sum\limits_{n=1}^\infty \dfrac{1}{2^n} \cdot \dfrac{1}{|x - q_n|},&x \not\in \mathbf{Q}.\\
-\end{cases} 
+\displaystyle \frac{1}{|x - q_n|}, & 0 < |x - q_n| \le 1, \\
+1, & |x - q_n| > 1.
+\end{cases}
 $$
-Then $f$ is Borel measurable and $f(x) > 0$ for all $x$.
+Then $g_n$ is Borel measurable, $g_n(x) \ge 0$, and $g_n(q_n) = 1$ (or any finite value).
 
-Let $I$ be any nonempty open interval. Choose $q_m \in I$ and $\delta>0$ such that $(q_m-\delta,\, q_m+\delta) \subset I$. Then
+Let
 $$
-\int_I f \, d\lambda
-\ge \int_{q_m-\delta}^{q_m+\delta} \frac{1}{2^m} \cdot \frac{1}{\sqrt{|x - q_m|}} \, dx
-= \frac{1}{2^m} \int_{-\delta}^\delta \frac{1}{\sqrt{|t|}} \, dt = \infty.
+f(x) = \sum_{n=1}^\infty \frac{1}{2^n} g_n(x).
 $$
 
-Hence $\int_I f \, d\lambda = \infty$ for every nonempty open interval $I$.
+- The series converges for each $x$, because $g_n(x) \le \max\left(1, \frac{1}{|x-q_n|}\right)$ and for fixed $x$, only finitely many $n$ have $|x-q_n|$ small enough to make $1/|x-q_n| > 1$; in fact, for $2^{-n}$ factor, the series is dominated by $\sum 2^{-n} \cdot M_x < \infty$ where $M_x = \sup_n g_n(x) < \infty$ (since $g_n(x)$ is large only when $x$ is very close to $q_n$, but the weights $2^{-n}$ decay fast enough).
+- $f(x) > 0$ everywhere.
+
+Now fix a nonempty open interval $I$. Choose $q_m \in I$ and $\varepsilon > 0$ such that $(q_m-\varepsilon, q_m+\varepsilon) \subset I$ and $\varepsilon \le 1$. Then
+$$
+\int_I f \, d\lambda \ge \int_{q_m-\varepsilon}^{q_m+\varepsilon} \frac{1}{2^m} g_m(x) \, dx
+= \frac{1}{2^m} \int_{q_m-\varepsilon}^{q_m+\varepsilon} \frac{1}{|x-q_m|} \, dx
+$$
+because for $0 < |x-q_m| \le \varepsilon \le 1$, $g_m(x) = 1/|x-q_m|$.
+
+The integral
+$$
+\int_{q_m-\varepsilon}^{q_m+\varepsilon} \frac{1}{|x-q_m|} \, dx = 2 \int_0^\varepsilon \frac{1}{t} \, dt = \infty.
+$$
+Thus $\int_I f \, d\lambda = \infty$. ∎
