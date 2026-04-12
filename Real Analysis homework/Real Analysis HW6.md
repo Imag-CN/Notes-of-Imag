@@ -43,7 +43,30 @@ ___
 >Give an example of a Borel measurable function $f$ from $\mathbf{R}$ to $\mathbf{R}$ such that there does not exist a set $B \subset \mathbf{R}$ such that $|\mathbf{R} \backslash B|=0$ and $f|_{B}$ is a continuous function on $B$.
 
 **Proof:**
+Let $\{J_m\}$ enumerate all subintervals of $\mathbb{R}$ with rational endpoints. In each $J_m$, construct a fat Cantor set $C_m$ with
+$$
+m(C_m) = \frac12 m(J_m).
+$$
+Define
+$$
+E = \bigcup_{m=1}^\infty C_m.
+$$
+- $E$ is Borel.
+- $E$ is dense (since each $J_m$ contains $C_m$).
+- $E^c$ is also dense: for any interval $I$, $I\setminus C_m$ is nonempty open in $I$, and we can arrange that it avoids other $C_{m'}$ in a dense way.
+- For any open interval $I$, choose $J_m \subset I$. Then
+  $$
+  m(E \cap I) \ge m(C_m) = \frac12 m(J_m) > 0,
+  $$
+  and
+  $$
+  m(E^c \cap I) = m(I) - m(E \cap I) \ge m(I) - \frac12 m(J_m) > 0
+  $$
+  (since $m(E \cap I) < m(I)$ by construction in subintervals).
 
+Take $f = \chi_E$, a Borel function. Suppose $\exists B$ with $m(\mathbb{R}\setminus B)=0$ and $f|_B$ continuous. Then $B$ is dense, and because $E$ and $E^c$ are dense and of positive measure in every interval, $B\cap E$ and $B\cap E^c$ are dense in $B$. Hence $f|_B$ takes both 0 and 1 densely near any point, so it cannot be continuous anywhere – contradiction.
+
+Thus $f$ is the required function.
 ___
 
 
