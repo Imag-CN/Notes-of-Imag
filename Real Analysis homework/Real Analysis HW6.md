@@ -165,13 +165,9 @@ ___
 >Give an example of a Borel measurable function $f:[0,1] \rightarrow(0, \infty)$ such that
 >$$L(f,[0,1])=0.$$
 
-**Example**
+**Proof:**
+Define 
 
-Enumerate $\mathbb{Q} \cap [0,1] = \{q_1, q_2, \dots\}$.  
-For each $n \ge 1$, define
-$$
-A_n = \{q_n\} \cup \left( \mathbb{Q}^c \cap \left( \frac{1}{n+1}, \frac{1}{n} \right] \right).
-$$
 Here $\mathbb{Q}^c = [0,1] \setminus \mathbb{Q}$, and we only take the intersection with $(1/(n+1),\, 1/n]$ to ensure the $A_n$ are disjoint. Then:
 
 1. Each $A_n$ is dense in $[0,1]$ (because it contains all irrationals in $(1/(n+1),1/n]$, which is dense in that interval, and the interval is spread throughout $[0,1]$ as $n$ grows).
