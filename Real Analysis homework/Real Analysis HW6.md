@@ -165,6 +165,33 @@ ___
 >Give an example of a Borel measurable function $f:[0,1] \rightarrow(0, \infty)$ such that
 >$$L(f,[0,1])=0.$$
 
+**Example**
 
+Enumerate $\mathbb{Q} \cap [0,1] = \{q_1, q_2, \dots\}$.  
+For each $n \ge 1$, define
+$$
+A_n = \{q_n\} \cup \left( \mathbb{Q}^c \cap \left( \frac{1}{n+1}, \frac{1}{n} \right] \right).
+$$
+Here $\mathbb{Q}^c = [0,1] \setminus \mathbb{Q}$, and we only take the intersection with $(1/(n+1),\, 1/n]$ to ensure the $A_n$ are disjoint. Then:
+
+1. Each $A_n$ is dense in $[0,1]$ (because it contains all irrationals in $(1/(n+1),1/n]$, which is dense in that interval, and the interval is spread throughout $[0,1]$ as $n$ grows).
+2. The $A_n$ are disjoint.
+3. $A_n$ is Borel (countable union of singletons and a Borel set).
+4. $\bigcup_{n=1}^\infty A_n = [0,1]$.
+
+Now define
+$$
+f(x) = \frac{1}{n} \quad \text{if } x \in A_n.
+$$
+
+**Properties:**
+
+- $f(x) > 0$ for all $x \in [0,1]$.
+- $f$ is Borel measurable because $f^{-1}((a,\infty))$ is a union of $A_n$ for $1/n > a$, which is Borel.
+- In any subinterval $I \subset [0,1]$, for all large $n$ we have $I \cap A_n \ne \varnothing$, hence $\inf_I f \le 1/n$ for all large $n$, so $\inf_I f = 0$.  
+  Thus for any partition $P$, the lower Riemann sum $L(f,P) = 0$, so $L(f,[0,1]) = 0$.
+- Yet $\int_{[0,1]} f \, d\lambda = \sum_{n=1}^\infty \frac{1}{n} \lambda(A_n) > 0$ because $\lambda(A_n) > 0$ for all $n$ (in fact $\lambda(A_n) = 1/n - 1/(n+1)$), and the series converges to a positive number.
+
+Thus $f$ is the desired function. ∎
 
 
