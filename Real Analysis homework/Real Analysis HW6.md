@@ -178,10 +178,8 @@ Now define
 $$
 f(x) = \frac{1}{2^n} \quad \text{if } x \in C_n \ (n \ge 0).
 $$
-Then $f(x) > 0$ for all $x$. $f$ is Borel measurable because for any $a\in \mathbf{R}$
-$$
-f^{-1}((a,+\infty))=\bigcup_{n \text{ with } \frac{1}{2^n}>a}C_{n}.
-$$
+Then $f(x) > 0$ for all $x$. $f$ is Borel measurable because it is the limit of a sequence of Borel simple functions $\left\{  f_{k}=\sum_{n=0}^{k} 2^{-n} \chi_{C_{n}}  \right\}$.
+
 Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish, i.e. $L(f,[0,1])=0.$
 ___
 
