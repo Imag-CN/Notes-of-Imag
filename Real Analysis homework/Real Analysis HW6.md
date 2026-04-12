@@ -170,26 +170,23 @@ Let $\sim$ be the equivalence relation on $[0,1]$ defined by $x \sim y \iff x-y 
 
 The equivalence classes are $C_\alpha = r_\alpha + \mathbb{Q} \ (\text{mod } 1)$，each dense in $[0,1]$.
 
-Enumerate countably many distinct equivalence classes as $C_1, C_2, C_3, \dots$.
-
-Define
+Enumerate countably many distinct equivalence classes as $C_1, C_2, C_3, \dots$, define
 $$
-A_n = C_n \quad (n \ge 1), \qquad
-A_\infty = [0,1] \setminus \bigcup_{n=1}^\infty C_n.
-$$
-Then $\{A_1, A_2, \dots, A_\infty\}$ are disjoint, each is dense in $[0,1]$, and each is Borel (in fact, each $A_n$ is countable, $A_\infty$ is co-countable).
+C_0 = [0,1] \setminus \bigcup_{n=1}^\infty C_n.
+$$ 
+Then $\{C_0, C_1, \dots, \}$ are disjoint, each is dense in $[0,1]$, and each is Borel.
 
 Now define
 $$
-f(x) = \frac{1}{n} \quad \text{if } x \in A_n \ (n \ge 1), \qquad
-f(x) = 1 \quad \text{if } x \in A_\infty.
+f(x) = \frac{1}{2^n} \quad \text{if } x \in C_n \ (n \ge 0).
 $$
-Then $f(x) > 0$ for all $x$, $f$ is Borel measurable.
+Then $f(x) > 0$ for all $x$. $f$ is Borel measurable because
+$$
+f^{-1}((a,+\infty))=\big
+$$
 
-**Why $L(f,[0,1])=0$:**  
-Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish.
+Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish, i.e. $L(f,[0,1])=0.$
+___
 
-**Why $\int f\,d\lambda > 0$:**  
-$\lambda(A_\infty) = 1$ (since $A_\infty$ is co-countable), and $f=1$ on $A_\infty$, so $\int f \, d\lambda \ge 1 > 0$. ∎
 
 
