@@ -42,4 +42,16 @@ ___
 >[!problem] [SHE] 2E.12
 >Give an example of a Borel measurable function $f$ from $\mathbf{R}$ to $\mathbf{R}$ such that there does not exist a set $B \subset \mathbf{R}$ such that $|\mathbf{R} \backslash B|=0$ and $f|_{B}$ is a continuous function on $B$.
 
+**Proof:**
+Enumerate all open intervals $(a_n,b_n)$ in $\mathbf{R}$ with rational endpoints. For each $n$, construct in $(a_n,b_n)$ a "fat Cantor set" $C_n$ with $m(C_n) > 0$ and $m((a_n,b_n)\setminus C_n) > 0$.
+
+Let $E = \bigcup_{n=1}^\infty C_n$. Then:
+1. $E$ is Borel.
+2. For any open interval $I$, choose $(a_n,b_n) \subset I$. Then $E\cap I$ contains $C_n$, so $m(E\cap I) > 0$.
+3. $E^c\cap I$ contains $(a_n,b_n)\setminus C_n$, so $m(E^c\cap I) > 0$.
+4. Both $E$ and $E^c$ are dense in $\mathbf{R}$.
+
+Thus $f = \chi_E$ works: For any $B$ with $m(\mathbf{R}\setminus B)=0$, both $B\cap E$ and $B\cap E^c$ are dense in $B$, so $f|_B$ is nowhere continuous.
+___
+
 
