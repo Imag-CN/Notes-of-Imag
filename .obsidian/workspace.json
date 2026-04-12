@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Real Analysis homework/Real Analysis HW6.md",
+                "file": "Abstract algebra homework/Abstract algebra HW11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Real Analysis HW6"
+              "title": "Abstract algebra HW11"
             }
           }
         ]
@@ -184,10 +184,12 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "9a25deaea7baccf2",
+  "active": "5ba80245070c0f3b",
   "lastOpenFiles": [
-    "Algebraic topology homework/Algebraic topology HW3.md",
+    "Abstract algebra homework/Abstract algebra HW1.md",
+    "Abstract algebra homework/Abstract algebra HW11.md",
     "Real Analysis homework/Real Analysis HW6.md",
+    "Algebraic topology homework/Algebraic topology HW3.md",
     "Real Analysis homework/Real Analysis HW2.md",
     "Real Analysis homework/Real Analysis HW3.md",
     "Real Analysis homework/Real Analysis HW1.md",
@@ -198,7 +200,6 @@
     "attachments/Pasted image 20260406220841.png",
     "Algebraic topology homework/Algebraic topology HW1.md",
     "Abstract algebra homework/Abstract algebra HW10.md",
-    "Abstract algebra homework/Abstract algebra HW1.md",
     "Abstract algebra homework/Abstract algebra HW9.md",
     "meet/A Continuous but Non-Lebesgue-Lebesgue Function.md",
     "Abstract algebra homework/Abstract algebra HW8.md",
@@ -213,7 +214,6 @@
     "conflict-files-obsidian-git.md",
     "三种积分技巧的统一与不同.md",
     "π 克牌挑战 (Pi Card Challenge).md",
-    "meet/Maximal Right Ideals of Linear Transformation Rings.md",
     "attachments/Pasted image 20260309212035.png",
     "物理",
     "Real Analysis homework",
