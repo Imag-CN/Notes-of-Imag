@@ -83,3 +83,61 @@ $$
 Therefore, $\mathbf{R}\setminus E\subset\left\{x \in \mathbf{R}: f(x)<1\right\}$, then $\left|\left\{x \in \mathbf{R}: f(x)<1\right\}\right| \geq \left| \mathbf{R}\setminus E \right|=\infty$.
 ___
 
+>[!problem] [SHE] 3A.2
+>Suppose $X$ is a set, $\mathcal{S}$ is a $\sigma$-algebra on $X$, and $c \in X$.
+>Define the Dirac measure $\delta_c$ on $(X,\mathcal{S})$ by
+>$$\delta_c(E)=\begin{cases}1 & \text { if } c \in E, \\ 0 & \text { if } c \notin E.\end{cases}$$
+>Prove that if $f: X \rightarrow[0, \infty]$ is $\mathcal{S}$-measurable, then $\int f \, d\delta_c=f(c)$.
+
+**Proof:**
+Take simple functions $s_n = \sum_i a_i^{(n)} \chi_{A_i^{(n)}}$ with $s_n \uparrow f$.
+
+For a simple $s = \sum_{i=1}^m a_i \chi_{A_i}$ ($a_i \ge 0$, $A_i$ disjoint in $\mathcal{S}$), by definition
+$$
+\int s \, d\delta_c = \sum_{i=1}^m a_i \, \delta_c(A_i).
+$$
+Since the $A_i$ are disjoint, $\delta_c(A_i)=1$ for at most one $i$ (the one containing $c$), else $0$. Hence $\int s \, d\delta_c = s(c)$.
+
+Now
+$$
+\int f \, d\delta_c = \lim_{n\to\infty} \int s_n \, d\delta_c,
+$$
+and $\int s_n \, d\delta_c = s_n(c) \uparrow f(c)$. Therefore
+$$
+\int f \, d\delta_c = f(c).
+$$
+___
+
+>[!problem] [SHE] 3A.7
+>Suppose $X$ is a set, $\mathcal{S}$ is the $\sigma$-algebra of all subsets of $X$, and $w: X \rightarrow[0, \infty]$ is a function. Define a measure $\mu$ on $(X, \mathcal{S})$ by
+>$$\mu(E)=\sum_{x \in E} w(x)$$
+>for $E \subset X$. Prove that if $f: X \rightarrow[0, \infty]$ is a function, then
+>$$\int f \, d \mu=\sum_{x \in X} w(x) f(x),$$
+>where the infinite sums above are defined as the supremum of all sums over finite subsets of $X$.
+
+**Proof:**
+**Case 1:** $f$ simple: $f = \sum_{i=1}^n a_i \chi_{A_i}$, $A_i$ disjoint. Then
+$$
+\int f \, d\mu = \sum_{i=1}^n a_i \mu(A_i) = \sum_{i=1}^n a_i \sum_{x \in A_i} w(x) = \sum_{x \in X} w(x) f(x).
+$$
+**Case 2:** General $f \ge 0$: take simple $s_n \uparrow f$. Then
+$$
+\int f \, d\mu = \lim_{n\to\infty} \int s_n \, d\mu
+\quad\text{(MCT)},
+$$
+and
+$$
+\int s_n \, d\mu = \sum_{x \in X} w(x) s_n(x) \uparrow \sum_{x \in X} w(x) f(x)
+$$
+by monotone convergence of sums. Hence
+$$
+\int f \, d\mu = \sum_{x \in X} w(x) f(x).
+$$
+___
+
+>[!problem] [SHE] 3A.3
+>Suppose $(X, \mathcal{S}, \mu)$ is a measure space and $f: X \rightarrow[0, \infty]$ is an $\mathcal{S}$-measurable function. Prove that
+>$$\int f \, d \mu>0 \quad \text { if and only if } \quad \mu(\{x \in X: f(x)>0\})>0.$$
+
+
+
