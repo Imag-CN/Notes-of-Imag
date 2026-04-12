@@ -198,3 +198,31 @@ Take $f_k = k \cdot \chi_{[0,1/k]}$, $k \ge 1$. Then:
 - $\int f_k \, d\lambda = k \cdot (1/k) = 1$ for all $k$, hence $\lim \int f_k = 1$.
 ___
 
+>[!problem] [SHE] 3A.11
+>Suppose $(X, \mathcal{S}, \mu)$ is a measure space and $f_{1}, f_{2}, \ldots$ are $\mathcal{S}$-measurable functions from $X$ to $\mathbf{R}$ such that
+>$$\sum_{k=1}^{\infty} \int\left|f_{k}\right| d \mu<\infty.$$
+>Prove that there exists $E \in \mathcal{S}$ such that $\mu(X \backslash E)=0$ and
+>$$\lim _{k \rightarrow \infty} f_{k}(x)=0 \quad \text { for every } x \in E.$$
+
+**Proof:**
+Let $g_n = \sum_{k=1}^n |f_k|$. Then $0 \le g_n \uparrow g$, where $g(x) = \sum_{k=1}^\infty |f_k(x)|$.
+
+By the Monotone Convergence Theorem,
+$$
+\int g \, d\mu = \lim_{n\to\infty} \int g_n \, d\mu
+= \lim_{n\to\infty} \sum_{k=1}^n \int |f_k| \, d\mu
+= \sum_{k=1}^\infty \int |f_k| \, d\mu < \infty.
+$$
+Thus $g$ is integrable, so $g(x) < \infty$ for $\mu$-almost every $x$.  
+Let $E = \{x : g(x) < \infty\} \in \mathcal{S}$. Then $\mu(X \setminus E) = 0$.
+
+For $x \in E$, $\sum_{k=1}^\infty |f_k(x)|$ converges, hence $|f_k(x)| \to 0$ as $k\to\infty$, i.e. $f_k(x) \to 0$.
+
+Therefore $f_k \to 0$ pointwise on $E$, with $\mu(X \setminus E) = 0$.
+___
+
+>[!problem] [SHE] 3A.12
+>Show that there exists a Borel measurable function $f: \mathbf{R} \rightarrow(0, \infty)$ such that
+>$$\int \chi_{I} f \, d \lambda=\infty$$
+>for every nonempty open interval $I \subset \mathbf{R}$, where $\lambda$ denotes Lebesgue measure on $\mathbf{R}$.
+
