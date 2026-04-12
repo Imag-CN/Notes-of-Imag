@@ -166,28 +166,30 @@ ___
 >$$L(f,[0,1])=0.$$
 
 **Proof:**
-Define 
+Let $\sim$ be the equivalence relation on $[0,1]$ defined by $x \sim y \iff x-y \in \mathbb{Q}$.
 
-Here $\mathbb{Q}^c = [0,1] \setminus \mathbb{Q}$, and we only take the intersection with $(1/(n+1),\, 1/n]$ to ensure the $A_n$ are disjoint. Then:
+The equivalence classes are $C_\alpha = r_\alpha + \mathbb{Q} \ (\text{mod } 1)$，each dense in $[0,1]$.
 
-1. Each $A_n$ is dense in $[0,1]$ (because it contains all irrationals in $(1/(n+1),1/n]$, which is dense in that interval, and the interval is spread throughout $[0,1]$ as $n$ grows).
-2. The $A_n$ are disjoint.
-3. $A_n$ is Borel (countable union of singletons and a Borel set).
-4. $\bigcup_{n=1}^\infty A_n = [0,1]$.
+Enumerate countably many distinct equivalence classes as $C_1, C_2, C_3, \dots$.
+
+Define
+$$
+A_n = C_n \quad (n \ge 1), \qquad
+A_\infty = [0,1] \setminus \bigcup_{n=1}^\infty C_n.
+$$
+Then $\{A_1, A_2, \dots, A_\infty\}$ are disjoint, each is dense in $[0,1]$, and each is Borel (in fact, each $A_n$ is countable, $A_\infty$ is co-countable).
 
 Now define
 $$
-f(x) = \frac{1}{n} \quad \text{if } x \in A_n.
+f(x) = \frac{1}{n} \quad \text{if } x \in A_n \ (n \ge 1), \qquad
+f(x) = 1 \quad \text{if } x \in A_\infty.
 $$
+Then $f(x) > 0$ for all $x$, $f$ is Borel measurable.
 
-**Properties:**
+**Why $L(f,[0,1])=0$:**  
+Each $A_n$ is dense, so any interval contains points from infinitely many $A_n$, hence $\inf_I f = 0$. Thus lower Riemann sums vanish.
 
-- $f(x) > 0$ for all $x \in [0,1]$.
-- $f$ is Borel measurable because $f^{-1}((a,\infty))$ is a union of $A_n$ for $1/n > a$, which is Borel.
-- In any subinterval $I \subset [0,1]$, for all large $n$ we have $I \cap A_n \ne \varnothing$, hence $\inf_I f \le 1/n$ for all large $n$, so $\inf_I f = 0$.  
-  Thus for any partition $P$, the lower Riemann sum $L(f,P) = 0$, so $L(f,[0,1]) = 0$.
-- Yet $\int_{[0,1]} f \, d\lambda = \sum_{n=1}^\infty \frac{1}{n} \lambda(A_n) > 0$ because $\lambda(A_n) > 0$ for all $n$ (in fact $\lambda(A_n) = 1/n - 1/(n+1)$), and the series converges to a positive number.
-
-Thus $f$ is the desired function. ∎
+**Why $\int f\,d\lambda > 0$:**  
+$\lambda(A_\infty) = 1$ (since $A_\infty$ is co-countable), and $f=1$ on $A_\infty$, so $\int f \, d\lambda \ge 1 > 0$. ∎
 
 
