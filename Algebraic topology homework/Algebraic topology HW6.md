@@ -27,3 +27,16 @@ ___
 Therefore, $\ker(\varphi) = H$.
 ___
 
+>[!problem] Problem 3
+>Solve the exercise in Example 93(d).
+
+**Proof:**
+Surjectivity: $p$ is surjective, and $p = \phi \circ \pi$. Thus $\phi$ is surjective.
+
+Injectivity: Suppose $\phi([\tilde{x}_1]) = \phi([\tilde{x}_2])$, i.e., $p(\tilde{x}_1) = p(\tilde{x}_2)$. Then $\tilde{x}_1, \tilde{x}_2$ lie in the same fiber $p^{-1}(x)$. Since $p$ is normal, $G$ acts transitively on each fiber. Hence $\exists g \in G$ with $g(\tilde{x}_1) = \tilde{x}_2$, so $[\tilde{x}_1] = [\tilde{x}_2]$. Therefore $\phi$ is injective.
+
+Continuity: By the universal property of quotient spaces, since $\pi$ is a quotient map and $p = \phi \circ \pi$ is continuous, $\phi$ is continuous.
+
+$\phi$ is an open map: Let $V \subset \widetilde{X}/G$ be open. Then $\pi^{-1}(V)$ is open in $\widetilde{X}$ (by continuity of $\pi$). Now $\phi(V) = p(\pi^{-1}(V))$. Since $p$ is a local homeomorphism, it is an open map. Thus $p(\pi^{-1}(V))$ is open, so $\phi(V)$ is open. Therefore $\phi$ is an open map.
+
+Since $\phi$ is a continuous bijection and an open map, it is a homeomorphism.
