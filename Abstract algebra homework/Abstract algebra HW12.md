@@ -29,23 +29,57 @@ $SO(n) = \{A \in O(n) \mid \det A = 1\}$. The same scalar condition applies, but
 
 **4. $Z(U(n))$**
 $U(n) = \{A \in M_{n}(\mathbb{C}) \mid A^* A = I\}$. A matrix that commutes with all unitary matrices must be a scalar matrix. Let $A = \lambda I$. The condition $(\lambda I)^*(\lambda I) = |\lambda|^2 I = I$ gives $|\lambda| = 1$. Therefore,
-$$Z(U(n)) = \{\lambda I_n \mid \lambda \in \mathbb{C},\ |\lambda| = 1\} \cong S^1.$$
+$$Z(U(n)) = \{\lambda I_n \mid \lambda \in \mathbb{C},\ |\lambda|.$$
 
 **5. $Z(SU(n))$**
 $SU(n) = \{A \in U(n) \mid \det A = 1\}$. Again, $A$ must be scalar: $A = \lambda I$. The conditions are $|\lambda| = 1$ (from unitarity) and $\det(\lambda I) = \lambda^n = 1$. Thus,
-$$Z(SU(n)) = \{\lambda I_n \mid \lambda^n = 1,\ |\lambda|=1\} = \{\lambda I_n \mid \lambda^n = 1\} \cong \mathbb{Z}/n\mathbb{Z}.$$
+$$Z(SU(n)) = \{\lambda I_n \mid \lambda^n = 1,\ |\lambda|=1\} = \{\lambda I_n \mid \lambda^n = 1\} .$$
+___
 
-**Summary**
-- $Z(GL_{n}(\mathbb{R})) = \{\lambda I_n \mid \lambda \in \mathbb{R}^\times\}$
-- $Z(O(n)) = \{I_n, -I_n\}$
-- $Z(SO(n)) = 
-\begin{cases}
-SO(2), & n=2 \\
-\{I_n, -I_n\}, & n \ \text{even}, n>2 \\
-\{I_n\}, & n \ \text{odd}
-\end{cases}$
-- $Z(U(n)) = \{\lambda I_n \mid |\lambda| = 1\} \cong S^1$
-- $Z(SU(n)) = \{\lambda I_n \mid \lambda^n = 1\} \cong \mathbb{Z}/n\mathbb{Z}$
+> [!problem] Problem 4
+> The compact symplectic group is defined to be
+>$$
+>\operatorname{Sp}(n) := U(2n) \cap \operatorname{Sp}_{2n}(\mathbb{C})
+>$$
+>Compute its center.
 
+**Proof:**
+Let $G=\operatorname{Sp}(n)=U(2n)\cap\operatorname{Sp}_{2n}(\mathbb{C})$ with $J=\begin{pmatrix}0&I_n\\-I_n&0\end{pmatrix}$.
+Find $Z(G)=\{A\in G\mid AB=BA\ \forall B\in G\}$.
+
+**1. Form of central elements**
+
+Write $A=\begin{pmatrix}X&Y\\Z&W\end{pmatrix}$.
+For all $U\in U(n)$, $B_U=\begin{pmatrix}U&0\\0&\overline{U}\end{pmatrix}\in G$.
+$AB_U=B_U A$ forces $X=\lambda I_n$, $W=\mu I_n$ (Schur).
+Also $AJ=JA$ gives $W=X$, $Z=-Y$.
+Thus $A=\begin{pmatrix}\lambda I_n&Y\\-Y&\lambda I_n\end{pmatrix}$.
+
+**2. Symplectic condition**
+
+$A^T J A=J$ gives $\lambda(Y^T-Y)=0$ and $\lambda^2 I_n+Y^T Y=I_n$.
+Assume $\lambda\neq0$ for nontrivial center, then $Y=Y^T$.
+
+**3. Unitarity**
+
+$A^*A=I_{2n}$ gives $|\lambda|^2 I_n+Y^* Y=I_n$ and $\bar{\lambda}Y=\lambda Y^*$.
+Since $Y=Y^T$, $Y^*=\overline{Y}$, so $\bar{\lambda}Y=\lambda\overline{Y}$.
+
+**4. Solving**
+
+From Step 2: $\lambda^2+Y^2=I_n$.
+From Step 3: $|\lambda|^2+Y^*Y=I_n$ and $Y^*=Y^T$ (real symmetric).
+Hence $Y^2$ is scalar, so $Y=t I_n$, $t\in\mathbb{R}$.
+Then $\lambda^2+t^2=1$, and $\lambda$ real (from $\bar{\lambda}Y=\lambda\overline{Y}$).
+
+**5. Result**
+
+$A=\begin{pmatrix}\lambda I_n&t I_n\\-t I_n&\lambda I_n\end{pmatrix}$ with $\lambda,t\in\mathbb{R}$, $\lambda^2+t^2=1$.
+Equivalently, $A=\cos\theta\cdot I_{2n}+\sin\theta\cdot J$.
+
+Therefore
+$$
+Z(\operatorname{Sp}(n))=\{\lambda I_{2n}+\mu J\mid \lambda,\mu\in\mathbb{R},\ \lambda^2+\mu^2=1\}\cong U(1).
+$$
 ___
 
