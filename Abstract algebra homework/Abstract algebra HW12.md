@@ -83,3 +83,6 @@ Z(\operatorname{Sp}(n))=\{\lambda I_{2n}+\mu J\mid \lambda,\mu\in\mathbb{R},\ \l
 $$
 ___
 
+> [!problem] Problem 5
+> Prove that the center is always a normal subgroup.
+
