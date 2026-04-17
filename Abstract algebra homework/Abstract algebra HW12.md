@@ -13,10 +13,20 @@ We directly classify group $G$ of order $p^{3}$.
 For $G$ abelian, we easily get three types: $C_{p^{3}},C_{p^{2}}\times C_{p},C_{p}\times C_{p}\times C_{p}$.
 
 For $G$ non-abelian, we get several propositions:
-1. $\lvert Z(G) \rvert=p$.
-2. For any proper subgroup $H<G$, either $H=Z(G)$ (when $|H|=p$, either $H=Z(g)$ for any $g\in H \setminus Z(G)$ (when $|H|=p^{2}$).
-3. 
-Proposition 1 is trivial
+1. $\lvert Z(G) \rvert=p$, and $Z(G)$ is the only subgroup of order $p$.
+2. For any $g\in G\setminus Z(G)$, $Z(g)$ is a subgroup of order $p^{2}$; Reversely, for subgroup $H<G$ of order $p^{2}$, $H=Z(g)$ for any $g\in H \setminus Z(G)$.
+3. Any subgroup $H<G$ of order $p^{2}$ is a normal subgroup.
+4. $[G:G]\subset Z(G)$. Furthermore, $(xy)^{k}=x^{k}y^{k}[x,y]^{k(k-1) / 2}$ for any $x,y \in G$ and $k\geq 1$.
+
+Proposition 1,2 is trivial (proof use the fact that groups of order $p^{2}$ is abelian). 
+
+To prove proposition 3, we consider the left multiplication on $G / H$:
+$$
+G \circlearrowleft G / H: g_{1}(g_{g_{2}}H)=g_{1}g_{2}H
+$$
+This gives a left action of $G$ on $G / H$, and further gives a homomorphism $\phi: G\to S_{p}$. Since $|S_{p}|=p!$ has factor $p$ of multiplicity only $1$, thus $|\operatorname{im} \phi|=1\text{ or }p$. But $|\operatorname{im}\phi|\neq1$ because is not possible that every element in $G$ fix any coset of $H$. Thus $|\operatorname{im}\phi|=p$, and $|\operatorname{ker}\phi|=p^{2}$. Since $\operatorname{ker}\phi \subset H$ and $|H|=p^{2}$, we have $H=\operatorname{ker}\phi$, thus $H$ is normal.
+
+To prove proposition 4, we consider the quotient map $\pi:G\to G / Z(G)$. This is a homomorphism because $Z(G)$ is normal. And $C/ Z(G)$ is abelian because Thus $\pi()$
 ___
 
 > [!problem] Problem 3
