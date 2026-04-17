@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meet/Sylow p-groups of GL(n,q).md",
+                "file": "Abstract algebra homework/Abstract algebra HW12.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Sylow p-groups of GL(n,q)"
+              "title": "Abstract algebra HW12"
             }
           }
         ]
@@ -186,8 +186,8 @@
   },
   "active": "5ba80245070c0f3b",
   "lastOpenFiles": [
-    "Abstract algebra homework/Abstract algebra HW12.md",
     "meet/Sylow p-groups of GL(n,q).md",
+    "Abstract algebra homework/Abstract algebra HW12.md",
     "Abstract algebra homework/Abstract algebra HW1.md",
     "Algebraic topology homework/Algebraic topology HW6.md",
     "Real Analysis homework/Real Analysis HW6.md",

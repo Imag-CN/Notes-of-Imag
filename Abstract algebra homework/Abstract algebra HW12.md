@@ -7,6 +7,16 @@ ___
 > [!problem] Problem 2
 > Show that for all prime numbers $p$, the number of non-isomorphic groups of order $p^{3}$ is the same.
 
+**Proof:**
+We directly classify group $G$ of order $p^{3}$.
+
+For $G$ abelian, we easily get three types: $C_{p^{3}},C_{p^{2}}\times C_{p},C_{p}\times C_{p}\times C_{p}$.
+
+For $G$ non-abelian, we get several propositions:
+1. $\lvert Z(G) \rvert=p$.
+2. For any proper subgroup $H<G$, either $H=Z(G)$ (when $|H|=p$, either $H=Z(g)$ for any $g\in H \setminus Z(G)$ (when $|H|=p^{2}$).
+3. 
+Proposition 1 is trivial
 ___
 
 > [!problem] Problem 3
@@ -29,7 +39,7 @@ $SO(n) = \{A \in O(n) \mid \det A = 1\}$. The same scalar condition applies, but
 
 **4. $Z(U(n))$**
 $U(n) = \{A \in M_{n}(\mathbb{C}) \mid A^* A = I\}$. A matrix that commutes with all unitary matrices must be a scalar matrix. Let $A = \lambda I$. The condition $(\lambda I)^*(\lambda I) = |\lambda|^2 I = I$ gives $|\lambda| = 1$. Therefore,
-$$Z(U(n)) = \{\lambda I_n \mid \lambda \in \mathbb{C},\ |\lambda|.$$
+$$Z(U(n)) = \{\lambda I_n \mid \lambda \in \mathbb{C},\ |\lambda|=1\}.$$
 
 **5. $Z(SU(n))$**
 $SU(n) = \{A \in U(n) \mid \det A = 1\}$. Again, $A$ must be scalar: $A = \lambda I$. The conditions are $|\lambda| = 1$ (from unitarity) and $\det(\lambda I) = \lambda^n = 1$. Thus,
