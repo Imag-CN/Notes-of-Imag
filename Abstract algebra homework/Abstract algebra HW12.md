@@ -106,3 +106,7 @@ ___
 > [!problem] Problem 5
 > Prove that the center is always a normal subgroup.
 
+**Proof:**
+Let $G$ be a group. Take any $x \in G$ and $y \in Z(G)$. Then $xyx^{-1}=y \in Z(G)$ because $xy=yx$. Thus $Z(G)$ is a normal subgroup.
+___
+
