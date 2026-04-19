@@ -30,3 +30,4 @@ ___
 > [!problem] Problem 2
 > For $1 \le n \le 60$, classify groups of order $n$ up to isomorphism.
 
+See [Groups of order 60 - Groupprops](https://groupprops.subwiki.org/wiki/Table_of_number_of_groups_for_small_orders)
