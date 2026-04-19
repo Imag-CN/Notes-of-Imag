@@ -13,7 +13,7 @@ We directly classify group $G$ of order $p^{3}$ to solve these two problems at t
 For $G$ abelian, we easily get three types: $C_{p^{3}},C_{p^{2}}\times C_{p},C_{p}\times C_{p}\times C_{p}$.
 
 For $G$ non-abelian, we get several propositions:
-1. $\lvert Z(G) \rvert=p$, and $Z(G)$ is the only subgroup of order $p$.
+1. $\lvert Z(G) \rvert=p$.
 2. For any $g\in G\setminus Z(G)$, $Z(g)$ is a subgroup of order $p^{2}$; Reversely, for subgroup $H<G$ of order $p^{2}$, $H=Z(g)$ for any $g\in H \setminus Z(G)$.
 3. Any subgroup $H<G$ of order $p^{2}$ is a normal subgroup.
 4. $[G,G]\subset Z(G)$. Furthermore, $(xy)^{k}=x^{k}y^{k}[y,x]^{k(k-1) / 2}$ for any $x,y \in G$ and $k\geq 1$.
