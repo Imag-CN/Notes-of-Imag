@@ -156,3 +156,15 @@ ___
 Let $G$ be a group. Take any $x \in G$ and $y \in Z(G)$. Then $xyx^{-1}=y \in Z(G)$ because $xy=yx$. Thus $Z(G)$ is a normal subgroup.
 ___
 
+>[!problem] Problem 6
+>Let $g \in SL_{2}(\mathbb{Z})$. Prove that the following statements are equivalent.  
+>(i) The centralizer of $g$ is finite.  
+>(ii) The trace of $g$ is in $\{-1, 0, 1\}$.  
+>(iii) The element $g$ is not in the center of $SL_{2}(\mathbb{Z})$, and the order of $g$ is finite.
+
+**Proof:**
+**(i)$\Rightarrow$(iii):** Obvious.
+
+**(iii)$\Rightarrow$(ii)**: Suppose $g^{k}=e$. Let $\lambda_{1},\lambda_{2}$ be the eigenvalue of $g$. Denote $\chi_{g}(z)=z^{2}-\operatorname{tr}g\cdot z+1$ the characteristic polynomial of $g$. That $g^{k}=g^{2k}=e$ indicates $\lambda_{1}^{k}+\lambda_{2}^{k}=2$ and $\lambda_{1}^{2k}+\lambda_{2}^{2k}=2$. Thus $\lambda_{1}^{k}=\lambda_{2}^{k}=1$, then we have $|\operatorname{tr}g|\leq|\lambda_{1}|+|\lambda_{2}|=2$. Since $\operatorname{tr}g$ is an integer and $\operatorname{tr}g=\pm 2$ yields $g=\pm e$ (which is in the center of $SL_{2}(\mathbb{Z})$), $\operatorname{tr}g$ must lie in $\{ -1,0,1 \}$.
+
+**(ii)$\Rightarrow$(i):** Respectively, there exists $p \in GL_{2}(\mathbb{C})$ such that $pgp ^{-1}$ is equal to $\begin{pmatrix}e^{\pi i/3}&0 \\ 0&e^{-\pi i/3}\end{pmatrix}$, $\begin{pmatrix}i&0 \\ 0&-i\end{pmatrix}$,  $\begin{pmatrix}e^{2\pi i/3}&0 \\ 0&e^{-2\pi i/3}\end{pmatrix}$ if $\operatorname{tr}g=-1,0,1$. Suppose $gh=hg$ for $h\in SL_{2}(\mathbb{Z})$, then $php ^{-1}=\begin{pmatrix}\alpha_{1}&0 \\ 0&\alpha_{2}\end{pmatrix}$ where $\alpha_{1},\alpha_{2}$ are the eigenvalues of $h$. That $\alpha_{1}+\alpha_{2}\in \mathbb{Z}$ and $\alpha_{1}\alpha_{2}=1$ 
