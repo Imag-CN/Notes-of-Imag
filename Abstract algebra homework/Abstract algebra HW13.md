@@ -13,8 +13,10 @@ ___
 $$
 p-1=\sum_{d\mid p-1}\psi(d).
 $$
-Let $\phi(d)$ be the Euler's function, i.e. the number of integers less than and coprime with $d$. Then 
+Suppose $b$ is a $d$-ordered element, then $b^{i},i=1,2,\dots d$ satisfies $(b^{i})^{d}=1$, thus they are the entire and distinct roots of $x^{d}-1$ ($\mathbb{Z}/ p \mathbb{Z}$ is a field, thus this polynomial has at most $d$ roots).
 
+Let $\phi(d)$ be the Euler's function, i.e. the number of integers less than and coprime with $d$. Then $\operatorname{ord}(d)=$
+ 
 ___
 
 > [!problem] Problem 2
