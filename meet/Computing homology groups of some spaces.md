@@ -31,15 +31,20 @@ $$
 \operatorname{im}\partial_{2}=\left< u_{i-1}-a+u_{i},v_{j-1}-b+u_{j}\mid i=0,\dots,m,\quad j=0,\dots,n \right> ,
 $$
 $$
-\operatorname{ker} \partial_{2}=\left< U_{1}-U_{2}+\cdots-U_{m}+V_{1}-V_{2}+\dots-V_{n} \right> ,\quad \text{if }m,n \text{ are both even},
+\operatorname{ker} \partial_{2}=\begin{cases}
+\left< U_{1}-U_{2}+\cdots-U_{m}+V_{1}-V_{2}+\dots-V_{n} \right> &, \text{if }m,n \text{ are both even}, \\
+0&,\text{if } m \text{ or }n\text{ is odd}.
+\end{cases}
 $$
-$$
-\operatorname{ker} \partial_{2}=0, \quad \text{if } m \text{ or }n\text{ is odd}.
-$$
+
 Therefore,
 $$
 H_{0}(X_{m,n})= \mathbb{Z},
 $$
 $$
 H_{1}(X_{m,n})=
+\begin{cases}
+\mathbb{Z}\oplus \mathbb{Z}_{\operatorname{gcd}(m,n)}\oplus \mathbb{Z}_{2}&,\text{if } m,n \text{ are both even}, \\
+\mathbb{Z}\oplus \mathbb{Z}_{\operatorname{gcd}(m,n)}&,\text{if } m \text{ or }n\text{ is odd}.
+\end{cases}
 $$
