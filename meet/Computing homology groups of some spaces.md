@@ -20,16 +20,26 @@ $$
 $$
 \partial_{3}U_{i}=u_{i-1}-a+u_{i},\quad \partial_{3}V_{j}=v_{j-1}-b+u_{j}\quad (i=0,\dots,m,\quad j=0,\dots,n).
 $$
+Thus
+$$
+\operatorname{im} \partial_{0}=0,\quad \operatorname{ker} \partial_{0}=\left< A,B \right>,
+$$
+$$
+\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1, j=0,\dots n-1 \right> ,
+$$
+$$
+\operatorname{im}\partial_{2}=\left< u_{i-1}-a+u_{i},v_{j-1}-b+u_{j}\mid i=0,\dots,m,\quad j=0,\dots,n \right> ,
+$$
+$$
+\operatorname{ker} \partial_{2}=\left< U_{1}-U_{2}+\cdots-U_{m}+V_{1}-V_{2}+\dots-V_{n} \right> ,\quad \text{if }m,n \text{ are both even},
+$$
+$$
+\operatorname{ker} \partial_{2}=0, \quad \text{if } m \text{ or }n\text{ is odd}.
+$$
 Therefore,
 $$
-\operatorname{im} \partial_{1}=0,\quad \operatorname{ker} \partial_{1}=\left< A,B \right>,
+H_{0}(X_{m,n})= \mathbb{Z},
 $$
 $$
-\operatorname{im}\partial_{2}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{2}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1, j=0,\dots n-1 \right> ,
-$$
-$$
-\operatorname{im}\partial_{3}=\left< u_{i-1}-a+u_{i},v_{j-1}-b+u_{j}\mid i=0,\dots,m,\quad j=0,\dots,n \right> ,
-$$
-$$
-\operatorname{ker} \partial_{3}=\left< U_{1}+U_{2} \right> ,\quad
+H_{1}(X_{m,n})=
 $$
