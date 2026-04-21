@@ -31,5 +31,5 @@ $$
 \operatorname{im}\partial_{3}=\left< u_{i-1}-a+u_{i},v_{j-1}-b+u_{j}\mid i=0,\dots,m,\quad j=0,\dots,n \right> ,
 $$
 $$
-\operatorname{ker} \partial_{3}=\left< U_{i+1}-U_{i} \right> 
+\operatorname{ker} \partial_{3}=\left< U_{1}+U_{2} \right> ,\quad
 $$
