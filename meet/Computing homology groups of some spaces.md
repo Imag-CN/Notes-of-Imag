@@ -43,8 +43,8 @@ H_{0}(X_{m,n})= \mathbb{Z},
 $$
 $$
 H_{1}(X_{m,n})=
-\begin{cases}
-\mathbb{Z}\oplus \mathbb{Z}_{\operatorname{gcd}(m,n)}\oplus \mathbb{Z}_{2}&,\text{if } m,n \text{ are both even}, \\
-\mathbb{Z}\oplus \mathbb{Z}_{\operatorname{gcd}(m,n)}&,\text{if } m \text{ or }n\text{ is odd}.
-\end{cases}
+\mathbb{Z}\oplus \mathbb{Z}_{\operatorname{gcd}(m,n)},
+$$
+$$
+H_{k}(X_{{m,n}})=0,\quad k\geq 2.
 $$
