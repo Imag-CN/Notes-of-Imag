@@ -18,39 +18,26 @@ $$
 \partial_{2} a=\partial_{2} b=0,\quad \partial_{2} u_{i}=\partial_{2} v_{j}=B-A\quad (i=0,\dots,m,\quad j=0,\dots,n),
 $$
 $$
-<<<<<<< HEAD
 \partial_{3}U_{i}=a-u_{i-1}+u_{i},\quad \partial_{3}V_{j}=b-v_{j-1}+u_{j}\quad (i=1,\dots,m,\quad j=1,\dots,n).
-=======
-\partial_{3}U_{i}=u_{i-1}-a+u_{i},\quad \partial_{3}V_{j}=v_{j-1}-b+u_{j}\quad (i=0,\dots,m,\quad j=0,\dots,n).
->>>>>>> Notes-of-Imag/main
 $$
 Thus
 $$
 \operatorname{im} \partial_{0}=0,\quad \operatorname{ker} \partial_{0}=\left< A,B \right>,
 $$
 $$
-<<<<<<< HEAD
-\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1,\quad j=0,\dots n-1 \right> ,
+\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i}-u_{i-1},v_{j}-v_{j-1}\mid i=1,\dots m,\quad j=2,\dots n \right> ,
 $$
 $$
-\operatorname{im}\partial_{2}=\left< a-u_{i-1}+u_{i},b-v_{j-1}+u_{j}\mid i=1,\dots,m,\quad j=1,\dots,n \right> ,
+\operatorname{im}\partial_{2}=\left< a-u_{i-1}+u_{i},b-v_{j-1}+u_{j}\mid i=1,\dots,m,\quad j=1,\dots,n \right> ,\quad \operatorname{ker} \partial_{2}=0.
+$$
+Change basis:
+$$
+\operatorname{ker} \partial_{1}=\left<a,b, a+u_{i}-u_{i-1},b+v_{j}-v_{j-1}\mid i=1,\dots m,\quad j=2,\dots n \right> ,
 $$
 $$
-\operatorname{ker} \partial_{2}=
-0.
-=======
-\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1, j=0,\dots n-1 \right> ,
+
 $$
-$$
-\operatorname{im}\partial_{2}=\left< u_{i-1}-a+u_{i},v_{j-1}-b+u_{j}\mid i=0,\dots,m,\quad j=0,\dots,n \right> ,
-$$
-$$
-\operatorname{ker} \partial_{2}=\begin{cases}
-\left< U_{1}-U_{2}+\cdots-U_{m}+V_{1}-V_{2}+\dots-V_{n} \right> &, \text{if }m,n \text{ are both even}, \\
-0&,\text{if } m \text{ or }n\text{ is odd}.
-\end{cases}
->>>>>>> Notes-of-Imag/main
-$$
+
 
 Therefore,
 $$
