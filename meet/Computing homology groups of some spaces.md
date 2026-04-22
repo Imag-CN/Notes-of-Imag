@@ -35,9 +35,13 @@ $$
 \operatorname{ker} \partial_{1}=\left<a,b, a+u_{i}-u_{i-1},b+v_{j}-v_{j-1}\mid i=1,\dots m,\quad j=2,\dots n \right> ,
 $$
 $$
-
+\operatorname{im}\partial_{2}=\left<ma-nb, a-u_{i-1}+u_{i},b-v_{j-1}+u_{j}\mid i=1,\dots,m,\quad j=2,\dots,n \right> 
 $$
-
+So
+$$
+H_{1}(X_{m,n})= \dfrac{\operatorname{ker}\partial_{1}}{\operatorname{im}\partial_{2}}= \dfrac{\left<a,b\right>}{\left< ma-nb \right> }.
+$$
+Let $d=\operatorname{gcd}(m,n)$ and $m=dm',n=dn'$. Then by Bezout's theorem, there exists $p,q\in \mathbb{Z}$ such that $m'p+$
 
 Therefore,
 $$
