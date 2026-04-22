@@ -1,0 +1,42 @@
+___
+
+>[!problem] Problem 1
+>According to Proposition 90 compute $H$, $N(H)$, and $G(\tilde{X})$ for Example 89 (ii). You can choose one of the vertexes as the base point for $\tilde{X}$.
+
+**Proof:**
+We choose the top-left vertex as the base point. Then
+$$
+H=\left< a^{2},b^{4},ab^{3},b^{3}ab^{2},b^{2}ab \right> ,
+$$
+$$
+N(H)=\left< a^{2},b^{2},ab\right>.
+$$
+$$
+G(\tilde{X})=\mathbb{Z}/2\mathbb{Z}.
+$$
+___
+
+>[!problem] Problem 2
+>Finish the proof of Proposition 90(ii): More precisely, show that the constructed map is a group homomorphism with kernel $H$.
+
+**Proof:**
+**($\subseteq$):** Let $[\gamma] \in \ker(\varphi)$. Then $\varphi([\gamma]) = \text{id}_{\widetilde{X}}$, so $\tau(\widetilde{x}_0) = \widetilde{x}_0$, i.e., $\widetilde{x}_1 = \widetilde{x}_0$. Thus, the lift $\widetilde{\gamma}$ is a loop in $\widetilde{X}$ based at $\widetilde{x}_0$, so $[\widetilde{\gamma}] \in \pi_1(\widetilde{X}, \widetilde{x}_0)$ and $[\gamma] = p_*([\widetilde{\gamma}]) \in H$.
+
+**($\supseteq$):** Let $[\gamma] \in H$. Then $\exists [\widetilde{\gamma}] \in \pi_1(\widetilde{X}, \widetilde{x}_0)$ such that $[\gamma] = p_*([\widetilde{\gamma}])$. Since $\widetilde{\gamma}$ is a loop, its endpoint is $\widetilde{x}_0$. Thus, $\varphi([\gamma])(\widetilde{x}_0) = \widetilde{x}_0$. In a path-connected covering space, a deck transformation fixing a point must be the identity. Hence $\varphi([\gamma]) = \text{id}_{\widetilde{X}}$, so $[\gamma] \in \ker(\varphi)$.
+
+Therefore, $\ker(\varphi) = H$.
+___
+
+>[!problem] Problem 3
+>Solve the exercise in Example 93(d).
+
+**Proof:**
+Surjectivity: $p$ is surjective, and $p = \phi \circ \pi$. Thus $\phi$ is surjective.
+
+Injectivity: Suppose $\phi([\tilde{x}_1]) = \phi([\tilde{x}_2])$, i.e., $p(\tilde{x}_1) = p(\tilde{x}_2)$. Then $\tilde{x}_1, \tilde{x}_2$ lie in the same fiber $p^{-1}(x)$. Since $p$ is normal, $G$ acts transitively on each fiber. Hence $\exists g \in G$ with $g(\tilde{x}_1) = \tilde{x}_2$, so $[\tilde{x}_1] = [\tilde{x}_2]$. Therefore $\phi$ is injective.
+
+Continuity: By the universal property of quotient spaces, since $\pi$ is a quotient map and $p = \phi \circ \pi$ is continuous, $\phi$ is continuous.
+
+$\phi$ is an open map: Let $V \subset \widetilde{X}/G$ be open. Then $\pi^{-1}(V)$ is open in $\widetilde{X}$ (by continuity of $\pi$). Now $\phi(V) = p(\pi^{-1}(V))$. Since $p$ is a local homeomorphism, it is an open map. Thus $p(\pi^{-1}(V))$ is open, so $\phi(V)$ is open. Therefore $\phi$ is an open map.
+
+Since $\phi$ is a continuous bijection and an open map, it is a homeomorphism.
