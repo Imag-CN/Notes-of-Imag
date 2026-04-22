@@ -41,7 +41,22 @@ So
 $$
 H_{1}(X_{m,n})= \dfrac{\operatorname{ker}\partial_{1}}{\operatorname{im}\partial_{2}}= \dfrac{\left<a,b\right>}{\left< ma-nb \right> }.
 $$
-Let $d=\operatorname{gcd}(m,n)$ and $m=dm',n=dn'$. Then by Bezout's theorem, there exists $p,q\in \mathbb{Z}$ such that $m'p+$
+Let $d=\operatorname{gcd}(m,n)$ and $m=dm',n=dn'$. Then by Bezout's theorem, there exists $p,q\in \mathbb{Z}$ such that $m'p+n'q=1$. Again we chage basis:
+$$
+\begin{pmatrix}
+a' \\
+b'
+\end{pmatrix}:=
+\begin{pmatrix}
+m'&-n' \\
+q&p
+\end{pmatrix}
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix},
+$$
+Then $\dfrac{\left<a,b\right>}{\left< ma-nb \right>}$ becomes $\dfrac{\left<a',b'\right>}{\left< da' \right>}$.
 
 Therefore,
 $$
