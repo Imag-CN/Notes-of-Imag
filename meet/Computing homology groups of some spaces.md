@@ -25,19 +25,7 @@ $$
 \operatorname{im} \partial_{0}=0,\quad \operatorname{ker} \partial_{0}=\left< A,B \right>,
 $$
 $$
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1, j=1,\dots n-1 \right> ,
-=======
 \operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i}-u_{i-1},v_{j}-v_{j-1}\mid i=1,\dots m,\quad j=2,\dots n \right> ,
->>>>>>> origin/main
-=======
-\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i}-u_{i-1},v_{j}-v_{j-1}\mid i=1,\dots m,\quad j=2,\dots n \right> ,
->>>>>>> origin/main
-=======
-\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i}-u_{i-1},v_{j}-v_{j-1}\mid i=1,\dots m,\quad j=2,\dots n \right> ,
->>>>>>> origin/main
 $$
 $$
 \operatorname{im}\partial_{2}=\left< a-u_{i-1}+u_{i},b-v_{j-1}+u_{j}\mid i=1,\dots,m,\quad j=1,\dots,n \right> ,\quad \operatorname{ker} \partial_{2}=0.
