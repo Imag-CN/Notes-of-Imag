@@ -25,7 +25,7 @@ $$
 \operatorname{im} \partial_{0}=0,\quad \operatorname{ker} \partial_{0}=\left< A,B \right>,
 $$
 $$
-\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1, j=0,\dots n-1 \right> ,
+\operatorname{im}\partial_{1}=\left< B-A \right> ,\quad \operatorname{ker} \partial_{1}=\left<a,b, u_{i+1}-u_{i},v_{j+1}-v_{j}\mid i=0,\dots m-1, j=1,\dots n-1 \right> ,
 $$
 $$
 \operatorname{im}\partial_{2}=\left< u_{i-1}-a+u_{i},v_{j-1}-b+u_{j}\mid i=0,\dots,m,\quad j=0,\dots,n \right> ,
