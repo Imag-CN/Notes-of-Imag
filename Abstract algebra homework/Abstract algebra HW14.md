@@ -1,0 +1,33 @@
+___
+
+> [!problem] Problem 1
+> Let $p$ be a prime number. Let $\mathbb{F}_p$ be the finite field with $p$ elements.
+>
+> (i) Compute the order of $GL_n(\mathbb{F}_p)$.
+>
+> (ii) Find a Sylow $p$-subgroup of $GL_n(\mathbb{F}_p)$.
+
+**Proof:**
+**(i)** Compute the order of the group:
+$$
+|GL_{n}(\mathbb{F}_{p})| = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})=p^{n(n-1)/2}\cdot(p^{n}-1)(p^{n-1}-1)\cdots(p-1).
+$$
+**(ii)** The $p$-part of the order is
+$$
+p^{n(n-1)/2} = p^{r n(n-1)/2},
+$$
+
+because $p^{n-i}-1$ is coprime to $p$ for $i \ge 1$.
+
+Let $U$ be the set of upper unitriangular matrices (diagonal entries $1$, strictly upper triangular part arbitrary). $U$ is a subgroup, and $|U| = p^{n(n-1)/2}$. Hence $|U|$ equals the $p$-part of $|G|$, so $U$ is a Sylow $p$-subgroup of $G$.
+
+>[!remark]
+>To find the number $n_{p}$ of Sylow $p$-groups of $G$, we can compute the normalizer $N_{G}(U)$ of $U$. Then $n_{p}=\lvert G \rvert / \lvert N_{G}(U) \rvert$ due to the counting formular. 
+>
+>**Claim:** $N_G(U) = B$, where $G = \operatorname{GL}(n,p)$ and $B$ is the Borel subgroup (invertible upper-triangular matrices).
+
+___
+
+> [!problem] Problem 2
+> For $n=3,4,5$, find all Sylow $p$-subgroups of $A_n$ and $S_n$ for all $p$ dividing $n$.
+
