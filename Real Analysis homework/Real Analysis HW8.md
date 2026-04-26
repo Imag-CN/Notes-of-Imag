@@ -154,4 +154,53 @@ would belong to $\mathcal{L}$ (because sections of a measurable set in the produ
 Thus $E$ and $F$ satisfy the required conditions.
 ___
 
+> [!problem]
+> Let $A$, $B$ be Lebesgue measurable subsets of $\mathbb{R}$. Denote
+> $$
+> A_x=\{a-x:a\in A\}.
+> $$
+> Prove that
+> $$
+> \int_{\mathbb{R}}\lambda(A_x\cap B)\,d\lambda=\lambda(A)\lambda(B).
+> $$
+
+**Proof:**
+Write the characteristic functions:
+$$
+\chi_{A_x}(y)=\chi_A(y+x),\qquad \chi_B(y)=\text{characteristic function of }B.
+$$
+Then
+$$
+\lambda(A_x\cap B)=\int_{\mathbb{R}}\chi_{A_x}(y)\chi_B(y)\,d\lambda(y)=\int_{\mathbb{R}}\chi_A(y+x)\chi_B(y)\,dy.
+$$
+Thus
+$$
+\int_{\mathbb{R}}\lambda(A_x\cap B)\,dx
+=\int_{\mathbb{R}}\Bigl[\int_{\mathbb{R}}\chi_A(y+x)\chi_B(y)\,dy\Bigr]dx.
+$$
+By Tonelli’s theorem, we may interchange the order of integration:
+$$
+=\int_{\mathbb{R}}\chi_B(y)\Bigl[\int_{\mathbb{R}}\chi_A(y+x)\,dx\Bigr]dy.
+$$
+The inner integral is independent of $y$: for fixed $y$,
+$$
+\int_{\mathbb{R}}\chi_A(y+x)\,dx=\int_{\mathbb{R}}\chi_A(z)\,dz=\lambda(A).
+$$
+Therefore
+$$
+\int_{\mathbb{R}}\lambda(A_x\cap B)\,dx
+=\int_{\mathbb{R}}\chi_B(y)\lambda(A)\,dy
+=\lambda(A)\int_{\mathbb{R}}\chi_B(y)\,dy
+=\lambda(A)\lambda(B).
+$$
+___
+
+> [!problem] [SHE] 4A.8
+> Find a formula for the Hardy–Littlewood maximal function of the function $h:\mathbb{R}\to[0,\infty)$ defined by
+> $$h(x)=
+> \begin{cases}
+> x, & \text{if }0\leq x\leq1,\\
+> 0, & \text{otherwise}.
+> \end{cases}$$
+
 
