@@ -105,4 +105,53 @@ For fixed $n$, $\sum_{m=1}^{\infty}x_{m,1}=1$, so $\sum_{n=1}^{\infty}\sum_{m=1}
 Fubini’s Theorem for sums (i.e., interchanging the order of summation) is valid when $\sum_{m,n}|x_{m,n}|<\infty$, and the example above fails to this condition.
 ___
 
+> [!problem] [SHE] 5B.4
+> Suppose $(X,\mathcal{S})$ is a measurable space and $f:X\to\mathbf{R}$ is a function. Let $\operatorname{graph}(f)\subset X\times\mathbf{R}$ denote the graph of $f$:
+> $$\operatorname{graph}(f)=\{(x,f(x)):x\in X\}.$$
+> Let $\mathcal{B}$ denote the $\sigma$-algebra of Borel subsets of $\mathbf{R}$. Prove that $\operatorname{graph}(f)\in\mathcal{S}\otimes\mathcal{B}$ if and only if $f$ is an $\mathcal{S}$-measurable function.
+
+**Proof:**
+$(\Rightarrow)$ Assume $\operatorname{graph}(f)\in\mathcal{S}\otimes\mathcal{B}$. For $a\in\mathbf{R}$, the section
+$$
+\{x\in X:(x,a)\in\operatorname{graph}(f)\}=\{x:f(x)=a\}
+$$
+is in $\mathcal{S}$ because sections of product-measurable sets are measurable. Then
+$$
+\{x:f(x)<a\}=\bigcup_{q<a,q\in\mathbb{Q}}\{x:f(x)=q\}\in\mathcal{S}.
+$$
+Thus $f$ is $\mathcal{S}$-measurable.
+
+$(\Leftarrow)$ Assume $f$ is $\mathcal{S}$-measurable. Define $F:X\times\mathbf{R}\to\mathbf{R}$ by $F(x,y)=f(x)-y$. Then $F$ is $(\mathcal{S}\otimes\mathcal{B},\mathcal{B})$-measurable, and
+$$
+\operatorname{graph}(f)=F^{-1}(\{0\})\in\mathcal{S}\otimes\mathcal{B}.
+$$
+___
+
+> [!problem] [SHE] 5C.6
+> Suppose $\lambda$ denotes Lebesgue measure on $(\mathbf{R},\mathcal{L})$, where $\mathcal{L}$ is the $\sigma$-algebra of Lebesgue measurable subsets of $\mathbf{R}$. Show that there exist subsets $E$ and $F$ of $\mathbf{R}^{2}$ such that
+> - $F\in\mathcal{L}\otimes\mathcal{L}$ and $(\lambda\times\lambda)(F)=0$;
+> - $E\subset F$ but $E\notin\mathcal{L}\otimes\mathcal{L}$.
+
+**Proof:**
+Let $V$ be a Vitali set in $\mathbf{R}$, i.e., $V\subset[0,1]$ is not Lebesgue measurable. Define
+$$
+F=[0,1]\times\{0\}\subset\mathbf{R}^2.
+$$
+Then $F\in\mathcal{L}\otimes\mathcal{L}$ (since $[0,1]\in\mathcal{L}$ and $\{0\}\in\mathcal{L}$) and
+$$
+(\lambda\times\lambda)(F)=\lambda([0,1])\cdot\lambda(\{0\})=1\cdot0=0.
+$$
+Now take
+$$
+E=V\times\{0\}\subset F.
+$$
+If $E\in\mathcal{L}\otimes\mathcal{L}$, then its section
+$$
+E_0=\{x\in\mathbf{R}:(x,0)\in E\}=V
+$$
+would belong to $\mathcal{L}$ (because sections of a measurable set in the product $\sigma$-algebra are measurable). But $V\notin\mathcal{L}$ by construction. Hence $E\notin\mathcal{L}\otimes\mathcal{L}$.
+
+Thus $E$ and $F$ satisfy the required conditions.
+___
+
 
