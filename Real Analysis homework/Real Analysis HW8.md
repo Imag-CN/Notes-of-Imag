@@ -359,17 +359,12 @@ ___
 > for almost every $b\in\mathbf{R}$.
 
 **Proof:**
-Recall the Hardy–Littlewood maximal function
-$$
-f^*(b)=\sup_{t>0}\frac{1}{2t}\int_{b-t}^{b+t}|f(y)|\,dy.
-$$
+Let $f^*$ denote the Hardy–Littlewood maximal function:
+$$ f^*(b) = \sup_{t>0} \frac{1}{2t} \int_{b-t}^{b+t} |f(y)| \, dy. $$
 
-For any fixed $t>0$, we have
-$$
-\frac{1}{2t}\int_{b-t}^{b+t}|f(y)|\,dy\ge\frac{1}{2t}\int_{b-t}^{b+t}|f(b)|\,dy=|f(b)|.
-$$
-Hence
-$$
-|f(b)|\le\frac{1}{2t}\int_{b-t}^{b+t}|f(y)|\,dy\le f^*(b)
-$$
-for every $t>0$ and every $b$.
+By the Lebesgue Differentiation Theorem, for almost every $b \in \mathbb{R}$, the limit of the averages equals the function value:
+$$ \lim_{t \to 0^+} \frac{1}{2t} \int_{b-t}^{b+t} |f(y)| \, dy = |f(b)|. $$
+
+Since $f^*(b)$ is the supremum of these averages over all $t > 0$, it must be at least as large as the limit (which exists for a.e. $b$). Therefore:
+$$ |f(b)| \le f^*(b) $$
+holds for almost every $b \in \mathbb{R}$.
