@@ -34,3 +34,62 @@ ___
 > [!problem] [HAT] 2.1.1
 > What familiar space is the quotient $\Delta$-complex of a 2-simplex $[v_0, v_1, v_2]$ obtained by identifying the edges $[v_0, v_1]$ and $[v_1, v_2]$, preserving the ordering of vertices?
 
+**Proof:** Klein bottle.
+___
+
+> [!problem] [HAT] 2.1.9
+> Compute the homology groups of the $\Delta$-complex $X$ obtained from $\Delta^{n}$ by identifying all faces of the same dimension. Thus $X$ has a single $k$-simplex for each $k\le n$.
+
+**Proof:**
+Let $e_k$ be the unique $k$-simplex. Chain groups $C_k=\mathbb{Z}$ for $0\le k\le n$.
+
+Boundary maps:
+$$
+\partial e_k=
+\begin{cases}
+0,&k\text{ odd},\\
+e_{k-1},&k\text{ even, }k\ge1.
+\end{cases}
+$$
+
+Thus the chain complex is
+$$
+0\to\mathbb{Z}\xrightarrow{\partial_n}\mathbb{Z}\xrightarrow{\partial_{n-1}}\cdots\xrightarrow{\partial_1}\mathbb{Z}\to0
+$$
+with $\partial_k=\begin{cases}0,&k\text{ odd}\\1,&k\text{ even}\end{cases}$ (multiplication by 1).
+
+Hence
+$$
+H_k(X)\cong
+\begin{cases}
+\mathbb{Z},&k=0,\\
+\mathbb{Z},&k=n\ \text{and}\ n\ \text{odd},\\
+0,&\text{otherwise}.
+\end{cases}
+$$
+___
+
+> [!problem] [HAT] 2.1.16
+> (a) Show that $H_0(X,A)=0$ iff $A$ meets each path-component of $X$.
+> (b) Show that $H_1(X,A)=0$ iff the map $H_1(A)\to H_1(X)$ is surjective and each path-component of $X$ contains at most one path-component of $A$.
+
+**Proof:**
+**(a)** Recall the long exact sequence
+$$
+\cdots\to H_0(A)\xrightarrow{i_*}H_0(X)\xrightarrow{j_*}H_0(X,A)\to0.
+$$
+Since $H_0(X)$ is free abelian on the set of path-components of $X$, and $i_*$ sends the component of a point $a\in A$ to the component of $i(a)\in X$, we have
+$$
+H_0(X,A)=\operatorname{coker}i_*\cong\mathbb{Z}^{\{\text{components of }X\text{ not met by }A\}}.
+$$
+Thus $H_0(X,A)=0$ iff $A$ meets every path-component of $X$.
+
+**(b)** From the long exact sequence
+$$
+H_1(A)\xrightarrow{i_*}H_1(X)\xrightarrow{j_*}H_1(X,A)\to H_0(A)\xrightarrow{i_*}H_0(X)
+$$
+we have $H_1(X,A)=0$ iff $i_*:H_1(A)\to H_1(X)$ is surjective and the map $H_0(A)\to H_0(X)$ is injective.
+
+Now $H_0(A)\to H_0(X)$ is injective iff distinct components of $A$ are mapped to distinct components of $X$, i.e., each component of $X$ contains at most one component of $A$.
+
+Hence $H_1(X,A)=0$ iff $i_*:H_1(A)\to H_1(X)$ is surjective and each component of $X$ contains at most one component of $A$.
