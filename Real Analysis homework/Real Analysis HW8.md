@@ -78,4 +78,31 @@ $$
 Thus $\iint|f|=\infty$, the hypothesis of Fubini’s Theorem is not satisfied, and the two iterated integrals may differ. Hence (a) contradicts neither theorem.
 ___
 
+> [!problem] [SHE] 5B.2
+>(a) Give an example of a doubly indexed collection $\{x_{m,n}:m,n\in\mathbf{Z}^{+}\}$ of real numbers such that
+>$$
+>\sum_{m=1}^{\infty}\sum_{n=1}^{\infty}x_{m,n}=0\quad\text{and}\quad\sum_{n=1}^{\infty}\sum_{m=1}^{\infty}x_{m,n}=\infty.
+>$$
+>
+>(b) Explain why (a) violates neither Tonelli’s Theorem nor Fubini’s Theorem.
+
+**Proof:**
+**(a)** Define
+$$
+x_{m,n}=
+\begin{cases}
+m, & n=m,\\
+-m, & n=m+1,\\
+0, & \text{otherwise}.
+\end{cases}
+$$
+Then for each $m$, $\sum_{n=1}^{\infty}x_{m,n}=0$, so $\sum_{m}\sum_{n}x_{m,n}=0$.
+
+For fixed $n$, $\sum_{m=1}^{\infty}x_{m,1}=1$, so $\sum_{n=1}^{\infty}\sum_{m=1}^{\infty}x_{m,n}=\infty$.
+
+**(b)** Tonelli’s Theorem applies to non‑negative terms.  Here $x_{m,n}$ takes both positive and negative values, so Tonelli does not apply.
+
+Fubini’s Theorem for sums (i.e., interchanging the order of summation) is valid when $\sum_{m,n}|x_{m,n}|<\infty$, and the example above fails to this condition.
+___
+
 
