@@ -204,29 +204,19 @@ ___
 > \end{cases}$$
 
 **Proof:**
-Let
-$$
-(Mh)(x)=\sup_{r>0}\frac{1}{2r}\int_{x-r}^{x+r}h(y)\,dy.
-$$
 Since $h$ is supported on $[0,1]$ and $h(y)=y$ on $[0,1]$, we compute case by case.
 
-1. $x\le0$: The best average is obtained as $r\to\infty$, giving $(Mh)(x)=\frac14$.
+1. $x\le0$: The best average is obtained as $t\to\infty$, giving $h^{*}(x)=\frac14$.
 
-2. $0<x\le\frac12$: The maximum occurs at $r=1-x$, giving
-   $$
-   (Mh)(x)=\frac{1}{4(1-x)}.
-   $$
+2. $0<x\le\frac12$: The maximum occurs at $t=1-x$, giving $h^{*}(x)=\frac{1}{4(1-x)}$.
 
-3. $\frac12\le x\le1$: The maximum occurs at $r=x$, giving $(Mh)(x)=x$.
+3. $\frac12\le x\le1$: The maximum occurs at $t=x$, giving $h^{*}(x)=x$.
 
-4. $x>1$: The maximum occurs at $r=\sqrt{x^2-1}$, giving
-   $$
-   (Mh)(x)=\frac{1}{2\bigl(x+\sqrt{x^2-1}\bigr)}.
-   $$
+4. $x>1$: The maximum occurs at $t=\sqrt{x^2-1}$, giving $h^{*}(x)=\frac{1}{2\bigl(x+\sqrt{x^2-1}\bigr)}$.
 
 Hence
 $$
-(Mh)(x)=
+h^{*}(x)=
 \begin{cases}
 \frac14, & x\le0,\\[4pt]
 \frac{1}{4(1-x)}, & 0<x\le\frac12,\\[4pt]
@@ -234,3 +224,34 @@ x, & \frac12\le x\le1,\\[4pt]
 \displaystyle\frac{1}{2\bigl(x+\sqrt{x^2-1}\bigr)}, & x>1.
 \end{cases}
 $$
+___
+
+> [!problem] [SHE] 4A.10
+> Prove or give a counterexample: If $h:\mathbb{R}\to[0,\infty)$ is an increasing function, then $h^*$ (the Hardy–Littlewood maximal function) is an increasing function.
+
+**Proof:**
+Let $h:\mathbb{R}\to[0,\infty)$ be increasing. For any $b\in\mathbb{R}$ and $t>0$, define the average
+$$
+A(b,t)=\frac{1}{2t}\int_{b-t}^{b+t}h(y)\,dy.
+$$
+Then the Hardy–Littlewood maximal function is
+$$
+h^*(b)=\sup_{t>0}A(b,t).
+$$
+
+Fix $x_1<x_2$. We will show $h^*(x_1)\le h^*(x_2)$.
+
+For any $t>0$, consider the intervals $I_1=[x_1-t,x_1+t]$ and $I_2=[x_2-t,x_2+t]$. Because $h$ is increasing, shifting the interval to the right increases the function values: for any $y\in I_1$, the point $y+(x_2-x_1)\in I_2$ satisfies $h(y)\le h(y+(x_2-x_1))$. By a change of variables or by the monotonicity of integrals over shifted intervals, we get
+$$
+A(x_1,t)\le A(x_2,t).
+$$
+Taking supremum over $t>0$ on both sides yields
+$$
+h^*(x_1)=\sup_{t>0}A(x_1,t)\le\sup_{t>0}A(x_2,t)=h^*(x_2).
+$$
+Hence $h^*$ is increasing.
+___
+
+> [!problem] [SHE] 4A.13
+> Show that there exists $h\in\mathcal{L}^{1}(\mathbf{R})$ such that $h^{*}(b)=\infty$ for every $b\in\mathbf{Q}$.
+
