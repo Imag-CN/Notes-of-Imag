@@ -255,3 +255,35 @@ ___
 > [!problem] [SHE] 4A.13
 > Show that there exists $h\in\mathcal{L}^{1}(\mathbf{R})$ such that $h^{*}(b)=\infty$ for every $b\in\mathbf{Q}$.
 
+**Proof:**
+Enumerate $\mathbb{Q}=\{q_n\}_{n=1}^\infty$. Choose intervals $I_n$ with $q_n\in I_n$ and $|I_n|=2^{-n}$.
+
+Define
+$$
+h(x)=\sum_{n=1}^{\infty}\frac{n^{-2}}{2^{-n}\log(1+n)}\chi_{I_n}(x).
+$$
+
+Then
+$$
+\|h\|_1=\sum_{n=1}^\infty\frac{n^{-2}}{\log(1+n)}<\infty,
+$$
+so $h\in L^1(\mathbb{R})$.
+
+For any $q_k\in\mathbb{Q}$ and any $r>0$, there are infinitely many $n$ with $I_n\subset(q_k-r,q_k+r)$. For such $n$,
+$$
+\frac{1}{2r}\int_{q_k-r}^{q_k+r}h\ge\frac{1}{2r}\int_{I_n}h
+=\frac{1}{2r}\cdot\frac{n^{-2}}{\log(1+n)}.
+$$
+Taking $r\to0^+$ appropriately, the right-hand side can be made arbitrarily large. Hence
+$$
+h^*(q_k)=\sup_{r>0}\frac{1}{2r}\int_{q_k-r}^{q_k+r}h=\infty
+$$
+for every $k$.
+___
+
+> [!problem]
+> For $f\in\mathcal{L}^{1}(\mathbb{R})$ and $I$ an interval of $\mathbb{R}$ with $0<|I|<\infty$, let $f_I$ denote the average of $f$ on $I$. In other words,
+> $$f_I=\frac{1}{|I|}\int_I f.$$
+> 1. Suppose $f\in\mathcal{L}^{1}(\mathbb{R})$. Prove that
+> $$\lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}\left|f-f_{[b-t,b+t]}\right|=0$$
+> for **almost every** $b\in\mathbb{R}$.
