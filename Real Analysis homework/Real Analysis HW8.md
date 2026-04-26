@@ -203,4 +203,34 @@ ___
 > 0, & \text{otherwise}.
 > \end{cases}$$
 
+**Proof:**
+Let
+$$
+(Mh)(x)=\sup_{r>0}\frac{1}{2r}\int_{x-r}^{x+r}h(y)\,dy.
+$$
+Since $h$ is supported on $[0,1]$ and $h(y)=y$ on $[0,1]$, we compute case by case.
 
+1. $x\le0$: The best average is obtained as $r\to\infty$, giving $(Mh)(x)=\frac14$.
+
+2. $0<x\le\frac12$: The maximum occurs at $r=1-x$, giving
+   $$
+   (Mh)(x)=\frac{1}{4(1-x)}.
+   $$
+
+3. $\frac12\le x\le1$: The maximum occurs at $r=x$, giving $(Mh)(x)=x$.
+
+4. $x>1$: The maximum occurs at $r=\sqrt{x^2-1}$, giving
+   $$
+   (Mh)(x)=\frac{1}{2\bigl(x+\sqrt{x^2-1}\bigr)}.
+   $$
+
+Hence
+$$
+(Mh)(x)=
+\begin{cases}
+\frac14, & x\le0,\\[4pt]
+\frac{1}{4(1-x)}, & 0<x\le\frac12,\\[4pt]
+x, & \frac12\le x\le1,\\[4pt]
+\displaystyle\frac{1}{2\bigl(x+\sqrt{x^2-1}\bigr)}, & x>1.
+\end{cases}
+$$
