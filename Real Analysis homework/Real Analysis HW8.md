@@ -280,10 +280,96 @@ h^*(q_k)=\sup_{r>0}\frac{1}{2r}\int_{q_k-r}^{q_k+r}h=\infty
 $$
 for every $k$.
 ___
+ For $f\in\mathcal{L}^{1}(\mathbb{R})$ and $I$ an interval of $\mathbb{R}$ with $0<|I|<\infty$, let $f_I$ denote the average of $f$ on $I$. In other words, $f_I=\frac{1}{|I|}\int_I f$.
+ 
+> [!problem] [SHE] 4B.1
+> Suppose $f\in\mathcal{L}^{1}(\mathbb{R})$. Prove that
+> $$
+> \lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}\left|f-f_{[b-t,b+t]}\right|=0
+> $$
+> for almost every $b\in\mathbb{R}$.
 
-> [!problem]
-> For $f\in\mathcal{L}^{1}(\mathbb{R})$ and $I$ an interval of $\mathbb{R}$ with $0<|I|<\infty$, let $f_I$ denote the average of $f$ on $I$. In other words,
-> $$f_I=\frac{1}{|I|}\int_I f.$$
-> 1. Suppose $f\in\mathcal{L}^{1}(\mathbb{R})$. Prove that
-> $$\lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}\left|f-f_{[b-t,b+t]}\right|=0$$
-> for **almost every** $b\in\mathbb{R}$.
+**Proof:**
+Define $F(x)=\int_0^x f(y)dy$. By the Lebesgue differentiation theorem, for almost every $b$,
+$$
+\lim_{t\to0}\frac{F(b+t)-F(b-t)}{2t}=f(b).
+$$
+Hence for a.e. $b$,
+$$
+\lim_{t\to0}f_{[b-t,b+t]}=\lim_{t\to0}\frac{F(b+t)-F(b-t)}{2t}=f(b).
+$$
+
+Now fix such a $b$ and let $\varepsilon>0$. Choose $t_0>0$ such that for all $0<t<t_0$,
+$$
+|f_{[b-t,b+t]}-f(b)|<\varepsilon.
+$$
+Then
+$$
+\begin{align*}
+\frac{1}{2t}\int_{b-t}^{b+t}|f-f_{[b-t,b+t]}|dx
+&\le\frac{1}{2t}\int_{b-t}^{b+t}|f-f(b)|dx
+   +\frac{1}{2t}\int_{b-t}^{b+t}|f(b)-f_{[b-t,b+t]}|dx \\
+&<\frac{1}{2t}\int_{b-t}^{b+t}|f-f(b)|dx+\varepsilon.
+\end{align*}
+$$
+By the Lebesgue differentiation theorem again,
+$$
+\lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}|f-f(b)|dx=0
+$$
+for a.e. $b$. Therefore
+$$
+\limsup_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}|f-f_{[b-t,b+t]}|dx\le\varepsilon
+$$
+for a.e. $b$. Since $\varepsilon>0$ is arbitrary, the limit equals $0$ for a.e. $b$.
+___
+
+> [!problem] [SHE] 4B.3
+> Suppose $f:\mathbb{R}\to\mathbb{R}$ is a Lebesgue measurable function such that $f^2\in\mathcal{L}^1(\mathbb{R})$. Prove that
+> $$\lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}|f-f(b)|^2=0$$
+> for almost every $b\in\mathbb{R}$.
+
+**Proof:**
+Let $g=f^2\in L^1(\mathbb{R})$. By Lebesgue differentiation,
+$$
+\lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}f(x)^2\,dx=f(b)^2
+$$
+for a.e. $b$. Also, since $f\in L^2_{\text{loc}}$, we have $f\in L^1_{\text{loc}}$, so
+$$
+\lim_{t\downarrow0}\frac{1}{2t}\int_{b-t}^{b+t}f(x)\,dx=f(b)
+$$
+for a.e. $b$.
+
+Now expand the square:
+$$
+\frac{1}{2t}\int_{b-t}^{b+t}|f-f(b)|^2
+=\frac{1}{2t}\int_{b-t}^{b+t}f^2
+-2f(b)\cdot\frac{1}{2t}\int_{b-t}^{b+t}f
++f(b)^2.
+$$
+For a.e. $b$, the right‑hand side tends to
+$$
+f(b)^2-2f(b)f(b)+f(b)^2=0.
+$$
+Hence the limit holds for almost every $b$.
+___
+
+> [!problem] [SHE] 4B.5
+> Suppose $f:\mathbf{R}\rightarrow\mathbf{R}$ is a Lebesgue measurable function. Prove that
+> $$|f(b)|\le f^{*}(b)$$
+> for almost every $b\in\mathbf{R}$.
+
+**Proof:**
+Recall the Hardy–Littlewood maximal function
+$$
+f^*(b)=\sup_{t>0}\frac{1}{2t}\int_{b-t}^{b+t}|f(y)|\,dy.
+$$
+
+For any fixed $t>0$, we have
+$$
+\frac{1}{2t}\int_{b-t}^{b+t}|f(y)|\,dy\ge\frac{1}{2t}\int_{b-t}^{b+t}|f(b)|\,dy=|f(b)|.
+$$
+Hence
+$$
+|f(b)|\le\frac{1}{2t}\int_{b-t}^{b+t}|f(y)|\,dy\le f^*(b)
+$$
+for every $t>0$ and every $b$.
