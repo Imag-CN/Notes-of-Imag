@@ -25,18 +25,18 @@
             "id": "8861a555fb800d67",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW4.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Abstract algebra HW4"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           },
           {
-            "id": "9c3a4c5b0d21507b",
+            "id": "e8e4fa2aa053507b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -213,10 +213,11 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "9c3a4c5b0d21507b",
+  "active": "e8e4fa2aa053507b",
   "lastOpenFiles": [
-    "Abstract algebra homework/Abstract algebra HW4.md",
     "conflict-files-obsidian-git.md",
+    "Abstract algebra homework/Abstract algebra HW8.md",
+    "Abstract algebra homework/Abstract algebra HW4.md",
     "Commutative Algebra/Commutative Algebra HW1.md",
     "Commutative Algebra",
     "Algebraic topology homework/Algebraic topology HW8.md",
@@ -243,7 +244,6 @@
     "Abstract algebra homework/Abstract algebra HW12.md",
     "Abstract algebra homework/Abstract algebra HW10.md",
     "Abstract algebra homework/Abstract algebra HW9.md",
-    "Abstract algebra homework/Abstract algebra HW8.md",
     "Abstract algebra homework/Abstract algebra HW7.md",
     "Abstract algebra homework/Abstract algebra HW6.md",
     "attachments/Pasted image 20260406220841.png",
