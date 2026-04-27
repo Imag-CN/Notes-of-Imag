@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic topology homework/Algebraic topology HW8.md",
+                "file": "Abstract algebra homework/Abstract algebra HW4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebraic topology HW8"
+              "title": "Abstract algebra HW4"
             }
           }
         ],
@@ -56,7 +56,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -199,11 +199,11 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "8861a555fb800d67",
+  "active": "9a25deaea7baccf2",
   "lastOpenFiles": [
+    "Algebraic topology homework/Algebraic topology HW8.md",
     "Algebraic topology homework/Algebraic topology HW2.md",
     "Abstract algebra homework/Abstract algebra HW11.md",
-    "Algebraic topology homework/Algebraic topology HW8.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
     "Real Analysis homework/Real Analysis HW8.md",
     "Algebraic topology homework/Algebraic topology HW7.md",
