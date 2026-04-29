@@ -27,30 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW13.md",
+                "file": "meet/Computing homology groups of some spaces.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abstract algebra HW13"
-            }
-          },
-          {
-            "id": "83c0f74227b059fb",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://groupprops.subwiki.org/wiki/Groups_of_order_60",
-                "title": "Groups of order 60 - Groupprops",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Groups of order 60 - Groupprops"
+              "title": "Computing homology groups of some spaces"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,7 +199,7 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "83c0f74227b059fb",
+  "active": "8861a555fb800d67",
   "lastOpenFiles": [
     "Abstract algebra homework/Abstract algebra HW13.md",
     "Abstract algebra homework/Abstract algebra HW14.md",
