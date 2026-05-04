@@ -9,3 +9,6 @@ All rings are commutative with unit.
 >\{ \text{homomorphisms } \varphi : \mathbb{Q}[x,y] \to R \} \leftrightarrow R^2
 >$$
 
+**Proof:** $R$ is a $\mathbb{Q}$-algebra.
+___
+
