@@ -11,14 +11,14 @@ ___
 >Prove that if $t\in[0,1]$, then there exists a Borel set $E\subset\mathbb{R}$ such that the density of $E$ at 0 is $t$.
 
 **Proof:**
-Let $A_{n}=( (n+1)^{-1}, (n+1)^{-1}(1+t))$, and let
+Let $A_{n}=( (n+1)^{-1}, (n+1)^{-1}+t(n^{-1}-(n+1)^{-1}))$, and let
 $$
 E=\bigcup_{n\ge1}(A_n\cup(-A_n)).
 $$
 Then $E$ is Borel and symmetric. For $r\in((n+1)^{-1},n^{-1}]$,
 $$
 \frac{m(E\cap(-r,r))}{2r}
-=\frac{2()}{2r}
-=t\cdot\frac{r_n}{r}.
+=\frac{2(rt+m(E\cap(r,n^{-1}]))}{2r}
+=t+ \dfrac{m(E\cap (r,n^{-1}])}{r}.
 $$
 Since $r_n/r\to1$ as $r\to0^+$, the density at $0$ is $t$.
