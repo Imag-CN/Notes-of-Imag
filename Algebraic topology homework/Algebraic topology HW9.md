@@ -26,3 +26,5 @@ $$
 S_n(\sigma)=\sum_{\pi\in \mathfrak{S}_{n+1}}\operatorname{sgn}(\pi)\,\sigma_{b_\pi},
 $$
 where $\sigma_{b_\pi}:\Delta^n\to X$ is the affine map sending the vertices of $\Delta^n$ in order to the vertices of the simplex $b_\pi$ in $\Delta^n$ and then composed with $\sigma$. (The sign accounts for orientation consistency.)
+___
+
