@@ -11,4 +11,4 @@ ___
 >Prove that if $t\in[0,1]$, then there exists a Borel set $E\subset\mathbb{R}$ such that the density of $E$ at 0 is $t$.
 
 **Proof:**
-Trivial for $t=0,1$, so we assume $t\in(0,1)$.
+Let $E'=$
