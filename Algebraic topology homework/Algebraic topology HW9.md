@@ -32,28 +32,25 @@ ___
 >Let $X$ be the cone on the $1$-skeleton of $\Delta^3$, the union of all line segments joining points in the six edges of $\Delta^3$ to the barycenter of $\Delta^3$. Compute the local homology groups $H_n(X, X - \{x\})$ for all $x \in X$. Define $\partial X$ to be the subspace of points $x$ such that $H_n(X, X - \{x\}) = 0$ for all $n$, and compute the local homology groups $H_n(\partial X, \partial X - \{x\})$. Use these calculations to determine which subsets $A \subset X$ have the property that $f(A) \subset A$ for all homeomorphisms $f: X \to X$.
 
 **Proof:**
-**1. Local homology of $X$**
+**1. Local homology $H_n(X,X-\{x\})$**
 
-- $x=b$: $X-\{b\}\simeq S^1\vee S^1\vee S^1$, so $H_2(X,X-\{b\})\cong\mathbb Z^3$, others 0.  
-- $x$ vertex of $\Delta^3$: $H_1(X,X-\{x\})\cong\mathbb Z^2$, others 0.  
-- $x\in\text{int}(edge)$ or $\text{int}(triangle)$: $H_2(X,X-\{x\})\cong\mathbb Z$, others 0.
+- $x=b$: $H_2\cong\mathbb Z^3$, others 0.  
+- $x$ vertex: $H_1\cong\mathbb Z^2$, others 0.  
+- $x$ on edge or triangle interior: $H_2\cong\mathbb Z$, others 0.
 
-**2. $\partial X$ (points with all $H_n(X,X-\{x\})=0$)**  
+**2. $\partial X$ (points with all $H_n=0$)**  
 
-From (1), only points with trivial local homology are those on the 1‑skeleton. Hence $\partial X$ is the 1‑skeleton of $\Delta^3$ (six edges).
+Only points on 1‑skeleton have $H_2=H_1=0$ → $\partial X$ = 1‑skeleton of $\Delta^3$ (6 edges).
 
-**3. Local homology of $\partial X$**
+**3. $H_n(\partial X,\partial X-\{x\})$**
 
-- $x$ vertex: $\partial X-\{x\}$ has 3 components → $H_1(\partial X,\partial X-\{x\})\cong\mathbb Z^2$, others 0.  
-- $x\in\text{int}(edge)$: $H_1(\partial X,\partial X-\{x\})\cong\mathbb Z$, others 0.
+- $x$ vertex: $H_1\cong\mathbb Z^2$, others 0.  
+- $x$ edge interior: $H_1\cong\mathbb Z$, others 0.
 
-**4. Subsets invariant under all homeomorphisms $f:X\to X$**
+**4. $A\subset X$ with $f(A)\subset A$ for all homeo $f$**
 
-Homeomorphisms preserve local homology, hence preserve the partition into four “strata”:
+Homeos preserve local homology → preserve strata:  
+(1) $\{b\}$, (2) vertices $V$, (3) open edges $E$, (4) open triangles $T$.  
+Thus $A$ is a union of these strata ($2^4=16$ possibilities).
 
-1. $\{b\}$ (unique point with $H_2\cong\mathbb Z^3$)  
-2. $V$ = four vertices (local $H_1\cong\mathbb Z^2$)  
-3. $E$ = six open edges (local $H_2\cong\mathbb Z$, on edge interior)  
-4. $T$ = six open triangles (local $H_2\cong\mathbb Z$, on triangle interior)
-
-Thus $f(A)\subset A$ for all $f$ iff $A$ is a union of these strata. There are $2^4=16$ such subsets, including $\varnothing$, $\{b\}$, $V$, $E$, $T$, $V\cup E$, $V\cup T$, $E\cup T$, $V\cup E\cup T$, $X$, etc.
+**Correction to earlier note:** The cone point $b$ is indeed the only point with $H_2\cong\mathbb Z^3$; edges and triangles both give $H_2\cong\mathbb Z$, but they are topologically distinguishable (edges belong to $\partial X$, triangles do not). The answer in Step 4 remains correct: $A$ must be a union of whole strata.
