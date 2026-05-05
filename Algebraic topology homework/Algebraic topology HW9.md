@@ -54,3 +54,5 @@ Homeos preserve local homology → preserve strata:
 Thus $A$ is a union of these strata ($2^4=16$ possibilities).
 
 **Correction to earlier note:** The cone point $b$ is indeed the only point with $H_2\cong\mathbb Z^3$; edges and triangles both give $H_2\cong\mathbb Z$, but they are topologically distinguishable (edges belong to $\partial X$, triangles do not). The answer in Step 4 remains correct: $A$ must be a union of whole strata.
+___
+
