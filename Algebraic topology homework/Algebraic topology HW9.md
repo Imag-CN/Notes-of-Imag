@@ -32,27 +32,38 @@ ___
 >Let $X$ be the cone on the $1$-skeleton of $\Delta^3$, the union of all line segments joining points in the six edges of $\Delta^3$ to the barycenter of $\Delta^3$. Compute the local homology groups $H_n(X, X - \{x\})$ for all $x \in X$. Define $\partial X$ to be the subspace of points $x$ such that $H_n(X, X - \{x\}) = 0$ for all $n$, and compute the local homology groups $H_n(\partial X, \partial X - \{x\})$. Use these calculations to determine which subsets $A \subset X$ have the property that $f(A) \subset A$ for all homeomorphisms $f: X \to X$.
 
 **Proof:**
-**1. Local homology $H_n(X,X-\{x\})$**
+Let $B_r(x)$ be the $r$-neighborhood of $x$ in $X$. For small $r$, $H_*(X,X-x)\cong H_*(B_r(x),L_r(x))$, where $L_r(x)=\partial B_r(x)$ is the "link" of $x$ in $X$. The reduced homology of the quotient $B_r(x)/L_r(x)$ gives the local homology.
 
-- $x=b$: $H_2\cong\mathbb Z^3$, others 0.  
-- $x$ vertex: $H_1\cong\mathbb Z^2$, others 0.  
-- $x$ on edge or triangle interior: $H_2\cong\mathbb Z$, others 0.
+- $x$ in interior of a 2‑face: $B_r(x)/L_r(x)\simeq S^2\Rightarrow H_2\cong\mathbb Z$, others 0.
+- $x$ on an edge $[V_iV_j]$ of $\Delta^3$: $B_r(x)$ is a half‑disk, $L_r(x)$ a half‑circle $\Rightarrow H_n\cong0$.
+- $x$ on an edge $[OV_i]$ ($O$ is the barycenter): $B_r(x)$ is three half‑disks glued along diameters $\Rightarrow B_r/L_r\simeq S^2\vee S^2\Rightarrow H_2\cong\mathbb Z^2$, others 0.
+- $x$ is a vertex $V_i$: $B_r/L_r$ contractible $\Rightarrow H_n\cong0$.
+- $x=O$: $B_r\simeq X$, $L_r=Y$ (1‑skeleton of $\Delta^3$). From the exact sequence of $(X,Y)$ and contractibility of $X$, $H_2\cong H_1(Y)\cong\mathbb Z^3$, others 0.
 
-**2. $\partial X$ (points with all $H_n=0$)**  
+Hence $\partial$ is the 1‑skeleton of $\Delta^3$.
 
-Only points on 1‑skeleton have $H_2=H_1=0$ → $\partial X$ = 1‑skeleton of $\Delta^3$ (6 edges).
+For $x\in Y$, the same neighborhood analysis gives:
+- $x$ a vertex $V_i$: $H_1\cong\mathbb Z^2$, others 0.
+- $x$ in interior of an edge $[V_iV_j]$: $H_1\cong\mathbb Z$, others 0.
 
-**3. $H_n(\partial X,\partial X-\{x\})$**
+A homeomorphism preserves local homology, hence preserves the following orbit decomposition:
+(1) $\{O\}$ (unique point with $H_2\cong\mathbb Z^3$)
+(2) Four vertices $V_i$ ($H_n\cong0$ but different local homology on $Y$ from edge points)
+(3) Interiors of edges $[OV_i]$ ($H_2\cong\mathbb Z^2$)
+(4) Interiors of edges $[V_iV_j]$ ($H_n\cong0$ but belong to $\partial X$)
+(5) Interiors of $2$‑faces ($H_2\cong\mathbb Z$)
 
-- $x$ vertex: $H_1\cong\mathbb Z^2$, others 0.  
-- $x$ edge interior: $H_1\cong\mathbb Z$, others 0.
-
-**4. $A\subset X$ with $f(A)\subset A$ for all homeo $f$**
-
-Homeos preserve local homology → preserve strata:  
-(1) $\{b\}$, (2) vertices $V$, (3) open edges $E$, (4) open triangles $T$.  
-Thus $A$ is a union of these strata ($2^4=16$ possibilities).
-
-**Correction to earlier note:** The cone point $b$ is indeed the only point with $H_2\cong\mathbb Z^3$; edges and triangles both give $H_2\cong\mathbb Z$, but they are topologically distinguishable (edges belong to $\partial X$, triangles do not). The answer in Step 4 remains correct: $A$ must be a union of whole strata.
+Therefore $A\subset X$ satisfies $f(A)\subset A$ for all homeomorphisms $f$ iff $A$ is a union of these orbits.
 ___
 
+>[!problem] [HAT] 2.1.29
+>Show that $S^{1}\times S^{1}$ and $S^{1}\vee S^{1}\vee S^{2}$ have isomorphic homology groups in all dimensions, but their universal covering spaces do not.
+
+**Proof:**
+Both spaces have homology groups: 
+- $H_0\cong\mathbb Z$,
+- $H_1\cong\mathbb Z^2$,
+- $H_2\cong\mathbb Z$,
+- $H_n=0$ for $n\ge3$.
+
+The universal cover of $S^1\times S^1$ is $\mathbb R^2$, whose $H_{2}$ is trivial. But the universal cover of $S^1\vee S^1\vee S^2$ is the wedge product of an $S^{2}$ and some other space, and the $H_{2}$ of $S^{2}$ is non-trivial, so the $H_{2}$ of the universal cover of $S^1\vee S^1\vee S^2$ is non-trivial.
