@@ -11,4 +11,14 @@ ___
 >Prove that if $t\in[0,1]$, then there exists a Borel set $E\subset\mathbb{R}$ such that the density of $E$ at 0 is $t$.
 
 **Proof:**
-Let $E'=$
+Pick $r_n=1/2^n$, $I_n=(r_{n+1},r_n]$. Choose $A_n\subset I_n$ with $m(A_n)=t\cdot m(I_n)$. Define
+$$
+E=\bigcup_{n\ge1}(A_n\cup(-A_n)).
+$$
+Then $E$ is Borel and symmetric. For $r\in(r_{n+1},r_n]$,
+$$
+\frac{m(E\cap(-r,r))}{2r}
+=\frac{2\sum_{k\ge n}t\cdot m(I_k)}{2r}
+=t\cdot\frac{r_n}{r}.
+$$
+Since $r_n/r\to1$ as $r\to0^+$, the density at $0$ is $t$.
