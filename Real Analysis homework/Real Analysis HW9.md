@@ -18,7 +18,7 @@ $$
 Then $E$ is Borel and symmetric. For $r\in((n+1)^{-1},n^{-1}]$,
 $$
 \frac{m(E\cap(-r,r))}{2r}
-=\frac{2(rt+m(E\cap(r,n^{-1}]))}{2r}
-=t+ \dfrac{m(E\cap (r,n^{-1}])}{r}.
+=\frac{2((n+1)^{-1}t+m(E\cap(r,n^{-1}]))}{2r}
+\leq t\cdot \dfrac{(n+1)^{-1}}{r} + \dfrac{n^{-1}-r}{r}.
 $$
-Since $r_n/r\to1$ as $r\to0^+$, the density at $0$ is $t$.
+Since $(n+1)^{-1}/r\to1$ and $(n^{-1}-r ) / r \to 0$ as $r\to0^+$, the density at $0$ is $t$.
