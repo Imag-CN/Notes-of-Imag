@@ -68,3 +68,47 @@ ___
 **iii) $\Rightarrow$ i):** If $e \in A$ is an idempotent with $e \neq 0,1$, then $\operatorname{Spec}(A) = D(e) \cup D(1-e)$ is a disconnection, as $D(e) \cap D(1-e) = D(e(1-e)) = D(0) = \varnothing$ and both are non-empty (since $e$ and $1-e$ are not units).
 ___
 
+> [!problem] [ATI] 1.27
+> Let $A$ be a ring. The subspace of $\operatorname{Spec}(A)$ consisting of the maximal ideals of $A$, with the induced topology, is called the maximal spectrum of $A$ and is denoted by $\operatorname{Max}(A)$. For arbitrary commutative rings it does not have the nice functorial properties of $\operatorname{Spec}(A)$ (see Exercise 21), because the inverse image of a maximal ideal under a ring homomorphism need not be maximal.
+>
+> Let $X$ be a compact Hausdorff space and let $C(X)$ denote the ring of all real-valued continuous functions on $X$ (add and multiply functions by adding and multiplying their values).
+>
+> For each $x \in X$, let $\mathfrak{m}_{x}$ be the set of all $f \in C(X)$ such that $f(x) = 0$. The ideal $\mathfrak{m}_{x}$ is maximal, because it is the kernel of the (surjective) homomorphism $C(X) \to \mathbb{R}$ which takes $f$ to $f(x)$.
+>
+> If $\tilde{X}$ denotes $\operatorname{Max}(C(X))$, we have therefore defined a mapping $\mu: X \to \tilde{X}$, namely $x \mapsto \mathfrak{m}_{x}$. We shall show that $\mu$ is a homeomorphism of $X$ onto $\tilde{X}$.
+>
+> i) Let $\mathfrak{m}$ be any maximal ideal of $C(X)$, and let $V = V(\mathfrak{m})$ be the set of common zeros of the functions in $\mathfrak{m}$: that is, $V = \{x \in X: f(x) = 0$ for all $f \in \mathfrak{m}\}$. Suppose that $V$ is empty. Then for each $x \in X$ there exists $f_{x} \in \mathfrak{m}$ such that $f_{x}(x) \neq 0$. Since $f_{x}$ is continuous, there is an open neighborhood $U_{x}$ of $x$ in $X$ on which $f_{x}$ does not vanish. The family $\left(U_{x}\right)_{x \in X}$ covers $X$ and since $X$ is compact, a finite number of the $U_{x}$, say $U_{x_{1}}, \ldots, U_{x_{n}}$, cover $X$. Let $f = f_{x_{1}}^{2} + \cdots + f_{x_{n}}^{2}$. Then $f \in \mathfrak{m}$ and $f$ does not vanish at any point of $X$, hence is a unit in $C(X)$. This contradicts the assumption that $\mathfrak{m} \neq C(X)$. Hence $V$ is not empty. Let $x$ be a point of $V$. Then $\mathfrak{m} \subseteq \mathfrak{m}_{x}$, hence $\mathfrak{m} = \mathfrak{m}_{x}$ because $\mathfrak{m}$ is maximal. Hence $\mu$ is surjective.
+>
+> ii) Urysohn’s lemma (for a compact Hausdorff space) asserts that, if $x$, $y$ are distinct points of $X$, there exists $f \in C(X)$ such that $f(x) = 0$, $f(y) = 1$. Hence $\mathfrak{m}_{x} \neq \mathfrak{m}_{y}$, and therefore $\mu$ is injective.
+>
+> iii) Let $f \in C(X)$; let $U_{f} = \{x \in X: f(x) \neq 0\}$ and let $\tilde{U}_{f} = \{\mathfrak{m} \in \tilde{X}: f \notin \mathfrak{m}\}$. Show that $\mu\left(U_{f}\right) = \tilde{U}_{f}$.
+>
+> The open sets $U_{f}$ (resp. $\tilde{U}_{f}$) form a basis of the topology of $X$ (resp. $\tilde{X}$) and therefore $\mu$ is a homeomorphism.
+>
+> Thus $X$ can be reconstructed from the ring of functions $C(X)$.
+
+**Proof:**
+**i)** Given a maximal ideal $\mathfrak{m} \subset C(X)$, let $V = \{ x \in X : f(x) = 0 \text{ for all } f \in \mathfrak{m} \}$.
+
+Suppose $V = \varnothing$. Then for each $x \in X$, there exists $f_x \in \mathfrak{m}$ with $f_x(x) \neq 0$. Since $f_x$ is continuous, there exists an open neighborhood $U_x$ of $x$ where $f_x$ does not vanish.
+The collection $\{U_x\}_{x \in X}$ is an open cover of $X$. By compactness, a finite subcover $\{U_{x_1}, \dots, U_{x_n}\}$ exists.
+
+Let $f = f_{x_1}^2 + \dots + f_{x_n}^2 \in \mathfrak{m}$. Then $f(x) > 0$ for all $x \in X$, so $f$ is a unit in $C(X)$. This contradicts the fact that $\mathfrak{m}$ is a proper ideal ($\mathfrak{m} \neq C(X)$). Hence $V \neq \varnothing$.
+
+Take $x \in V$. By definition, $f(x) = 0$ for all $f \in \mathfrak{m}$, so $\mathfrak{m} \subseteq \mathfrak{m}_x$. Since both are maximal ideals, $\mathfrak{m} = \mathfrak{m}_x = \mu(x)$.
+
+Therefore, every maximal ideal $\mathfrak{m}$ is of the form $\mathfrak{m}_x$, so $\mu$ is surjective.
+
+**ii)** Let $x, y \in X$, $x \neq y$. By Urysohn’s Lemma (for compact Hausdorff spaces), there exists $f \in C(X)$ such that $f(x) = 0$ and $f(y) = 1$. Then $f \in \mathfrak{m}_x$ but $f \notin \mathfrak{m}_y$, so $\mathfrak{m}_x \neq \mathfrak{m}_y$. Hence $\mu(x) \neq \mu(y)$, so $\mu$ is injective.
+
+**iii)** We have
+$$
+x \in U_f \iff f(x) \neq 0 \iff f \notin \mathfrak{m}_x \iff \mathfrak{m}_x = \mu(x) \in \tilde{U}_f,
+$$
+so $\mu(U_f) = \tilde{U}_f$.
+
+The collection $\{U_f\}_{f \in C(X)}$ forms a basis for the topology of $X$ (as a compact Hausdorff space, the co‑zero sets $U_f$ are a basis). Likewise, $\{\tilde{U}_f\}_{f \in C(X)}$ forms a basis for the Zariski topology on $\tilde{X} = \operatorname{Max}(C(X))$. Since $\mu$ is a bijection that maps a basic open set $U_f$ to the basic open set $\tilde{U}_f$, it is a homeomorphism.
+
+Thus $X$ is homeomorphic to its maximal spectrum $\operatorname{Max}(C(X))$, and the space $X$ can be reconstructed from the ring of continuous functions $C(X)$.
+___
+
