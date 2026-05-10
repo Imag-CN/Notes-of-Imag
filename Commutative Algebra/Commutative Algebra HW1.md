@@ -68,7 +68,7 @@ ___
 **iii) $\Rightarrow$ i):** If $e \in A$ is an idempotent with $e \neq 0,1$, then $\operatorname{Spec}(A) = D(e) \cup D(1-e)$ is a disconnection, as $D(e) \cap D(1-e) = D(e(1-e)) = D(0) = \varnothing$ and both are non-empty (since $e$ and $1-e$ are not units).
 ___
 
-> [!problem] [ATI] 1.27
+> [!problem] [ATI] 1.26
 > Let $A$ be a ring. The subspace of $\operatorname{Spec}(A)$ consisting of the maximal ideals of $A$, with the induced topology, is called the maximal spectrum of $A$ and is denoted by $\operatorname{Max}(A)$. For arbitrary commutative rings it does not have the nice functorial properties of $\operatorname{Spec}(A)$ (see Exercise 21), because the inverse image of a maximal ideal under a ring homomorphism need not be maximal.
 >
 > Let $X$ be a compact Hausdorff space and let $C(X)$ denote the ring of all real-valued continuous functions on $X$ (add and multiply functions by adding and multiplying their values).
@@ -111,4 +111,37 @@ The collection $\{U_f\}_{f \in C(X)}$ forms a basis for the topology of $X$ (as 
 
 Thus $X$ is homeomorphic to its maximal spectrum $\operatorname{Max}(C(X))$, and the space $X$ can be reconstructed from the ring of continuous functions $C(X)$.
 ___
+
+> [!problem] [ATI] 1.27
+> Let $k$ be an algebraically closed field and let
+> $$f_{\alpha}(t_{1}, \ldots, t_{n}) = 0$$
+> be a set of polynomial equations in $n$ variables with coefficients in $k$. The set $X$
+> of all points $x = (x_{1}, \ldots, x_{n}) \in k^{n}$ which satisfy these equations is an *affine
+> algebraic variety*.
+>
+> Consider the set of all polynomials $g \in k[t_{1}, \ldots, t_{n}]$ with the property that
+> $g(x) = 0$ for all $x \in X$. This set is an ideal $I(X)$ in the polynomial ring, and is
+> called the *ideal of the variety* $X$. The quotient ring
+> $$P(X) = k[t_{1}, \ldots, t_{n}] / I(X)$$
+> is the ring of polynomial functions on $X$, because two polynomials $g, h$ define the
+> same polynomial function on $X$ if and only if $g - h$ vanishes at every point of $X$,
+> that is, if and only if $g - h \in I(X)$.
+>
+> Let $\xi_{i}$ be the image of $t_{i}$ in $P(X)$. The $\xi_{i}$ ($1 \leqslant i \leqslant n$) are the *coordinate
+> functions* on $X$: if $x \in X$, then $\xi_{i}(x)$ is the $i$th coordinate of $x$. $P(X)$ is generated
+> as a $k$-algebra by the coordinate functions, and is called the *coordinate ring* (or
+> affine algebra) of $X$.
+>
+> As in Exercise 26, for each $x \in X$ let $\mathfrak{m}_{x}$ be the ideal of all $f \in P(X)$ such that
+> $f(x) = 0$; it is a maximal ideal of $P(X)$. Hence, if $\bar{X} = \operatorname{Max}(P(X))$, we
+> have defined a mapping $\mu: X \rightarrow \bar{X}$, namely $x \mapsto \mathfrak{m}_{x}$.
+>
+> It is easy to show that $\mu$ is injective: if $x \neq y$, we must have $x_{i} \neq y_{i}$ 
+> for some $i$ ($1 \leqslant i \leqslant n$), and hence $\xi_{i} - x_{i}$ is in $\mathfrak{m}_{x}$ but not in $\mathfrak{m}_{y}$, so that
+> $\mathfrak{m}_{x} \neq \mathfrak{m}_{y}$. What is less obvious (but still true) is that $\mu$ is *surjective*. This is one form of Hilbert's Nullstellensatz (see Chapter 7).
+
+Nothing to prove.
+___
+
+
 
