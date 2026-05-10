@@ -56,34 +56,38 @@ Thus $H_n(S^2, A) = \mathbb{Z}$ for $n=2$, $\mathbb{Z}^{m-1}$ for $n=1$, and $0$
 For $X = S^1 \times S^1$, $A = m$ points, the long exact sequence for $(X, A)$ gives:
 - $H_2(S^1 \times S^1, A) \cong H_2(S^1 \times S^1) \cong \mathbb{Z}$.
 - $H_0(S^1 \times S^1, A) = 0$.
-- $H_1$ can be computed from the sequence, but the result is not explicitly needed for the next part.
+- $H_1(S^1 \times S^1, A) \cong \mathbb{Z}^{m+1}$
 
-**(b)** $(X, A)$ and $(X, B)$ are good pairs, so
+**(b)** Notice that $(X,A)$ and $(X,B)$ are good pairs, hence $H_n(X,A) \cong H_n(X/A)$ and $H_n(X,B) \cong H_n(X/B)$.  
+But $X/A \cong T^2 \vee T^2 \cong T^2 \sqcup T^2 / \{x,y\}$, hence $H_n(X,A) = H_n(T^2,\{x\}) \oplus H_n(T^2,\{y\})$.  
+By previous part,  
 $$
-H_n(X, A) \cong \tilde{H}_n(X/A), \quad H_n(X, B) \cong \tilde{H}_n(X/B).
-$$
-
-For the pair $(X, A)$:
-$A$ is a separating circle that splits $X$ into two one-holed tori. The quotient $X/A$ is the wedge sum of two tori: $X/A \simeq T^2 \vee T^2$. Hence
-$$
-H_n(X, A) \cong H_n(T^2 \vee T^2) \cong
+H_n(T^2,\{x\}) = 
 \begin{cases}
-\mathbb{Z} & n=0, \\
-\mathbb{Z}^4 & n=1, \\
-\mathbb{Z}^2 & n=2, \\
-0 & \text{otherwise}.
+\mathbb{Z} & \text{when } n = 2 \\
+\mathbb{Z}^2 & \text{when } n = 1 \\
+0 & \text{otherwise.}
+\end{cases}
+$$  
+Thus  
+$$
+H_n(X,A) = 
+\begin{cases}
+\mathbb{Z}^2 & \text{when } n = 2 \\
+\mathbb{Z}^4 & \text{when } n = 1 \\
+0 & \text{otherwise.}
 \end{cases}
 $$
 
-For the pair $(X, B)$:
-$B$ is a non-separating circle. The quotient $X/B$ is homotopy equivalent to a torus $T^2$ with a disk attached along a meridian, which is homotopy equivalent to $S^2 \vee S^1 \vee S^1$ (a wedge of a 2‑sphere and two circles). Therefore
+Similarly, $X/B \cong T^2 / \{x,y\}$, hence $H_n(X,B) = H_n(T^2,\{x\}) \oplus H_n(T^2,\{x,y\})$.
+
+Therefore,  
 $$
-H_n(X, B) \cong H_n(S^2 \vee S^1 \vee S^1) \cong
+H_n(X,B) = 
 \begin{cases}
-\mathbb{Z} & n=0, \\
-\mathbb{Z}^2 & n=1, \\
-\mathbb{Z} & n=2, \\
-0 & \text{otherwise}.
+\mathbb{Z} & \text{when } n = 2 \\
+\mathbb{Z}^3 & \text{when } n = 1 \\
+0 & \text{otherwise.}
 \end{cases}
 $$
 ___
