@@ -143,5 +143,46 @@ ___
 Nothing to prove.
 ___
 
+> [!problem] [ATI] 1.28
+> Let $f_{1}, \ldots, f_{m}$ be elements of $k[t_{1}, \ldots, t_{n}]$. They determine a polynomial mapping $\phi: k^{n} \to k^{m}$: if $x \in k^{n}$, the coordinates of $\phi(x)$ are $f_{1}(x), \ldots, f_{m}(x)$.
+>
+> Let $X, Y$ be affine algebraic varieties in $k^{n}, k^{m}$ respectively. A mapping $\phi: X \to Y$ is said to be regular if $\phi$ is the restriction to $X$ of a polynomial mapping from $k^{n}$ to $k^{m}$.
+>
+> If $\eta$ is a polynomial function on $Y$, then $\eta \circ \phi$ is a polynomial function on $X$. Hence $\phi$ induces a $k$-algebra homomorphism $P(Y) \to P(X)$, namely $\eta \mapsto \eta \circ \phi$.
+>
+> Show that in this way we obtain a one-to-one correspondence between the regular mappings $X \to Y$ and the $k$-algebra homomorphisms $P(Y) \to P(X)$.
+
+**Proof:**
+Let $\phi: X \to Y$ be a regular map. By definition, $\phi$ is the restriction to $X$ of a polynomial map
+$$
+\tilde{\phi} = (f_1, \dots, f_m): k^n \to k^m,
+$$
+where $f_j \in k[t_1,\dots,t_n]$.
+
+Given $\eta \in P(Y) = k[u_1,\dots,u_m]/I(Y)$ represented by $g(u_1,\dots,u_m)$,
+define
+$$
+\psi(\eta) = \eta \circ \phi \in P(X).
+$$
+Concretely, $\psi(\eta)$ is the class of $g(f_1,\dots,f_m)$ in $P(X)=k[t_1,\dots,t_n]/I(X)$.
+
+If $g, h$ represent the same $\eta$, then $g-h \in I(Y)$. Because $\phi(X) \subseteq Y$, we have $(g-h)(f_1,\dots,f_m) \in I(X)$, so $\psi(\eta)$ is well-defined. Clearly $\psi$ is a $k$-algebra homomorphism.
 
 
+Let $\psi: P(Y) \to P(X)$ be a $k$-algebra homomorphism. Let $\eta_j$ be the $j$‑th coordinate function on $Y$ (image of $u_j$ in $P(Y)$). Choose $f_j \in k[t_1,\dots,t_n]$ whose class modulo $I(X)$ equals $\psi(\eta_j)$.  
+Define a polynomial map $\tilde{\phi}= (f_1,\dots,f_m): k^n \to k^m$.
+
+We check $\tilde{\phi}(X) \subseteq Y$:
+If $g \in I(Y)$, then $g(\eta_1,\dots,\eta_m)=0$ in $P(Y)$. Applying $\psi$ gives $g(\psi(\eta_1),\dots,\psi(\eta_m))=0$ in $P(X)$, i.e. $g(f_1,\dots,f_m) \in I(X)$. Hence for all $x \in X$, $g(f_1(x),\dots,f_m(x)) = 0$, so $\tilde{\phi}(x) \in Y$.
+
+Thus $\phi = \tilde{\phi}|_X$ is a regular map $X \to Y$.
+
+* Start with $\phi$, get $\psi(\eta)=\eta \circ \phi$, then reconstruct $\phi'$ via $f_j = \psi(\eta_j)$.  
+  But $\psi(\eta_j) = \eta_j \circ \phi$ is exactly the $j$‑th component of $\phi$, so $\phi'=\phi$.
+
+* Start with $\psi$, get $\phi$, then reconstruct $\psi'$ by $\psi'(\eta)=\eta \circ \phi$.  
+  For $\eta$ represented by $g$, $\eta \circ \phi$ is the class of $g(f_1,\dots,f_m)$.  
+  Since $f_j$ lifts $\psi(\eta_j)$, $g(f_1,\dots,f_m)$ lifts $\psi(g(\eta_1,\dots,\eta_m))=\psi(\eta)$.  
+  Hence $\psi'(\eta) = \psi(\eta)$.
+
+Therefore we have a one‑to‑one correspondence.
