@@ -4,44 +4,31 @@ ___
 >Let $X$ and $Y$ be Banach spaces, and let $U$ be an open subset of $X$.
 >
 >**Gâteaux Differentiability**
->A function $f: U \to Y$ is said to be Gâteaux differentiable at a point $x \in U$ if for every direction $h \in X$, the directional derivative
+>A function $f: U \to Y$ is said to be Gâteaux differentiable at a point $x \in U$ if for every $h \in X$, there exists a linear operator $A: X \to Y$ (not necessarily bounded) and a remainder $r(t; h)$ such that
 >$$
->df(x; h) = \lim_{t \to 0} \frac{f(x + t h) - f(x)}{t}
+>f(x + th) = f(x) + tA(h) + r(t; h), \quad \text{where} \quad \lim_{t \to 0} \frac{r(t; h)}{t} = 0.
 >$$
->exists in $Y$. If the mapping $h \mapsto df(x; h)$ is a **continuous linear operator** from $X$ to $Y$, then this operator is called the **Gâteaux derivative** of $f$ at $x$, often denoted by $D_G f(x)$ or $\nabla f(x)$. In this case, we have
-$$
-D_G f(x) \in \mathcal{L}(X, Y), \quad \text{and} \quad df(x; h) = D_G f(x)(h) \quad \forall h \in X.
-$$
+>If, in addition, the operator $h \mapsto A(h)$ is a bounded linear operator (i.e., $A \in \mathcal{L}(X, Y)$), then $A$ is called the Gâteaux derivative of $f$ at $x$, denoted $D_G f(x)$.
+>
+>**Fréchet Differentiability**
+>A function $f: U \to Y$ is said to be Fréchet differentiable at a point $x \in U$ if there exists a bounded linear operator $A \in \mathcal{L}(X, Y)$ and a remainder $r(h)$ such that
+>$$
+>f(x + h) = f(x) + A(h) + r(h), \quad \text{where} \quad \lim_{h \to 0} \frac{\|r(h)\|_Y}{\|h\|_X} = 0.
+>$$
+>
+>The operator $A$ is uniquely determined and is called the Fréchet derivative of $f$ at $x$, denoted $D_F f(x)$ or simply $f'(x)$.
 
-### Fréchet Differentiability
-A function $f: U \to Y$ is said to be **Fréchet differentiable** at a point $x \in U$ if there exists a **continuous linear operator** $A \in \mathcal{L}(X, Y)$ such that
-$$
-\lim_{h \to 0} \frac{\|f(x + h) - f(x) - A(h)\|_Y}{\|h\|_X} = 0.
-$$
-Equivalently,
-$$
-f(x + h) = f(x) + A(h) + o(\|h\|_X) \quad \text{as} \quad h \to 0.
-$$
-The operator $A$ is uniquely determined and is called the **Fréchet derivative** of $f$ at $x$, denoted by $D_F f(x)$ or simply $f'(x)$.
+If $f$ is Fréchet differentiable at $x$, then it is Gâteaux differentiable with the same derivative. The converse is false in general, as shown by following example.
 
-> **Key Relations**:
-> 1. If $f$ is **Fréchet differentiable** at $x$, then it is also **Gâteaux differentiable** at $x$, and the two derivatives coincide: $D_F f(x) = D_G f(x)$.
-> 2. The converse is **not** true in general. A function can be Gâteaux differentiable (with a linear Gâteaux derivative) but not Fréchet differentiable, as shown by the $l^1$ norm example.
-> 3. A sufficient condition for Gâteaux differentiability to imply Fréchet differentiability is that the Gâteaux derivative $D_G f(x)$ exists in a neighborhood of $x$ and is **continuous at $x$** (i.e., the mapping $x \mapsto D_G f(x)$ is continuous in the operator norm).
+>[!problem]
+>We note that for a Banach space $l$, the norm $\|\cdot\|$ is Gâteaux differentiable at $x_0$ if and only if all coordinates of $x_0$ are nonzero; moreover, the norm $\|\cdot\|$ is not Fréchet differentiable at any point $x_0\in l$.
 
-# Counterexample: A Banach Space Norm Gâteaux Differentiable but Not Fréchet Differentiable at Some Point
-
-We note that for a Banach space $l$, the norm $\|\cdot\|$ is Gâteaux differentiable at $x_0$ if and only if all coordinates of $x_0$ are nonzero; moreover, the norm $\|\cdot\|$ is not Fréchet differentiable at any point $x_0\in l$.
-
-In fact,
-
+**Proof:**
 **(i)** If for some $\xi_n=0$, where $x=\{\xi_n\}$, then
 $$
 \frac{\|x+te_n\|-\|x\|}{t}=\frac{|t|}{t},
 $$
 which has no limit as $t\to0$. Therefore, the norm $\|\cdot\|$ is not Gâteaux differentiable at such $x$.
-
----
 
 **(ii)** If $x=\{\xi_n\}$, and all $\xi_n\neq0$, for any $y=\{\eta_n\}\in l$ and $\varepsilon>0$, choose $n_0$ sufficiently large so that
 $$
@@ -60,8 +47,6 @@ $$
 $$
 Therefore, the norm $\|\cdot\|$ is Gâteaux differentiable at $x=\{\xi_n\}$, and its Gâteaux derivative is $\{\operatorname{sgn}\xi_n\}$.
 
----
-
 **(iii)** It suffices to consider $x=\{\xi_n\},\xi_n\neq0,n=1,2,\cdots$. Let
 $$
 y_m=(0,\cdots,0,-2\xi_m,-2\xi_{m+1},\cdots),
@@ -71,6 +56,7 @@ $$
 \lim_{y_m\to0}\frac{\|x+y_m\|-\|x\|-x^*(y_m)}{\|y_m\|}=\lim_{y_m\to0}\frac{\left|\sum_{n\geq m}-2|\xi_n|\right|}{\|y_m\|}=\lim_{y_m\to0}\frac{\|y_m\|}{\|y_m\|}=1,
 $$
 so the norm $\|\cdot\|$ is not Fréchet differentiable at $x=\{\xi_n\}$.
+___
 
----
-
+>[!remark]
+>That $f:X \to Y$ is Gâteaux differentiable at $x$ is equivalent to that $f \mid_{x+F}$ is Fréchet differentiable at $x$ for any finite-dimensional subspace $F$ of $X$. One direction is obvious since line is one-dimensional; the other direction can be shown by taking a basis of $F$.
