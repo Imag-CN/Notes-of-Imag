@@ -61,3 +61,53 @@ $B$ is independent by definition. If $v \in V \setminus \operatorname{span}(B)$,
 Therefore $B$ is a basis extending $S_0$.
 ___
 
+> [!problem] [SHE] 6A.6 (Already assigned in the first homework)
+> (a) Prove that if $V$ is a metric space, $f \in V$, and $r > 0$, then $\overline{B(f, r)} \subset \overline{B}(f, r)$.  
+> (b) Give an example of a metric space $V$, $f \in V$, and $r > 0$ such that $\overline{B(f, r)} \neq \overline{B}(f, r)$.
+
+**Proof:**
+**(a)** By definition we have $B(f, r) \subset \overline{B}(f, r)$. The closure $\overline{B(f, r)}$ is the smallest closed set containing $B(f,r)$, and $\overline{B}(f, r)$ is a closed set containing $B(f,r)$, thus $\overline{B(f, r)} \subset \overline{B}(f, r)$.
+**(b)** Let $V$ be a set containing at least two elements, and equip it with discrete metric (then it has the discrete topology). Let $f \in V$, then $B(f,1)= \{ f \}$, and $\overline{ B }(f,1)=V$. However, ${f}$ itself is a closed set, thus $\overline{ B(f,r) }=\{ f \}$ . Therefore $\overline{B(f, r)} \neq \overline{B}(f, r)$.
+___
+
+>[!problem] [SHE] 6A.15(5)
+>Verify the following space is a complete metric space:
+>
+>Define $d$ on $\ell^1 \times \ell^1$ by $d((a_1, a_2, \ldots), (b_1, b_2, \ldots)) = \sum_{k=1}^{\infty} |a_k - b_k|$; here $\ell^1$ is the set of sequences $(a_1, a_2, \ldots)$ of real numbers such that $\sum_{k=1}^{\infty} |a_k| < \infty$.
+
+**Proof:**
+This space is obviously a metric space, so we show that it is complete.
+
+Let $(a^{(n)})_{n=1}^{\infty}$ be a Cauchy sequence in $\ell^1$, with $a^{(n)} = (a_1^{(n)}, a_2^{(n)}, \dots)$.
+For each fixed $k$, we have
+$$
+|a_k^{(n)} - a_k^{(m)}| \le d(a^{(n)}, a^{(m)}) \to 0 \quad (n, m \to \infty).
+$$
+Hence $(a_k^{(n)})_{n=1}^{\infty}$ is a Cauchy sequence in $\mathbb{R}$, so it converges. Define
+$$
+a_k := \lim_{n \to \infty} a_k^{(n)}, \qquad a := (a_1, a_2, \dots).
+$$
+
+**Step 2. $a \in \ell^1$.**  
+Since $(a^{(n)})$ is Cauchy, it is bounded: $\sup_n d(a^{(n)}, 0) = M < \infty$. For any $N$,
+$$
+\sum_{k=1}^{N} |a_k| = \lim_{n \to \infty} \sum_{k=1}^{N} |a_k^{(n)}| \le M.
+$$
+Letting $N \to \infty$ gives $\sum_{k=1}^{\infty} |a_k| \le M$, so $a \in \ell^1$.
+
+**Step 3. Convergence in $\ell^1$.**  
+Fix $\varepsilon > 0$. Choose $N_0$ such that for all $n, m \ge N_0$,
+$$
+d(a^{(n)}, a^{(m)}) = \sum_{k=1}^{\infty} |a_k^{(n)} - a_k^{(m)}| < \varepsilon.
+$$
+For any $K$,
+$$
+\sum_{k=1}^{K} |a_k^{(n)} - a_k| = \lim_{m \to \infty} \sum_{k=1}^{K} |a_k^{(n)} - a_k^{(m)}| \le \varepsilon.
+$$
+Let $K \to \infty$ to obtain
+$$
+d(a^{(n)}, a) = \sum_{k=1}^{\infty} |a_k^{(n)} - a_k| \le \varepsilon \quad \text{for all } n \ge N_0.
+$$
+Hence $a^{(n)} \to a$ in $\ell^1$.
+
+Therefore $(\ell^1, d)$ is complete.
