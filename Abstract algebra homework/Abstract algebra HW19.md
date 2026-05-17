@@ -28,3 +28,15 @@ ___
 **(iii)** $R/(p)$ is an integral domain $\iff (p)$ is a prime ideal in $R$. Since $R$ is the ring of integers of $\mathbb{Q}(\sqrt{D})$, the factorization of $(p)$ depends on the Legendre symbol $\big(\frac{D}{p}\big)$. The condition $R/(p)$ integral domain means $(p)$ is inert, i.e., $\big(\frac{D}{p}\big) = -1$. Then $R/(p) \cong \mathbb{F}_{p^2}$. Hence $|R/(p)| = p^2$.
 ___
 
+>[!problem] Problem 3
+>Let $R=\mathbb{C}[x,y]/(y^{2}-x^{3}-1)$.
+>(i) Prove that $R$ is an integral domain.
+>(ii) Prove that $R$ is not a UFD.
+
+**Proof:**
+**(i)** $f(x,y)=y^2-x^3-1$ is irreducible in $\mathbb{C}[x,y]$. Hence $(f)$ is prime, so $R=\mathbb{C}[x,y]/(f)$ is an integral domain.
+
+**(ii)** In $R$, let $X=x+(f), Y=y+(f)$; they satisfy $Y^2=X^3+1=(X+1)(X^2-X+1)$.
+- $X+1$ is irreducible: if $X+1=\alpha\beta$, taking norms leads to contradiction in $\mathbb{C}[X]$.
+- $X+1$ does not divide $Y$ (since $Y/(X+1)\notin R$).
+Thus $Y^2$ factors as $Y\cdot Y$ and as $(X+1)(X^2-X+1)$, two distinct factorizations into irreducibles, so $R$ is not a UFD.
