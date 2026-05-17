@@ -47,4 +47,4 @@ For quadratic field $K=\mathbb{Q}(\sqrt{D})$ with discriminant $\Delta$, there i
 4. For $\Delta<0$: each class has unique reduced form → class number = number of reduced forms.  
 5. For $\Delta>0$: use continued fractions to determine equivalence.
 
-**(iii)** 
+**(iii)** See [LMFDB - Number fields](https://www.lmfdb.org/NumberField/)
