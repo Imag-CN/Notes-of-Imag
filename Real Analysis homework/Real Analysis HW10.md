@@ -88,14 +88,12 @@ $$
 a_k := \lim_{n \to \infty} a_k^{(n)}, \qquad a := (a_1, a_2, \dots).
 $$
 
-**Step 2. $a \in \ell^1$.**  
 Since $(a^{(n)})$ is Cauchy, it is bounded: $\sup_n d(a^{(n)}, 0) = M < \infty$. For any $N$,
 $$
 \sum_{k=1}^{N} |a_k| = \lim_{n \to \infty} \sum_{k=1}^{N} |a_k^{(n)}| \le M.
 $$
 Letting $N \to \infty$ gives $\sum_{k=1}^{\infty} |a_k| \le M$, so $a \in \ell^1$.
 
-**Step 3. Convergence in $\ell^1$.**  
 Fix $\varepsilon > 0$. Choose $N_0$ such that for all $n, m \ge N_0$,
 $$
 d(a^{(n)}, a^{(m)}) = \sum_{k=1}^{\infty} |a_k^{(n)} - a_k^{(m)}| < \varepsilon.
