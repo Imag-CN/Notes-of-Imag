@@ -19,7 +19,7 @@ ___
 >Show that the collection $\mathcal{A} = \{k\mathbf{Z} : k = 2, 3, 4, \ldots\}$ of subsets of $\mathbf{Z}$ satisfies the hypothesis of Zorn’s Lemma.
 
 **Proof:**
-We need to show that the collection $\mathcal{A} = \{k\mathbb{Z} : k = 2,3,4,\dots\}$ with the order $k\mathbb{Z} \preceq m\mathbb{Z} \iff m\mathbb{Z} \subseteq k\mathbb{Z}$ satisfies the hypothesis of Zorn’s Lemma: every chain in $\mathcal{A}$ has an upper bound in $\mathcal{A}$.
+We need to show that the collection $\mathcal{A} = \{k\mathbb{Z} : k = 2,3,4,\dots\}$ with the order $k\mathbb{Z} \preceq m\mathbb{Z} \iff m\mathbb{Z} \subseteq k\mathbb{Z}\iff k\mid m \,(\text{for positive } k,m)$ satisfies the hypothesis of Zorn’s Lemma: every chain in $\mathcal{A}$ has an upper bound in $\mathcal{A}$.
 
 Let $\mathcal{C}$ be a chain in $\mathcal{A}$. Define
 $$
@@ -27,7 +27,7 @@ S = \{k \ge 2 : k\mathbb{Z} \in \mathcal{C}\}.
 $$
 Since $\mathcal{C}$ is a chain, for any $k,m \in S$, either $k \mid m$ or $m \mid k$. Thus $S$ is totally ordered by divisibility. Let
 $$
-d = \gcd(S)
+d = \min(S)
 $$
 (the smallest element in $S$ under divisibility, which exists because $S$ is totally ordered by $\mid$). Then $d\mathbb{Z} \in \mathcal{C}$.
 
