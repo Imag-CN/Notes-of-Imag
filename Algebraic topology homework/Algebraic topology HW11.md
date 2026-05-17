@@ -63,3 +63,6 @@ ___
 > [!problem] [HAT] 2.2.11
 > In an exercise for 1.2 we described a $3$-dimensional CW complex obtained from the cube $I^3$ by identifying opposite faces via a one-quarter twist. Compute the homology groups of this complex.
 
+**Proof:**
+
+![[Pasted image 20260518025330.png]]
