@@ -43,3 +43,38 @@ Let $m_i$ be the maximum dimension of cells intersecting $\sigma_i(\Delta^p)$. S
 Since $X^m$ contains all cells of dimension $\leq m$, and $\sigma_i(\Delta^p)$ is contained in the union of cells it intersects (all of dimension $\leq m_i \leq m$), we have $\sigma_i(\Delta^p) \subseteq X^m$.
 
 Therefore, each $\sigma_i$ is a singular simplex of $X^m$, and $c$ is a singular chain of $X^m$.
+___
+
+> [!problem] [HAT] 2.2.2
+> Given a map $f: S^{2n} \to S^{2n}$, show that there is some point $x \in S^{2n}$ with either $f(x)=x$ or $f(x)=-x$. Deduce that every map $\mathbb{R}P^{2n} \to \mathbb{R}P^{2n}$ has a fixed point. Construct maps $\mathbb{R}P^{2n-1} \to \mathbb{R}P^{2n-1}$ without fixed points from linear transformations $\mathbb{R}^{2n} \to \mathbb{R}^{2n}$ without eigenvectors.
+
+**Proof:**
+For $f: S^{2n} \to S^{2n}$, consider the antipodal map $a(x) = -x$. If $f(x) \neq x$ for all $x$, then $f$ is homotopic to $a$ via $f_t(x) = (1-t)f(x) - tx$. This homotopy is valid since $f(x) \neq -x$ for all $x$.
+
+If $f$ is homotopic to $a$, then $\deg f = \deg a = (-1)^{2n+1} = -1$. But if $f(x) \neq -x$ for all $x$, then $f$ is homotopic to identity via $f_t(x) = (1-t)f(x) + tx$, giving $\deg f = 1$.
+
+Since these degrees differ, at least one of the conditions must fail, so there exists $x$ with $f(x)=x$ or $f(x)=-x$.
+
+For $\mathbb{R}P^{2n} \to \mathbb{R}P^{2n}$, any map $g$ lifts to $f: S^{2n} \to S^{2n}$ with $f(-x) = \pm f(x)$. By above, $\exists x$ with $f(x)=x$ or $f(x)=-x$.
+
+If $f(x)=x$, then $g([x]) = [x]$. If $f(x)=-x$, then $g([x]) = [x]$ too. So $g$ has fixed point.
+
+For $\mathbb{R}P^{2n-1} \to \mathbb{R}P^{2n-1}$, take linear $A: \mathbb{R}^{2n} \to \mathbb{R}^{2n}$ with $A = \text{diag}(R, \dots, R)$ where $R = \begin{pmatrix}0&-1\\1&0\end{pmatrix}$. $A$ has no real eigenvectors (only complex eigenvalues $\pm i$), so the induced map on $\mathbb{R}P^{2n-1}$ has no fixed points.
+___
+
+> [!problem] [HAT] 2.2.4
+> Construct a surjective map $S^n \to S^n$ of degree zero, for each $n \geq 1$.
+
+**Proof:**
+For $n=1$, define $f: S^1 \to S^1$ by $f(e^{2\pi i t}) = e^{4\pi i t}$ for $t \in [0, 1/2]$ and $f(e^{2\pi i t}) = e^{4\pi i (2-2t)}$ for $t \in [1/2, 1]$.
+
+Geometrically: wrap first half-circle once positively, second half-circle once negatively.
+
+$f$ is clearly surjective. $\deg f = 0$ since it is homotopic to a constant map via a straight-line homotopy in $\mathbb{C}$.
+
+For $n \geq 2$, take the $(n-1)$-fold suspension $\Sigma^{n-1} f: S^n \to S^n$. Suspension preserves surjectivity and the degree of mapping.
+___
+
+> [!problem] [HAT] 2.2.11
+> In an exercise for 1.2 we described a $3$-dimensional CW complex obtained from the cube $I^3$ by identifying opposite faces via a one-quarter twist. Compute the homology groups of this complex.
+
