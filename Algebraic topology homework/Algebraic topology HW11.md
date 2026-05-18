@@ -64,5 +64,26 @@ ___
 > In an exercise for 1.2 we described a $3$-dimensional CW complex obtained from the cube $I^3$ by identifying opposite faces via a one-quarter twist. Compute the homology groups of this complex.
 
 **Proof:**
-
+The notation is as shown in the figure. The whole space is denoted as $Q$. The three pairs of faces are labeled as $X$, $Y$, and $Z$(corresponding to the faces perpendicular to the respective coordinate axes), and the entire volume is labeled as $U$. The orientation of the entire volume is outward, and the orientations of the faces are determined based on the faces attaching to the coordinate axes, following the right-hand rule.
 ![[Pasted image 20260518025330.png]]
+Compute the partials:
+$$
+\partial_{1}(a)=\partial_{1}(b)=\partial_{1}(c)=\partial_{1}(d)=q-p,
+$$
+$$
+\partial_{2}(X)=-a+b-c+d,\quad \partial_{2}(Y)=-a-b+c+d,\quad \partial_{3}(Z)=a-b-c+d,
+$$
+$$
+\partial_{3}(U)=0.
+$$
+Therefore:
+$$
+H_{n}(Q)=
+\begin{cases}
+0,&n\geq 4 ,\\
+\mathbb{Z},&n=3,\\
+0,&n=2,\\
+\mathbb{Z}_{2}\oplus \mathbb{Z}_{2},&n=1,\\
+\mathbb{Z},&n=0.\\
+\end{cases}
+$$
