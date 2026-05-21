@@ -2,6 +2,8 @@ ___
 
 >[!question] 
 >Given $K$ a field, when does there exists a proper subring $B \subsetneq K$ that is a valuation of $K$ (i.e. $B$ is a valuation ring and its fractional field is $K$) ? 
+>
+>We call such $B$ a proper valuation ring of $K$.
 
 To approach this problem, we can start with some basic observations:
 
@@ -54,10 +56,25 @@ Every element $\alpha$ in $F(t)$ has the form $t^{k}\dfrac{p(t)}{q(t)}$ with $p(
 ___
 
 >[!problem] Chevalley's Extension Theorem
->Let $R$ be a local subring with maximal ideal $\mathfrak{m}$ contained in a field $K$. Then there exists a valuation ring $V$ of $K$ with maximal ideal $\mathfrak{m}_V$ satisfying:
+>Let $R$ be a local subring with maximal ideal $\mathfrak{m}$ contained in a field $K$. Then there exists a valuation ring $B$ of $K$ with maximal ideal $\mathfrak{m}_B$ satisfying:
 >
->1. $R \subseteq V$;
->2. $\mathfrak{m}_V \cap R = \mathfrak{m}$.
+>1. $R \subset B$;
+>2. $\mathfrak{m}_B \cap R = \mathfrak{m}$.
 
+**Proof:**
+Let $\Omega$ be the algebraic closure of $R/\mathfrak{m}$. Let $f$ be the composition of the quotient map from $R$ to $R / \mathfrak{m}$ and the inclusion map from $R / \mathfrak{m}$ into $\Omega$. Then $\operatorname{ker} f=\mathfrak{m}$. By Theorem 5.21 in *Introduction To Commutative Algebra, Atiyah*, let $(B,g)$ be a maximal element with $(B,g)\supset(R,f)$, then $B$ is a valuation ring and $\mathfrak{m}_{B}=\operatorname{ker}g$. So $\operatorname{ker}g \cap R=\operatorname{ker}f=\mathfrak{m}$.
 
+>[!remark]
+>These theorem is equivalent to saying that any valuation of a subfield can be always extended to the whole field. In particular, $p$-adic valuation can be extended to $\mathbb{R}$, though we might have no explicit construction.
 
+It's obvious that if $B$ is a valuation ring of $K$, then $B$ is proper if and only if $B$ is not a filed.
+
+If we have a field extension $F|K$ and a proper valuation ring $R$ (with maximal ideal $\mathfrak{m}$) of $F$, then by this theorem we can find a valuation $B$ of $K$ such that $R\subset B$ and $\mathfrak{m}_{B}\cap R=\mathfrak{m}$. Since $R$ is proper, we know $R$ is not a field, thus $\mathfrak{m}\neq (0)$, and $\mathfrak{m}_{B}\neq(0)$. So $K$ is not a field. Therefore we find a proper valuation ring $B$ of $K$.
+
+This is to say if we find a proper valuation ring of a subfield, then we can also extend it to the whole field, preserving properness.
+___
+
+In conclusion, we have the following statement:
+
+>[!problem] Conclusion
+>Given $K$ a field, exists a proper valuation ring $B$ if and only if $\operatorname{char}K=0$ or $K$ is some transcendental extension of some $\mathbb{F}_{p}$.
