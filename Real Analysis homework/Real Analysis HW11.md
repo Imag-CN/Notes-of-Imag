@@ -4,7 +4,28 @@ ___
 > Show that the map $f \mapsto \|f\|$ from a normed vector space $V$ to $\mathbb{R}$ is continuous (where the norm on $\mathbb{R}$ is the usual absolute value).
 
 **Proof:**
-Take a sequence $f_{1},\dots ,f_{n},\dots$ in $V$ which convergence to $f$. Since the topology is induced by the metric induced by the norm, we have $\lVert f_{n}-f \rVert \to{0}$ as $n\to \infty$. By triangular inequality, $\lVert f_{n}-f \rVert\geq \lvert \lVert f_{n} \rVert- \lVert f \rVert\rvert$, so $\lvert \lVert f_{n} \rVert-\lVert f \rVert \rvert\to 0$ as $n\to \infty$, i.e. $\lVert f_{n} \rVert\to \lVert f \rVert$ as $n\to \infty$. Therefore, $f \mapsto \lVert f \rVert$ is continuous.
+Take a sequence $f_{1},\dots ,f_{n},\dots$ in $V$ which convergence to $f$. Since the topology is induced by the metric induced by the norm, we have $\lVert f_{n}-f \rVert \to{0}$ as $n\to \infty$. By triangle inequality, $\lVert f_{n}-f \rVert\geq \lvert \lVert f_{n} \rVert- \lVert f \rVert\rvert$, so $\lvert \lVert f_{n} \rVert-\lVert f \rVert \rvert\to 0$ as $n\to \infty$, i.e. $\lVert f_{n} \rVert\to \lVert f \rVert$ as $n\to \infty$. Therefore, $f \mapsto \lVert f \rVert$ is continuous.
+___
+
+> [!problem] [SHE] 6C.6
+> Suppose $X$ is a nonempty set and $b(X)$ is the vector space of bounded functions from $X$ to $\mathbb{R}$. Prove that if $\|\cdot\|$ is defined on $b(X)$ by $\|f\|=\sup_X|f|$, then $b(X)$ is a Banach space.
+
+**Proof:**
+$\|f\|=\sup_X|f|$ clearly satisfies positivity, homogeneity, and the triangle inequality, thus it is a norm. Next we prove completeness:
+
+Let $\{f_n\}$ be Cauchy: $\forall\varepsilon>0,\ \exists N$ s.t. $\|f_n-f_m\|<\varepsilon$ for $n,m\ge N$.
+   - For each $x\in X$, $\{f_n(x)\}$ is Cauchy in $\mathbb{R}$, so define $f(x)=\lim f_n(x)$.
+   - $f$ is bounded: Fix $n\ge N$; then $|f(x)|\le|f(x)-f_n(x)|+|f_n(x)|\le\varepsilon+\|f_n\|$.
+   - $f_n\to f$: For $n\ge N$, $|f_n(x)-f(x)|=\lim_{m\to\infty}|f_n(x)-f_m(x)|\le\limsup\|f_n-f_m\|\le\varepsilon$, so $\|f_n-f\|\le\varepsilon$.
+
+Thus $b(X)$ is complete, hence a Banach space.
+___
+
+> [!problem] [SHE] 6C.10
+> Suppose $U$ is a subspace of a normed vector space $V$ such that some open ball of $V$ is contained in $U$. Prove that $U=V$.
+
+**Proof:**
+Suppose $U$ contains an open ball $B(a,r)$, then since $U$ is a subspace, $B(0,r)=B(a,r)-a$ is contained in $U$. For any $v\in V, v\neq 0$, we know $\dfrac{r}{2\lVert v \rVert}\cdot v$ is in $B(0,r)$, thus in $U$, so $v$ is in $U$ since $U$ is a subspace. Therefore, $U=V$.
 ___
 
 > [!problem]
