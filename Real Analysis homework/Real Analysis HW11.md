@@ -75,10 +75,19 @@ ___
 > $I:(V,\|\cdot\|_a)\to(V,\|\cdot\|_b)$ and $I:(V,\|\cdot\|_b)\to(V,\|\cdot\|_a)$ are both continuous.
 
 **Proof:**
-**($\Rightarrow$)** If $\|\cdot\|_a$ and $\|\cdot\|_b$ are equivalent, i.e., $\exists\,c,C>0$ such that $c\|x\|_a\le\|x\|_b\le C\|x\|_a$ for all $x\in V$.
+($\Rightarrow$) If $\|\cdot\|_a$ and $\|\cdot\|_b$ are equivalent, then $\exists c,C>0$ such that $c\|x\|_a\le\|x\|_b\le C\|x\|_a$ for all $x\in V$.
 
-Then $\|I(x)\|_b = \|x\|_b \le C\|x\|_a$, thus $I:(V,\|\cdot\|_a)\to(V,\|\cdot\|_b)$ is bounded, hence continuous. Similarly, $I:(V,\|\cdot\|_b)\to(V,\|\cdot\|_a)$ is bounded since $\|x\|_a\le(1/c)\|x\|_b$, therefore continuous.
+Take $I:(V,\|\cdot\|_a)\to(V,\|\cdot\|_b)$. If $x_n\to x$ in $\|\cdot\|_a$, then $\|x_n-x\|_a\to0$. Using the upper bound,
+$$
+\|I(x_n)-I(x)\|_b=\|x_n-x\|_b\le C\|x_n-x\|_a\to0,
+$$
+so $I$ is continuous. The proof for $I:(V,\|\cdot\|_b)\to(V,\|\cdot\|_a)$ is similar, using the lower bound.
 
-**($\Leftarrow$)** If both identities are continuous, then they are bounded as linear maps. Hence $\exists\,C>0$ such that $\|x\|_b\le C\|x\|_a$ and $\exists\,c'>0$ such that $\|x\|_a\le c'\|x\|_b$ for all $x\in V$. Taking $c=1/c'$ gives $c\|x\|_a\le\|x\|_b\le C\|x\|_a$.
+($\Leftarrow$) Suppose both $I:(V,\|\cdot\|_a)\to(V,\|\cdot\|_b)$ and $I:(V,\|\cdot\|_b)\to(V,\|\cdot\|_a)$ are continuous.
+
+Assume for contradiction that no $C>0$ satisfies $\|x\|_b\le C\|x\|_a$ for all $x\in V$. Then for each $n\in\mathbb{N}$, pick $x_n\neq0$ with $\|x_n\|_b>n\|x_n\|_a$. Set $y_n=x_n/\|x_n\|_b$. Then $\|y_n\|_b=1$, but $\|y_n\|_a<1/n\to0$, so $y_n\to0$ in $\|\cdot\|_a$. By continuity of $I:(V,\|\cdot\|_a)\to(V,\|\cdot\|_b)$, we must have $\|y_n\|_b\to0$, contradicting $\|y_n\|_b=1$. Hence $\exists C>0$ with $\|x\|_b\le C\|x\|_a$.
+
+A symmetric argument (using continuity of $I:(V,\|\cdot\|_b)\to(V,\|\cdot\|_a)$) gives $\exists c'>0$ with $\|x\|_a\le c'\|x\|_b$. Setting $c=1/c'$ yields $c\|x\|_a\le\|x\|_b$.
 
 Thus the norms are equivalent.
+
