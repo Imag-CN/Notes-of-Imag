@@ -19,26 +19,18 @@ $$
 \end{cases}
 $$
 
-**Case 1: $n$ odd ($n=2l+1$).**  
-Then $\widetilde{H}_*(\mathbb{RP}^{n-2})$: $\mathbb{Z}$ in degree $n-2$, $0$ elsewhere.  
-$\widetilde{H}_*(\mathbb{RP}^n)$: $\mathbb{Z}$ in degree $n$, $0$ elsewhere.
-
+**Case 1: $n$ odd**
 The LES yields:
-- $k=n$: $0 \to \mathbb{Z} \to \widetilde{H}_n \to 0$ ⇒ $\widetilde{H}_n = \mathbb{Z}$.
-- $k=n-1$: $0 \to \widetilde{H}_{n-1} \to \mathbb{Z} \to 0$ ⇒ $\widetilde{H}_{n-1} = \mathbb{Z}$.
+- $k=n$: $0 \to \mathbb{Z} \to \widetilde{H}_n \to 0\Rightarrow\widetilde{H}_n = \mathbb{Z}$.
+- $k=n-1$: $0 \to \widetilde{H}_{n-1} \to \mathbb{Z} \to 0\Rightarrow\widetilde{H}_{n-1} = \mathbb{Z}$.
 - All other $\widetilde{H}_k = 0$.
 
 Thus for $n$ odd: $\widetilde{H}_k = 0$ for $k\neq n-1,n$, and $\widetilde{H}_{n-1} = \mathbb{Z}$, $\widetilde{H}_n = \mathbb{Z}$.
 
-**Case 2: $n$ even ($n=2l$).**  
-Then $\widetilde{H}_*(\mathbb{RP}^{n-2})$: $\mathbb{Z}/2$ in degrees odd $<n-2$, 0 elsewhere. 
-$\widetilde{H}_*(\mathbb{RP}^n)$: $\mathbb{Z}/2$ in degrees odd $<n$, 0 elsewhere.
-
+**Case 2: $n$ even**  
 The only possibly nonzero maps in LES are between $\mathbb{Z}/2$ groups. The LES splits into short exact sequences $0 \to \mathbb{Z}/2 \to \mathbb{Z}/2 \oplus \mathbb{Z}/2 \to \mathbb{Z}/2 \to 0$ etc, giving $\widetilde{H}_k=0$ for $k<n-1$.
 
-At $k=n$: $0 \to \widetilde{H}_n \to 0$ ⇒ $\widetilde{H}_n = 0$ initially, but wait — careful: $\widetilde{H}_n(\mathbb{RP}^n)=0$ since $n$ even. But the quotient space is $S^{n-1} \cup_\eta e^n$ with $\eta$ degree 2, giving cellular chain $0 \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to 0$ for degrees $n$ and $n-1$.
-
-Thus $\widetilde{H}_n =  \mathbb{Z}/2\mathbb{Z}$.
+At $k=n$: The quotient space is $S^{n-1} \cup_\eta e^n$ with $\eta$ degree $2$, giving cellular chain $0 \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to 0$ for degrees $n$ and $n-1$. Thus $\widetilde{H}_n =  \mathbb{Z}/2\mathbb{Z}$.
 
 In conclusion:
 For $n>2$:
@@ -59,3 +51,7 @@ $$
 0 & \text{otherwise}
 \end{cases}
 $$
+___
+
+> [!problem] Problem 2
+> Is there a topological space X such that for all non-negative integers n the nth singular homology group is isomorphic to Z/nZ? If yes construct X, if no, then give a proof for the non-existence. (Z is here the ring of integers.)
