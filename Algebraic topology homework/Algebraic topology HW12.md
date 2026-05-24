@@ -30,7 +30,7 @@ Thus for $n$ odd: $\widetilde{H}_k = 0$ for $k\neq n-1,n$, and $\widetilde{H}_{n
 **Case 2: $n$ even**  
 The only possibly nonzero maps in LES are between $\mathbb{Z}/2$ groups. The LES splits into short exact sequences $0 \to \mathbb{Z}/2 \to \mathbb{Z}/2 \oplus \mathbb{Z}/2 \to \mathbb{Z}/2 \to 0$ etc, giving $\widetilde{H}_k=0$ for $k<n-1$.
 
-At $k=n$: The quotient space is $S^{n-1} \cup_\eta e^n$ with $\eta$ degree $2$, giving cellular chain $0 \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to 0$ for degrees $n$ and $n-1$. Thus $\widetilde{H}_n =  \mathbb{Z}/2\mathbb{Z}$.
+At $k=n-1$: The quotient space is $S^{n-1} \cup_\eta e^n$ with $\eta$ degree $2$, giving cellular chain $0 \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to 0$ for degrees $n$ and $n-1$. Thus $\widetilde{H}_{n-1} =  \mathbb{Z}/2\mathbb{Z}$.
 
 In conclusion:
 For $n>2$:
@@ -47,7 +47,7 @@ $$
 $$
 \widetilde{H}_k(\mathbb{RP}^n/\mathbb{RP}^{n-2}) = 
 \begin{cases}
-\mathbb{Z}/2\mathbb{Z} & k=n \\
+\mathbb{Z}/2\mathbb{Z} & k=n-1 \\
 0 & \text{otherwise}
 \end{cases}
 $$
