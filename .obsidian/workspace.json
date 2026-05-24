@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Real Analysis homework/Real Analysis HW11.md",
+                "file": "Abstract algebra homework/Abstract algebra HW22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Real Analysis HW11"
+              "title": "Abstract algebra HW22"
             }
           }
         ],
@@ -215,12 +215,14 @@
   },
   "active": "12c133a6b6a6fc0f",
   "lastOpenFiles": [
-    "The property of lp space as a subspace of lq space.md",
+    "Abstract algebra homework/Abstract algebra HW21.md",
+    "Abstract algebra homework/Abstract algebra HW22.md",
     "Real Analysis homework/Real Analysis HW11.md",
+    "Algebraic topology homework/Algebraic topology HW11.md",
+    "The property of lp space as a subspace of lq space.md",
     "Real Analysis homework/Real Analysis HW1.md",
     "Computing some integral closures.md",
     "Existence of proper valuation rings.md",
-    "Algebraic topology homework/Algebraic topology HW11.md",
     "attachments/Pasted image 20260518025330.png",
     "attachments/Pasted image 20260518022658.png",
     "Algebraic topology homework/Algebraic topology HW10.md",
@@ -241,8 +243,6 @@
     "Algebraic topology homework/Algebraic topology HW1.md",
     "Commutative Algebra/Commutative Algebra HW1.md",
     "Homework 1.md",
-    "Helly 定理.md",
-    "有理逼近.md",
     "Commutative Algebra",
     "Abstract algebra homework/未命名",
     "attachments/X_{4,3}.png",
