@@ -54,4 +54,35 @@ $$
 ___
 
 > [!problem] Problem 2
-> Is there a topological space X such that for all non-negative integers n the nth singular homology group is isomorphic to Z/nZ? If yes construct X, if no, then give a proof for the non-existence. (Z is here the ring of integers.)
+> Is there a topological space $X$ such that for all non-negative integers $n$ the $n$th singular homology group is isomorphic to $\mathbb{Z}/n\mathbb{Z}$? If yes construct $X$, if no, then give a proof for the non-existence.
+
+**Proof:**
+Let $X_{n}$ be $S^{n}$ with a cell $e^{n+1}$ attached by a map $S_{n}\to S_{n}$ with degree $n$. Then the homology group $H_{k}(X_{n})$ of $X_{n}$ is $\mathbb{Z}/n\mathbb{Z}$ for $k=n$ and $0$ for $k\neq n$. Take $X=\wedge_{n\in \mathbb{N}^{+}}X_{n}$, where the base point is chosen as the $0$-skeleton of each $X_{n}$. Then such $X$ suffices.
+___
+
+> [!problem] Problem 3
+> Let $K$ be the Kleinian bottle, $T$ be the $2$ dimensional torus and $P$ be the real projective plane. Is the Cartesian product $K\times K$ homeomorphic to $P\times T$? Prove your answer.
+
+**Proof:**
+The universal cover of $T$ and $K$ is $\mathbb{R}^{2}$, and the universal cover of $P$ is $S^{2}$. Thus the universal cover of $K\times K$ is $\mathbb{R}^{2}\times \mathbb{R}^{2}$, and the universal cover of $P\times T$ is $\mathbb{R}^{2}\times S^{2}$. Since $\mathbb{R}^{2}\times \mathbb{R}^{2}$ is contractible, while $\mathbb{R}^{2}\times S^{2}$ is not (because it is homotopy equivalent to $S^{2}$), $K\times K$ and $P\times T$ are not homeomorphic.
+___
+
+>[!problem] Problem 4
+>Compute the Euler characteristic for the spaces $K\times K$ and $P\times T$ in Problem 3.
+
+**Proof:**
+Since we have:
+
+|     | $0$-cells | $1$-cells | $2$-cells |
+|:---:|:---------:|:---------:|:---------:|
+| $K$ |    $1$    |    $2$    |    $1$    |
+| $T$ |    $1$    |    $2$    |    $1$    |
+| $P$ |    $2$    |    $2$    |    $1$    |
+
+thus,
+
+|             | $0$-cells | $1$-cells | $2$-cells | $3$-cells | $4$-cells |
+| ----------- |:---------:|:---------:|:---------:|:---------:|:---------:|
+| $K\times K$ |    $1$    |    $4$    |    $6$    |    $4$    |    $1$    |
+| $P\times T$ |    $2$    |    $6$    |    $7$    |    $4$    |    $1$    |
+Therefore, the Euler characteristic for the spaces $K\times K$ is $1-4+6-4+1=0$, and that for the space $P\times T$ is $2-6+7-4+1=0$.

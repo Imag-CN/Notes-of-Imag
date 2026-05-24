@@ -189,9 +189,19 @@
               "icon": "lucide-list",
               "title": "满足柯西-黎曼方程但不复可微的例子 的大纲"
             }
+          },
+          {
+            "id": "479fb350501a2ea9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -216,11 +226,11 @@
   "active": "12c133a6b6a6fc0f",
   "lastOpenFiles": [
     "Algebraic topology homework/Algebraic topology HW11.md",
+    "Algebraic topology homework/Algebraic topology HW12.md",
     "Algebraic topology homework/Algebraic topology HW8.md",
     "Algebraic topology homework/Algebraic topology HW7.md",
     "Algebraic topology homework/Algebraic topology HW9.md",
     "Algebraic topology homework/Algebraic topology HW10.md",
-    "Algebraic topology homework/Algebraic topology HW12.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
     "Abstract algebra homework/Abstract algebra HW22.md",
     "Abstract algebra homework/Abstract algebra HW21.md",
