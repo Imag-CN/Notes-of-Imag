@@ -11,7 +11,6 @@ ___
 > [!problem]
 > Given a CW complex $X$. Prove that $X^m$ is a closed subset of $X$ for all integers $m$. Prove that for every singular chain $c$ for $X$ there is a positive integer $m$ such that $c$ is a singular chain of $X^m$.
 
-
 **Proof**:
 1. **$X^m$ is closed in $X$ for all $m$**:
 Each $m$-skeleton $X^m$ is constructed inductively as a quotient space of $X^{m-1} \sqcup (\bigsqcup D_\alpha^m)$ under characteristic maps $\Phi_\alpha: \partial D_\alpha^m \to X^{m-1}$. By the definition of CW topology, a subset $A \subseteq X$ is closed if and only if $A \cap \overline{e}$ is closed in $\overline{e}$ for each cell $e$. For any cell $e^n$ of dimension $n > m$, we have $\overline{e} \cap X^m = \Phi(\partial D^n)$, which is compact and thus closed in $\overline{e}$. For cells of dimension $\leq m$, $\overline{e} \cap X^m = \overline{e}$, which is closed.
