@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "满足柯西-黎曼方程但不复可微的例子.md",
+                "file": "Commutative Algebra/Commutative Algebra HW2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "满足柯西-黎曼方程但不复可微的例子 的反向链接列表"
+              "title": "Commutative Algebra HW2 的反向链接列表"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "满足柯西-黎曼方程但不复可微的例子.md",
+                "file": "Commutative Algebra/Commutative Algebra HW2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "满足柯西-黎曼方程但不复可微的例子 的出链列表"
+              "title": "Commutative Algebra HW2 的出链列表"
             }
           },
           {
@@ -201,11 +201,12 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
