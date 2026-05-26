@@ -66,3 +66,9 @@ ___
 **Multiplicatively closedness:** Obviously $1\in S_{0}$. And if $s_{1},s_{2} \in S_{0}$ but $s_{1}s_{2}\not\in S_{0}$, then $s_{1}s_{2}u=0$ for some $u\in A \neq 0$. Since $s_{2}\in S_{0}$, $s_{2}u\neq 0$, then it becomes a zero divisor of $s_{1}$, contradition.
 
 **Every minimal prime ideal is in $D$:** Take a minimal prime ideal $\mathfrak{p}$ of $A$, suppose $\mathfrak{p}$ contains a non-zero-divisor $a$.
+
+**(i)** Take $S$ a multiplicatively closed subset of $A$ which contains a zero divisor $s$, say $st=0$ for $t\in A\neq {0}$. Then $t$ is in the kernel of $A\to S_{0}^{-1}A$, which makes the homomorphism not injective.
+
+**(ii)** Suppose $a /s \in S_{0}^{-1}A$ is a not a unit and $a\neq 0$, then $a\not\in S_{0}$ (otherwise $s /a$ is an inverse of $a /s$). Then $a$ is a zero-divisor, say $ta=0$ for some $t\in A$ . Then $a /s \cdot t /1 =0$, thus $a /s$ is a zero divisor.
+
+**(iii)** 
