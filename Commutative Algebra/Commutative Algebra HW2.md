@@ -60,8 +60,9 @@ ___
 >
 >(ii) Every element in $S_0^{-1}A$ is either a zero-divisor or a unit.
 >
->(iii) Every non-unit in $S_0^{-1}A$ is a zero-divisor.
+>(iii) Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A \to S_{0}^{-1}A$ is bijective).
 
 **Proof:**
 **Multiplicatively closedness:** Obviously $1\in S_{0}$. And if $s_{1},s_{2} \in S_{0}$ but $s_{1}s_{2}\not\in S_{0}$, then $s_{1}s_{2}u=0$ for some $u\in A \neq 0$. Since $s_{2}\in S_{0}$, $s_{2}u\neq 0$, then it becomes a zero divisor of $s_{1}$, contradition.
 
+**Every minimal prime ideal is in $D$:** Take a minimal prime ideal $\mathfrak{p}$ of $A$, suppose $\mathfrak{p}$ contains a non-zero-divisor $a$.
