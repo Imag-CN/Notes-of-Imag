@@ -65,10 +65,29 @@ ___
 **Proof:**
 **Multiplicatively closedness:** Obviously $1\in S_{0}$. And if $s_{1},s_{2} \in S_{0}$ but $s_{1}s_{2}\not\in S_{0}$, then $s_{1}s_{2}u=0$ for some $u\in A \neq 0$. Since $s_{2}\in S_{0}$, $s_{2}u\neq 0$, then it becomes a zero divisor of $s_{1}$, contradition.
 
-**Every minimal prime ideal is in $D$:** Take a minimal prime ideal $\mathfrak{p}$ of $A$, suppose $\mathfrak{p}$ contains a non-zero-divisor $a$.
+**Every minimal prime ideal is in $D$:** Let $\mathfrak{p}$ be a minimal prime ideal of $A$, $S_{0}$ be $A\setminus \mathfrak{p}$. Let $\Sigma$ be the collection of multiplicatively close subset $S$ of $A$ such that $S\supset S_{0}$ and $0 \not\in S$. Clearly $\Sigma$ suffices the conditions of Zorn's lemma, so there is a maximal element $S_{1}$. By exercise 6 we know $A\setminus S_{1}$ is a minimal prime ideal, so $S_{1}=S_{0}$. Therefore $\mathfrak{p}\subset A\setminus S_{0}=D$.
+
 
 **(i)** Take $S$ a multiplicatively closed subset of $A$ which contains a zero divisor $s$, say $st=0$ for $t\in A\neq {0}$. Then $t$ is in the kernel of $A\to S_{0}^{-1}A$, which makes the homomorphism not injective.
 
 **(ii)** Suppose $a /s \in S_{0}^{-1}A$ is a not a unit and $a\neq 0$, then $a\not\in S_{0}$ (otherwise $s /a$ is an inverse of $a /s$). Then $a$ is a zero-divisor, say $ta=0$ for some $t\in A$ . Then $a /s \cdot t /1 =0$, thus $a /s$ is a zero divisor.
 
-**(iii)** 
+**(iii)** First check injectivity: take  $a\in \operatorname{ker} (A\to S_{0}^{-1}A)$, then $as=0$ for some $s \in S_{0}$. Since $s$ is not a zero divisor, $a$ must be $0$.
+
+Then check surjectivity: take $a / s \in S_{0}^{-1}A$, then $s$ is a unit since it is not a zero divisor. Then $a /s=as^{-1} /1$ is in the image.
+___
+
+>[!problem] [ATI] 3.10
+>Let $A$ be a ring.
+>
+>(i) If $A$ is absolutely flat and $S$ is any multiplicatively closed subset of $A$, then $S^{-1}A$ is absolutely flat.
+>
+>(ii) $A$ is absolutely flat $\Leftrightarrow$ $A_{\mathfrak{m}}$ is a field for each maximal ideal $\mathfrak{m}$.
+
+**Proof:**
+**(i)** For any $S^{-1}A$-module $M$, we have $M$ is naturally an $A$-module. Since $A$ is absolutely flat, $M$ is flat as an $A$-module. The functor $S^{-1}$ is exact, so $S^{-1}M$ is flat as an $S^{-1}A$-module. And $S^{-1}M$ is isomorphic to $M$ as $S^{-1}A$-module, so $M$ is flat, thus $S^{-1}A$ is absolutely flat.
+
+**(ii)** $\Rightarrow$: By (i), $A_{\mathfrak{m}}$ is absolutely flat. Suppose $\mathfrak{m}A_{\mathfrak{m}}\neq 0$. 
+
+
+$\Leftarrow$: Suppose $A_{\mathfrak{m}}$ is a field for each maximal ideal $\mathfrak{m}$. Let $a \in A$. For each $\mathfrak{m}$, the image of $a$ in $A_{\mathfrak{m}}$ is either $0$ or a unit. If it is a unit, then there exists $u \in A \setminus \mathfrak{m}$ such that $u a$ is a unit in $A_{\mathfrak{m}}$; equivalently, $(a)_{\mathfrak{m}} = (1)_{\mathfrak{m}}$. The set of $\mathfrak{m}$ where $a$ maps to $0$ is closed. By partition of unity argument, there exists an idempotent $e$ such that $a = ae$. Thus $A$ is absolutely flat.
