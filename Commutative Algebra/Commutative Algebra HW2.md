@@ -118,4 +118,6 @@ ___
 
 **(iv)** For $m \in T(m)$, say $am=0$ for $a\in A \neq 0$, $1\otimes m=(1 /a)\otimes(am)=0$, thus $m$ is in that kernel.
 
-For $x$ in the kernel, $1\otimes x=0$ implies $1\otimes x=0$ in some $K_{0}\otimes M_{0}$ where $K_{0}$ and $M_{0}$ are some f.g. $A$-module as submodule of $K$ and $M$ with $1\in K_{0}$ and $x \in M_{0}$ (Corollary 2.13).
+Take $x$ in the kernel. Let $S=A \setminus\{ 0 \}$, then $K=S^{-1}A$, so $K\otimes_{A}M$ is isomorphic to $S^{-1}M$. Then $x /1=0$, so $ax=0$ for some $a\in S$. Therefore, $x$ is in $T(M)$.
+___
+
