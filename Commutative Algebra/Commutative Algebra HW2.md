@@ -121,3 +121,16 @@ ___
 Take $x$ in the kernel. Let $S=A \setminus\{ 0 \}$, then $K=S^{-1}A$, so $K\otimes_{A}M$ is isomorphic to $S^{-1}M$. Then $x /1=0$, so $ax=0$ for some $a\in S$. Therefore, $x$ is in $T(M)$.
 ___
 
+>[!problem] [ATI] 3.13
+>Let $S$ be a multiplicatively closed subset of an integral domain $A$. In the notation of Exercise 12, show that
+>
+>$$T(S^{-1}M) = S^{-1}(TM).$$
+>
+>Deduce that the following are equivalent:
+>
+>(i) $M$ is torsion-free.
+>
+>(ii) $M_{\mathfrak{p}}$ is torsion-free for all prime ideals $\mathfrak{p}$.
+>
+>(iii) $M_{\mathfrak{m}}$ is torsion-free for all maximal ideals $\mathfrak{m}$.
+
