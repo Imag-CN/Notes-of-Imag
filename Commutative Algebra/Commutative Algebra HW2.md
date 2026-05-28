@@ -134,3 +134,21 @@ ___
 >
 >(iii) $M_{\mathfrak{m}}$ is torsion-free for all maximal ideals $\mathfrak{m}$.
 
+
+
+
+___
+
+>[!problem] [ATI] 5.7
+>Let $B_1, \dots, B_n$ be integral $A$-algebras. Show that $\prod_{i=1}^{n} B_i$ is an integral $A$-algebra.
+
+**Proof:**
+Denote $B=\prod_{i=1}^{n} B_i$.
+
+We clarify the definition:
+$$
+B_{i} \text{ is an integral } A\text{-algebra} \iff \exists f_{i}:A\to B_{i} \text{ s.t. }B_{i} \text{ is integral over }f_{i}(A)
+$$
+So it suffices to find a $f:A\to B$ such that $B$ is integral over $f(A)$.
+
+We define $f:A\to B$ as $a\mapsto(f_{1}(a),\dots,f_{n}(a))$. Take any $b=(b_{1},\dots,b_{n})\in B$. Since $B_{i}$ is integral $A$-algebra, there exist monic $p_{i}\in f_{i}(A)[x]$ such that $p_{i}(b_{i})=0$ ($i=1,\dots,n$). Since $f_{i}:A\to f_{i}(A)$ is surjective, we can find monic $q_{i}\in A[x]$ such that $p_{i}=f_{i}(q_{i})$. Let $q=q_{1}\cdot\dots \cdot q_{n}$ and $p=f(q)$, then $p \in f(A)[x]$ is monic. And $p(b)=(f_{1}(q)(b_{1}),\dots ,f_{n}(q)(b_{n}))=(0,\dots,0)$. Therefore, $B$ is integral over $f(A)$.
