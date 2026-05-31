@@ -28,3 +28,18 @@ ___
 > Use the Galois correspondence to build the bijection between subgroups of
 > $D_{4}$ and subfields of $\mathbb{Q}(\sqrt[4]{5}, \sqrt{-1})$.
 
+**Proof:**
+Subgroups ↔ Fixed fields (Galois correspondence):
+
+1. $D_4$ → $\mathbb{Q}$
+2. $\langle r \rangle$ → $\mathbb{Q}(i)$
+3. $\langle r^2, s \rangle$ → $\mathbb{Q}(\sqrt{5})$
+4. $\langle r^2, sr \rangle$ → $\mathbb{Q}(\sqrt{5}\,i)$
+5. $\langle r^2 \rangle$ → $\mathbb{Q}(\sqrt{5}, i)$
+6. $\langle s \rangle$ → $\mathbb{Q}(\sqrt[4]{5})$
+7. $\langle sr \rangle$ → $\mathbb{Q}(\sqrt[4]{5}(1+i))$
+8. $\langle sr^2 \rangle$ → $\mathbb{Q}(\sqrt[4]{5}\,i)$
+9. $\langle sr^3 \rangle$ → $\mathbb{Q}(i\sqrt[4]{5})$
+10. $\{1\}$ → $L$
+
+**Check**: Each fixed field degree = $8 / |\text{subgroup}|$, giving degrees 1,2,2,2,2,4,4,4,4,8 respectively. All inclusions reverse subgroup inclusions.
