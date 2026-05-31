@@ -47,3 +47,23 @@ The set $\{1, a, a^2, \omega, \omega a, \omega a^2\}$ spans $\mathbb{Q}(a,\omega
 Any automorphism $\sigma \in \operatorname{Aut}(L/\mathbb{Q})$ permutes the three roots $\{a,\omega a,\omega^2 a\}$ and sends $\omega$ to $\omega$ or $\omega^2$. The map $\sigma \mapsto$ (its permutation of the roots) gives an injective homomorphism $\operatorname{Aut}(L/\mathbb{Q}) \hookrightarrow S_3$. By counting orders, it is an isomorphism: $\operatorname{Aut}(L/\mathbb{Q}) \cong S_3$.
 ___
 
+> [!problem] Problem 4
+>Let $f(x)$ be an irreducible polynomial in $\mathbb{Q}[x]$ of degree 3. Let $x_1, x_2, x_3$ be the
+> roots of $f(x)$. Let $L = \mathbb{Q}(x_1, x_2, x_3)$.
+> (i) Prove that $\operatorname{Aut}(L/\mathbb{Q})$ is isomorphic to either $A_3$ or $S_3$.
+> (ii) Find a criterion to decide whether $\operatorname{Aut}(L/\mathbb{Q})$ is isomorphic to $A_3$ or $S_3$.
+
+**Proof:**
+**(i)** Let $f(x) \in \mathbb{Q}[x]$ be irreducible of degree 3. Its splitting field $L/\mathbb{Q}$ is Galois. The Galois group $G = \operatorname{Aut}(L/\mathbb{Q})$ acts faithfully on the 3 roots, embedding $G$ into $S_3$.
+
+Since $f$ is irreducible, $G$ is transitive, so $3 \mid |G|$. Also $|G| = [L:\mathbb{Q}]$ divides $6 = |S_3|$. Thus $|G| = 3$ or $6$. The only subgroup of $S_3$ of order 3 is $A_3$, and the whole group is $S_3$. Therefore $G \cong A_3$ or $S_3$.
+
+**(ii)** Let $\Delta = \prod_{i<j}(x_i - x_j)^2$ be the discriminant of $f$. Then $\Delta \in \mathbb{Q}$. The sign of a permutation $\sigma$ acting on the roots equals $\sigma(\sqrt{\Delta})/\sqrt{\Delta}$. Hence $\sigma$ is even (i.e., in $A_3$) if and only if $\sigma$ fixes $\sqrt{\Delta}$.
+
+Therefore, $\sqrt{\Delta} \in \mathbb{Q}$ (i.e., $\Delta$ is a square in $\mathbb{Q}$) if and only if every element of $G$ fixes $\sqrt{\Delta}$, which is equivalent to $G \le A_3$. Since $|G|$ is 3 or 6, this yields the exact criterion:
+
+$$
+\operatorname{Aut}(L/\mathbb{Q}) \cong A_3 \ \Longleftrightarrow\ \Delta \text{ is a square in } \mathbb{Q}.
+$$
+
+Otherwise, $\operatorname{Aut}(L/\mathbb{Q}) \cong S_3$.
