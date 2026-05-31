@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW24.md",
+                "file": "Real Analysis homework/Real Analysis HW12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abstract algebra HW24"
+              "title": "Real Analysis HW12"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW24.md",
+                "file": "Real Analysis homework/Real Analysis HW12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Abstract algebra HW24 的反向链接列表"
+              "title": "Real Analysis HW12 的反向链接列表"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Abstract algebra homework/Abstract algebra HW24.md",
+                "file": "Real Analysis homework/Real Analysis HW12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Abstract algebra HW24 的出链列表"
+              "title": "Real Analysis HW12 的出链列表"
             }
           },
           {
@@ -226,8 +226,9 @@
   },
   "active": "12c133a6b6a6fc0f",
   "lastOpenFiles": [
-    "Abstract algebra homework/Abstract algebra HW23.md",
     "Abstract algebra homework/Abstract algebra HW24.md",
+    "Real Analysis homework/Real Analysis HW12.md",
+    "Abstract algebra homework/Abstract algebra HW23.md",
     "Algebraic topology homework/未命名.md",
     "Algebraic topology homework/Algebraic topology HW12.md",
     "Commutative Algebra/Commutative Algebra HW2.md",
@@ -251,7 +252,6 @@
     "Seminar notes on Complex Algebraic Curves.md",
     "Homework 1.md",
     "Algebraic topology homework/Algebraic topology HW11.md",
-    "Algebraic topology homework/Algebraic topology HW8.md",
     "attachments/Pasted image 20260518025330.png",
     "attachments/Pasted image 20260518022658.png",
     "Commutative Algebra",
