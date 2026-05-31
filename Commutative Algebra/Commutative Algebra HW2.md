@@ -134,9 +134,12 @@ ___
 >
 >(iii) $M_{\mathfrak{m}}$ is torsion-free for all maximal ideals $\mathfrak{m}$.
 
+**Proof:**
+Assume $0 \not\in S$, then $S^{-1}A \neq 0, S^{-1} M\neq 0$.
+**"$\subset$":** Take $m /s \in T(S^{-1}M)$, say $am / ts =0$ where $a / t\in S^{-1}A \neq 0$. Then $uam=0$ for some $u\in S\neq 0$, so $m\in T(M)$. Therefore, $m / s \in S^{-1}(TM)$.
+**"$\supset$":** Take $m / s \in S^{-1}(TM)$, say $am=0$ where $a\in A \neq 0$. Then $a/ 1 \cdot m /s =0$, thus $m / s \in T(S^{-1} M)$.
 
-
-
+The equivalence of **(i)(ii)(iii)** follows from that vanishing is a local property.
 ___
 
 >[!problem] [ATI] 5.7
@@ -152,3 +155,22 @@ $$
 So it suffices to find a $f:A\to B$ such that $B$ is integral over $f(A)$.
 
 We define $f:A\to B$ as $a\mapsto(f_{1}(a),\dots,f_{n}(a))$. Take any $b=(b_{1},\dots,b_{n})\in B$. Since $B_{i}$ is integral $A$-algebra, there exist monic $p_{i}\in f_{i}(A)[x]$ such that $p_{i}(b_{i})=0$ ($i=1,\dots,n$). Since $f_{i}:A\to f_{i}(A)$ is surjective, we can find monic $q_{i}\in A[x]$ such that $p_{i}=f_{i}(q_{i})$. Let $q=q_{1}\cdot\dots \cdot q_{n}$ and $p=f(q)$, then $p \in f(A)[x]$ is monic. And $p(b)=(f_{1}(q)(b_{1}),\dots ,f_{n}(q)(b_{n}))=(0,\dots,0)$. Therefore, $B$ is integral over $f(A)$.
+___
+
+> [!problem] [ATI] 3.14
+> Let $M$ be an $A$-module and $\mathfrak{a}$ an ideal of $A$. Suppose that $M_{\mathfrak{m}} = 0$ for all maximal ideals $\mathfrak{m} \supseteq \mathfrak{a}$. Prove that $M = \mathfrak{a}M$.
+
+**Proof:**
+Consider the module $N=M / \mathfrak{a}M$ as a $A /\mathfrak{a}A$-module. Every maximal ideal of $A /\mathfrak{a}A$ corresponds to a maximal ideal of $A$ containing $\mathfrak{a}$. Thus $N_{\mathfrak{m}}=0$ for any maximal ideals in $A/\mathfrak{a}A$. Since vanishing is a local property, $N=0$, thus $M= \mathfrak{a} M$.
+___
+
+> [!problem] [ATI] 3.20
+> Let $f: A \to B$ be a ring homomorphism, $f^*: \operatorname{Spec}(B) \to \operatorname{Spec}(A)$ the associated mapping. Show that
+> i) Every prime ideal of $A$ is a contracted ideal $\Leftrightarrow f^*$ is surjective.
+> ii) Every prime ideal of $B$ is an extended ideal $\Rightarrow f^*$ is injective.
+> Is the converse of ii) true?
+
+**Proof:**
+**(i)** **"$\Rightarrow$":** Take any $\mathfrak{p}\in \operatorname{Spec}(A)$, let $\mathfrak{p}=\mathfrak{q}^{c}$, then $f^{*}(\mathfrak{q})=\mathfrak{p}$, thus $f^{*}$ is surjective.
+**"$\Leftarrow$":** Take any $\mathfrak{p}\in \operatorname{Spec}(A)$, let $\mathfrak{p}=f^{*}(\mathfrak{q})$, then $\mathfrak{p}=\mathfrak{q}^{c}$.
+**(ii)** Suppose $f^{*}(\mathfrak{q})=f^{*}(\mathfrak{q'})$, and let $\mathfrak{q}=\mathfrak{p}^{e}$, $\mathfrak{q}'=\mathfrak{p}^{'e}$.
