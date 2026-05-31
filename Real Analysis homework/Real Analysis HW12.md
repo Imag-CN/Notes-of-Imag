@@ -25,7 +25,7 @@ Assume a continuous extension $T: C[0,1] \to W$ exists with $T|_U = S$. Then $T$
 Therefore no such continuous $T$ exists. This shows completeness of $W$ is essential.
 ___
 
-> [!problem] [ATI] 6C.17
+> [!problem] [SHE] 6C.17
 >Suppose $U$, $V$, and $W$ are normed vector spaces and $T: U \rightarrow V$ and $S: V \rightarrow W$ are linear. Prove that $\|S \circ T\| \leq \|S\| \|T\|$.
 
 **Proof:**  
@@ -37,7 +37,7 @@ $$
 $$
 ___
 
-> [!problem] [ATI] 6C.18
+> [!problem] [SHE] 6C.18
 > Suppose $V$ and $W$ are normed vector spaces and $T: V \to W$ is a linear map. Prove that the following are equivalent:
 > (a) $T$ is bounded.
 > (b) There exists $f \in V$ such that $T$ is continuous at $f$.
@@ -68,7 +68,7 @@ Thus $g\in U$, so $U$ is open.
 Therefore (a), (b), (c), (d) are equivalent.
 ___
 
-> [!problem] [ATI] 6D.5
+> [!problem] [SHE] 6D.5
 > Suppose $n \in \mathbf{Z}^{+}$, $V$ is a normed vector space, and $T: \mathbf{F}^{n} \to V$ is a linear map that is one-to-one and onto $V$.
 > (a) Show that
 > $$\inf\left\{ \|Tx\| : x \in \mathbf{F}^{n} \text{ and } \|x\|_{\infty} = 1 \right\} > 0.$$
@@ -92,7 +92,7 @@ $$
 so $T^{-1}$ is bounded with $\|T^{-1}\| \le 1/m$.
 ___
 
-> [!problem] [ATI] 6D.7
+> [!problem] [SHE] 6D.7
 > Suppose $V$ and $W$ are normed vector spaces and $V$ is finite-dimensional. Prove that every linear map from $V$ to $W$ is continuous.
 
 **Proof:**
@@ -113,3 +113,110 @@ $$
 Thus $T$ is bounded, hence continuous.
 ___
 
+> [!problem] [SHE] 6D.14
+> Show that there exists a linear functional $\varphi: \ell^{\infty} \to \mathbf{F}$ such that
+> $$|\varphi(a_{1}, a_{2},\ldots)| \leq \|(a_{1}, a_{2},\ldots)\|_{\infty}$$
+> for all $(a_{1},a_{2},\ldots) \in \ell^{\infty}$, and
+> $$\varphi(a_{1}, a_{2},\ldots) = \lim_{k\to\infty} a_{k}$$
+> for all $(a_{1},a_{2},\ldots) \in \ell^{\infty}$ such that the limit above on the right exists.
+
+**Proof:**
+Let $c \subset \ell^\infty_{\mathbb{R}}$ be the subspace of convergent real sequences.  
+Define $\lambda : c \to \mathbb{R}$ by
+$$
+\lambda(a) = \lim_{k\to\infty} a_k \qquad (a = (a_k) \in c).
+$$
+$\lambda$ is linear and satisfies $|\lambda(a)| \le \|a\|_\infty$ because $|\lim a_k| \le \sup_k |a_k|$.
+
+Take $V = \ell^\infty_{\mathbb{R}}$, $U = c$, $f = \lambda$, and $M=1$. By Hahn–Banach, there exists a linear functional $\varphi : \ell^\infty_{\mathbb{R}} \to \mathbb{R}$ such that
+$$
+\varphi|_c = \lambda \quad\text{and}\quad |\varphi(a)| \le \|a\|_\infty \;\; \forall a\in\ell^\infty_{\mathbb{R}}.
+$$
+Thus $\varphi$ is the required functional.
+___
+
+> [!problem] [SHE] 6D.15
+> Suppose $B$ is an open ball in a normed vector space $V$ such that $0 \notin B$.
+> Prove that there exists $\varphi \in V'$ such that
+> $$
+> \varphi(f) > 0
+> $$
+> for all $f \in B$.
+
+**Proof:**
+Let $V$ be a real normed space, $B = B(f_0,r)$ an open ball with $0 \notin B$. Then $\|f_0\| \ge r$.
+
+Consider the shifted ball $C = B - f_0 = B(0,r)$. Its Minkowski functional is
+$$p(f) = \inf\{t>0 : f \in tC\} = \frac{\|f\|}{r}.$$
+
+Define $\ell$ on $\operatorname{span}\{f_0\}$ by $\ell(\alpha f_0) = \alpha$. For $\alpha\ge0$,
+$$\ell(\alpha f_0)=\alpha \le \alpha\frac{\|f_0\|}{r}=p(\alpha f_0).$$
+For $\alpha<0$, $\ell(\alpha f_0)=\alpha\le0\le p(\alpha f_0)$. Hence $\ell\le p$ on $\operatorname{span}\{f_0\}$.
+
+By Hahn–Banach, $\ell$ extends to a linear $\varphi:V\to\mathbb{R}$ with $\varphi\le p$. Thus $|\varphi(f)|\le\|f\|/r$, so $\varphi\in V'$.
+
+For any $f\in B$, write $f=f_0+g$ with $\|g\|<r$. Then
+$$\varphi(f)=\varphi(f_0)+\varphi(g)=1+\varphi(g) \quad(\text{since }\varphi(f_0)=\ell(f_0)=1).$$
+But $|\varphi(g)|\le\|g\|/r<1$, hence $\varphi(f)>1-1=0$.
+___
+
+>[!problem] [SHE] 6D.17
+>Suppose $V$ is a separable normed vector space. Explain how the Hahn–Banach Theorem (6.69) for $V$ can be proved without using any results (such as Zorn’s Lemma) that depend upon the Axiom of Choice.
+
+**Proof:**
+Let $V$ be separable, $U\subset V$ a subspace, $f:U\to\mathbb{F}$ bounded, $\|f\|=M$.
+
+Choose a countable dense set $\{x_1,x_2,\dots\}\subset V$. Extract a sequence $\{v_k\}$ that is linearly independent over $U$ and such that $\widetilde{U} := U + \operatorname{span}\{v_1,v_2,\dots\}$ is dense in $V$.
+
+Define $U_0=U$, $U_{k+1}=U_k+\operatorname{span}\{v_{k+1}\}$. Extend $f$ from $U_k$ to $U_{k+1}$ by setting
+$$
+f_{k+1}(u+tv_{k+1}) = f_k(u) + t\alpha_{k+1},
+$$
+where $\alpha_{k+1}\in\mathbb{F}$ is chosen to keep the norm $\|f_{k+1}\|=M$. This choice needs only the one‑dimensional extension lemma (no AC).
+
+Let $F:\widetilde{U}\to\mathbb{F}$ be the linear functional defined by $F|_{U_k}=f_k$. Then $\|F\|=M$. Since $\widetilde{U}$ is dense in $V$, extend $F$ to $V$ by continuity: for $x\in V$, pick $y_n\in\widetilde{U}$ with $y_n\to x$ and set
+$$
+\overline{F}(x)=\lim_{n\to\infty}F(y_n).
+$$
+Then $\overline{F}$ is linear, $\overline{F}|_U=f$, and $\|\overline{F}\|=M$.
+___
+
+>[!problem] [SHE] 6D.18
+>Suppose $V$ is a normed vector space such that the dual space $V'$ is a separable Banach space. Prove that $V$ is separable.
+
+**Proof:**
+Let $\{\varphi_n\}$ be dense in $V'$. For each $n$, pick $x_n\in V$ with $\|x_n\|=1$ such that $|\varphi_n(x_n)|\ge\frac12\|\varphi_n\|$. Let $X=\overline{\operatorname{span}}\{x_n\}$. Assume $X\neq V$; then $\exists x_0\in V\setminus X$. By Hahn–Banach, there exists $\psi\in V'$ with $\psi|_X=0$, $\psi(x_0)=1$, $\|\psi\|>0$. Since $\{\varphi_n\}$ is dense, for any $\varepsilon>0$ we can pick $\varphi_k$ with $\|\psi-\varphi_k\|<\varepsilon$. Then
+$$
+   \|\varphi_k\|\ge|\varphi_k(x_k)|\ge|\psi(x_k)|-|\psi(x_k)-\varphi_k(x_k)|>0-\varepsilon.
+$$
+   Hence $\|\psi\|\le\|\psi-\varphi_k\|+\|\varphi_k\|<2\varepsilon$. Letting $\varepsilon\to0$ gives $\|\psi\|=0$, contradiction.
+
+Therefore $X=V$, so $V$ is separable.
+___
+
+> [!problem] [SHE] 6D.20
+> Define $\Phi: V \to V''$ by
+> $$
+> (\Phi f)(\varphi) = \varphi(f)
+> $$
+> for $f \in V$ and $\varphi \in V'$. Show that $\|\Phi f\| = \|f\|$ for every $f \in V$.
+
+**Proof:**
+For any $f \in V$, the dual norm of $\Phi f \in V''$ is
+$$
+\|\Phi f\| = \sup_{\varphi \in V',\ \varphi \neq 0} \frac{|(\Phi f)(\varphi)|}{\|\varphi\|}
+= \sup_{\varphi \in V',\ \varphi \neq 0} \frac{|\varphi(f)|}{\|\varphi\|}.
+$$
+
+By definition of the norm of $f$,
+$$
+\|f\| = \sup_{\psi \in V',\ \|\psi\|=1} |\psi(f)|.
+$$
+Therefore
+$$
+\|\Phi f\| = \sup_{\varphi \neq 0} \frac{|\varphi(f)|}{\|\varphi\|}
+= \sup_{\|\psi\|=1} |\psi(f)| = \|f\|.
+$$
+The second equality follows by setting $\psi = \varphi/\|\varphi\|$ for $\varphi \neq 0$.
+
+Hence $\|\Phi f\| = \|f\|$ for all $f \in V$.
