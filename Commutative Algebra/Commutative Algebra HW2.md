@@ -182,7 +182,7 @@ so $\mathfrak{p}_1 = \mathfrak{p}_2$. Hence $\mathfrak{q}_1 = \mathfrak{p}_1^{\;
 **Converse of (ii) is false:** Let $A=\mathbb{C}[t^{2},t^{3}]$, $B=\mathbb{C}[t]$, $f$ be the inclusion map. Take any $(t-a)\in \operatorname{Spec}B$, then $f^{*}((t-a))=(t^{2}-a^{2},t^{3}-a^{3})$, thus $f^{*}$ is injective. But $(t)^{ce}=(t^{2},t^{3})^{e}=(t^{2})\neq (t)$, thus $(t)$ is not an extended ideal.
 ___
 
-> [!problem] [ATI] 3.20
+> [!problem] [ATI] 4.1
 >If an ideal $\mathfrak{a}$ has a primary decomposition, then $\operatorname{Spec}(A/\mathfrak{a})$ has only finitely many irreducible components.
 
 **Proof:**
