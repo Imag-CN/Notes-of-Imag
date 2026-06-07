@@ -173,4 +173,25 @@ ___
 **Proof:**
 **(i)** **"$\Rightarrow$":** Take any $\mathfrak{p}\in \operatorname{Spec}(A)$, let $\mathfrak{p}=\mathfrak{q}^{c}$, then $f^{*}(\mathfrak{q})=\mathfrak{p}$, thus $f^{*}$ is surjective.
 **"$\Leftarrow$":** Take any $\mathfrak{p}\in \operatorname{Spec}(A)$, let $\mathfrak{p}=f^{*}(\mathfrak{q})$, then $\mathfrak{p}=\mathfrak{q}^{c}$.
-**(ii)** Suppose $f^{*}(\mathfrak{q})=f^{*}(\mathfrak{q'})$, and let $\mathfrak{q}=\mathfrak{p}^{e}$, $\mathfrak{q}'=\mathfrak{p}^{'e}$.
+**(ii)** Suppose $f^{*}(\mathfrak{q}_1) = f^{*}(\mathfrak{q}_2)$. Write $\mathfrak{q}_1 = \mathfrak{p}_1^{\;e}$ and $\mathfrak{q}_2 = \mathfrak{p}_2^{\;e}$ for some prime ideals $\mathfrak{p}_1, \mathfrak{p}_2$ of $A$. Then
+$$
+f^{*}(\mathfrak{q}_1) = \mathfrak{p}_1, \qquad f^{*}(\mathfrak{q}_2) = \mathfrak{p}_2,
+$$
+so $\mathfrak{p}_1 = \mathfrak{p}_2$. Hence $\mathfrak{q}_1 = \mathfrak{p}_1^{\;e} = \mathfrak{p}_2^{\;e} = \mathfrak{q}_2$. Therefore $f^{*}$ is injective.
+
+**Converse of (ii) is false:** Let $A=\mathbb{C}[t^{2},t^{3}]$, $B=\mathbb{C}[t]$, $f$ be the inclusion map. Take any $(t-a)\in \operatorname{Spec}B$, then $f^{*}((t-a))=(t^{2}-a^{2},t^{3}-a^{3})$, thus $f^{*}$ is injective. But $(t)^{ce}=(t^{2},t^{3})^{e}=(t^{2})\neq (t)$, thus $(t)$ is not an extended ideal.
+___
+
+> [!problem] [ATI] 3.20
+>If an ideal $\mathfrak{a}$ has a primary decomposition, then $\operatorname{Spec}(A/\mathfrak{a})$ has only finitely many irreducible components.
+
+**Proof:**
+Let $\mathfrak{a} = \bigcap_{i=1}^n \mathfrak{q}_i$ be a minimal primary decomposition, $\mathfrak{p}_i = r(\mathfrak{q}_i)$. Then
+$$
+V(\mathfrak{a}) = \bigcup_{i=1}^n V(\mathfrak{q}_i) = \bigcup_{i=1}^n V(\mathfrak{p}_i).
+$$
+Each $V(\mathfrak{p}_i) \cong \operatorname{Spec}(A/\mathfrak{p}_i)$ is irreducible because $A/\mathfrak{p}_i$ is a domain.
+
+Hence the $V(\mathfrak{p}_i)$ are the finitely many irreducible components of $\operatorname{Spec}(A/\mathfrak{a})$.'
+___
+
