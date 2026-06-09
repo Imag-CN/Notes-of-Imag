@@ -4,7 +4,10 @@
       "lemma",
       "remark",
       "definition",
-      "awesome"
+      "awesome",
+      "proposition",
+      "theorem",
+      "corollary"
     ],
     "settings": {
       "lemma": [
@@ -35,6 +38,29 @@
           "changes": {
             "icon": "lucide-laugh",
             "color": "227, 107, 167"
+          }
+        }
+      ],
+      "proposition": [
+        {
+          "changes": {
+            "icon": "lucide-book-open-check",
+            "color": "68, 207, 110"
+          }
+        }
+      ],
+      "theorem": [
+        {
+          "changes": {
+            "icon": "lucide-book-type"
+          }
+        }
+      ],
+      "corollary": [
+        {
+          "changes": {
+            "icon": "lucide-arrow-big-right",
+            "color": "83, 223, 221"
           }
         }
       ]
