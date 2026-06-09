@@ -12,7 +12,9 @@ ___
 >$$
 
 **Proof:**
-
+$$
+\operatorname{disc}(f)=(-1)^{n(n-1)/2}\cdot\operatorname{Res}(f,f')=(-1)^{n(n-1)/2}(n^{n}+(-n+1)^{n-1})
+$$
 ___
 
 >[!lemma] Lemma 1
