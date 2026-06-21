@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic topology homework/Algebraic topology HW1.md",
+                "file": "Abstract algebra homework/Abstract algebra HW28.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebraic topology HW1"
+              "title": "Abstract algebra HW28"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebraic topology homework/Algebraic topology HW1.md",
+                "file": "Abstract algebra homework/Abstract algebra HW28.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Algebraic topology HW1 的反向链接列表"
+              "title": "Abstract algebra HW28 的反向链接列表"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebraic topology homework/Algebraic topology HW1.md",
+                "file": "Abstract algebra homework/Abstract algebra HW28.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Algebraic topology HW1 的出链列表"
+              "title": "Abstract algebra HW28 的出链列表"
             }
           },
           {
@@ -212,8 +212,10 @@
   },
   "active": "676eb87e53521df2",
   "lastOpenFiles": [
-    "未命名.md",
+    "Abstract algebra homework/Abstract algebra HW2.md",
+    "Abstract algebra homework/Abstract algebra HW28.md",
     "Algebraic topology homework/Algebraic topology HW1.md",
+    "未命名.md",
     "Dirichlet 核的积分的极限.md",
     "Decay rate of Fourier coefficients.md",
     "有理逼近.md",
@@ -234,10 +236,8 @@
     "Real Analysis homework/Real Analysis HW13.md",
     "Real Analysis homework/Real Analysis HW1.md",
     "Abstract algebra homework/Abstract algebra HW27.md",
-    "Abstract algebra homework/Abstract algebra HW2.md",
     "meet/Computing Commutator Subgroups.md",
     "meet/An interesting non-noetherian ring.md",
-    "meet/A continuous function with divergent Fourier series.md",
     "attachments/Pasted image 20260518025330.png",
     "attachments/Pasted image 20260518022658.png",
     "Commutative Algebra",
