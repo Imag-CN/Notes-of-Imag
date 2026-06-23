@@ -51,4 +51,12 @@ ___
 > Let $A$ be a subring of a ring $B$ such that $B$ is integral over $A$. Let $\mathfrak{n}$ be a maximal ideal of $B$ and let $\mathfrak{m} = \mathfrak{n} \cap A$ be the corresponding maximal ideal of $A$. Is $B_{\mathfrak{n}}$ necessarily integral over $A_{\mathfrak{m}}$?
 
 **Proof:**
-No. Consider the subring $k[x^2 - 1]$ of $k[x]$, where $k$ is a field, and let $\mathfrak{n} = (x - 1)$.
+No. Consider the subring $A=k[x^2 - 1]$ of $B=k[x]$, where $k$ is a field, and let $\mathfrak{n} = (x - 1)$, then $\mathfrak{m}=\mathfrak{n}\cap A=(x^{2}-1)$. Pick $y=1 /(x+1) \in B_{\mathfrak{n}}$, suppose $f(y)=0$ for some monic $f(t)\in A_{\mathfrak{m}}[t]$. Suppose $\operatorname{deg}f=n$, then $f(y)=f(1 /(x+1))$ has a pole $x=-1$ of order $n$, thus nonzero, contradiction. Therefore, $B_{\mathfrak{n}}$ is not integral over $A_{\mathfrak{m}}$.
+___
+
+> [!problem] [ATI] 5.5
+> Let $A \subseteq B$ be rings, $B$ integral over $A$.
+>
+> i) If $x \in A$ is a unit in $B$, then it is a unit in $A$.
+>
+> ii) The Jacobson radical of $A$ is the contraction of the Jacobson radical of $B$.
