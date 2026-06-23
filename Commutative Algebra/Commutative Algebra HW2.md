@@ -142,7 +142,7 @@ Assume $0 \not\in S$, then $S^{-1}A \neq 0, S^{-1} M\neq 0$.
 The equivalence of **(i)(ii)(iii)** follows from that vanishing is a local property.
 ___
 
->[!problem] [ATI] 5.7
+>[!problem] [ATI] 5.6
 >Let $B_1, \dots, B_n$ be integral $A$-algebras. Show that $\prod_{i=1}^{n} B_i$ is an integral $A$-algebra.
 
 **Proof:**
