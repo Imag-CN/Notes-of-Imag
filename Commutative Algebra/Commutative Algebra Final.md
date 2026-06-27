@@ -17,7 +17,7 @@ ___
 > Using group action on rings, show that $R := \mathbb{C}[x,y,z,w]/(xy - zw)$ is integrally closed. Is this a Noetherian ring? Is the localization of this ring at every prime ideal $R_{\mathfrak{p}}$ a Regular Local Ring? Is $R_{\mathfrak{p}}$ Cohen-Macaulay?
 
 **Proof:**
-Let $S=\mathbb C[a,b,c,d]$. Define an action of $\mathbb G_m=\mathbb C^\times$ on $S$ by
+**Integrally closed:** Let $S=\mathbb C[a,b,c,d]$. Define an action of $\mathbb G_m=\mathbb C^\times$ on $S$ by
 $$
 t\cdot a=ta,\qquad t\cdot b=tb,\qquad t\cdot c=t^{-1}c,\qquad t\cdot d=t^{-1}d.
 $$
@@ -29,22 +29,20 @@ x\mapsto ac,\qquad y\mapsto bd,\qquad z\mapsto ad,\qquad w\mapsto bc.
 $$
 Then $\varphi(xy-zw)=(ac)(bd)-(ad)(bc)=0$, thus $(xy-zw)\subseteq \ker\varphi$, and $\operatorname{Im}\varphi=S^{\mathbb G_m}$.
 
-Moreover, $\varphi (x^{i}y^{j}z^{k}w^{\ell})=a^{i+k}b^{j+\ell}c^{i+\ell}d^{j+k}$, so the degree (on each variant $a,b,c,d$) of $\varphi (x^{i}y^{j}z^{k}w^{\ell})$ and $\varphi (x^{i'}y^{j'}z^{k'}w^{\ell'})$ agree if and only if $$
+Moreover, $\varphi (x^{i}y^{j}z^{k}w^{\ell})=a^{i+k}b^{j+\ell}c^{i+\ell}d^{j+k}$, so the degree (on each variant $a,b,c,d$) of $\varphi (x^{i}y^{j}z^{k}w^{\ell})$ and $\varphi (x^{i'}y^{j'}z^{k'}w^{\ell'})$ agree if and only if $i-i'=j-j'=k'-k=\ell'-\ell$, i.e. $xy-zw\mid x^{i}y^{j}z^{k}w^{\ell}-x^{i'}y^{j'}z^{k'}w^{\ell'}$. For any element in $\operatorname{ker}\varphi$, we can also write it as a sum of some sums of a pair of monomial with opposite coefficients and same degree of image, therefore $xy-zw$ divides any element in $\operatorname{ker} \varphi$, i.e. $(xy-zw)\supseteq \operatorname{ker}\varphi$.
 
 Therefore $\mathbb C[x,y,z,w]/(xy-zw)\cong S^{\mathbb G_m}$. Since $S=\mathbb C[a,b,c,d]$ is a domain and $S^{\mathbb G_m}\subseteq S$, the invariant ring $S^{\mathbb G_m}$ is also a domain.
 
 Now use the standard fact:
 
+>[!lemma] Lemma
 > If $B$ is an integrally closed domain and a group $G$ acts on $B$ by ring automorphisms, then $B^G$ is integrally closed.
 
-Indeed, let $A=B^G$. If $\alpha\in \operatorname{Frac}(A)$ is integral over $A$, then it is integral over $B$. Since $B$ is integrally closed, $\alpha\in B$. Also $\alpha\in \operatorname{Frac}(A)$ is fixed by $G$, so $\alpha\in B^G=A$.
+Let $A=B^G$. If $\alpha\in \operatorname{Frac}(A)$ is integral over $A$, then it is integral over $B$. Since $B$ is integrally closed, $\alpha\in B$. Also $\alpha\in \operatorname{Frac}(A)$ is fixed by $G$, so $\alpha\in B^G=A$.
 
 Applying this to $B=S$ and $G=\mathbb G_m$, since $S$ is a polynomial ring and hence integrally closed, we get that $S^{\mathbb G_m}$ is integrally closed.
 
-Therefore, by the isomorphism above,
+Therefore, by the isomorphism above, $\mathbb C[x,y,z,w]/(xy-zw)$ is an integrally closed domain.
 
-$
-\mathbb C[x,y,z,w]/(xy-zw)
-$
+**Noetherian:** By Hilbert's basis theorem, $\mathbb C[x,y,z,w]$ is Noetherian. By Proposition 6.6, $\mathbb C[x,y,z,w]/(xy-zw)$ is also Noetherian.
 
-is an integrally closed domain.
