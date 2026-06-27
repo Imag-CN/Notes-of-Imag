@@ -16,3 +16,7 @@ ___
 > [!problem] Problem 1
 > Using group action on rings, show that $R := \mathbb{C}[x,y,z,w]/(xy - zw)$ is integrally closed. Is this a Noetherian ring? Is the localization of this ring at every prime ideal $R_{\mathfrak{p}}$ a Regular Local Ring? Is $R_{\mathfrak{p}}$ Cohen-Macaulay?
 
+**Proof:**
+
+Since $\mathbb{C}[x,y,z,w]$ is a Noetherian ring (by Hilbert’s Basis Theorem), and since Proposition 6.6, $R$ is a Noetherian ring.
+
