@@ -13,3 +13,6 @@ let $f_{1}=\pi(x_{1}),\dots,f_{n}=\pi(x_{n})$, then since $\pi$ is surjective, w
 In conclusion, any maximal ideal of $\mathbb{C}[x_1, \ldots, x_n]$ has the form $(x_{1}-f_{1},\dots,x_{n}-f_{n})$ for some $f_{1},\dots f_{n}\in \mathbb{C}$. (Also, for any $f_{1},\dots f_{n}\in \mathbb{C}$, $(x_{1}-f_{1},\dots,x_{n}-f_{n})$ is a maximal ideal, because the quotient is $\mathbb{C}$).
 ___
 
+> [!problem] Problem 1
+> Using group action on rings, show that $R := \mathbb{C}[x,y,z,w]/(xy - zw)$ is integrally closed. Is this a Noetherian ring? Is the localization of this ring at every prime ideal $R_{\mathfrak{p}}$ a Regular Local Ring? Is $R_{\mathfrak{p}}$ Cohen-Macaulay?
+
