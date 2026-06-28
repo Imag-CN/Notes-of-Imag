@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commutative Algebra/Commutative Algebra Final.md",
+                "file": "Real Analysis homework/Real Analysis HW12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Commutative Algebra Final"
+              "title": "Real Analysis HW12"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Commutative Algebra/Commutative Algebra Final.md",
+                "file": "Real Analysis homework/Real Analysis HW12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Commutative Algebra Final 的反向链接列表"
+              "title": "Real Analysis HW12 的反向链接列表"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commutative Algebra/Commutative Algebra Final.md",
+                "file": "Real Analysis homework/Real Analysis HW12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Commutative Algebra Final 的出链列表"
+              "title": "Real Analysis HW12 的出链列表"
             }
           },
           {
@@ -212,13 +212,17 @@
   },
   "active": "676eb87e53521df2",
   "lastOpenFiles": [
-    "Commutative Algebra/Commutative Algebra HW3.md",
+    "Real Analysis homework/Real Analysis HW10.md",
+    "Real Analysis homework/Real Analysis HW11.md",
+    "Real Analysis homework/Real Analysis HW14.md",
+    "Real Analysis homework/Real Analysis HW15.md",
+    "Real Analysis homework/Real Analysis HW1.md",
     "Commutative Algebra/Commutative Algebra Final.md",
+    "Commutative Algebra/Commutative Algebra HW3.md",
     "Commutative Algebra/未命名",
     "exercise_remained.md",
     "Commutative Algebra/Commutative Algebra HW2.md",
     "Commutative Algebra/Commutative Algebra Notes.md",
-    "Real Analysis homework/Real Analysis HW10.md",
     "Real Analysis homework/Real Analysis HW9.md",
     "Real Analysis homework/Real Analysis HW8.md",
     "Real Analysis homework/Real Analysis HW7.md",
@@ -235,10 +239,6 @@
     "幂级数边界的收敛点集.md",
     "内禀体积.md",
     "满足柯西-黎曼方程但不复可微的例子.md",
-    "哈代不等式（Hardy-Landau）.md",
-    "关于双周期函数的一些问题.md",
-    "非整数阶积分与导数.md",
-    "度量与全序的相似, 不同与统一.md",
     "attachments/Pasted image 20260518025330.png",
     "attachments/Pasted image 20260518022658.png",
     "Commutative Algebra",
