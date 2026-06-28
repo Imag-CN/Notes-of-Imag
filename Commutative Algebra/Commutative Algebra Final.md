@@ -60,12 +60,29 @@ Therefore, $R_{\mathfrak{m}}$ is not a regular local ring.
 
 **Cohen-Macaulay:** Yes. Let $\mathfrak{m}=(x,y,z,w)$ (we omit all the bars because the notation will not cause confusion). We prove that for every prime ideal $\mathfrak p\subset R$, the local ring $R_{\mathfrak p}$ is Cohen-Macaulay.
 
-We first consider the case $\mathfrak p\neq \mathfrak m$. Since $\mathfrak p\neq \mathfrak m$, not all of $x,y,z,w$ lie in $\mathfrak p$. W.L.O.G we suppose that $x\notin \mathfrak p$. Then in $R_x$, the element $x$ is invertible, and from $xy=zw$, we get $y=\dfrac{zw}{x}$. Thus $R_{\mathfrak p}$ is a local ring of a localization of the polynomial ring $\mathbb C[x,z,w]$. By the example after Proposition 11.24, $R_{\mathfrak p}$ is regular local.
+We first consider the case $\mathfrak p\neq \mathfrak m$. Since $\mathfrak p\neq \mathfrak m$, not all of $x,y,z,w$ lie in $\mathfrak p$. W.L.O.G we suppose that $x\notin \mathfrak p$. Then in $R_x$, the element $x$ is invertible, and from $xy=zw$, we get $y=\dfrac{zw}{x}$. Thus $R_{\mathfrak p}$ is a localization of the polynomial ring $\mathbb C[x,z,w]$. 
 
-Moreover, by Atiyah--Macdonald, Chapter 11, Regular local rings, in a
-regular local ring a regular system of parameters is a regular sequence.
-Therefore every regular local ring is Cohen-Macaulay. Hence
-$R_{\mathfrak p}$ is Cohen-Macaulay.
+
+**Lemma.** A localization of a polynomial ring over a field is Cohen-Macaulay.
+
+**Proof.** Let $A=k[X_1,\dots,X_n],$ and let $S\subset A$ be a multiplicative set. We prove that $S^{-1}A$ is Cohen-Macaulay.
+
+By the prime ideal correspondence for localization, every prime ideal
+$\mathfrak q\in \operatorname{Spec}(S^{-1}A)$ is of the form $\mathfrak q=S^{-1}\mathfrak p$ for some prime ideal $\mathfrak p\subset A$ with $\mathfrak p\cap S=\varnothing$.
+
+Moreover, by transitivity of localization, $(S^{-1}A)_{\mathfrak q}\cong A_{\mathfrak p}.$
+
+Now $A_{\mathfrak p}$ is a local ring of a polynomial ring over a field. By
+Atiyah--Macdonald, Chapter 11, Regular local rings, local rings of polynomial
+rings over a field are regular local rings.
+
+Also, by Atiyah--Macdonald, Chapter 11, in a regular local ring a regular
+system of parameters is a regular sequence. Hence every regular local ring is
+Cohen-Macaulay.
+
+Therefore $A_{\mathfrak p}$ is Cohen-Macaulay. Hence every local ring of
+$S^{-1}A$ is Cohen-Macaulay, so $S^{-1}A$ is Cohen-Macaulay.
+
 
 It remains to consider $R_{\mathfrak m}$. We have already proven that $\operatorname{dim} R_{\mathfrak{m}}=3$, and we claim that $x,\ y,\ z+w$ is a regular sequence in $R_{\mathfrak m}$.
 
