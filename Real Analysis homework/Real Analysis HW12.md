@@ -189,7 +189,7 @@ Let $\{\varphi_n\}$ be dense in $V'$. For each $n$, pick $x_n\in V$ with $\|x_n\
 $$
    \|\varphi_k\|\ge|\varphi_k(x_k)|\ge|\psi(x_k)|-|\psi(x_k)-\varphi_k(x_k)|>0-\varepsilon.
 $$
-   Hence $\|\psi\|\le\|\psi-\varphi_k\|+\|\varphi_k\|<2\varepsilon$. Letting $\varepsilon\to0$ gives $\|\psi\|=0$, contradiction.
+Hence $\|\psi\|\le\|\psi-\varphi_k\|+\|\varphi_k\|<2\varepsilon$. Letting $\varepsilon\to0$ gives $\|\psi\|=0$, contradiction.
 
 Therefore $X=V$, so $V$ is separable.
 ___

@@ -109,8 +109,7 @@ ___
 >[!problem] [SHE] 8A.11
 >Suppose $f$ and $g$ are elements of an inner product space. Prove that $\|f\| = \|g\|$ if and only if $\|sf + tg\| = \|tf + sg\|$ for all $s, t \in \mathbb{R}$.
 
-We prove the equivalence.
-
+**Proof:**
 ($\Rightarrow$) Assume $\|f\| = \|g\|$. Compute
 $$
 \begin{aligned}
