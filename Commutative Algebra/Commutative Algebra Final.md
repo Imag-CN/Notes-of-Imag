@@ -48,15 +48,17 @@ Therefore, by the isomorphism above, $\mathbb C[x,y,z,w]/(xy-zw)$ is an integral
 
 **Regular Local:** No. Let $\mathfrak{m}=(\overline{ x },\overline{ y },\overline{ z },\overline{ w })$, then the residue field $k=R / \mathfrak{m}=\mathbb{C}$. Since $\mathfrak{m} / \mathfrak{m}^{2}\cong \mathbb{C}[x,y,z,w] / (\text{all 2-degree relations})\cong \mathbb{C}^{4}$, we have $\operatorname{dim}_{k}\mathfrak{m} / \mathfrak{m}^{2}=4$.
 
-By Proposition 3.11 (iv), $(\mathbb{C}[x,y,z,w]/(xy - zw))_{\mathfrak{m}}\cong\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}$. Since $\mathbb{C}[x,y,z,w]$ is an integral domain, $(xy-zw) / 1$ is not a zero divisor in $\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$.
+By Proposition 3.11 (iv), $(\mathbb{C}[x,y,z,w]/(xy - zw))_{\mathfrak{m}}\cong\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}$. Since $\mathbb{C}[x,y,z,w]$ is an integral domain, $(xy-zw) / 1$ is not a zero divisor in $\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$. By the example after Theorem 11.4, $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)}=4$.
 
-By Corollary 11.18:
+Use Corollary 11.18:
 >[!corollary] Corollary 11.18
 >Let $A$ be a Noetherian local ring, $x_{A}$ an element of $\mathfrak{m}_{A}$ which is not a zero-divisor. Then $\operatorname{dim} A/(x_{A}) = \operatorname{dim} A - 1$.
 
-here we set $A=\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$, $x_{A}=(xy-zw) / 1$. By the example after Theorem 11.4, $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)}=4$, thus $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}=4-1=3$.
+here we set $A=\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$, $x_{A}=(xy-zw) / 1$, then $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}=4-1=3$, i.e. $\operatorname{dim}(\mathbb{C}[x,y,z,w]/(xy - zw))_{\mathfrak{m}}=4$.
 
+Therefore, $R_{\mathfrak{m}}$ is not a regular local ring.
 
+**Cohen-Macaulay:** 
 
 ___
 
@@ -66,3 +68,6 @@ ___
 **Proof:**
 No. Let $\mathfrak{m}=(\overline{ x },\overline{ y })$, then the residue field $k=R / \mathfrak{m}=\mathbb{C}$. Since $\mathfrak{m} / \mathfrak{m}^{2}\cong \mathbb{C}[x,y] / (\text{all 2-degree relations})\cong \mathbb{C}^{2}$, we have $\operatorname{dim}_{k}\mathfrak{m} / \mathfrak{m}^{2}=2$.
 
+By Proposition 3.11 (iv), $(\mathbb{C}[x,y]/(x^{2} - y^{3}))_{\mathfrak{m}}\cong\mathbb{C}[x,y]_{(x,y)} / (x^{2}-y^{3})_{(x,y)}$. Since $\mathbb{C}[x,y]$ is an integral domain, $(x^{2}-y^{3}) / 1$ is not a zero divisor in $\mathbb{C}[x,y]_{(x,y)}$. By the example after Theorem 11.4, $\operatorname{dim}\mathbb{C}[x,y]_{(x,y)}=2$. By Corollary 11.18, $\operatorname{dim}\mathbb{C}[x,y]_{(x,y)} / (x^{2}-y^{3})_{(x,y)}=2-1=1$.
+
+Therefore, $R_{\mathfrak{m}}$ is not a regular local ring.
