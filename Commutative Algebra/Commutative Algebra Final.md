@@ -44,5 +44,6 @@ Applying this to $B=S$ and $G=\mathbb G_m$, since $S$ is a polynomial ring and h
 
 Therefore, by the isomorphism above, $\mathbb C[x,y,z,w]/(xy-zw)$ is an integrally closed domain.
 
-**Noetherian:** By Hilbert's basis theorem, $\mathbb C[x,y,z,w]$ is Noetherian. By Proposition 6.6, $\mathbb C[x,y,z,w]/(xy-zw)$ is also Noetherian.
+**Noetherian:** Yes. By Hilbert's basis theorem, $\mathbb C[x,y,z,w]$ is Noetherian. By Proposition 6.6, $\mathbb C[x,y,z,w]/(xy-zw)$ is also Noetherian.
 
+**Regular Local:** No. Let $\mathfrak{m}=(\overline{ x },\overline{ y },\overline{ z },\overline{ w })$, then the residue field $k=R / \mathfrak{m}=\mathbb{C}$. Since $\mathfrak{m} / \mathfrak{m}^{2}\cong \mathbb{C}[x,y,z,w] / (\text{all 2-degree relations})\cong \mathbb{C}^{4}$,
