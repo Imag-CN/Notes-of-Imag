@@ -62,10 +62,10 @@ Therefore, $R_{\mathfrak{m}}$ is not a regular local ring.
 
 We first consider the case $\mathfrak p\neq \mathfrak m$. Since $\mathfrak p\neq \mathfrak m$, not all of $x,y,z,w$ lie in $\mathfrak p$. W.L.O.G we suppose that $x\notin \mathfrak p$. Then in $R_x$, the element $x$ is invertible, and from $xy=zw$, we get $y=\dfrac{zw}{x}$. Thus $R_{\mathfrak p}$ is a localization of the polynomial ring $\mathbb C[x,z,w]$. 
 
+>[!lemma] Lemma
+>A localization of a polynomial ring over a field is Cohen-Macaulay.
 
-**Lemma.** A localization of a polynomial ring over a field is Cohen-Macaulay.
-
-**Proof.** Let $A=k[X_1,\dots,X_n],$ and let $S\subset A$ be a multiplicative set. We prove that $S^{-1}A$ is Cohen-Macaulay.
+**Proof of the lemma:** Let $A=k[X_1,\dots,X_n],$ and let $S\subset A$ be a multiplicative set. We prove that $S^{-1}A$ is Cohen-Macaulay.
 
 By the prime ideal correspondence for localization, every prime ideal
 $\mathfrak q\in \operatorname{Spec}(S^{-1}A)$ is of the form $\mathfrak q=S^{-1}\mathfrak p$ for some prime ideal $\mathfrak p\subset A$ with $\mathfrak p\cap S=\varnothing$.
