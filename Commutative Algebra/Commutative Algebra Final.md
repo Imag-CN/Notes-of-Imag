@@ -31,7 +31,7 @@ Then $\varphi(xy-zw)=(ac)(bd)-(ad)(bc)=0$, thus $(xy-zw)\subseteq \ker\varphi$, 
 
 Moreover, $\varphi (x^{i}y^{j}z^{k}w^{\ell})=a^{i+k}b^{j+\ell}c^{i+\ell}d^{j+k}$, so the degree (on each variant $a,b,c,d$) of $\varphi (x^{i}y^{j}z^{k}w^{\ell})$ and $\varphi (x^{i'}y^{j'}z^{k'}w^{\ell'})$ agree if and only if $i-i'=j-j'=k'-k=\ell'-\ell$, i.e. $xy-zw\mid x^{i}y^{j}z^{k}w^{\ell}-x^{i'}y^{j'}z^{k'}w^{\ell'}$. For any element in $\operatorname{ker}\varphi$, we can also write it as a sum of some sums of a pair of monomial with opposite coefficients and same degree of image, therefore $xy-zw$ divides any element in $\operatorname{ker} \varphi$, i.e. $(xy-zw)\supseteq \operatorname{ker}\varphi$.
 
-Therefore $\mathbb C[x,y,z,w]/(xy-zw)\cong S^{\mathbb G_m}$. Since $S=\mathbb C[a,b,c,d]$ is a domain and $S^{\mathbb G_m}\subseteq S$, the invariant ring $S^{\mathbb G_m}$ is also a domain.
+Therefore $\mathbb C[x,y,z,w]/(xy-zw)\cong S^{\mathbb G_m}$. Since $S=\mathbb C[a,b,c,d]$ is a domain and $S^{\mathbb G_m}\subseteq S$, the invariant ring $S^{\mathbb G_m}$ is also a domain (this can be also seen by the fact that $xy-zw$ is irreducible in the UFD $\mathbb C[x,y,z,w]$).
 
 Now use the standard fact:
 
@@ -48,18 +48,34 @@ Therefore, by the isomorphism above, $\mathbb C[x,y,z,w]/(xy-zw)$ is an integral
 
 **Regular Local:** No. Let $\mathfrak{m}=(\overline{ x },\overline{ y },\overline{ z },\overline{ w })$, then the residue field $k=R / \mathfrak{m}=\mathbb{C}$. Since $\mathfrak{m} / \mathfrak{m}^{2}\cong \mathbb{C}[x,y,z,w] / (\text{all 2-degree relations})\cong \mathbb{C}^{4}$, we have $\operatorname{dim}_{k}\mathfrak{m} / \mathfrak{m}^{2}=4$.
 
-By Proposition 3.11 (iv), $(\mathbb{C}[x,y,z,w]/(xy - zw))_{\mathfrak{m}}\cong\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}$. Since $\mathbb{C}[x,y,z,w]$ is an integral domain, $(xy-zw) / 1$ is not a zero divisor in $\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$. By the example after Theorem 11.4, $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)}=4$.
+By Proposition 3.11 (iv), $R_{\mathfrak{m}}\cong\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}$. Since $\mathbb{C}[x,y,z,w]$ is an integral domain, $(xy-zw) / 1$ is not a zero divisor in $\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$. By the example after Theorem 11.4, $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)}=4$.
 
 Use Corollary 11.18:
 >[!corollary] Corollary 11.18
 >Let $A$ be a Noetherian local ring, $x_{A}$ an element of $\mathfrak{m}_{A}$ which is not a zero-divisor. Then $\operatorname{dim} A/(x_{A}) = \operatorname{dim} A - 1$.
 
-here we set $A=\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$, $x_{A}=(xy-zw) / 1$, then $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}=4-1=3$, i.e. $\operatorname{dim}(\mathbb{C}[x,y,z,w]/(xy - zw))_{\mathfrak{m}}=4$.
+here we set $A=\mathbb{C}[x,y,z,w]_{(x,y,z,w)}$, $x_{A}=(xy-zw) / 1$, then $\operatorname{dim}\mathbb{C}[x,y,z,w]_{(x,y,z,w)} / (xy-zw)_{(x,y,z,w)}=4-1=3$, i.e. $\operatorname{dim}R_{\mathfrak{m}}=3$.
 
 Therefore, $R_{\mathfrak{m}}$ is not a regular local ring.
 
-**Cohen-Macaulay:** 
+**Cohen-Macaulay:** Yes. Let $\mathfrak{m}=(x,y,z,w)$ (we omit all the bars because the notation will not cause confusion). We prove that for every prime ideal $\mathfrak p\subset R$, the local ring $R_{\mathfrak p}$ is Cohen-Macaulay.
 
+We first consider the case $\mathfrak p\neq \mathfrak m$. Since $\mathfrak p\neq \mathfrak m$, not all of $x,y,z,w$ lie in $\mathfrak p$. W.L.O.G we suppose that $x\notin \mathfrak p$. Then in $R_x$, the element $x$ is invertible, and from $xy=zw$, we get $y=\dfrac{zw}{x}$. Thus $R_{\mathfrak p}$ is a local ring of a localization of the polynomial ring $\mathbb C[x,z,w]$. By the example after Proposition 11.24, $R_{\mathfrak p}$ is regular local.
+
+Moreover, by Atiyah--Macdonald, Chapter 11, Regular local rings, in a
+regular local ring a regular system of parameters is a regular sequence.
+Therefore every regular local ring is Cohen-Macaulay. Hence
+$R_{\mathfrak p}$ is Cohen-Macaulay.
+
+It remains to consider $R_{\mathfrak m}$. We have already proven that $\operatorname{dim} R_{\mathfrak{m}}=3$, and we claim that $x,\ y,\ z+w$ is a regular sequence in $R_{\mathfrak m}$.
+
+$R$ is a domain as we have already shown. Next, $R_{\mathfrak m}/(x)\cong \left(\mathbb C[y,z,w]/(zw)\right)_{(y,z,w)}$. In $\mathbb C[y,z,w]$, if $yg\in (zw)$, then since $y$ is relatively prime to $zw$, we get $g\in (zw)$. Thus $y$ is a non-zero-divisor on $\mathbb C[y,z,w]/(zw)$, and hence also after localization. Therefore $y$ is a non-zero-divisor on $R_{\mathfrak m}/(x)$.
+
+Finally, $R_{\mathfrak m}/(x,y)\cong\left(\mathbb C[z,w]/(zw)\right)_{(z,w)}$. In $\mathbb C[z,w]$, the element $z+w$ is relatively prime to $zw$. Hence if $(z+w)g\in (zw)$, then $g\in (zw)$. Therefore $z+w$ is a non-zero-divisor on $\mathbb C[z,w]/(zw)$, and hence also after localization. Thus $z+w$ is a non-zero-divisor on $R_{\mathfrak m}/(x,y)$.
+
+Therefore $x,\ y,\ z+w$ is a regular sequence in $R_{\mathfrak m}$, and $R_{\mathfrak m}$ is Cohen-Macaulay.
+
+Combining the two cases, for every prime ideal $\mathfrak p\subset R$, the local ring $R_{\mathfrak p}$ is Cohen-Macaulay.
 ___
 
 >[!problem] Problem 2
