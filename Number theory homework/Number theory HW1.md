@@ -14,7 +14,7 @@ ___
 > The following two problems are taken from exercises in Chapter 9 of [AM].
 
 **Proof:**
-Let $A$ be a commutative ring, $\mathfrak{p} \subset A$ a prime ideal, and $\mathfrak{a}, \mathfrak{b} \subset A$ two ideals. We verify the two identities.
+Let $A$ be a commutative ring, $\mathfrak{p} \subset A$ a prime ideal, and $\mathfrak{a}, \mathfrak{b} \subset A$ two ideals. We verify the two identities. 
 
 **1. $(\mathfrak{a} \cdot \mathfrak{b})_{\mathfrak{p}} = \mathfrak{a}_{\mathfrak{p}} \cdot \mathfrak{b}_{\mathfrak{p}}$**
 
