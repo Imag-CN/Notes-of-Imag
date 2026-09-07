@@ -14,7 +14,7 @@ ___
 > The following two problems are taken from exercises in Chapter 9 of [AM].
 
 **Proof:**
-Let $A$ be a commutative ring, $\mathfrak{p} \subset A$ a prime ideal, and $\mathfrak{a}, \mathfrak{b} \subset A$ two ideals. We verify the two identities. 
+Let $A$ be a DVR, $\mathfrak{p} \subset A$ a prime ideal, and $\mathfrak{a}, \mathfrak{b} \subset A$ two ideals. We verify the two identities. 
 
 **1. $(\mathfrak{a} \cdot \mathfrak{b})_{\mathfrak{p}} = \mathfrak{a}_{\mathfrak{p}} \cdot \mathfrak{b}_{\mathfrak{p}}$**
 
@@ -26,9 +26,9 @@ Thus equality holds.
 
 **2. $(\mathfrak{a} : \mathfrak{b})_{\mathfrak{p}} = (\mathfrak{a}_{\mathfrak{p}} : \mathfrak{b}_{\mathfrak{p}})$**
 
-$(\subseteq)$: Take $\dfrac{x}{s} \in (\mathfrak{a} : \mathfrak{b})_{\mathfrak{p}}$ with $x \in (\mathfrak{a} : \mathfrak{b})$, $s \notin \mathfrak{p}$. For any $\dfrac{b}{t} \in \mathfrak{b}_{\mathfrak{p}}$, we have $\dfrac{x}{s} \cdot \dfrac{b}{t} = \dfrac{xb}{st}$. Since $xb \in \mathfrak{a}$, this lies in $\mathfrak{a}_{\mathfrak{p}}$, hence $\dfrac{x}{s} \in (\mathfrak{a}_{\mathfrak{p}} : \mathfrak{b}_{\mathfrak{p}})$.
+$(\subseteq)$: Take $\dfrac{x}{s} \in (\mathfrak{a} : \mathfrak{b})_{\mathfrak{p}}$ with $x \in (\mathfrak{a} : \mathfrak{b})$, $s \notin \mathfrak{p}$. For any $\dfrac{b}{t} \in \mathfrak{b}_{\mathfrak{p}}$, we have $\dfrac{x}{s} \cdot \dfrac{b}{t} = \dfrac{xb}{st}$. Since $xb \in \mathfrak{a}$, $st\not\in \mathfrak{p}$, we have $\dfrac{xb}{st}$ lies in $\mathfrak{a}_{\mathfrak{p}}$, hence $\dfrac{x}{s} \in (\mathfrak{a}_{\mathfrak{p}} : \mathfrak{b}_{\mathfrak{p}})$.
 
-$(\supseteq)$: Take $\dfrac{x}{s} \in (\mathfrak{a}_{\mathfrak{p}} : \mathfrak{b}_{\mathfrak{p}})$. For each $b \in \mathfrak{b}$, consider $\dfrac{x}{s} \cdot \dfrac{b}{1} = \dfrac{xb}{s} \in \mathfrak{a}_{\mathfrak{p}}$, so there exists $u_b \notin \mathfrak{p}$ with $u_b x b \in \mathfrak{a}$. If $\mathfrak{b}$ is finitely generated (as in the proposition's context), take generators $b_1,\dots,b_n$ and let $t = u_{b_1}\cdots u_{b_n} \notin \mathfrak{p}$. Then $t x b_i \in \mathfrak{a}$ for all $i$, so $t x \mathfrak{b} \subseteq \mathfrak{a}$, i.e., $t x \in (\mathfrak{a} : \mathfrak{b})$. Hence $\dfrac{x}{s} = \dfrac{t x}{t s} \in (\mathfrak{a} : \mathfrak{b})_{\mathfrak{p}}$.
+$(\supseteq)$: Take $\dfrac{x}{s} \in (\mathfrak{a}_{\mathfrak{p}} : \mathfrak{b}_{\mathfrak{p}})$. For each $b \in \mathfrak{b}$, consider $\dfrac{x}{s} \cdot \dfrac{b}{1} = \dfrac{xb}{s} \in \mathfrak{a}_{\mathfrak{p}}$, so there exists $u_b \notin \mathfrak{p}$ with $u_b x b \in \mathfrak{a}$. Since $\mathfrak{b}$ is finitely generated (as $A$ is a DVR, DVRs are Noetherian, and every ideal of a Noetherian ring is finitely generated), take generators $b_1,\dots,b_n$ and let $t = u_{b_1}\cdots u_{b_n} \notin \mathfrak{p}$. Then $t x b_i \in \mathfrak{a}$ for all $i$, so $t x \mathfrak{b} \subseteq \mathfrak{a}$, i.e., $t x \in (\mathfrak{a} : \mathfrak{b})$. Hence $\dfrac{x}{s} = \dfrac{t x}{t s} \in (\mathfrak{a} : \mathfrak{b})_{\mathfrak{p}}$.
 
 Thus equality holds.
 
