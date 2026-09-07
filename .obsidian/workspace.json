@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Real Analysis homework/Real Analysis HW6.md",
+                "file": "度量与全序的相似, 不同与统一.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Real Analysis HW6"
+              "title": "度量与全序的相似, 不同与统一"
             }
           }
         ],
@@ -212,8 +212,9 @@
   },
   "active": "676eb87e53521df2",
   "lastOpenFiles": [
-    "Real Analysis homework/Real Analysis HW5.md",
+    "meet/An explicit rational polynomial with associated Galois group S_n.md",
     "Real Analysis homework/Real Analysis HW6.md",
+    "Real Analysis homework/Real Analysis HW5.md",
     "Real Analysis homework/Real Analysis HW10.md",
     "Real Analysis homework/Real Analysis HW13.md",
     "Real Analysis homework/Real Analysis HW12.md",
@@ -238,7 +239,6 @@
     "未命名.md",
     "Dirichlet 核的积分的极限.md",
     "Decay rate of Fourier coefficients.md",
-    "有理逼近.md",
     "attachments/Pasted image 20260518025330.png",
     "attachments/Pasted image 20260518022658.png",
     "Commutative Algebra",
