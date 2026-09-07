@@ -34,4 +34,17 @@ Thus equality holds.
 
 **3. Why "The proposition follows from this by localisation"**
 
-Proposition 5 states that certain properties of ideals (e.g., being primary, being a product, etc.) hold if and only if they hold after localising at every maximal (or prime) ideal. The two equalities above show that the operations of sum, product, and quotient commute with localisation. Therefore, checking these operations locally reduces to checking them in the local rings $A_{\mathfrak{p}}$. When $A$ is a DVR, the structure is simple enough to verify directly. By localising at each prime, the general case follows from the DVR case via these commutation relations.
+In a Dedekind domain, localising at any prime ideal gives a DVR. It is known that every nonzero fractional ideal of a DVR is invertible. The three identities verified above show that the operations of product, sum, and quotient ideal commute with localisation. Consequently, a fractional ideal is invertible globally iff it is invertible at every localisation.
+
+Therefore, for any nonzero fractional ideal of a Dedekind domain, localising at each prime yields an invertible ideal in the corresponding DVR, and by the local-global principle, the original ideal must be invertible.
+___
+
+> [!problem] Problem 2
+> Let $A$ be a Dedekind domain, $S$ a multiplicatively closed subset such that $S^{-1}A$ is not a field.
+> (i) Show that $S^{-1}A$ is a Dedekind domain.
+> (ii) Show that the extension of ideals (and similarly for fractional ideals) induces a surjection from the ideal class group of $A$ to that of $S^{-1}A$.
+
+**Proof:**
+**(i)** A Dedekind domain is Noetherian, integrally closed, and of Krull dimension $\le 1$. Since $A$ is Noetherian, $S^{-1}A$ is Noetherian. Since $A$ is integrally closed in its fraction field $K$, any element $x\in K$ integral over $S^{-1}A$ is also integral over $A$, hence $x\in A\subset S^{-1}A$; thus $S^{-1}A$ is integrally closed. Prime ideals of $S^{-1}A$ correspond bijectively to primes $\mathfrak{p}\subset A$ with $\mathfrak{p}\cap S=\varnothing$. As $A$ is Dedekind, every nonzero such $\mathfrak{p}$ is maximal, so its image in $S^{-1}A$ is also maximal. Hence $\dim S^{-1}A\le 1$. Since $S^{-1}A$ is not a field, it has a nonzero prime ideal, so $\dim S^{-1}A=1$. Therefore $S^{-1}A$ is a Dedekind domain.
+
+**(ii)** Let $\varphi:I(A)\to I(S^{-1}A)$ be the extension map $\mathfrak{a}\mapsto S^{-1}\mathfrak{a}$. This sends principal ideals to principal ideals, hence induces a homomorphism $\overline{\varphi}:\operatorname{Cl}(A)\to\operatorname{Cl}(S^{-1}A)$. To show surjectivity, take any fractional ideal $\mathfrak{b}\subset S^{-1}A$. Its contraction $\mathfrak{a}=\mathfrak{b}\cap A$ is a fractional ideal of $A$, and by standard localization theory we have $\mathfrak{b}=S^{-1}\mathfrak{a}$. Thus every fractional ideal of $S^{-1}A$ is extended from $A$, so $\varphi$ is surjective on fractional ideals. Consequently $\overline{\varphi}$ is surjective on class groups.
