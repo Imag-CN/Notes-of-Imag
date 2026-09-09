@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Number theory homework/Number theory HW1.md",
+                "file": "Algebraic geometry homework/Algebraic geometry HW1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Number theory HW1"
+              "title": "Algebraic geometry HW1"
             }
           }
         ],
@@ -226,9 +226,11 @@
   },
   "active": "2db741372f76a34e",
   "lastOpenFiles": [
+    "Number theory homework/Number theory HW1.md",
+    "Algebraic geometry homework/Algebraic geometry HW1.md",
+    "Algebraic geometry homework",
     "Number theory homework",
     "度量与全序的相似, 不同与统一.md",
-    "Number theory homework/Number theory HW1.md",
     "meet/An explicit rational polynomial with associated Galois group S_n.md",
     "Real Analysis homework/Real Analysis HW6.md",
     "Real Analysis homework/Real Analysis HW5.md",
@@ -270,8 +272,6 @@
     "attachments/Pasted image 20251224222024.png",
     "attachments/Pasted image 20251224221853.png",
     "Topology and geometry homework/未命名",
-    "attachments",
-    "未命名.canvas",
-    "未命名.base"
+    "未命名.canvas"
   ]
 }
