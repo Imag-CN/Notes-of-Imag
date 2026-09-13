@@ -55,6 +55,16 @@ divide both sides by $(x-1)$ yields
 $$
 \sum_{i=0}^{p-1}x^{i}=\prod_{i=1}^{p-1}(x-\zeta_p^i),
 $$
-substitute $x=1$ gives the formula required.
+substitute $x=1$ gives the equation required.
 
-**(2)** 
+**(2)** Since $\zeta_{p}$ is the root of $x^{p}-1$, it is in $B$. For $1\leq i\leq p-1$, we have $1-\zeta_{p}^{i}=(1-\zeta_{p})(1+\zeta_{p}+\dots+\zeta_{p}^{i-1})$, and $1-\zeta_{p}=1-\zeta_{p}^{ij}=(1-\zeta_{p}^{i})(1+\zeta_{p}^{i}+\dots+\zeta_{p}^{i(j-1)})$, where $j$ is the inverse of $i$ in $\mathbb{Z}/p\mathbb{Z}$. Therefore, $(1-\zeta_{p})=(1-\zeta_{p}^{i})$ as ideals in $B$ for $1\leq i\leq p-1$.
+
+Combined with **(a)**, we have:
+$$
+(p) =\prod_{i=1}^{p-1}(1-\zeta_p^i)= (1-\zeta_p)^{p-1}
+$$
+as ideals in $B$.
+
+Since the ramification index is less than or equal to the degree of field extension, the equation above gives the factorization of $(p)$, thus $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
+___
+
