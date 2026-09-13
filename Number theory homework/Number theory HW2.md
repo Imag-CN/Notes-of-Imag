@@ -103,3 +103,22 @@ ___
 >[!problem] Problem 4
 >Let $d$ be a square-free number (which is either positive or negative) such that $d\neq 1$ and $d\equiv 1\pmod{4}$. Give a numerical condition for each (rational) prime $p$ to be split, inert, or ramified in $\mathbb{Q}(\sqrt{d})$.
 
+**Proof:**
+Let $d=4k+1$, then the integral closure of $\mathbb{Z}$ in $\mathbb{Q}(\sqrt{d})$ is $\mathbb{Z}[\dfrac{1+\sqrt{ d }}{2}]\cong \mathbb{Z}[x] / (x^{2}-x-k)$ by HW1 problem 4. Then 
+$$
+\mathbb{Z}[x] / (x^{2}-x-k) / (p)\cong\mathbb{F}_{p}[x]/(x^{2}-x-k).
+$$
+**1.** $p$ is split in $\mathbb{Q}(\sqrt{ d })$ if and only if $x^{2}-x-k$ splits into two distinct factors in $\mathbb{F}_{p}$.
+
+- If $p=2$, then $p$ is split if and only if $2|k$ , i.e. $\dfrac{d-1}{4}$ is even.
+- If $p\neq 2$, then write $x^{2}-x-k=(x-\dfrac{1+\sqrt{ d }}{2})(x-\dfrac{1-\sqrt{ d }}{2})$, the discriminant is $d$. Thus $p$ is split if and only if $d$ is a non-zero square in $\mathbb{F}_{p}$ (i.e. the Legendre symbol $\left( \dfrac{d}{p} \right)=1$ and $p\not\mid d$).
+
+**2.** $p$ is ramified in $\mathbb{Q}(\sqrt{ d })$ if and only if $x^{2}-x-k$ splits into two identical factors in $\mathbb{F}_{p}$.
+
+- If $p=2$, then $p$ is never ramified.
+- If $p\neq 2$, then write $x^{2}-x-k=(x-\dfrac{1+\sqrt{ d }}{2})(x-\dfrac{1-\sqrt{ d }}{2})$, the discriminant is $d$. Thus $p$ is ramified if and only if $d$ is zero in $\mathbb{F}_{p}$ (i.e. $p|d$).
+
+**3.** $p$ is inert in $\mathbb{Q}(\sqrt{ d })$ if and only if $x^{2}-x-k$ is irreducible in $\mathbb{F}_{p}$.
+
+- If $p=2$, then $p$ is inert if and only if $2\not\mid k$ , i.e. $\dfrac{d-1}{4}$ is odd.
+-  If $p\neq 2$, then write $x^{2}-x-k=(x-\dfrac{1+\sqrt{ d }}{2})(x-\dfrac{1-\sqrt{ d }}{2})$. Thus $p$ is inert if and only if $d$ is not a square in $\mathbb{F}_{p}$ (i.e. the Legendre symbol $\left( \dfrac{d}{p} \right)=-1$). 
