@@ -93,6 +93,11 @@ Assume $B = \mathbb{Z}[\zeta_p] + \pi^i B$ for some $i \geq 1$. Take any $b$ in 
 
 **(2)** From class note 4.2 we have $\mathbb{Z}[\zeta_p] \subset B \subset B^* \subset \mathbb{Z}[\zeta_p]^*$. It suffices to find $m$ such that $p^m \mathbb{Z}[\zeta_p]^* \subset \mathbb{Z}[\zeta_p]$.
 
-Take the $\mathbb{Z}$-basis $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$. Note that $\operatorname{Tr}(\zeta_{p}^{i}y)=$.Thus the dual basis is 
+Take the $\mathbb{Z}$-basis $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$. Through direct computation, one can check that 
+$$
+f_{j}= \dfrac{1}{p}\sum_{i=1}^{p-1}\zeta_{p}^{-ij}\cdot \sum_{k=0}^{i-1}\zeta_{p}^{k},\quad j=1,\dots,p-1
+$$is the dual basis of $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$. By class note 4.2, $\{ f_{1},\dots,f_{p-2} \}$ is a basis of $\mathbb{Z}[\zeta_p]^*$.
 
-**(3)** From **(2)**, there exists $m$ such that $p^m B \subset \mathbb{Z}[\zeta_p]$. By Problem 2.(2) $p = u \cdot \pi^{p-1}$ for some unit $u \in B$, so we have $p^m = u^m \cdot \pi^{m(p-1)}$, so $\pi^{m(p-1)} B = p^m B\subset \mathbb{Z}[\zeta_p]$. Now apply **(1)** with $i = m(p-1)$, we get $B = \mathbb{Z}[\zeta_p] + \pi^{m(p-1)} B \subset \mathbb{Z}[\zeta_p] + \mathbb{Z}[\zeta_p] = \mathbb{Z}[\zeta_p]$. Since $Z[\zeta_p] \subset B$, we conclude that $B = \mathbb{Z}[\zeta_p]$.
+Therefore, $\mathbb{Z}[\zeta_p]^*=1/p\,\mathbb{Z}[\zeta_{p}]$, which completes the proof.
+
+**(3)** From **(2)**, there exists $m$ such that $p^m B \subset \mathbb{Z}[\zeta_p]$ (we can actually take $m=1$ by the proof of **(2)**). By Problem 2.(2) $p = u \cdot \pi^{p-1}$ for some unit $u \in B$, so we have $p^m = u^m \cdot \pi^{m(p-1)}$, so $\pi^{m(p-1)} B = p^m B\subset \mathbb{Z}[\zeta_p]$. Now apply **(1)** with $i = m(p-1)$, we get $B = \mathbb{Z}[\zeta_p] + \pi^{m(p-1)} B \subset \mathbb{Z}[\zeta_p] + \mathbb{Z}[\zeta_p] = \mathbb{Z}[\zeta_p]$. Since $Z[\zeta_p] \subset B$, we conclude that $B = \mathbb{Z}[\zeta_p]$.
