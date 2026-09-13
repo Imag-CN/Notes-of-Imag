@@ -65,7 +65,7 @@ $$
 $$
 as ideals in $B$.
 
-Since the ramification index is less than or equal to the degree of field extension (which is $p-1$), the equation above gives the factorization of $(p)$, thus $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
+The fundamental identity forces the equation above to be the factorization of $(p)$, thus $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
 ___
 
 > [!problem] Problem 3
