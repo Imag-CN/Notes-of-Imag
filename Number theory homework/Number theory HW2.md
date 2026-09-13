@@ -68,3 +68,33 @@ as ideals in $B$.
 Since the ramification index is less than or equal to the degree of field extension, the equation above gives the factorization of $(p)$, thus $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
 ___
 
+> [!problem] Problem 3
+> Keep using the notation from Problem 2.
+>
+> (1) Show that for every positive integer $i$,
+> $$
+> B = \mathbb{Z}[\zeta_p] + (1-\zeta_p)^i B.
+> $$
+> (In words: every $b\in B$ can be written as $b=b'+b''$ with $b'\in\mathbb{Z}[\zeta_p]$ and $b''\in(1-\zeta_p)^i B$.)
+>
+> (2) Show that there exists a positive integer $m$ such that
+> $$
+> p^m B \subset \mathbb{Z}[\zeta_p].
+> $$
+>
+> Hint: In proving that $B$ is finite over $A$ in I.3, we introduced the "dual lattice" $M^*$ of a submodule $M\subset L$ using the trace pairing $L\times L\to K$. Similarly, we have
+> $$
+> \mathbb{Z}[\zeta_p]\subset B\subset B^*\subset\mathbb{Z}[\zeta_p]^*,
+> $$
+> which you don't need to reprove (it was done in class). So it suffices to show that there exists $m$ such that
+> $$
+> p^m\mathbb{Z}[\zeta_p]^*\subset\mathbb{Z}[\zeta_p],
+> $$
+> which avoids $B$ and reduces to linear algebra: compute $\mathbb{Z}[\zeta_p]^*$ relative to the basis $\{1,\zeta_p,\dots,\zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$.
+>
+> (Alternatively, one can also prove (2) using the discriminant, which will come later, but the idea is the same — the discriminant roughly measures how far $B^*$ is from $B$.)
+>
+> (3) Conclude from (1) and (2) that $B=\mathbb{Z}[\zeta_p]$.
+
+**Proof:**
+**(1)** 
