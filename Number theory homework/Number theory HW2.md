@@ -57,7 +57,7 @@ $$
 $$
 substitute $x=1$ gives the equation required.
 
-**(2)** Since $\zeta_{p}$ is the root of $x^{p}-1$, it is in $B$. For $1\leq i\leq p-1$, we have $1-\zeta_{p}^{i}=(1-\zeta_{p})(1+\zeta_{p}+\dots+\zeta_{p}^{i-1})$, and $1-\zeta_{p}=1-\zeta_{p}^{ij}=(1-\zeta_{p}^{i})(1+\zeta_{p}^{i}+\dots+\zeta_{p}^{i(j-1)})$, where $j$ is the inverse of $i$ in $\mathbb{Z}/p\mathbb{Z}$. Therefore, $(1-\zeta_{p})=(1-\zeta_{p}^{i})$ as ideals in $B$ for $1\leq i\leq p-1$.
+**(2)** Since $\zeta_{p}$ is the root of $x^{p}-1$, it is in $B$. For $1\leq i\leq p-1$, we have $1-\zeta_{p}^{i}=(1-\zeta_{p})(1+\zeta_{p}+\dots+\zeta_{p}^{i-1})$, and $1-\zeta_{p}=1-\zeta_{p}^{ij}=(1-\zeta_{p}^{i})(1+\zeta_{p}^{i}+\dots+\zeta_{p}^{i(j-1)})$, where $j$ is the inverse of $i$ in $\mathbb{F}_{p}$. Therefore, $(1-\zeta_{p})=(1-\zeta_{p}^{i})$ as ideals in $B$ for $1\leq i\leq p-1$.
 
 Combined with **(a)**, we have:
 $$
@@ -82,29 +82,17 @@ ___
 > p^m B \subset \mathbb{Z}[\zeta_p].
 > $$
 >
-> Hint: In proving that $B$ is finite over $A$ in I.3, we introduced the "dual lattice" $M^*$ of a submodule $M\subset L$ using the trace pairing $L\times L\to K$. Similarly, we have
-> $$
-> \mathbb{Z}[\zeta_p]\subset B\subset B^*\subset\mathbb{Z}[\zeta_p]^*,
-> $$
-> which you don't need to reprove (it was done in class). So it suffices to show that there exists $m$ such that
-> $$
-> p^m\mathbb{Z}[\zeta_p]^*\subset\mathbb{Z}[\zeta_p],
-> $$
-> which avoids $B$ and reduces to linear algebra: compute $\mathbb{Z}[\zeta_p]^*$ relative to the basis $\{1,\zeta_p,\dots,\zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$.
->
-> (Alternatively, one can also prove (2) using the discriminant, which will come later, but the idea is the same — the discriminant roughly measures how far $B^*$ is from $B$.)
->
 > (3) Conclude from (1) and (2) that $B=\mathbb{Z}[\zeta_p]$.
 
 **Proof:**
 **(1)** We prove by induction on $i$. Let $\pi = 1 - \zeta_p$.
 
-For $i = 1$: From Problem 2.(2), we know that $(p) = (\pi)^{p-1}$ as ideals of $B$. Consider the natural map $\phi: \mathbb{Z}[\zeta_p] \to B/\pi B$. Since $\mathbb{Z}[\zeta_p]/\pi \mathbb{Z}[\zeta_p] \cong F_p$ and $B/\pi B \cong F_p$ (both have dimension $1$ over $F_p$), the map is surjective. Hence $B = \mathbb{Z}[\zeta_p] + \pi B$.
+For $i = 1$: From Problem 2.(2), we know that $(p) = (\pi)^{p-1}$ as ideals of $B$. Consider the natural map $\phi: \mathbb{Z}[\zeta_p] \to B/\pi B$. Since $\mathbb{Z}[\zeta_p]/\pi \mathbb{Z}[\zeta_p] \cong \mathbb{F}_p$ and $B/\pi B \cong \mathbb{F}_p$ (both have dimension $1$ over $F_p$), the map is surjective. Hence $B = \mathbb{Z}[\zeta_p] + \pi B$.
 
-Assume $B = \mathbb{Z}[\zeta_p] + \pi^i B$ for some $i \geq 1$. Take any $b$ in $B$. By induction hypothesis,$b = z + \pi^i b_0$ for some $z \in \mathbb{Z}[\zeta_p]$ and $b_0 \in B$. By the case $i=1$, $b_0 = z_0 + pi b_1$ for some $z_0$ in $\mathbb{Z}[\zeta_p]$ and $b_1 \in B$. Then $b = z + \pi^i(z_0 + \pi b_1) = (z + \pi^i z_0) + \pi^{i+1} b_1 \in \mathbb{Z}[\zeta_p] + \pi^{i+1} B$. Thus $B = \mathbb{Z}[\zeta_p] + \pi^{i+1} B$. By induction, the statement holds for all positive integers $i$.
+Assume $B = \mathbb{Z}[\zeta_p] + \pi^i B$ for some $i \geq 1$. Take any $b$ in $B$. By induction hypothesis, $b = z + \pi^i b_0$ for some $z \in \mathbb{Z}[\zeta_p]$ and $b_0 \in B$. By the case $i=1$, $b_0 = z_0 + \pi b_1$ for some $z_0$ in $\mathbb{Z}[\zeta_p]$ and $b_1 \in B$. Then $b = z + \pi^i(z_0 + \pi b_1) = (z + \pi^i z_0) + \pi^{i+1} b_1 \in \mathbb{Z}[\zeta_p] + \pi^{i+1} B$. Thus $B = \mathbb{Z}[\zeta_p] + \pi^{i+1} B$. By induction, the statement holds for all positive integers $i$.
 
-(2) We use the dual lattice argument. Recall that for a Z-submodule M of K, M^* = {x in K : Tr(xM) subset Z}. From class we have Z[zeta_p] subset B subset B^* subset Z[zeta_p]^*. It suffices to find m such that p^m Z[zeta_p]^* subset Z[zeta_p].
+**(2)** Recall that for a $\mathbb{Z}$-submodule $M$ of $K$, $M^* = \{ x \in K : \operatorname{Tr}(xM) \subset Z\}$. From class we have $\mathbb{Z}[\zeta_p] \subset B \subset B^* \subset \mathbb{Z}[\zeta_p]^*$. It suffices to find $m$ such that $p^m \mathbb{Z}[\zeta_p]^* \subset \mathbb{Z}[\zeta_p]$.
 
 Take the Z-basis {1, zeta_p, ..., zeta_p^{p-2}} of Z[zeta_p]. The discriminant of Z[zeta_p] is Disc(Z[zeta_p]) = +/- p^{p-2}. The index [Z[zeta_p]^* : Z[zeta_p]] = |Disc| = p^{p-2}. Therefore p^{p-2} Z[zeta_p]^* subset Z[zeta_p]. Taking m = p-2, we get p^m B subset p^m Z[zeta_p]^* subset Z[zeta_p].
 
-(3) From (2), there exists m such that p^m B subset Z[zeta_p]. Since p = u * pi^{p-1} for some unit u in B, we have p^m = u^m * pi^{m(p-1)}, so pi^{m(p-1)} B subset p^m B subset Z[zeta_p]. Now apply (1) with i = m(p-1): B = Z[zeta_p] + pi^{m(p-1)} B subset Z[zeta_p] + Z[zeta_p] = Z[zeta_p]. Since Z[zeta_p] subset B always holds, we conclude B = Z[zeta_p].
+**(3)** From **(2)**, there exists $m$ such that $p^m B \subset \mathbb{Z}[\zeta_p]$. By Problem 2.(2) $p = u \cdot \pi^{p-1}$ for some unit $u \in B$, so we have $p^m = u^m \cdot \pi^{m(p-1)}$, so $\pi^{m(p-1)} B = p^m B\subset \mathbb{Z}[\zeta_p]$. Now apply **(1)** with $i = m(p-1)$, we get $B = \mathbb{Z}[\zeta_p] + \pi^{m(p-1)} B \subset \mathbb{Z}[\zeta_p] + \mathbb{Z}[\zeta_p] = \mathbb{Z}[\zeta_p]$. Since $Z[\zeta_p] \subset B$, we conclude that $B = \mathbb{Z}[\zeta_p]$.
