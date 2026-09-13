@@ -25,7 +25,7 @@ Take any discrete valuation $v$ on $K$ with $v(A) \ge 0$. Set $\mathfrak{p} = \m
 
 Now observe that $v$ gives rise to a valuation ring $R_v = \{x \in K : v(x) \ge 0\}$. Since $v(A) \ge 0$, we have $A \subset R_v$, and the maximal ideal of $R_v$ is $\mathfrak{m}_v = \{x \in K : v(x) > 0\}$. By construction, $\mathfrak{p} = A \cap \mathfrak{m}_v$.
 
-Because $A_{\mathfrak{p}}$ is the smallest DVR containing $A$ with maximal ideal extending $\mathfrak{p}$, it must coincide with $R_v$ as subrings of $K$. Consequently, their normalized valuations agree up to scaling. As both are normalized to have value group $\mathbb{Z}$, they are identical: $v = v_{\mathfrak{p}}$.
+Because $A_{\mathfrak{p}}$ is the smallest DVR containing $A$ with maximal ideal extending $\mathfrak{p}$, it must coincide with $R_v$ as subrings of $K$. Consequently, their normalized valuations agree, thus they are identical: $v = v_{\mathfrak{p}}$.
 
 Thus $\Phi(\Psi(v)) = \Phi(\mathfrak{p}) = v_{\mathfrak{p}} = v$.
 ___
