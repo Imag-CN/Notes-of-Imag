@@ -65,7 +65,7 @@ $$
 $$
 as ideals in $B$.
 
-Since the ramification index is less than or equal to the degree of field extension, the equation above gives the factorization of $(p)$, thus $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
+Since the ramification index is less than or equal to the degree of field extension (which is $p-1$), the equation above gives the factorization of $(p)$, thus $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
 ___
 
 > [!problem] Problem 3
@@ -91,8 +91,8 @@ For $i = 1$: From Problem 2.(2), we know that $(p) = (\pi)^{p-1}$ as ideals of $
 
 Assume $B = \mathbb{Z}[\zeta_p] + \pi^i B$ for some $i \geq 1$. Take any $b$ in $B$. By induction hypothesis, $b = z + \pi^i b_0$ for some $z \in \mathbb{Z}[\zeta_p]$ and $b_0 \in B$. By the case $i=1$, $b_0 = z_0 + \pi b_1$ for some $z_0$ in $\mathbb{Z}[\zeta_p]$ and $b_1 \in B$. Then $b = z + \pi^i(z_0 + \pi b_1) = (z + \pi^i z_0) + \pi^{i+1} b_1 \in \mathbb{Z}[\zeta_p] + \pi^{i+1} B$. Thus $B = \mathbb{Z}[\zeta_p] + \pi^{i+1} B$. By induction, the statement holds for all positive integers $i$.
 
-**(2)** Recall that for a $\mathbb{Z}$-submodule $M$ of $K$, $M^* = \{ x \in K : \operatorname{Tr}(xM) \subset Z\}$. From class we have $\mathbb{Z}[\zeta_p] \subset B \subset B^* \subset \mathbb{Z}[\zeta_p]^*$. It suffices to find $m$ such that $p^m \mathbb{Z}[\zeta_p]^* \subset \mathbb{Z}[\zeta_p]$.
+**(2)** From class note 4.2 we have $\mathbb{Z}[\zeta_p] \subset B \subset B^* \subset \mathbb{Z}[\zeta_p]^*$. It suffices to find $m$ such that $p^m \mathbb{Z}[\zeta_p]^* \subset \mathbb{Z}[\zeta_p]$.
 
-Take the Z-basis {1, zeta_p, ..., zeta_p^{p-2}} of Z[zeta_p]. The discriminant of Z[zeta_p] is Disc(Z[zeta_p]) = +/- p^{p-2}. The index [Z[zeta_p]^* : Z[zeta_p]] = |Disc| = p^{p-2}. Therefore p^{p-2} Z[zeta_p]^* subset Z[zeta_p]. Taking m = p-2, we get p^m B subset p^m Z[zeta_p]^* subset Z[zeta_p].
+Take the $\mathbb{Z}$-basis $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$. $\operatorname{Tr}(\zeta_{p}^{i}y)=$.Thus the dual basis is 
 
 **(3)** From **(2)**, there exists $m$ such that $p^m B \subset \mathbb{Z}[\zeta_p]$. By Problem 2.(2) $p = u \cdot \pi^{p-1}$ for some unit $u \in B$, so we have $p^m = u^m \cdot \pi^{m(p-1)}$, so $\pi^{m(p-1)} B = p^m B\subset \mathbb{Z}[\zeta_p]$. Now apply **(1)** with $i = m(p-1)$, we get $B = \mathbb{Z}[\zeta_p] + \pi^{m(p-1)} B \subset \mathbb{Z}[\zeta_p] + \mathbb{Z}[\zeta_p] = \mathbb{Z}[\zeta_p]$. Since $Z[\zeta_p] \subset B$, we conclude that $B = \mathbb{Z}[\zeta_p]$.
