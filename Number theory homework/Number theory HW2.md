@@ -2,7 +2,7 @@ ___
 *Using DeepSeek to help write markdown problem statements, provided ideas for problem 2 and 3, and enhance writing conventions.*
 ___
 
-> [!problem]
+> [!problem] Problem 1
 > Let $A$ be a Dedekind domain and $K$ its fraction field. Show that the following two sets are in bijection
 > (1) the set of nonzero prime ideals $\mathfrak{p}$ of $A$
 > (2) the set of discrete valuations $v$ on $K$ which have nonnegative values on $A$
@@ -25,8 +25,36 @@ Take any discrete valuation $v$ on $K$ with $v(A) \ge 0$. Set $\mathfrak{p} = \m
 
 Now observe that $v$ gives rise to a valuation ring $R_v = \{x \in K : v(x) \ge 0\}$. Since $v(A) \ge 0$, we have $A \subset R_v$, and the maximal ideal of $R_v$ is $\mathfrak{m}_v = \{x \in K : v(x) > 0\}$. By construction, $\mathfrak{p} = A \cap \mathfrak{m}_v$.
 
-Because $A_{\mathfrak{p}}$ is the smallest DVR containing $A$ with maximal ideal extending $\mathfrak{p}$, it must coincide with $R_v$ as subrings of $K$. Consequently, their normalized valuations agree, thus they are identical: $v = v_{\mathfrak{p}}$.
+Because $A_{\mathfrak{p}}$ is the smallest DVR containing $A$ with maximal ideal extending $\mathfrak{p}$, it must coincide with $R_v$ as subrings of $K$. Consequently, their valuations agree: $v = v_{\mathfrak{p}}$.
 
 Thus $\Phi(\Psi(v)) = \Phi(\mathfrak{p}) = v_{\mathfrak{p}} = v$.
 ___
 
+> [!problem] Problem 2
+> Let $K=\mathbb{Q}$, $L=\mathbb{Q}(\zeta_p)$, where $\zeta_p$ is a primitive $p$-th root of unity. Set $A=\mathbb{Z}$. Let $B$ be the integral closure of $A$ in $L$.
+>
+> Prove the following:
+>
+> (1)
+> $$
+> p = \prod_{i=1}^{p-1}(1-\zeta_p^i)
+> $$
+> (2)
+> Show that
+> $$
+> (p) = (1-\zeta_p)^{p-1}
+> $$
+> as ideals of $B$. From this deduce that $(p)$ is totally ramified in $\mathbb{Q}(\zeta_p)/\mathbb{Q}$.
+
+**Proof:**
+**(1)** Note that
+$$
+x^{p}-1=\prod_{i=1}^{p}(x-\zeta_p^i),
+$$
+divide both sides by $(x-1)$ yields
+$$
+\sum_{i=0}^{p-1}x^{i}=\prod_{i=1}^{p-1}(x-\zeta_p^i),
+$$
+substitute $x=1$ gives the formula required.
+
+**(2)** 
