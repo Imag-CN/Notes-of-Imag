@@ -93,6 +93,6 @@ Assume $B = \mathbb{Z}[\zeta_p] + \pi^i B$ for some $i \geq 1$. Take any $b$ in 
 
 **(2)** From class note 4.2 we have $\mathbb{Z}[\zeta_p] \subset B \subset B^* \subset \mathbb{Z}[\zeta_p]^*$. It suffices to find $m$ such that $p^m \mathbb{Z}[\zeta_p]^* \subset \mathbb{Z}[\zeta_p]$.
 
-Take the $\mathbb{Z}$-basis $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$. $\operatorname{Tr}(\zeta_{p}^{i}y)=$.Thus the dual basis is 
+Take the $\mathbb{Z}$-basis $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$. Note that $\operatorname{Tr}(\zeta_{p}^{i}y)=$.Thus the dual basis is 
 
 **(3)** From **(2)**, there exists $m$ such that $p^m B \subset \mathbb{Z}[\zeta_p]$. By Problem 2.(2) $p = u \cdot \pi^{p-1}$ for some unit $u \in B$, so we have $p^m = u^m \cdot \pi^{m(p-1)}$, so $\pi^{m(p-1)} B = p^m B\subset \mathbb{Z}[\zeta_p]$. Now apply **(1)** with $i = m(p-1)$, we get $B = \mathbb{Z}[\zeta_p] + \pi^{m(p-1)} B \subset \mathbb{Z}[\zeta_p] + \mathbb{Z}[\zeta_p] = \mathbb{Z}[\zeta_p]$. Since $Z[\zeta_p] \subset B$, we conclude that $B = \mathbb{Z}[\zeta_p]$.
