@@ -93,7 +93,7 @@ Assume $B = \mathbb{Z}[\zeta_p] + \pi^i B$ for some $i \geq 1$. Take any $b$ in 
 
 **(2)** From class note 4.2 we have $\mathbb{Z}[\zeta_p] \subset B \subset B^* \subset \mathbb{Z}[\zeta_p]^*$. It suffices to find $m$ such that $p^m \mathbb{Z}[\zeta_p]^* \subset \mathbb{Z}[\zeta_p]$.
 
-Take the $\mathbb{Z}$-basis $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$ of $\mathbb{Z}[\zeta_p]$. Through direct computation, one can check that 
+Take the $\mathbb{Z}$-basis $\{\zeta_p, ..., \zeta_p^{p-1}\}$ of $\mathbb{Z}[\zeta_p]$. Through direct computation, one can check that 
 $$
 f_{j}= \dfrac{1}{p}\sum_{i=1}^{p-1}\zeta_{p}^{-ij}\cdot \sum_{k=0}^{i-1}\zeta_{p}^{k},\quad j=1,\dots,p-1
 $$is the dual basis of $\{1, \zeta_p, ..., \zeta_p^{p-2}\}$. By class note 4.2, $\{ f_{1},\dots,f_{p-2} \}$ is a basis of $\mathbb{Z}[\zeta_p]^*$.
