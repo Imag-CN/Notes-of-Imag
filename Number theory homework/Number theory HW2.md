@@ -121,4 +121,4 @@ $$
 **3.** $p$ is inert in $\mathbb{Q}(\sqrt{ d })$ if and only if $x^{2}-x-k$ is irreducible in $\mathbb{F}_{p}$.
 
 - If $p=2$, then $p$ is inert if and only if $2\not\mid k$ , i.e. $\dfrac{d-1}{4}$ is odd.
--  If $p\neq 2$, then write $x^{2}-x-k=(x-\dfrac{1+\sqrt{ d }}{2})(x-\dfrac{1-\sqrt{ d }}{2})$. Thus $p$ is inert if and only if $d$ is not a square in $\mathbb{F}_{p}$ (i.e. the Legendre symbol $\left( \dfrac{d}{p} \right)=-1$). 
+-  If $p\neq 2$, then write $x^{2}-x-k=(x-\dfrac{1+\sqrt{ d }}{2})(x-\dfrac{1-\sqrt{ d }}{2})$. Thus $p$ is inert if and only if $d$ is not a square in $\mathbb{F}_{p}$ (i.e. the Legendre symbol $\left( \dfrac{d}{p} \right)=-1$).
