@@ -38,3 +38,52 @@ ___
 >
 > (d) With the hypothesis of (c), conclude that $\Gamma(X_f, \mathcal{O}_{X_f}) \cong A_f$.
 
+**Proof:**
+Define $X_f = \{x \in X \mid f_x \notin \mathfrak{m}_x \subseteq \mathcal{O}_x\}$.
+
+**(a)** $x \in U \cap X_f$ iff $x \in U$ and $f_x \notin \mathfrak{m}_x$. Since $U$ is affine, take $x$ as a prime $\mathfrak{p} \in \text{Spec } B$ with maximal ideal $\mathfrak{m} = \mathfrak{p}B_\mathfrak{p}$. $\bar{f} \in \mathfrak{m}$ iff $\bar{f} \in \mathfrak{p}$, so $U \cap X_f = D(\bar{f})$. Since a subset of a topological space is open iff it is open in every element of an open cover, $X_f$ is open in $X$.
+
+**(b)** Assume $X$ quasi-compact. Let $U_i = \text{Spec } A_i$ be a finite affine cover. Restriction of $a$ to $U_i \cap X_f = \text{Spec } (A_i)_f$ is zero, so $f^{n_i}a = 0$ in $A_i$ for some $n_i$. Choose $n > n_i$ for all $i$. Then $f^n a = 0$ on each $\text{Spec } A_i$. Since $X = \bigcup \text{Spec } A_i$ and $\mathcal{O}_X$ is a sheaf, $f^n a = 0$.
+
+**(c)** Let $U_i = \text{Spec } A_i$. $b|_{U_i \cap U_f} = \frac{b_i}{f^{n_i}}$ for each $i$. By finiteness choose common $n$ with $b_i \in A_i$ s.t. $f^n b|_{U_i \cap X_f} = b_i$. On $U_{ij} := U_i \cap U_j$ (quasi-compact), $b_i - b_j$ restricts to zero on $U_{ij} \cap X_f$, so by (b) $\exists m_{ij}$ s.t. $f^{m_{ij}}(b_i - b_j) = 0$. Choose common $m$. Then $f^m b_i$ agree on intersections and lift to global $c \in \Gamma(X, \mathcal{O}_X)$. $c - f^{n+m}b$ restricts to zero on $X_f$, so $c = f^{n+m}b$ on $X_f$. Hence $f^{n+m}b$ is restriction of $c$.
+
+**(d)** Morphism $A_f \to \Gamma(X_f, \mathcal{O}_{X_f})$. If $\frac{a}{f^n}$ in kernel then $a|_{X_f} = 0$, by (b) $f^m a = 0$ so $\frac{a}{f^n} = 0$ (injective). For any $b \in \Gamma(X_f, \mathcal{O}_{X_f})$, by (c) $\exists m, c \in A$ s.t. $f^m b = c|_{X_f}$, so $\frac{c}{f^m} \mapsto b$ (surjective). Thus $\Gamma(X_f, \mathcal{O}_{X_f}) \cong A_f$.
+___
+
+> [!problem] [HAR] II.2.17
+> A Criterion for Affineness.
+>
+> (a) Let $f: X \to Y$ be a morphism of schemes, and suppose that $Y$ can be covered by open subsets $U_i$, such that for each $i$, the induced map $f^{-1}(U_i) \to U_i$ is an isomorphism. Then $f$ is an isomorphism.
+>
+> (b) A scheme $X$ is affine if and only if there is a finite set of elements $f_1, \dots, f_r \in A = \Gamma(X, \mathcal{O}_X)$, such that the open subsets $X_{f_i}$ are affine, and $f_1, \dots, f_r$ generate the unit ideal in $A$. 
+
+**Proof:**
+**(a)** Let $U_i$ cover $Y$ with $f^{-1}(U_i) \cong U_i$. $f$ is a homeomorphism since $V = \bigcup (V \cap f^{-1}(U_i))$ is open for any $V \subset X$. Stalks $f_p: \mathcal{O}_{Y,f(p)} \to \mathcal{O}_{X,p}$ are isomorphisms via $f^{-1}(U_i) \cong U_i$. Gluing gives an isomorphism of sheaves, so $f$ is an isomorphism.
+
+**(b)** If $X$ affine take $f_1=1$. Conversely, let $f_1,\dots,f_r \in A=\Gamma(X,\mathcal{O}_X)$ generate $1$ with $X_{f_i}$ affine. Consider $f: X \to \text{Spec } A$. $D(f_i) = \text{Spec } A_{f_i}$ cover $\text{Spec } A$; pre-images are $X_{f_i} \cong \text{Spec } A_{f_i}$ (by 2.16d). Restrict to $\varphi_i: \text{Spec } A_i \to \text{Spec } A_{f_i}$ (isomorphism by Ex. 2.4).
+
+Injectivity of $\varphi_i$: $\frac{a}{f_i^n} \in A_{f_i}$ maps to $0$ on $X_{f_i} \implies \frac{a}{f_i^n}=0$ on intersections $\implies f_j^{n_j}a=0$ in $A_j$. Common $m$ gives $f_i^m a=0$, so $\frac{a}{f_i^n}=0$.
+
+Surjectivity of $\varphi_i$: For $a \in A_i$, on $X_{f_i f_j}$ write $a|_{X_{f_i f_j}} = \frac{b_j}{f_j^{n_i}}$. Finitely many intersections $\implies$ common $n$. On triple intersections $f_k^m(b_j-b_k)=0$. Common $m$ gives $f_i^m b_j$ agreeing on intersections, lifting to global $d$. Restriction of $d$ to $X_{f_i}$ is $f_i^{n+m}a$, so $\frac{d}{f_i^{n+m}} \mapsto a$. By (a), $f$ is an isomorphism, so $X$ is affine.
+___
+
+> [!problem] [GOR] 3.6
+>Let $p$ be a prime number, and let $X$ be a scheme of characteristic $p$ (Exercise 3.5). Show that there exists a unique morphism $\text{Frob}_X = (f, f^\sharp): X \to X$ of schemes such that $f = \text{id}_X$ and that for every open subset $U \subseteq X$, $f^\sharp_U$ is given by the ring homomorphism $\Gamma(U, \mathcal{O}_X) \to \Gamma(U, \mathcal{O}_X), a \mapsto a^p$.
+>
+> Give an example of a scheme $X$, such that the morphism $\text{Frob}_X$ induces an isomorphism on the global sections $\Gamma(X, \mathcal{O}_X)$ without being an isomorphism itself.
+>
+> The morphism $\text{Frob}_X$ is called the *absolute Frobenius morphism* of $X$.
+
+**Proof:**
+Define $\text{Frob}_X = (\text{id}_X, f^\sharp)$ where for each open $U \subseteq X$,
+$$
+f^\sharp_U: \Gamma(U, \mathcal{O}_X) \to \Gamma(U, \mathcal{O}_X), \quad a \mapsto a^p.
+$$
+
+In characteristic $p$, $(a+b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$, so $f^\sharp_U$ is a ring homomorphism. It commutes with restrictions because restriction maps are ring homs and $(a|_V)^p = (a^p)|_V$. Hence $f^\sharp$ is a sheaf morphism, and $(\text{id}_X, f^\sharp)$ is a scheme morphism. Uniqueness follows because $f = \text{id}_X$ is fixed and $f^\sharp$ is forced by $a \mapsto a^p$ on every affine open.
+
+**Example:**
+Let $X = \mathbb{P}^1_k$ where $k = \overline{\mathbb{F}}_p$.
+
+- $\Gamma(X, \mathcal{O}_X) = k$, and $a \mapsto a^p$ is an automorphism of $k$ since $k$ is perfect.
+- On the affine open $U = \text{Spec } k[x]$, $\text{Frob}_X$ induces $k[x] \to k[x]$, $x \mapsto x^p$. This map is not surjective (its image is $k[x^p]$), so it is not an isomorphism of rings. Hence $\text{Frob}_X$ is not an isomorphism of schemes.
