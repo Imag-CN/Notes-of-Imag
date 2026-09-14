@@ -18,7 +18,8 @@ For a circle of $n$ boxes, consider whether boxes $n$ and $1$ are covered by a s
  
 Therefore, $L_n = F_{n-1} + F_{n+1}$ for $n \ge 1$.
 
-**(b)** 
+**(b)** For a circle of $m+n$ boxes, consider whether boxes $n$ and $1$ are covered by a single domino:
+
 
 **(c)** We do induction on $n$:
 - If $n=1$, then $F_{2n}=F_{n}L_{n}=1$;
