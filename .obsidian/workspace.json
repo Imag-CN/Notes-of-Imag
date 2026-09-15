@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic combinatorics homework/Algebraic combinatorics.md",
+                "file": "Algebraic geometry homework/Algebraic geometry HW2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebraic combinatorics"
+              "title": "Algebraic geometry HW2"
             }
           }
         ],
@@ -226,8 +226,8 @@
   },
   "active": "2db741372f76a34e",
   "lastOpenFiles": [
+    "Algebraic combinatorics homework/Algebraic combinatorics HW1.md",
     "Algebraic geometry homework/Algebraic geometry HW2.md",
-    "Algebraic combinatorics homework/Algebraic combinatorics.md",
     "Algebraic combinatorics homework",
     "Algebraic geometry homework/Algebraic geometry HW1.md",
     "Number theory homework/Number theory HW2.md",

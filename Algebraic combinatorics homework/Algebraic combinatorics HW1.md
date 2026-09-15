@@ -80,7 +80,8 @@ $$
 We show these two generating functions are equal:
 $$
 \prod_{m \ge 1} (1 + x^m) = \prod_{m \ge 1} \frac{1 - x^{2m}}{1 - x^m}= \dfrac{\prod_{m \ge 1}(1-x^{2m})}{\prod_{k \ge 1} (1 - x^{2k})\prod_{k \ge 1} (1 - x^{2k})}=\prod_{k \ge 1} \frac{1}{1 - x^{2k-1}}
-$$Therefore $p_{\text{distinct}}(n) = p_{\text{odd}}(n)$ for all $n \ge 0$.
+$$
+Therefore $p_{\text{distinct}}(n) = p_{\text{odd}}(n)$ for all $n \ge 0$.
 ___
 
 > [!problem] 2.2
@@ -212,9 +213,95 @@ Hence $[u^k]F(x,u)=x^kC(x)^k$, and $f_{n,k}=[x^{n-k}]C(x)^k$. Using the known co
 $$
 f_{n,k}=\frac{k}{n}\binom{2n-k-1}{n-k}.
 $$
-This simplifies to
+>[!error]
+>The formula given is incorrect. It is even not necessarily an integer (check $n=5$, $k=4$).
+
+___
+
+> [!problem] 3.4
+>Construct a bijection between non-decreasing parking functions of size $n$ and Dyck paths of length $n$.
+
+**Proof:**
+Map a non-decreasing parking function $(a_1,\dots,a_n)$ to a Dyck path of semilength $n$ as follows: for $i=1,\dots,n$, place the $i$-th $D$ at position $i+a_i$ in a sequence of $2n$ steps, and fill all other positions with $U$. The result is a Dyck path because $a_i\leq i$ ensures the path never dips below $0$. Conversely, given a Dyck path, let $a_i$ be the number of $U$'s before the $i$-th $D$ minus $(i-1)$. This gives a bijection.
+___
+
+> [!problem] 3.5
+> Let $f$ be a parking function of size $n$. Let $p_i$ be the spot where car $i$ parks. The displacement $d_i$ of car $i$ is $p_i - f(i)$ and the displacement of $f$ is $\sum_{i=1}^n d_i$. How many parking functions have displacement $0$? What is the maximal displacement? Can we read the displacement on the labelled Dyck path?
+
+**Proof:**
+**1. Displacement 0:** Only $(1,2,\dots,n)$. So the number is $1$.
+
+**2. Max displacement:** Achieved by $(1,1,\dots,1)$. Cars park at $1,2,\dots,n$, giving displacement $\sum_{i=1}^{n}(i-1)=\frac{n(n-1)}{2}$.
+
+**3. On labelled Dyck path:** In the standard bijection, the height before the $i$-th down step equals the displacement $d_i$. Hence total displacement $=$ sum of these heights $=$ area under the Dyck path.
+___
+
+> [!problem] 4.1
+> An $r$-parking function of length $n$ may be defined as a sequence $(a_1, ..., a_n)$ of positive integers whose increasing rearrangement $b_1 \le ... \le b_n$ satisfies $b_i \le 1 + (i - 1)r$.
+> 
+> - Show that the parking functions defined in class correspond to the case $r = 1$.
+> - Given an $r$-parking function, the parking procedure goes as follows: we now have $rn$ cars $C_1, \dots, C_{rn}$ and $rn$ spaces $1, 2, ..., rn$. We consider preferences and cars $C_{r(i-1)+1}, ..., C_{ri}$ all prefer spot $a_i$. The cars use the same parking algorithm as in class. Prove that the number of $r$-parking functions is $(rn + 1)^{n-1}$.
+
+**Proof:**
+**Case $r = 1$:**
+
+When $r = 1$, the condition becomes: increasing rearrangement $b_1 \le \cdots \le b_n$ satisfies $b_i \le 1 + (i-1)\cdot 1 = i$. This is exactly the definition of a classical parking function: $b_i \le i$ for all $i$.
+
+**Counting $r$-parking functions:**
+
+Consider a circle with $rn+1$ spots labeled $0,1,\dots,rn$. Spots $1,\dots,rn$ are real parking spots; spot $0$ is a "phantom" spot that indicates failure. There are $rn$ cars, grouped into $n$ blocks of $r$ cars each. Block $i$ (cars $C_{r(i-1)+1},\dots,C_{ri}$) all prefer spot $a_i$.
+
+Cars arrive in order $C_1,\dots,C_{rn}$. Each car tries its preferred spot; if taken, it moves forward (increasing spot number) until finding an empty spot. If a car reaches spot $rn$ and it is taken, it wraps around to spot $0$ (the phantom spot). If any car parks at $0$, the configuration fails.
+
+Choose an arbitrary starting point on the circle. For any sequence $(a_1,\dots,a_n)$ with $1 \le a_i \le rn+1$ (allowing $a_i = rn+1$ to mean preference for spot $0$), run the algorithm. Exactly one rotation of the circle will make all cars park successfully (none hit spot $0$). This is the same cyclic symmetry argument as for ordinary parking functions: among the $rn+1$ rotations, exactly one yields a valid parking outcome.
+
+There are $(rn+1)^n$ sequences $(a_1,\dots,a_n)$ with entries in $\{1,\dots,rn+1\}$. By the cyclic symmetry, exactly $1/(rn+1)$ of them are valid $r$-parking functions. Thus:
+
 $$
-f_{n,k}=\frac1k\binom{n}{k}\binom{n}{k-1}.
+\text{Number of } r\text{-parking functions} = \frac{(rn+1)^n}{rn+1} = (rn+1)^{n-1}.
 $$
 ___
 
+> [!problem] 4.2
+> Prove that the Prüfer code gives a bijection between labelled trees with $n$ vertices and words of length $n-2$ in $\{1,\dots,n\}$.
+
+**Proof:**  
+To yield the Prüfer code of a tree: while more than two vertices remain, delete the leaf with smallest label and record its neighbour.
+
+The inverse reconstructs the tree: given a word $(p_1,\dots,p_{n-2})$, let $S=[n]$. For $i=1,\dots,n-2$, let $v$ be the smallest element of $S$ not appearing in $(p_i,\dots,p_{n-2})$; add edge $(v,p_i)$ and remove $v$ from $S$. Finally join the two remaining vertices.
+
+Both maps are deterministic inverses, hence a bijection.
+___
+
+> [!problem] 4.3
+> Let $T_n$ be the number of rooted labeled trees with $n$ vertices (i.e. with one chosen vertex called the root) and let
+> $$
+> T(x) = \sum_{n \ge 1} T_n \frac{x^n}{n!}.
+> $$
+> Show that
+> $$
+> T(x) = x \exp(T(x)).
+> $$
+
+**Proof:**
+Any rooted labeled tree can be uniquely decomposed as: a root vertex (labeled) $+$ a set of subtrees rooted at its children.
+
+The children’s subtrees are:
+  - themselves rooted labeled trees;
+  - their vertex sets partition the remaining $n-1$ labels (excluding the root);
+  - they are unordered — so we use the “set” construction in labeled combinatorics.
+
+In exponential generating functions (EGFs), the class “set of structures from class $\mathcal{T}$” has EGF:  
+$$ \exp(T(x)) = \sum_{k \ge 0} \frac{T(x)^k}{k!} $$  
+This is because:
+- $T(x)^k$: sequence of $k$ labeled structures (ordered);
+- divide by $k!$: to account for unordered sets (since labels are already accounted for in EGF).
+
+So, the full class of rooted labeled trees is:
+
+Root (EGF: $x$) $×$ Set of subtrees (EGF: $\exp(T(x))$)
+
+Therefore, by labeled product rule (since root and subtrees have disjoint labels):
+$$
+T(x) = x \cdot \exp(T(x))
+$$
