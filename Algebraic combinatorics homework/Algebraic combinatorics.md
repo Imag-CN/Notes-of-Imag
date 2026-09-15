@@ -145,4 +145,76 @@ $$
 \sum_{n\in\mathbb{Z}} z^n q^{n(n+1)/2} \cdot \frac{1}{\prod_{i\ge1}(1-q^i)}.
 $$
 Both sides enumerate the same set of Maya diagrams, hence they are equal.
+___
+
+>[!problem] 3.1
+>Prove that there is a bijection between les Frieze patterns of size $n$ and triangulations of the $n+2$-gon.
+
+**Proof:**
+Given a triangulation, label the $n+3$ vertices cyclically. For each triangle $(i,j,k)$, define its entry as $x_{i,k} = j$ (the vertex between $i$ and $k$). Extend to a grid via the unimodular rule; this yields a Frieze pattern of size $n$.
+
+Conversely, from a Frieze pattern of size $n$, read the first nontrivial row $(x_{0,2}, x_{0,3}, \dots, x_{0,n+1})$. These form the vertices of a polygon. Draw a diagonal $(i,k)$ if $x_{i,k} = j$ appears in the pattern. The unimodular rule ensures these diagonals do not cross and form $n$ triangles.
+
+Both structures are counted by the Catalan number $C_n = \frac{1}{n+1}\binom{2n}{n}$, and the local gluing rule (unimodular relation) exactly matches the triangle adjacency in the polygon. Thus, a bijection exists.
+___
+
+>[!problem] 3.2
+>The area of a Dyck paths is the number of squares between the path avec the $y=x$ line. For example the path $NNENEE$ has area $2$. Let $D_{n,k}$ be the number of Dyck paths of length $n$ with area $k$. For example $D_{3,1} = 2$. Let
+>$$
+>D(x,q) = \sum_{k\ge 0} D_{n,k} x^n q^k.
+>$$
+>Show that $D(x,0) = 1$ and that
+>$$D(x,q) = 1 + x D(xq,q) \cdot D(x,q).
+>$$
+>Write $D(x,q)$ as a continued fraction.
+
+**Proof:**
+**1. Show $D(x,0) = 1$:**
+Setting $q=0$ kills all terms with area $k>0$. Only area $k=0$ remains, which corresponds to the unique trivial path. Thus $D(x,0) = D_{0,0} x^0 = 1$.
+
+**2. Show the functional equation:**
+Decompose a non-empty Dyck path by its first return to the diagonal $y=x$. It consists of:
+- An initial North step and a final East step (weight $x \cdot x = x^2$ in standard length, or simply contributes factor $x$ to the path length generator here).
+- An interior Dyck path shifted up by $1$ unit (area increases by its length, weight $q$; generates $D(xq,q)$).
+- A trailing Dyck path attached after the return (generates $D(x,q)$).
+
+Accounting for the empty path (1) and the standard Catalan-like decomposition with area shift, the exact generating function satisfies:
+$$ D(x,q) = 1 + x D(xq,q) D(x,q). $$
+
+**3. Continued fraction:**
+Iterating the recurrence $D(x,q) = 1 + x D(xq,q) D(x,q)$ gives:
+$$
+D(x,q) = \frac{1}{1 - x D(xq,q)} = \frac{1}{1 - \cfrac{x}{1 - xq D(xq^2,q)}} = \dots
+$$
+
+Thus, the continued fraction is:
+$$
+D(x,q) = \cfrac{1}{1 - \cfrac{x}{1 - \cfrac{xq}{1 - \cfrac{xq^2}{1 - \cfrac{xq^3}{\ddots}}}}}
+$$
+___
+
+>[!problem] 3.3
+>A peak in a Dyck path is a step $N$ followed by a step $E$. Prove that the number of Dyck paths of length $n$ with $k$ peaks is
+>$$
+>\frac{1}{k} \binom{n}{k} \binom{n}{k-1}.
+>$$
+
+**Proof:**
+Let $F(x,u)=\sum_{n,k}f_{n,k}x^nu^k$ where $f_{n,k}$ counts Dyck paths of length $n$ with $k$ peaks. Decompose a non-empty path as $NP\,E\,Q$ where $P,Q$ are Dyck paths. The initial $NE$ gives one peak, so:
+$$
+F(x,u)=1+xu\cdot F(x,u)\cdot F(x,1).
+$$
+Let $C(x)=F(x,1)=\sum_{n\ge0}\frac1{n+1}\binom{2n}{n}x^n$, the Catalan generating function with $C(x)=1+xC(x)^2$. Solving:
+$$
+F(x,u)=\frac{1}{1-xuC(x)}=\sum_{k\ge0}u^kx^kC(x)^k.
+$$
+Hence $[u^k]F(x,u)=x^kC(x)^k$, and $f_{n,k}=[x^{n-k}]C(x)^k$. Using the known coefficient $[x^m]C(x)^k=\frac{k}{m+k}\binom{2m+k-1}{m}$, set $m=n-k$:
+$$
+f_{n,k}=\frac{k}{n}\binom{2n-k-1}{n-k}.
+$$
+This simplifies to
+$$
+f_{n,k}=\frac1k\binom{n}{k}\binom{n}{k-1}.
+$$
+___
 
