@@ -114,9 +114,9 @@ $$
 $$
 and
 $$
-\sum_{i=1}^\infty \min(\lambda_i,k) = n - \sum_{i=1}^\infty \max(\lambda_i-k,0)
+\sum_{i=1}^\infty \min(\lambda_i,k) = n - \sum_{i=1}^\infty \max(\lambda_i-k,0),\quad\sum_{i=1}^\infty \min(\mu_i,k) = n - \sum_{i=1}^\infty \max(\mu_i-k,0)
 $$
-and similarly for $\mu$. Since $\lambda\ge\mu$, for each $m$ we have $\sum_{i=1}^m\lambda_i\ge\sum_{i=1}^m\mu_i$. Subtracting $mk$ from both sides gives
+Since $\lambda\ge\mu$, for each $m$ we have $\sum_{i=1}^m\lambda_i\ge\sum_{i=1}^m\mu_i$. Subtracting $mk$ from both sides gives
 $$
 \sum_{i=1}^m (\lambda_i-k) \ge \sum_{i=1}^m (\mu_i-k).
 $$
@@ -125,4 +125,13 @@ $$
 \sum_{i=1}^\infty \max(\lambda_i-k,0) \ge \sum_{i=1}^\infty \max(\mu_i-k,0).
 $$
 Hence $\sum_i\min(\lambda_i,k)\le\sum_i\min(\mu_i,k)$, i.e. $\sum_{j=1}^k\lambda'_j\le\sum_{j=1}^k\mu'_j$ for all $k$, so $\lambda'\le\mu'$.
-Since $\lambda\ge\mu$, for each $i$, the partial sums of $\lambda$ dominate those of $\mu$. A standard fact: this implies $\sum_i\min(\lambda_i,k)\le\sum_i\min(\mu_i,k)$ for every $k$. Hence $\sum_{j=1}^k\lambda'_j\le\sum_{j=1}^k\mu'_j$ for all $k$, i.e., $\lambda'\le\mu'$.
+___
+
+>[!problem] 2.4
+>Use Maya diagrams to prove the Jacobi triple product identity
+>$$
+>\frac{\sum_{n\in\mathbb{Z}} z^n q^{n(n+1)/2}}{\prod_{i\ge 1}(1-q^i)} = \prod_{i\ge 1}(1+zq^i)(1+q^{i-1}/z)
+>$$
+
+**Proof:**
+
