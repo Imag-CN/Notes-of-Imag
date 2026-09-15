@@ -134,4 +134,15 @@ ___
 >$$
 
 **Proof:**
+Let the Fermi vacuum be: all negative integers occupied (●), nonnegative empty (○). A Maya diagram is a finite perturbation of this vacuum.
+
+Assign weight $zq^i$ for adding a particle at position $i\ge1$, and $q^{i-1}/z$ for creating a hole at position $-(i-1)$. Independent choices give the RHS:
+$$
+\prod_{i\ge1}(1+zq^i)(1+q^{i-1}/z).
+$$
+Now group diagrams by net particle number $n$. The minimal energy for net $n$ particles is $n(n+1)/2$ (triangular number). The remaining energy corresponds to an unrestricted partition, generating $\prod_{i\ge1}(1-q^i)^{-1}$. Summing over $n$ gives the LHS:
+$$
+\sum_{n\in\mathbb{Z}} z^n q^{n(n+1)/2} \cdot \frac{1}{\prod_{i\ge1}(1-q^i)}.
+$$
+Both sides enumerate the same set of Maya diagrams, hence they are equal.
 
