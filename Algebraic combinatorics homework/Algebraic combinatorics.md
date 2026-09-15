@@ -107,18 +107,22 @@ ___
 **Proof:**
 Since conjugation is symmetric, we only have to prove "$\Rightarrow$".
 
-For any $k\geq1$,  
+For any $k\ge1$,  
 $$
-\sum_{j=1}^k \lambda'_j = \sum_{i=1}^\infty \min(\lambda_i, k), \quad
-\sum_{j=1}^k \mu'_j = \sum_{i=1}^\infty \min(\mu_i, k).
+\sum_{j=1}^k\lambda'_j = \sum_{i=1}^\infty\min(\lambda_i,k),\qquad
+\sum_{j=1}^k\mu'_j = \sum_{i=1}^\infty\min(\mu_i,k).
 $$
-
-The function $f(x) = \min(x, k)$ is concave (piecewise linear, non-decreasing, and concave on $\mathbb{R}_{\ge 0}$). By the Karamata inequality (or majorization theory), if $\lambda \ge \mu$ in dominance order, then for any concave function $f$,  
+and
 $$
-\sum_i f(\lambda_i) \le \sum_i f(\mu_i).
-$$  
-Hence,  
+\sum_{i=1}^\infty \min(\lambda_i,k) = n - \sum_{i=1}^\infty \max(\lambda_i-k,0)
 $$
-\sum_{j=1}^k \lambda'_j \le \sum_{j=1}^k \mu'_j \quad \text{for all } k.
-$$  
-That is, $\lambda' \le \mu'$ in dominance order.
+and similarly for $\mu$. Since $\lambda\ge\mu$, for each $m$ we have $\sum_{i=1}^m\lambda_i\ge\sum_{i=1}^m\mu_i$. Subtracting $mk$ from both sides gives
+$$
+\sum_{i=1}^m (\lambda_i-k) \ge \sum_{i=1}^m (\mu_i-k).
+$$
+Taking the positive part preserves the inequality termwise, so
+$$
+\sum_{i=1}^\infty \max(\lambda_i-k,0) \ge \sum_{i=1}^\infty \max(\mu_i-k,0).
+$$
+Hence $\sum_i\min(\lambda_i,k)\le\sum_i\min(\mu_i,k)$, i.e. $\sum_{j=1}^k\lambda'_j\le\sum_{j=1}^k\mu'_j$ for all $k$, so $\lambda'\le\mu'$.
+Since $\lambda\ge\mu$, for each $i$, the partial sums of $\lambda$ dominate those of $\mu$. A standard fact: this implies $\sum_i\min(\lambda_i,k)\le\sum_i\min(\mu_i,k)$ for every $k$. Hence $\sum_{j=1}^k\lambda'_j\le\sum_{j=1}^k\mu'_j$ for all $k$, i.e., $\lambda'\le\mu'$.
