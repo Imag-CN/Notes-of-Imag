@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic geometry homework/Algebraic geometry HW2.md",
+                "file": "Model theory homework/Model theory HW1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebraic geometry HW2"
+              "title": "Model theory HW1"
             }
           }
         ],
@@ -224,11 +224,13 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "9a25deaea7baccf2",
+  "active": "2db741372f76a34e",
   "lastOpenFiles": [
-    "未命名",
-    "Algebraic combinatorics homework/Algebraic combinatorics HW1.md",
+    "Model theory homework/Model theory HW2.md",
+    "Model theory homework/Model theory HW1.md",
     "Algebraic geometry homework/Algebraic geometry HW2.md",
+    "Model theory homework",
+    "Algebraic combinatorics homework/Algebraic combinatorics HW1.md",
     "Algebraic combinatorics homework",
     "Algebraic geometry homework/Algebraic geometry HW1.md",
     "Number theory homework/Number theory HW2.md",
@@ -255,7 +257,6 @@
     "Real Analysis homework/Real Analysis HW9.md",
     "Real Analysis homework/Real Analysis HW8.md",
     "Real Analysis homework/Real Analysis HW7.md",
-    "Algebraic topology homework/Algebraic topology HW16.md",
     "attachments/Pasted image 20260518025330.png",
     "attachments/Pasted image 20260518022658.png",
     "Commutative Algebra",
@@ -268,7 +269,6 @@
     "物理",
     "Real Analysis homework",
     "Abstract algebra homework",
-    "Algebraic topology homework",
     "attachments/Pasted image 20260103222321.png",
     "attachments/Pasted image 20251224222024.png",
     "attachments/Pasted image 20251224221853.png",
