@@ -43,11 +43,11 @@ ii) $X = \{m > 0 : m \text{ is composite}\}$.
 $\mathcal{L} = \{E,F\}$, two equivalence relations. $\phi$: $E$ has at least one class of size $>1$, $F$ has at least one class of size $>1$, and every $E$-class and $F$-class intersect in exactly one element. Then $|M| = a \cdot b$ with $a,b > 1$, i.e., composite.
 
 iii) $X = \{p^n : p \text{ prime}, n > 0\}$.  
-$\mathcal{L} = \{E,U\}$, $U$ a unary predicate, $E$ an equivalence relation. $\phi$: $U$ is nonempty, $E$ restricted to $U$ has classes of equal size $p$, and $E$ restricted to the complement of $U$ has classes of size 1. Then $|M| = p \cdot k$; iterate to get $p^n$.
+$\mathcal{L} = \{E,U\}$, $U$ a unary predicate, $E$ an equivalence relation. $\phi$: $U$ is nonempty, $E$ restricted to $U$ has classes of equal size $p$, and $E$ restricted to the complement of $U$ has classes of size $1$. Then $|M| = p \cdot k$; iterate to get $p^n$.
 
 iv) $X = \{p : p \text{ is prime}\}$.  
 $\mathcal{L} = \{E\}$. $\phi$: $E$ is an equivalence relation with all classes of the same size $k \ge 2$, and there is exactly one class (so $|M| = k$), together with a sentence forcing $k$ to be prime (e.g., $k$ cannot be factored into smaller uniform class sizes).
 
-**c)†**  
+**c)**
 ($\Rightarrow$) If $X$ is a finite spectrum, there is a sentence $\phi$ with models of size $n$ iff $n \in X$. A nondeterministic Turing machine on input $1^n$ guesses an $\mathcal{L}$-structure of size $n$ and verifies $\phi$ in exponential time.  
 ($\Leftarrow$) If a NTM $M$ accepts $1^n$ in exponential time iff $n \in X$, encode its computation as a first-order structure of size exponential in $n$. Using equivalence relations to compress the encoding to size $n$, we obtain a sentence whose finite spectrum is $X$.
