@@ -19,3 +19,16 @@ Define $\phi := \phi_{\text{size}} \wedge \exists x_1 \dots \exists x_n \, \Delt
 If $\mathcal{N} \models \phi$, $\mathcal{N}$ has exactly $n$ elements and satisfies the same atomic diagram as $\mathcal{M}$; the map sending witnesses in $\mathcal{N}$ to $a_i$ is an isomorphism. Conversely, $\mathcal{N} \cong \mathcal{M}$ implies $\mathcal{N} \models \phi$. Thus $\mathcal{N} \models \phi$ iff $\mathcal{N} \cong \mathcal{M}$.
 ___
 
+> [!problem] [MAR] 1.4.7
+> Let $\phi$ be an $\mathcal{L}$-sentence. The *finite spectrum* of $\phi$ is the set $\{n \in \mathbb{N}^+ : \text{there is } \mathcal{M} \models \phi \text{ with } |M| = n\}$, where $\mathbb{N}^+$ is the set of positive natural numbers.
+>
+> a) Let $\mathcal{L} = \{E\}$ where $E$ is a binary relation, and let $\phi$ be the sentence that asserts that $E$ is an equivalence relation where every equivalence class has exactly two elements. Show that the finite spectrum of $\phi$ is the set of positive even numbers.
+>
+> b) For each of the following subsets $X$ of $\mathbb{N}^+$, show that $X$ occurs as the finite spectrum of an $\mathcal{L}$-sentence for some language $\mathcal{L}$:
+> i) $\{2^n 3^m : n, m > 0\}$;
+> ii) $\{m > 0 : m \text{ is composite}\}$ (i.e. $m = ab$ where $a \neq 1$ and $b \neq 1$);
+> iii) $\{p^n : p \text{ is prime and } n > 0\}$;
+> iv) $\{p : p \text{ is prime}\}$;
+>
+> c)† Show that $X \subseteq \mathbb{N}^+$ is a finite spectrum if and only if there is a nondeterministic Turing machine $M$ running in exponential time such that given a string of $n$ 1's as input $M$ halts accepting if and only if $n \in X$. [Remark: An interesting open problem is whether the complement of a finite spectrum is a finite spectrum. This problem shows that it is equivalent to the question of whether the collection of sets recognizable in nondeterministic exponential time is closed under complement.]
+
