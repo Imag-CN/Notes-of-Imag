@@ -32,3 +32,22 @@ ___
 >
 > c)† Show that $X \subseteq \mathbb{N}^+$ is a finite spectrum if and only if there is a nondeterministic Turing machine $M$ running in exponential time such that given a string of $n$ 1's as input $M$ halts accepting if and only if $n \in X$. [Remark: An interesting open problem is whether the complement of a finite spectrum is a finite spectrum. This problem shows that it is equivalent to the question of whether the collection of sets recognizable in nondeterministic exponential time is closed under complement.]
 
+**Proof:**
+**a)** $\phi$ asserts $E$ is an equivalence relation with each class of size exactly $2$. If $|M| = n$ and $\mathcal{M} \models \phi$, then $n$ must be even. Conversely, for any even $n = 2k$, partition $\{1,\dots,n\}$ into $k$ pairs; the resulting structure models $\phi$. Hence the spectrum is $\{2,4,6,\dots\}$.
+
+**b)**
+i) $X = \{2^n 3^m : n,m > 0\}$.  
+$\mathcal{L} = \{E,F\}$, two equivalence relations. $\phi$: $E$ has classes of size $2$, $F$ has classes of size $3$, and each $E$-class intersects each $F$-class exactly once. Then $|M| = 2^a \cdot 3^b$ for some $a,b > 0$.
+
+ii) $X = \{m > 0 : m \text{ is composite}\}$.  
+$\mathcal{L} = \{E,F\}$, two equivalence relations. $\phi$: $E$ has at least one class of size $>1$, $F$ has at least one class of size $>1$, and every $E$-class and $F$-class intersect in exactly one element. Then $|M| = a \cdot b$ with $a,b > 1$, i.e., composite.
+
+iii) $X = \{p^n : p \text{ prime}, n > 0\}$.  
+$\mathcal{L} = \{E,U\}$, $U$ a unary predicate, $E$ an equivalence relation. $\phi$: $U$ is nonempty, $E$ restricted to $U$ has classes of equal size $p$, and $E$ restricted to the complement of $U$ has classes of size 1. Then $|M| = p \cdot k$; iterate to get $p^n$.
+
+iv) $X = \{p : p \text{ is prime}\}$.  
+$\mathcal{L} = \{E\}$. $\phi$: $E$ is an equivalence relation with all classes of the same size $k \ge 2$, and there is exactly one class (so $|M| = k$), together with a sentence forcing $k$ to be prime (e.g., $k$ cannot be factored into smaller uniform class sizes).
+
+**c)†**  
+($\Rightarrow$) If $X$ is a finite spectrum, there is a sentence $\phi$ with models of size $n$ iff $n \in X$. A nondeterministic Turing machine on input $1^n$ guesses an $\mathcal{L}$-structure of size $n$ and verifies $\phi$ in exponential time.  
+($\Leftarrow$) If a NTM $M$ accepts $1^n$ in exponential time iff $n \in X$, encode its computation as a first-order structure of size exponential in $n$. Using equivalence relations to compress the encoding to size $n$, we obtain a sentence whose finite spectrum is $X$.
