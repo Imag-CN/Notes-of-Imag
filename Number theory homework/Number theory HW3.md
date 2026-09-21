@@ -112,7 +112,7 @@ ___
 >**Hint:** Feel free to use the following group-theoretic facts. Let $p$ be a prime number. Let $S_p$ denote the symmetric group in $p$ letters acting on $\{1, 2, \dots, p\}$. If $G$ is a solvable subgroup of $S_p$ acting transitively on $\{1, 2, \dots, p\}$ then every nontrivial element of $G$ fixes at most one element in $\{1, 2, \dots, p\}$. (A reference for this fact is given in Neukirch.)
 
 **Proof:**
-Let $G=\operatorname{Gal}(M/K)$, $H=\operatorname{Gal}(M/L)$, and $D=D_{\mathfrak r}(M/K)$. Since $[L]=p$, we have $[G]=p$, so $G$ acts transitively on the $p$ elements of $H\backslash G$.
+Let $G=\operatorname{Gal}(M/K)$, $H=\operatorname{Gal}(M/L)$, and $D=D_{\mathfrak r}(M/K)$. Since $[L:K]=p$, we have $[G:H]=p$, so $G$ acts transitively on the $p$ elements of $H\backslash G$.
 
 By Problem 3(i), the primes of $L$ above $\mathfrak p$ are in bijection with  
 $$  
@@ -130,16 +130,4 @@ Hence $\operatorname{Frob}_{\mathfrak r}$ fixes at least two distinct elements o
 $$  
 \operatorname{Frob}_{\mathfrak r}=1.  
 $$  
-Therefore $D=1$.
-
-# |H\backslash G|
-
-# [G]
-
-p.  
-$$  
-Thus there are exactly $p=[L]$ primes of $L$ above $\mathfrak p$. Since $\mathfrak p$ is unramified,  
-$$  
-\sum_{\mathfrak q\mid\mathfrak p} f_{\mathfrak q}=[L]=p.  
-$$  
-There are already $p$ primes, so every $f_{\mathfrak q}=1$. Hence $\mathfrak p$ splits completely in $L/K$.
+Therefore $D=1$. Thus there are exactly $p=[L:K]$ primes of $L$ above $\mathfrak p$. Since $\mathfrak p$ is unramified, $\sum_{\mathfrak q\mid\mathfrak p} f_{\mathfrak q}=[L:K]=p.$ There are already $p$ primes, so every $f_{\mathfrak q}=1$. Hence $\mathfrak p$ splits completely in $L/K$.
