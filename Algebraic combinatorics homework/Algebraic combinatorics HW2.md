@@ -47,4 +47,5 @@ Also, $\phi(\phi(A,B)) = (A,B)$, and $\phi(A,B) \neq (A,B)$ because the membersh
 Therefore, the total sum is $0$.
 ___
 
->[!problem] 5.3
+>[!problem] 6.1
+>Give a proof of the Cauchy-Binet Theorem using the LGV lemma.
