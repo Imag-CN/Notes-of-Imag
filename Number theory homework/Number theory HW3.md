@@ -31,5 +31,49 @@ ___
 > [!problem] Problem 2
 > Consider $L = \mathbb{Q}(\sqrt{7}, \sqrt{10})$. Prove that $\mathcal{O}_L$ (notation as above) is not monogenic.
 
+**Proof:**
+Assume for contradiction that $\mathcal{O}_L = \mathbb{Z}[\alpha]$ for some $\alpha \in \mathcal{O}_L$. Let $f(x) \in \mathbb{Z}[x]$ be the minimal polynomial of $\alpha$ over $\mathbb{Z}$, so $\deg f = [L:\mathbb{Q}] = 4$. For any $g \in \mathbb{Z}[x]$, let $\overline{g}$ denote its reduction modulo 3 in $\mathbb{Z}_3[x]$.
+
+For $g \in \mathbb{Z}[x]$, $g(\alpha)$ is divisible by $3$ in $\mathbb{Z}[\alpha]$ iff $\overline{g}$ is divisible by $\overline{f}$ in $\mathbb{Z}_3[x]$. This follows because $\mathbb{Z}[\alpha] \cong \mathbb{Z}[x]/(f(x))$, and reducing modulo $3$ gives $\mathbb{F}_3[\alpha] \cong \mathbb{F}_3[x]/(\overline{f}(x))$.
+
+Consider the four algebraic integers:
+$$ \alpha_1 = (1+\sqrt{7})(1+\sqrt{10}), \quad \alpha_2 = (1+\sqrt{7})(1-\sqrt{10}) $$
+$$ \alpha_3 = (1-\sqrt{7})(1+\sqrt{10}), \quad \alpha_4 = (1-\sqrt{7})(1-\sqrt{10}) $$
+It's easy to check that all products $\alpha_i \alpha_j$ ($i \neq j$) are divisible by $3$ in $\mathbb{Z}[\alpha]$.
+
+Note that the trace is $T^K(\alpha_i^n) = \alpha_1^n + \alpha_2^n + \alpha_3^n + \alpha_4^n$, which is congruent modulo $3$ to $(\alpha_1+\alpha_2+\alpha_3+\alpha_4)^n = 4^n \equiv 1^n \equiv 1 \pmod 3$. Hence $\alpha_i^n \notin 3\mathcal{O}_L$.
+
+Write $\alpha_i = f_i(\alpha)$ with $f_i \in \mathbb{Z}[x]$. Since $\alpha_i \alpha_j \in 3\mathbb{Z}[\alpha]$, we have $\overline{f} \mid \overline{f_i}\overline{f_j}$ in $\mathbb{F}_3[x]$. Since $\alpha_i^n \notin 3\mathbb{Z}[\alpha]$, we have $\overline{f} \nmid \overline{f_i}^n$. As $\mathbb{F}_3[x]$ is a UFD, for each $i$ there exists an irreducible factor $p_i$ of $\overline{f}$ such that $p_i \nmid \overline{f_i}$ but $p_i \mid \overline{f_j}$ for all $j \neq i$. Thus the $p_i$ ($i=1,2,3,4$) are four distinct irreducible factors of $\overline{f}$.
+
+However, $\mathbb{F}_3$ has only three distinct linear polynomials, namely $x$, $x+1$ and $x+2$, so it is impossible for $\bar{f}$ to have four distinct linear factors, contradiction. Therefore $\mathcal{O}_L$ is not monogenic.
+___
+
+>[!problem] Problem 3
+>Let $A$ be a Dedekind domain, $K = \operatorname{Frac}(A)$. Let $L/K$ be a finite separable extension with normal closure $M$ of $L$ so that $M$ is Galois over $K$. Let $\mathfrak{p}$ be a prime ideal of $A$. (You don't need to assume $\mathfrak{p}$ to be unramified.) Fix a prime ideal $\mathfrak{r}$ of $M$ above $\mathfrak{p}$. (By convention, this means $\mathfrak{r}$ is a nonzero prime in the integral closure of $A$ in $M$ such that $\mathfrak{r}$ divides $\mathfrak{p}$.) Denote by $D_{\mathfrak{r}}(M/K)$ the decomposition group of $\mathfrak{r}$ in $M/K$.
+>
+>(i) Define a map
+>$$
+>\operatorname{Gal}(M/K) \longrightarrow \{\text{primes of } L \text{ above } \mathfrak{p}\}, \quad \sigma \longmapsto \sigma(\mathfrak{r}) \cap L.
+>$$
+>
+>Show that this map induces a bijection
+>$$
+>\operatorname{Gal}(M/L) \backslash \operatorname{Gal}(M/K) / D_{\mathfrak{r}}(M/K) \xrightarrow{\sim} \{\text{primes of } L \text{ above } \mathfrak{p}\}.
+>$$
+>
+>**Note**: When $H, K$ are subgroups of $G$, one can think of $H \backslash G / K$ as the set of orbits of $K$ on $H \backslash G$ via right multiplication. To put it another way, an element of $H \backslash G / K$ is an equivalence class of elements of $G$, where $g$ and $g'$ are equivalent if there are $h \in H$ and $k \in K$ such that $g' = hgk$.
+>
+>In the problem, well-definedness $+$ injectivity amounts to: $\sigma, \sigma' \in \operatorname{Gal}(M/K)$ have the same image if and only if $\sigma' = \alpha \sigma \beta$ for some $\alpha \in \operatorname{Gal}(M/L)$ and $\beta \in D_{\mathfrak{r}}(M/K)$.
+>
+>(ii) Assume that $\operatorname{Gal}(M/K) \simeq S_3$, the symmetric group in $3$ variables, that $D_{\mathfrak{r}}(M/K)$ and $\operatorname{Gal}(M/L)$ are order $2$ subgroups of $\operatorname{Gal}(M/K)$ which are equal (not just isomorphic).
+>
+>Use part (i) to verify that $\mathfrak{p}$ does not split completely in $L$.
+
+**Proof:**
 
 
+
+
+
+>[!remark] Remark
+>The point of (ii) is that when the decomposition group of $\mathfrak{r}$ is not normal in $\operatorname{Gal}(M/K)$, the prime $\mathfrak{r}$ need not split completely in the decomposition field, which is $L$ here. A concrete example for (ii) can be given when $K = \mathbb{Q}$, $L = \mathbb{Q}(\sqrt[3]{2})$, $M = \mathbb{Q}(\sqrt[3]{2}, \zeta_3)$. By the Chebotarev density theorem, or by explicit computation, you can find $\mathfrak{r}$ such that $(\mathfrak{r}, M/K)$ is the unique nontrivial element of $\operatorname{Gal}(M/L)$. Then all the conditions of (ii) are satisfied.
