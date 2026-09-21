@@ -10,14 +10,26 @@ ___
 **Proof:**
 **(i)** Assume for contradiction that $\mathcal{O}_L = \mathbb{Z}[\beta]$ for some $\beta \in \mathcal{O}_L$. Let $f(x) \in \mathbb{Z}[x]$ be the minimal polynomial of $\beta$, so $\deg f = 3$. Since $(2)$ splits completely in $L$, the reduction $\bar{f}(x) \in \mathbb{F}_2[x]$ factors into three distinct linear factors over $\mathbb{F}_2$. But $\mathbb{F}_2$ has only two distinct linear polynomials, namely $x$ and $x+1$, so it is impossible for $\bar{f}$ to have three distinct linear factors, contradiction. Hence $\mathcal{O}_L$ is not monogenic.
 
-**(ii)** Let $\alpha$ be a root of $f(x) = x^3 - x^2 - 2x - 8$. We know
-$$\mathcal{O}_L = \mathbb{Z} \oplus \mathbb{Z}\alpha \oplus \mathbb{Z}\frac{\alpha^2+\alpha}{2}.$$
-From $f(\alpha)=0$ we obtain
-$$\alpha^3 - \alpha^2 - 2\alpha = 8.$$
-Factor the left-hand side:
-$$\alpha(\alpha^2 - \alpha - 2) = \alpha(\alpha-2)(\alpha+1) = 8.$$
-Thus
-$$\alpha \cdot \frac{\alpha+1}{2} \cdot \frac{\alpha-2}{2} = 2.$$
-Note that $\alpha$, $\frac{\alpha+1}{2}$, $\frac{\alpha-2}{2} \in \mathcal{O}_L$ (the latter two lie in $\mathcal{O}_L$ because they are $\mathbb{Z}$-linear combinations of the basis elements). Their product equals $2$, showing that $(2) = \mathfrak{p}_1 \mathfrak{p}_2 \mathfrak{p}_3$ where $\mathfrak{p}_1 = (\alpha)$, $\mathfrak{p}_2 = (\frac{\alpha+1}{2})$, $\mathfrak{p}_3 = (\frac{\alpha-2}{2})$ are distinct prime ideals. Hence $(2)$ splits completely in $L$.
+**(ii)** It suffices to prove $\mathcal{O}_L/(2) \cong \mathbb{F}_2^3$.
+
+Let $\beta = \frac{\alpha^2 + \alpha}{2}$, so $\mathcal{O}_L = \{ x + y\alpha + z\beta \mid x,y,z \in \mathbb{Z} \}$.
+From $\alpha^3 - \alpha^2 - 2\alpha - 8 = 0$ and $\beta = \frac{\alpha^2 + \alpha}{2}$, we obtain:
+$$
+\alpha^2 = -\alpha + 2\beta,\quad \alpha\beta = 2\beta + 4,\quad \beta^2 = 2\alpha + 3\beta + 2.
+$$
+Reducing modulo 2, we have:
+$$
+\overline{\alpha}^2 = \overline{\alpha},\quad \overline{\alpha}\,\overline{\beta} = \overline{0},\quad \overline{\beta}^2 = \overline{\beta}.
+$$
+Define a ring homomorphism $\varphi: \mathcal{O}_L/(2) \to \mathbb{F}_2 \oplus \mathbb{F}_2 \oplus \mathbb{F}_2$ by:
+$$
+\varphi(\overline{1}) = (1,1,1),\quad \varphi(\overline{\alpha}) = (1,0,0),\quad \varphi(\overline{\beta}) = (0,1,0).
+$$
+It is straightforward to verify that $\varphi$ is an isomorphism. Hence $\mathcal{O}_L/(2) \cong \mathbb{F}_2^3$, proving that $(2)$ splits completely in $L$.
 ___
+
+> [!problem] Problem 2
+> Consider $L = \mathbb{Q}(\sqrt{7}, \sqrt{10})$. Prove that $\mathcal{O}_L$ (notation as above) is not monogenic.
+
+
 
