@@ -110,3 +110,48 @@ ___
 >is a polynomial in $q$ with non negative coefficients.
 
 **Proof:**
+**1.** Let $P(n,k)$ be the generating polynomial of $N,E$ paths from $(0,0)$ to $(k,n-k)$, where an east step at height $y$ has weight $q^y$ and a north step has weight $1$.
+
+Every such path either ends with an east step or a north step. Thus
+$$
+P(n,k)=q^{n-k}P(n-1,k-1)+P(n-1,k).
+$$
+The initial conditions are
+$$
+P(n,0)=P(n,n)=1.
+$$
+
+On the other hand, the $q$-binomial coefficients satisfy the same recurrence
+$$
+\binom{n}{k}_q
+=
+q^{n-k}\binom{n-1}{k-1}_q+\binom{n-1}{k}_q,
+$$
+with
+$$
+\binom{n}{0}_q=\binom{n}{n}_q=1.
+$$
+Therefore
+$$
+P(n,k)=\binom{n}{k}_q.
+$$
+**2.** The claimed identity';]
+$$
+\binom{n}{k}_q\binom{n+1}{k}_q\binom{n}{k-1}_q
+=
+\binom{n+1}{k+1}_q
+$$
+is not correct in general.
+
+For example, when $n=2$ and $k=1$,
+$$
+\binom21_q\binom31_q\binom21_q
+=
+[2]_q^2[3]_q
+\ne
+[3]_q
+=
+\binom32_q.
+$$
+
+Thus the second statement cannot be proved as written. The formula in the problem likely contains a missing quotient or an incorrect factor. Once the intended identity is corrected, the LGV proof can be given by constructing a planar network whose vertex-disjoint path families are weighted by the corresponding product of $q$-binomial coefficients.
