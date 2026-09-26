@@ -51,27 +51,62 @@ ___
 >Give a proof of the Cauchy-Binet Theorem using the LGV lemma.
 
 **Proof:**
-Let $A$ and $B$ be $n\times n$ matrices. For each matrix $M$, construct a directed graph with vertices $V_1,\ldots,V_n,W_1,\ldots,W_n$ and an edge $V_i\to W_j$ of weight $M_{ij}$.
-
-Apply the LGV lemma to the graph associated with $AB$. A path from $V_i$ to $W_j$ through an intermediate vertex $U_k$ has weight $A_{ik}B_{kj}$. Hence its total weight is
+Let $A$ be an $m\times n$ matrix and $B$ an $n\times m$ matrix, with $m\le n$. We prove the Cauchy-Binet formula
 $$
-(AB)_{ij}=\sum_{k=1}^n A_{ik}B_{kj}.
+\det(AB)=\sum_{\substack{S\subseteq [n]\\ |S|=m}}\det(A_{[m],S})\det(B_{S,[m]})
+$$
+using the LGV lemma.
+
+Construct a directed acyclic graph with vertices arranged in three layers. The first layer consists of vertices $u_1,\dots,u_m$, the middle layer consists of $v_1,\dots,v_n$, and the last layer consists of $w_1,\dots,w_m$. Put an edge $u_i\to v_j$ of weight $a_{ij}$ and an edge $v_j\to w_k$ of weight $b_{jk}$.
+
+A path from $u_i$ to $w_k$ has weight
+$$
+\sum_{j=1}^n a_{ij}b_{jk}=(AB)_{ik}.
+$$
+Thus, the matrix of single-path weights from the $u_i$'s to the $w_k$'s is exactly $AB$.
+
+By the LGV lemma, since the only vertex-disjoint path families connect $u_i$ to $w_i$ up to a permutation, we have
+$$
+\det(AB)=\sum_{\sigma\in S_m}\operatorname{sgn}(\sigma)
+\prod_{i=1}^m\left(\sum_{j=1}^n a_{ij}b_{j,\sigma(i)}\right).
 $$
 
-For a fixed subset $S\subseteq[n]$ with $|S|=n$, the vertex-disjoint path families correspond to permutations $\sigma\in S_n$. The LGV lemma therefore gives
+Expand the products. Each term corresponds to choosing a middle vertex $v_{j_i}$ for each $i$. If two indices $j_i$ and $j_k$ are equal, the corresponding paths intersect at the same middle vertex, so the LGV involution cancels such intersecting path families.
+
+Hence only families using $m$ distinct middle vertices survive. Let
+$$
+S=\{j_1,\dots,j_m\}\subseteq[n],\qquad |S|=m.
+$$
+For a fixed $S$, the LGV lemma applied to the paths from $u_1,\dots,u_m$ to the middle vertices indexed by $S$ gives the contribution
+$$
+\det(A_{[m],S}),
+$$
+while the paths from the middle vertices indexed by $S$ to $w_1,\dots,w_m$ give
+$$
+\det(B_{S,[m]}).
+$$
+
+Therefore, summing over all $m$-element subsets $S\subseteq[n]$ gives
 $$
 \det(AB)
 =
-\sum_{\sigma\in S_n}\operatorname{sgn}(\sigma)
-\prod_{i=1}^n(AB)_{i,\sigma(i)}.
+\sum_{\substack{S\subseteq[n]\\ |S|=m}}
+\det(A_{[m],S})\det(B_{S,[m]}).
 $$
-
-Expanding each $(AB)_{i,\sigma(i)}$ amounts to choosing intermediate vertices. By the LGV involution, all path families that intersect cancel in pairs, leaving precisely the vertex-disjoint families. Grouping them according to the intermediate vertices gives
-$$
-\det(AB)
-=
-\sum_{\substack{S\subseteq[n]\\|S|=n}}
-\det(A_{[n],S})\det(B_{S,[n]}).
-$$
-This is the Cauchy-Binet formula.
 ___
+
+>[!problem] 6.2
+>Let $[n]_q = 1 + q + \ldots + q^{n-1}$ and $[n]_q! = [n]_q[n-1]_q\ldots[1]_q$. Define the $q$-binomial coefficient by
+>$$
+>\binom{n}{k}_q = \frac{[n]_q!}{[k]_q![n-k]_q!}.
+>$$
+>
+>- Prove that $\binom{n}{k}_q$ is the generating polynomial of $N,E$ paths from $(0,0)$ to $(k,n-k)$ where the weight of the step $(x,y) \to (x+1,y)$ is $q^y$ and the weight of the steps $(x,y) \to (x,y+1)$ is $1$.
+>
+>- Use the LGV lemma to prove that
+>$$
+>\binom{n}{k}_q \binom{n+1}{k}_q \binom{n}{k-1}_q = \binom{n+1}{k+1}_q
+>$$
+>is a polynomial in $q$ with non negative coefficients.
+
+**Proof:**
