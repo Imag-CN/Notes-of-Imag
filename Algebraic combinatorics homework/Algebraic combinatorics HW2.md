@@ -49,3 +49,50 @@ ___
 
 >[!problem] 6.1
 >Give a proof of the Cauchy-Binet Theorem using the LGV lemma.
+
+**Proof:**
+Let $A$ be an $m\times n$ matrix and $B$ an $n\times m$ matrix, with $m\le n$. We prove the Cauchy-Binet formula
+$$
+\det(AB)=\sum_{\substack{S\subseteq [n]\\ |S|=m}}\det(A_{[m],S})\det(B_{S,[m]})
+$$
+using the LGV lemma.
+
+Construct a directed acyclic graph with vertices arranged in three layers. The first layer consists of vertices $u_1,\dots,u_m$, the middle layer consists of $v_1,\dots,v_n$, and the last layer consists of $w_1,\dots,w_m$. Put an edge $u_i\to v_j$ of weight $a_{ij}$ and an edge $v_j\to w_k$ of weight $b_{jk}$.
+
+A path from $u_i$ to $w_k$ has weight
+$$
+\sum_{j=1}^n a_{ij}b_{jk}=(AB)_{ik}.
+$$
+Thus, the matrix of single-path weights from the $u_i$'s to the $w_k$'s is exactly $AB$.
+
+By the LGV lemma, since the only vertex-disjoint path families connect $u_i$ to $w_i$ up to a permutation, we have
+$$
+\det(AB)=\sum_{\sigma\in S_m}\operatorname{sgn}(\sigma)
+\prod_{i=1}^m\left(\sum_{j=1}^n a_{ij}b_{j,\sigma(i)}\right).
+$$
+
+Expand the products. Each term corresponds to choosing a middle vertex $v_{j_i}$ for each $i$. If two indices $j_i$ and $j_k$ are equal, the corresponding paths intersect at the same middle vertex, so the LGV involution cancels such intersecting path families.
+
+Hence only families using $m$ distinct middle vertices survive. Let
+$$
+S=\{j_1,\dots,j_m\}\subseteq[n],\qquad |S|=m.
+$$
+For a fixed $S$, the LGV lemma applied to the paths from $u_1,\dots,u_m$ to the middle vertices indexed by $S$ gives the contribution
+$$
+\det(A_{[m],S}),
+$$
+while the paths from the middle vertices indexed by $S$ to $w_1,\dots,w_m$ give
+$$
+\det(B_{S,[m]}).
+$$
+
+Therefore, summing over all $m$-element subsets $S\subseteq[n]$ gives
+$$
+\det(AB)
+=
+\sum_{\substack{S\subseteq[n]\\ |S|=m}}
+\det(A_{[m],S})\det(B_{S,[m]}),
+$$
+which is precisely the Cauchy-Binet Theorem.
+___
+
