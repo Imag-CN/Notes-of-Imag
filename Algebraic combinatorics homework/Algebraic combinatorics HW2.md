@@ -195,6 +195,7 @@ ___
 
 
 
-3. Let $f \in \mathbb{C}[[\mathbf{x}]]$ show that if $f$ is invariant under all permutations of $\cup_{n=1}^\infty \Sigma_n$ then it is invariant for all bijections from $\mathbb{P}$ to $\mathbb{P}$ where $\mathbb{P} = \{1, 2, 3, \dots\}$.
+>[!problem] 8.3
+>Let $f \in \mathbb{C}[[\mathbf{x}]]$ show that if $f$ is invariant under all permutations of $\cup_{n=1}^\infty \Sigma_n$ then it is invariant for all bijections from $\mathbb{P}$ to $\mathbb{P}$ where $\mathbb{P} = \{1, 2, 3, \dots\}$.
 
 Hint: every monomial of a power series involves only finitely many variables.
