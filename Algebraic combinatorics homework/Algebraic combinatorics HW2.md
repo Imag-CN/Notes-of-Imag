@@ -147,4 +147,54 @@ $$
 $$
 ___
 
+>[!problem] 8.1
+>Let $R_n = \mathbb{Z}[x_1, \dots, x_n]$ and $\Lambda_n$ be the set of symmetric polynomials in $R_n$, Show that $\Lambda_n$ is closed under addition and multiplication, and hence forms a subring of $R_n$.
 
+**Proof:**
+Let $f,g\in\Lambda_n$. By definition, for every permutation $\sigma\in S_n$,
+$$
+f(x_{\sigma(1)},\dots,x_{\sigma(n)})=f(x_1,\dots,x_n)
+$$
+and
+$$
+g(x_{\sigma(1)},\dots,x_{\sigma(n)})=g(x_1,\dots,x_n).
+$$
+
+Then
+$$
+(f+g)(x_{\sigma(1)},\dots,x_{\sigma(n)})
+=f(x_1,\dots,x_n)+g(x_1,\dots,x_n)
+=(f+g)(x_1,\dots,x_n),
+$$
+so $f+g$ is symmetric.
+
+Similarly,
+$$
+(fg)(x_{\sigma(1)},\dots,x_{\sigma(n)})
+=f(x_1,\dots,x_n)g(x_1,\dots,x_n)
+=(fg)(x_1,\dots,x_n),
+$$
+so $fg$ is symmetric.
+
+Also, $0,1\in\Lambda_n$, and if $f\in\Lambda_n$, then $-f\in\Lambda_n$. Hence $\Lambda_n$ is closed under addition, multiplication, and additive inverses, and therefore $\Lambda_n$ is a subring of $R_n$.
+___
+
+>[!problem] 8.2
+>Let $\mathbf{x}$ be a countable infinite set of variables.
+>
+>- Prove that $e_k(\mathbf{x}) = m_{(1^k)}$.
+>
+>- Use this to show that the expansion of $e_\lambda(\mathbf{x})$ in the $m_\mu$ can be written as
+>$$
+>e_{\lambda'}(\mathbf{x}) = m_\lambda(\mathbf{x}) + \sum_{\mu > \lambda} K_{\lambda,\mu} m_\mu(\mathbf{x})
+>$$
+>for some total order $>$. Here $\lambda'$ is the conjugate of $\lambda$.
+
+
+
+
+
+
+3. Let $f \in \mathbb{C}[[\mathbf{x}]]$ show that if $f$ is invariant under all permutations of $\cup_{n=1}^\infty \Sigma_n$ then it is invariant for all bijections from $\mathbb{P}$ to $\mathbb{P}$ where $\mathbb{P} = \{1, 2, 3, \dots\}$.
+
+Hint: every monomial of a power series involves only finitely many variables.
