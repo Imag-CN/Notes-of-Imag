@@ -110,7 +110,7 @@ ___
 >is a polynomial in $q$ with non negative coefficients.
 
 **Proof:**
-**1.** Let $P(n,k)$ be the generating polynomial of $N,E$ paths from $(0,0)$ to $(k,n-k)$, where an east step at height $y$ has weight $q^y$ and a north step has weight $1$.
+Let $P(n,k)$ be the generating polynomial of $N,E$ paths from $(0,0)$ to $(k,n-k)$, where an east step at height $y$ has weight $q^y$ and a north step has weight $1$.
 
 Every such path either ends with an east step or a north step. Thus
 $$
@@ -135,7 +135,7 @@ Therefore
 $$
 P(n,k)=\binom{n}{k}_q.
 $$
-**2.** The claimed identity is not correct in general. For example, when $n=2$ and $k=1$,
+The claimed identity is not correct in general. For example, when $n=2$ and $k=1$,
 $$
 \binom21_q\binom31_q\binom20_q
 =
@@ -189,6 +189,45 @@ ___
 >e_{\lambda'}(\mathbf{x}) = m_\lambda(\mathbf{x}) + \sum_{\mu > \lambda} K_{\lambda,\mu} m_\mu(\mathbf{x})
 >$$
 >for some total order $>$. Here $\lambda'$ is the conjugate of $\lambda$.
+
+**Proof:**
+We have
+$$
+e_k(\mathbf{x})=\sum_{i_1<\cdots<i_k}x_{i_1}\cdots x_{i_k},\quad m_{\lambda}(\mathbf{x})=\sum x_{i_{1}}^{\lambda_{1}}\dots x_{i_{n}}^{\lambda_{n}}.
+$$
+Each monomial in $e_k(\mathbf{x})$ is a product of $k$ distinct variables, and every monomial of this form occurs exactly once. Hence
+$$
+e_k(\mathbf{x})=m_{(1^k)}(\mathbf{x}).
+$$
+
+Now let $\lambda=(\lambda_1,\lambda_2,\ldots)$ be a partition. Since
+$$
+e_{\lambda'}=e_{\lambda'_1}e_{\lambda'_2}\cdots,
+$$
+a monomial occurring in $e_{\lambda'}$ is obtained by choosing, for each column of the Young diagram of $\lambda$, a set of distinct variables.
+
+Suppose such a monomial has exponent partition $\mu$. For any $r\ge1$, the $r$ variables with largest exponents can occur at most once in each column. Therefore their total exponent is at most
+$$
+\sum_j\min(r,\lambda'_j)
+=
+\sum_{i=1}^r\lambda_i.
+$$
+Thus
+$$
+\mu_1+\cdots+\mu_r\le\lambda_1+\cdots+\lambda_r
+$$
+for every $r$. Hence $\lambda$ dominates $\mu$, with equality for all $r$ only when $\mu=\lambda$.
+
+Choose any total order $>$ on partitions refining the reverse dominance order. Then every $\mu\ne\lambda$ occurring above satisfies $\mu>\lambda$. Moreover, the monomial type $\lambda$ occurs with coefficient $1$: assign the same variable to all boxes in each row of $\lambda$. Therefore
+$$
+e_{\lambda'}(\mathbf{x})
+=
+m_\lambda(\mathbf{x})
++
+\sum_{\mu>\lambda}K_{\lambda,\mu}m_\mu(\mathbf{x}),
+$$
+where $K_{\lambda,\mu}\in\mathbb{Z}_{\ge0}$.
+
 
 
 
