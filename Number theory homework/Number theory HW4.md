@@ -18,3 +18,39 @@ ___
 >(ii) Using (i) show that $p$ splits completely in $\mathbb{Q}(\zeta_n)$ if and only if $p \equiv 1 \bmod n$.
 
 **Proof:**
+**(i)** Let $\mathfrak{p}$ be a prime of $\mathbb{Q}(\zeta_n)$ above $p$. Since $p$ is unramified, the Frobenius element $\operatorname{Frob}_{\mathfrak p}$ satisfies
+$$
+\operatorname{Frob}_{\mathfrak p}(x)\equiv x^p\pmod{\mathfrak p}
+$$
+for every $x\in\mathbb{Z}[\zeta_n]$.
+
+Applying this to $\zeta_n$ gives
+$$
+\operatorname{Frob}_{\mathfrak p}(\zeta_n)
+\equiv \zeta_n^p\pmod{\mathfrak p}.
+$$
+Both sides are $n$-th roots of unity. Since $p\nmid n$, the polynomial $X^n-1$ has distinct roots modulo $\mathfrak p$, so the congruence implies
+$$
+\operatorname{Frob}_{\mathfrak p}(\zeta_n)=\zeta_n^p.
+$$
+By the definition of the canonical isomorphism $i$,
+$$
+i(\operatorname{Frob}_{\mathfrak p})\equiv p\pmod n.
+$$
+
+**(ii)** For an unramified prime, $p$ splits completely in $L/\mathbb{Q}$ if and only if its Frobenius element is the identity. By (i),
+$$
+\operatorname{Frob}_{\mathfrak p}=\operatorname{id}
+\iff
+i(\operatorname{Frob}_{\mathfrak p})=1
+\iff
+p\equiv1\pmod n.
+$$
+Therefore,
+$$
+p\text{ splits completely in }\mathbb{Q}(\zeta_n)
+\iff
+p\equiv1\pmod n.
+$$
+___
+
