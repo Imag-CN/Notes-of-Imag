@@ -52,5 +52,11 @@ p\text{ splits completely in }\mathbb{Q}(\zeta_n)
 \iff
 p\equiv1\pmod n.
 $$
+
+>[!remark] Remark
+>The prime $p$ is inert in $\mathbb{Q}(\zeta_n)$ if and only if the Frobenius element generates the whole Galois group. 
+>
+>By (i), $$ i(\operatorname{Frob}_{\mathfrak p})\equiv p\pmod n. $$ Hence $$ p\text{ is inert in }\mathbb{Q}(\zeta_n) \iff \langle p\bmod n\rangle=(\mathbb{Z}/n\mathbb{Z})^\times \iff \operatorname{ord}_n(p)=\varphi(n). $$ Thus $p$ is inert if and only if $p$ has multiplicative order $\varphi(n)$ modulo $n$, i.e. $p\bmod n$ is a generator of $(\mathbb{Z}/n\mathbb{Z})^\times$.
+
 ___
 
