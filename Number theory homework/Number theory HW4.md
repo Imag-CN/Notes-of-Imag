@@ -1,4 +1,6 @@
 ___
+*Using DeepSeek to help write markdown problem statements, provided ideas for problem 2, 3 and 4, and enhance writing conventions.*
+___
 
 >[!problem] Problem 1
 >Let $\zeta_n$ denote a primitive $n$-th root of unity (so that powers of $\zeta_n$ give all $n$-th roots of unity). Consider $L = \mathbb{Q}(\zeta_n)$ over $K = \mathbb{Q}$. This is a Galois extension and there is an isomorphism (which deserves to be called "canonical"; you may review this from [L], VI.3)
