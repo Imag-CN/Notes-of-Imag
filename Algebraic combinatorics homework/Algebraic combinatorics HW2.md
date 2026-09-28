@@ -147,7 +147,7 @@ $$
 $$
 ___
 
->[!problem] 8.1
+>[!problem] 7.1
 >Let $R_n = \mathbb{Z}[x_1, \dots, x_n]$ and $\Lambda_n$ be the set of symmetric polynomials in $R_n$, Show that $\Lambda_n$ is closed under addition and multiplication, and hence forms a subring of $R_n$.
 
 **Proof:**
@@ -179,7 +179,7 @@ so $fg$ is symmetric.
 Also, $0,1\in\Lambda_n$, and if $f\in\Lambda_n$, then $-f\in\Lambda_n$. Hence $\Lambda_n$ is closed under addition, multiplication, and additive inverses, and therefore $\Lambda_n$ is a subring of $R_n$.
 ___
 
->[!problem] 8.2
+>[!problem] 7.2
 >Let $\mathbf{x}$ be a countable infinite set of variables.
 >
 >- Prove that $e_k(\mathbf{x}) = m_{(1^k)}$.
@@ -199,6 +199,8 @@ Each monomial in $e_k(\mathbf{x})$ is a product of $k$ distinct variables, and e
 $$
 e_k(\mathbf{x})=m_{(1^k)}(\mathbf{x}).
 $$
+
+
 
 Now let $\lambda=(\lambda_1,\lambda_2,\ldots)$ be a partition. Since
 $$
@@ -227,14 +229,52 @@ m_\lambda(\mathbf{x})
 \sum_{\mu>\lambda}K_{\lambda,\mu}m_\mu(\mathbf{x}),
 $$
 where $K_{\lambda,\mu}\in\mathbb{Z}_{\ge0}$.
+___
 
-
-
-
-
-
-
->[!problem] 8.3
+>[!problem] 7.3
 >Let $f \in \mathbb{C}[[\mathbf{x}]]$ show that if $f$ is invariant under all permutations of $\cup_{n=1}^\infty \Sigma_n$ then it is invariant for all bijections from $\mathbb{P}$ to $\mathbb{P}$ where $\mathbb{P} = \{1, 2, 3, \dots\}$.
+
+**Proof:**
+Let $\sigma:\mathbb{P}\to\mathbb{P}$ be any bijection. We want to show that
+$$
+f(x_1,x_2,\ldots)=f(x_{\sigma(1)},x_{\sigma(2)},\ldots).
+$$
+
+Write
+$$
+f=\sum_{\alpha}c_\alpha x^\alpha,
+$$
+where each monomial $x^\alpha$ involves only finitely many variables. Fix a monomial $x^\alpha$. Let $S$ be the finite set of indices of variables appearing in $x^\alpha$. Then $\sigma(S)$ is also finite.
+
+Choose $N$ such that
+$$
+S\cup\sigma(S)\subseteq\{1,\ldots,N\}.
+$$
+The restriction of $\sigma$ to $S\cup\sigma(S)$ can be extended to a permutation $\tau\in\Sigma_N$. Since $f$ is invariant under every permutation in $\Sigma_N$,
+$$
+f(x_1,x_2,\ldots)=f(x_{\tau(1)},x_{\tau(2)},\ldots).
+$$
+In particular, $\tau$ and $\sigma$ act identically on the variables occurring in $x^\alpha$, so the coefficient of $x^\alpha$ is unchanged when the variables are permuted by $\sigma$.
+
+Since every monomial involves only finitely many variables, this holds for every monomial. Hence
+$$
+f(x_1,x_2,\ldots)=f(x_{\sigma(1)},x_{\sigma(2)},\ldots).
+$$
+
+Therefore $f$ is invariant under every bijection $\mathbb{P}\to\mathbb{P}$.
+___
+
+>[!problem]
+>Let $R_n = \mathbb{Z}[x_1, \dots, x_n]$ and $\Lambda_n$ be the set of symmetric polynomials in $R_n$. Show that $\Lambda_n$ is closed under addition and multiplication, and hence forms a subring of $R_n$.
+
+2. Let $\mathbf{x}$ be a countable infinite set of variables.
+
+- Prove that $e_k(\mathbf{x}) = m_{(1^k)}$.
+
+- Use this to show that the expansion of $e_\lambda(\mathbf{x})$ in the $m_\mu$ can be written as
+  $$ e_{\lambda'}(\mathbf{x}) = m_\lambda(\mathbf{x}) + \sum_{\mu > \lambda} K_{\lambda,\mu} m_\mu(\mathbf{x}) $$
+  for some total order $>$. Here $\lambda'$ is the conjugate of $\lambda$.
+
+3. Let $f \in \mathbb{C}[[\mathbf{x}]]$. Show that if $f$ is invariant under all permutations of $\cup_{n=1}^\infty \Sigma_n$ then it is invariant for all bijections from $\mathbb{P}$ to $\mathbb{P}$ where $\mathbb{P} = \{1, 2, 3, \dots\}$.
 
 Hint: every monomial of a power series involves only finitely many variables.
