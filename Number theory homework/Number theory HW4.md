@@ -135,7 +135,43 @@ $$
 \left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=1.
 $$
 
-This proves the quadratic reciprocity law in the case $q\equiv1\pmod4$ without using quadratic reciprocity itself.
+(This proves the quadratic reciprocity law in the case $q\equiv1\pmod4$ without using quadratic reciprocity itself.)
+
+>[!remark] Remark
+>Suppose $q\equiv3\pmod4$. Then $\mathbb{Q}(\sqrt{-q})\subset\mathbb{Q}(\zeta_q)$.
+>
+>As before, the subgroup of $\operatorname{Gal}(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ fixing $\mathbb{Q}(\sqrt{-q})$ corresponds under $i$ to the unique subgroup of index $2$ in $(\mathbb{Z}/q\mathbb{Z})^\times$, namely the subgroup of squares.
+>
+>Hence, for $p\neq q$,
+>$$
+>p\text{ is a square modulo }q
+>\iff
+>\operatorname{Frob}_p\text{ fixes }\mathbb{Q}(\sqrt{-q})
+>\iff
+>p\text{ splits in }\mathbb{Q}(\sqrt{-q}).
+>$$
+>
+>Applying Problem Set 02 #4 with $d=-q$, we get
+>$$
+>p\text{ splits in }\mathbb{Q}(\sqrt{-q})
+>\iff
+>\left(\frac{-q}{p}\right)=1.
+>$$
+>
+>Therefore
+>$$
+>\left(\frac{p}{q}\right)=1
+>\iff
+>\left(\frac{-q}{p}\right)=1.
+>$$
+>Since both Legendre symbols are $\pm1$,
+>$$
+>\left(\frac{p}{q}\right)\left(\frac{-q}{p}\right)=1
+>$$
+
+___
+
+
 
 
 
