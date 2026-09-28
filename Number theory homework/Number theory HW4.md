@@ -171,37 +171,88 @@ $$
 
 ___
 
+>[!problem] Problem 3 ([L] VI.47)
+>Let $p$ be a prime number, and consider the projection of $W(A)$ on vectors whose components are indexed by a power of $p$. Now use the log to the base $p$ to index these components, so that we write $x_n$ instead of $x_{p^n}$. For instance, $x_0$ now denotes what was $x_1$ previously. For a Witt vector $x = (x_0, x_1, \dots, x_n, \dots)$ define
+>$$
+>Vx = (0, x_0, x_1, \dots) \quad \text{and} \quad Fx = (x_0^p, x_1^p, \dots).
+>$$
+>Thus $V$ is a shifting operator. We have $V \circ F = F \circ V$. Show that
+>$$
+>(Vx)^{(n)} = px^{(n-1)} \quad \text{and} \quad x^{(n)} = (Fx)^{(n-1)} + p^n x_n.
+>$$
+>Also from the definition, we have
+>$$
+>x^{(n)} = x_0^{p^n} + px_1^{p^{n-1}} + \cdots + p^n x_n.
+>$$
 
+**Proof:**
+Since
+$$
+(Vx)_i=
+\begin{cases}
+0,&i=0,\\
+x_{i-1},&i\ge1,
+\end{cases}
+$$
+the $n$-th ghost component of $Vx$ is
+$$
+(Vx)^{(n)}
+=\sum_{i=0}^n p^i(Vx)_i^{p^{n-i}}
+=\sum_{i=1}^n p^i x_{i-1}^{p^{n-i}}.
+$$
+Setting $j=i-1$, we obtain
+$$
+(Vx)^{(n)}
+=p\sum_{j=0}^{n-1}p^j x_j^{p^{n-1-j}}
+=px^{(n-1)}.
+$$
 
+Similarly, since $(Fx)_i=x_i^p$, we have
+$$
+(Fx)^{(n-1)}
+=\sum_{i=0}^{n-1}p^i(x_i^p)^{p^{n-1-i}}
+=\sum_{i=0}^{n-1}p^i x_i^{p^{n-i}}.
+$$
+Comparing this with
+$$
+x^{(n)}
+=\sum_{i=0}^n p^i x_i^{p^{n-i}},
+$$
+we get $x^{(n)}=(Fx)^{(n-1)}+p^n x_n$. Thus
+$$
+(Vx)^{(n)}=px^{(n-1)}
+\qquad\text{and}\qquad
+x^{(n)}=(Fx)^{(n-1)}+p^n x_n.
+$$
+___
 
+>[!problem] Problem 4 ([L] VI.48)
+>Let $k$ be a field of characteristic $p$, and consider $W(k)$. Then $V$ is an additive endomorphism of $W(k)$, and $F$ is a ring homomorphism of $W(k)$ into itself. Furthermore, if $x \in W(k)$ then
+>$$
+>px = VFx.
+>$$
+>If $x, y \in W(k)$, then $(V^i x)(V^j y) = V^{i+j}(F^{pj}x \cdot F^{pi}y)$. For $a \in k$ denote by $\{a\}$ the Witt vector $(a, 0, 0, \dots)$. Then we can write symbolically
+>$$
+>x = \sum_{i=0}^\infty V^i\{x_i\}.
+>$$
+>Show that if $x \in W(k)$ and $x_0 \neq 0$ then $x$ is a unit in $W(k)$.
 
+**Proof:**
+Since
+$$
+x=\sum_{i=0}^\infty V^i\{x_i\},
+$$
+we have
+$$
+x\{x_0^{-1}\}
+=\{x_0\}\{x_0^{-1}\}+\sum_{i=1}^\infty V^i\{x_i\}\{x_0^{-1}\}.
+$$
+The first term is $1$, so $x\{x_0^{-1}\}=1-Vy$ for some $y\in W(k)$. Thus $1-x\{x_0^{-1}\}=Vy$.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   * **Bonus:** When $q \equiv 3 \bmod 4$, a similar argument with $\mathbb{Q}(\sqrt{-q})$ in place of $\mathbb{Q}(\sqrt{q})$ shows that
-   $$ \left(\frac{p}{q}\right) \left(\frac{-q}{p}\right) = 1 $$
-   but you need not include this in your solution. [PROCEED TO PAGE 2.]
+Since $V$ increases the index of the first nonzero component, $(Vy)^i$ tends to $0$ in the $V$-adic topology. Hence the geometric series $\sum_{i=0}^\infty(Vy)^i$ is well-defined in $W(k)$. Therefore
+$$
+x\{x_0^{-1}\}\sum_{i=0}^\infty(Vy)^i
+=(1-Vy)\sum_{i=0}^\infty(Vy)^i
+=1.
+$$
+Thus $x\{x_0^{-1}\}$ is a unit. Since $\{x_0^{-1}\}$ is also a unit, it follows that $x$ is a unit in $W(k)$.
