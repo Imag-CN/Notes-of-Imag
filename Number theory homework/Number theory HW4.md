@@ -60,3 +60,112 @@ $$
 
 ___
 
+>[!problem] Problem 2 (Continue from the previous problem.)
+>Assume that $n = q$ is a prime such that $q \equiv 1 \bmod 4$. Recall there is a canonical isomorphism
+   $$ i: \operatorname{Gal}(\mathbb{Q}(\zeta_q)/\mathbb{Q}) \xrightarrow{\sim} (\mathbb{Z}/q\mathbb{Z})^\times $$
+   sending the Frobenius element $(p, \mathbb{Q}(\zeta_q)/\mathbb{Q})$ to $p \in (\mathbb{Z}/q\mathbb{Z})^\times$ for every $p \neq q$. Let's take on faith the fact that $\mathbb{Q}(\sqrt{q}) \subset \mathbb{Q}(\zeta_q)$. (We'll be able to show this later in the course.) Now fix an odd prime $p \neq q$. Use the isomorphism $i$ to do the following.
+>
+>(i) Verify that $p$ is a square modulo $q$ if and only if $(p, \mathbb{Q}(\zeta_q)/\mathbb{Q})$ fixes the subfield $\mathbb{Q}(\sqrt{q})$ element-wise.
+>
+>(ii) Check that $(p, \mathbb{Q}(\zeta_q)/\mathbb{Q})$ fixes the subfield $\mathbb{Q}(\sqrt{q})$ element-wise if and only if $p$ splits (completely) in $\mathbb{Q}(\sqrt{q})$.
+>
+>(iii) Deduce from (i), (ii), and Problem Set 02 #4 that $p$ is a square modulo $q$ if and only if $q$ is a square modulo $p$, namely
+>$$
+>\left(\frac{p}{q}\right) \left(\frac{q}{p}\right) = 1.
+>$$
+
+**Proof:**
+**(i)** Under the isomorphism
+$$
+i:\operatorname{Gal}(\mathbb{Q}(\zeta_q)/\mathbb{Q})\xrightarrow{\sim}(\mathbb{Z}/q\mathbb{Z})^\times,
+$$
+the subgroup fixing $\mathbb{Q}(\sqrt q)$ corresponds to the subgroup of squares in $(\mathbb{Z}/q\mathbb{Z})^\times$.
+
+Since
+$$
+[\mathbb{Q}(\zeta_q):\mathbb{Q}]=q-1,
+\qquad
+[\mathbb{Q}(\sqrt q):\mathbb{Q}]=2,
+$$
+the subgroup fixing $\mathbb{Q}(\sqrt q)$ has index $2$. Since $q\equiv1\pmod4$, $(\mathbb{Z}/q\mathbb{Z})^\times$ is cyclic of even order $q-1$, and its unique subgroup of index $2$ is the subgroup of squares.
+
+By the previous problem,
+$$
+i\left(\operatorname{Frob}_p\right)=p\pmod q.
+$$
+Therefore,
+$$
+p\text{ is a square modulo }q
+\iff
+\operatorname{Frob}_p\text{ fixes }\mathbb{Q}(\sqrt q)\text{ element-wise}.
+$$
+
+**(ii)** Since $p\neq q$, we have $p\nmid q$, so $p$ is unramified in $\mathbb{Q}(\sqrt q)$.
+
+For a quadratic extension, an unramified prime splits completely if and only if its Frobenius element is the identity. The Frobenius in $\mathbb{Q}(\zeta_q)/\mathbb{Q}$ fixes $\mathbb{Q}(\sqrt q)$ element-wise if and only if its restriction to $\mathbb{Q}(\sqrt q)$ is the identity. Hence
+$$
+\operatorname{Frob}_p\text{ fixes }\mathbb{Q}(\sqrt q)
+\iff
+p\text{ splits completely in }\mathbb{Q}(\sqrt q).
+$$
+**(iii)** By (i) and (ii),
+$$
+p\text{ is a square modulo }q
+\iff
+p\text{ splits in }\mathbb{Q}(\sqrt q).
+$$
+
+Since $q\equiv1\pmod4$, Problem Set 02 #4 applied with $d=q$ gives, for $p\neq2,q$,
+$$
+p\text{ splits in }\mathbb{Q}(\sqrt q)
+\iff
+\left(\frac{q}{p}\right)=1.
+$$
+Thus
+$$
+p\text{ is a square modulo }q
+\iff
+\left(\frac{q}{p}\right)=1
+\iff
+q\text{ is a square modulo }p.
+$$
+
+Equivalently,
+$$
+\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=1.
+$$
+
+This proves the quadratic reciprocity law in the case $q\equiv1\pmod4$ without using quadratic reciprocity itself.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   * **Bonus:** When $q \equiv 3 \bmod 4$, a similar argument with $\mathbb{Q}(\sqrt{-q})$ in place of $\mathbb{Q}(\sqrt{q})$ shows that
+   $$ \left(\frac{p}{q}\right) \left(\frac{-q}{p}\right) = 1 $$
+   but you need not include this in your solution. [PROCEED TO PAGE 2.]
