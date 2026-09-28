@@ -356,3 +356,45 @@ ___
 > - Let $K_{\lambda,\mu}$ be the number of semi standard Young tableaux of shape $\lambda$ and content $\mu$. Prove that if $\mu >_{LEX} \lambda$ then $K_{\lambda,\mu} = 0$.
 > - Is it true that if $\mu >_{LEX} \lambda$ then $\mu$ dominates $\lambda$? Is it true that if $\mu$ dominates $\lambda$ then $\mu >_{LEX} \lambda$?
 
+**Proof:**
+Suppose $\mu>_{\mathrm{LEX}}\lambda$. Let $j$ be the first index for which
+$$
+\mu_i=\lambda_i\quad(i\le j),\qquad \mu_{j+1}>\lambda_{j+1}.
+$$
+In a semistandard Young tableau of shape $\lambda$, the entries in each column are strictly increasing. Hence all entries $1,\ldots,j+1$ can occur only in the first $j+1$ rows, so the total number of entries among $1,\ldots,j+1$ is at most
+$$
+\lambda_1+\cdots+\lambda_{j+1}.
+$$
+But the content $\mu$ contains
+$$
+\mu_1+\cdots+\mu_{j+1}
+>
+\lambda_1+\cdots+\lambda_{j+1}
+$$
+such entries, a contradiction. Thus
+$$
+K_{\lambda,\mu}=0.
+$$
+
+
+Lexicographic order does not imply dominance. For example,
+$$
+\mu=(4,4,1,1),\qquad \lambda=(5,3,2),
+$$
+have $\mu>_{\mathrm{LEX}}\lambda$, but
+$$
+\mu_1+\mu_2=8<9=\lambda_1+\lambda_2,
+$$
+so $\mu$ does not dominate $\lambda$.
+
+The converse is also false. For example,
+$$
+\mu=(3,3,0),\qquad \lambda=(4,1,1),
+$$
+satisfy $\mu$ dominates $\lambda$, since
+$$
+3\le4,\qquad 3+3\ge4+1,
+$$
+but $\mu<_{\mathrm{LEX}}\lambda$ because $\mu_1<\lambda_1$.
+
+Therefore, neither implication holds.
