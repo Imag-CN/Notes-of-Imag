@@ -351,7 +351,8 @@ There is exactly one such tableau.
 Let the entries be $1,\dots,k$, with $i$ occurring $\lambda_{k+1-i}$ times. Since the entries in each column are strictly increasing and those in each row are weakly increasing, the smallest entries must occupy the leftmost available boxes. Thus the entries are forced uniquely: for each $i$, place the $\lambda_{k+1-i}$ copies of $i$ in the boxes added when passing from the $(i-1)$-st column boundary to the $i$-th one.
 ___
 
-4. Let $\mu$ and $\lambda$ be partitions of $n$. We say that $\mu >_{LEX} \lambda$ if $\mu_1 > \lambda_1$ or if there exists $j$ such that $\mu_i = \lambda_i$ for $1 \le i \le j$ and $\mu_{j+1} > \lambda_{j+1}$.
+>[!problem] 8.4
+>Let $\mu$ and $\lambda$ be partitions of $n$. We say that $\mu >_{LEX} \lambda$ if $\mu_1 > \lambda_1$ or if there exists $j$ such that $\mu_i = \lambda_i$ for $1 \le i \le j$ and $\mu_{j+1} > \lambda_{j+1}$.
+> - Let $K_{\lambda,\mu}$ be the number of semi standard Young tableaux of shape $\lambda$ and content $\mu$. Prove that if $\mu >_{LEX} \lambda$ then $K_{\lambda,\mu} = 0$.
+> - Is it true that if $\mu >_{LEX} \lambda$ then $\mu$ dominates $\lambda$? Is it true that if $\mu$ dominates $\lambda$ then $\mu >_{LEX} \lambda$?
 
-   - Let $K_{\lambda,\mu}$ be the number of semi standard Young tableaux of shape $\lambda$ and content $\mu$. Prove that if $\mu >_{LEX} \lambda$ then $K_{\lambda,\mu} = 0$.
-   - Is it true that if $\mu >_{LEX} \lambda$ then $\mu$ dominates $\lambda$? Is it true that if $\mu$ dominates $\lambda$ then $\mu >_{LEX} \lambda$?
