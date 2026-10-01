@@ -38,7 +38,7 @@ ___
 Conversely, if $|M|=2r$, partition $M$ into $r$ pairs and let $E$ be the equivalence relation whose classes are these pairs. Thus the finite spectrum is $\{2r:r>0\}$.
 
 **(b)**
-**(i)** $\{2^n3^m:n,m>0\}$ Use the language of groups. Let $\phi$ say that $M$ is a group of exponent dividing $6$, together with
+**(i) $\{2^n3^m:n,m>0\}$** Use the language of groups. Let $\phi$ say that $M$ is a group of exponent dividing $6$, together with
 $$
 \exists x(x\neq e\land x^2=e)
 $$
@@ -116,3 +116,24 @@ n\in X
 $$
 
 Hence $X$ is a finite spectrum if and only if it is recognizable in nondeterministic exponential time.
+___
+
+>[!problem] [MAR] 1.4.8
+>Let $\mathcal{L} = \{+, 0\}$. Show that $\mathbb{Z} \oplus \mathbb{Z} \not\cong \mathbb{Z}$.
+
+**Proof:**
+The sentence
+$$
+\exists x \forall y \exists z (y=z+z \vee y=z+z+x)
+$$
+is true in $\mathbb{Z}$ but not in $\mathbb{Z}\oplus \mathbb{Z}$.
+___
+
+>[!problem] [MAR] 1.4.9
+>Let  be an -structure. We say that  is definable if the graph of  is a definable set in .
+>
+>a) Show that if $f: M^n \to M^m$ and $g: M^m \to M^l$ are definable, then so is $g \circ f$.
+>
+>b) Suppose that $f: M^n \to M$ is definable. Show that the image of $f$ is definable.
+>
+>c) Suppose that $f: M^n \to M$ is definable and one-to-one. Show that $f^{-1}$ is definable.
