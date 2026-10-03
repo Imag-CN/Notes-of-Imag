@@ -48,26 +48,17 @@ ___
 > (Note: This implies that there exists a unique degree $n$ unramified extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$. It also follows that such an extension is Galois over $\mathbb{Q}_p$.)
 
 **Proof:**
-**(1)** Let $\mathcal{O}_{L_n}$ be the ring of integers of $L_n$ and let $\mathfrak{m}_{L_n}$ be its maximal ideal. Since $L_n/\mathbb{Q}_p$ is unramified of degree $n$, its residue field is $\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\cong\mathbb{F}_{p^n}$. Hence $\left(\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\right)^\times$ has order $p^n-1$.
+**(1)** Since $L_{n}$ is a finite extension of a discrete non-Archimedean CVF, $L_{n}$ is also a discrete non-Archimedean CVF with a unique valuation extending the valuation in $\mathbb{Q}_{p}$. Let $\mathcal{O}_{L_n}$ be the ring of integers of $L_n$ and let $\mathfrak{m}_{L_n}$ be its maximal ideal. Since $L_n/\mathbb{Q}_p$ is unramified of degree $n$, its residue field is $\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\cong\mathbb{F}_{p^n}$. Hence $\left(\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\right)^\times$ has order $p^n-1$.
 
 First suppose that $\zeta\in\mu(L_n)$ has order prime to $p$. Its reduction $\overline{\zeta}$ is nonzero, and reduction is injective on roots of unity of order prime to $p$. Thus
 $$
 \operatorname{ord}(\zeta)\mid p^n-1.
 $$
-Moreover, every element of $\mathbb{F}_{p^n}^\times$ has a unique lift to a root of unity of order prime to $p$ by Hensel's lemma. Therefore
-$$
-\mu_{p^n-1}\subseteq\mu(L_n).
-$$
+Moreover, every element of $\mathbb{F}_{p^n}^\times$ has a unique lift to a root of unity of order prime to $p$ by Hensel's lemma. Therefore $\mu_{p^n-1}\subseteq\mu(L_n)$.
 
-If $p$ is odd, $p^n-1$ is even. There are no nontrivial $p$-power roots of unity in an unramified extension of $\mathbb{Q}_p$: a $p$-power root of unity would reduce to $1$, while the group $1+\mathfrak{m}_{L_n}$ is torsion-free for $p$ odd. Hence every root of unity in $L_n$ has order dividing $p^n-1$, and
-$$
-\mu(L_n)=\mu_{p^n-1}.
-$$
+- If $p$ is odd, $p^n-1$ is even. There are no nontrivial $p$-power roots of unity in an unramified extension of $\mathbb{Q}_p$: a $p$-power root of unity would reduce to $1$, while the group $1+\mathfrak{m}_{L_n}$ is torsion-free for $p$ odd. Hence every root of unity in $L_n$ has order dividing $p^n-1$, and $\mu(L_n)=\mu_{p^n-1}$.
 
-If $p=2$, the same argument shows that every root of unity of odd order belongs to $\mu_{2^n-1}$. The only $2$-power roots of unity in an unramified extension are $\pm1$. Hence
-$$
-\mu(L_n)=\mu_{2(2^n-1)}.
-$$
+- If $p=2$, the same argument shows that every root of unity of odd order belongs to $\mu_{2^n-1}$. The only $2$-power roots of unity in an unramified extension are $\pm1$. Hence $\mu(L_n)=\mu_{2(2^n-1)}$.
 
 **(2)** Put $m=p^n-1$. By (1), $\mu_m\subset L_n$, so
 $$
