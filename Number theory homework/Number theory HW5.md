@@ -4,7 +4,7 @@ ___
 > (Krasner's lemma) Let $E/K$ be a finite Galois extension of a non-Archimedean complete field $K$. Prolong the valuation of $K$ to $E$. Let $x \in E$ and let $\{x_1, \dots, x_n\}$ be the set of conjugates of $x$ over $K$, with $x = x_1$. Let $y \in E$ be such that $\|y - x\| < \|y - x_i\|$ for $i \ge 2$. Show that $x$ belongs to the field $K(y)$.
 
 **Proof:**
-Since $E/K$ is Galois, for any $K$-automorphism $\sigma:E\to E$, we have $\sigma(x)=x_i$ for some $i$; and $E/K(y)$ is Galois. Suppose that $x\notin K(y)$. Then there is a $K(y)$-automorphism $\sigma$ $E$ such that $\sigma(x)\ne x$. In particular, $\sigma(x)=x_i$ for some $i\ge2$.
+Since $E/K$ is Galois, we have $E/K(y)$ is Galois. Suppose that $x\notin K(y)$, then there is a $K(y)$-automorphism $\sigma$ of $E$ such that $\sigma(x)\ne x$ (since $\operatorname{Gal}(E/K(y))$ acts transitively on the roots of the minimal polynomial of $x$ with respect to $E/K(y)$). In particular, $\sigma$ is also a $K$-automorphism of $E$, so $\sigma(x)=x_i$ for some $i\ge2$.
 
 By the uniqueness of extension of valuations, we have$\|y-x\|=\|\sigma(y-x)\|$. Because $\sigma$ fixes $y$, we have $\|\sigma(y-x)\|=\|y-\sigma(x)\|=\|y-x_i\|$, contradicting the assumption $\|y-x\|<\|y-x_i\| \quad (i\ge2)$.
 
@@ -47,3 +47,67 @@ ___
 >
 > (2) Prove that $L_n = \mathbb{Q}_p(\mu_{p^n-1})$.
 > (Note: This implies that there exists a unique degree $n$ unramified extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$. It also follows that such an extension is Galois over $\mathbb{Q}_p$.)
+
+**Proof:**
+**(1)** Let $\mathcal{O}_{L_n}$ be the ring of integers of $L_n$ and let $\mathfrak{m}_{L_n}$ be its maximal ideal. Since $L_n/\mathbb{Q}_p$ is unramified of degree $n$, its residue field is
+$$
+\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\cong\mathbb{F}_{p^n}.
+$$
+Hence
+$$
+\left(\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\right)^\times
+$$
+has order $p^n-1$.
+
+First suppose that $\zeta\in\mu(L_n)$ has order prime to $p$. Its reduction $\overline{\zeta}$ is nonzero, and reduction is injective on roots of unity of order prime to $p$. Thus
+$$
+\operatorname{ord}(\zeta)\mid p^n-1.
+$$
+Moreover, every element of $\mathbb{F}_{p^n}^\times$ has a unique lift to a root of unity of order prime to $p$ by Hensel's lemma. Therefore
+$$
+\mu_{p^n-1}\subseteq\mu(L_n).
+$$
+
+If $p$ is odd, $p^n-1$ is even. There are no nontrivial $p$-power roots of unity in an unramified extension of $\mathbb{Q}_p$: a $p$-power root of unity would reduce to $1$, while the group $1+\mathfrak{m}_{L_n}$ is torsion-free for $p$ odd. Hence every root of unity in $L_n$ has order dividing $p^n-1$, and
+$$
+\mu(L_n)=\mu_{p^n-1}.
+$$
+
+If $p=2$, the same argument shows that every root of unity of odd order belongs to $\mu_{2^n-1}$. The only $2$-power roots of unity in an unramified extension are $\pm1$. Hence
+$$
+\mu(L_n)=\mu_{2(2^n-1)}.
+$$
+
+**(2)** Put $m=p^n-1$. By (1), $\mu_m\subset L_n$, so
+$$
+\mathbb{Q}_p(\mu_m)\subseteq L_n.
+$$
+
+Let $\zeta_m$ be a primitive $m$-th root of unity. Its reduction has order $m$ in $\mathbb{F}_{p^n}^\times$. The order of $p$ modulo $m$ is exactly $n$: indeed,
+$$
+p^n\equiv1\pmod m,
+$$
+while for $1\le d<n$,
+$$
+0<p^d-1<p^n-1=m,
+$$
+so $p^d\not\equiv1\pmod m$. Therefore the minimal polynomial of $\overline{\zeta}_m$ over $\mathbb{F}_p$ has degree $n$.
+
+By Hensel's lemma, $\zeta_m$ has the same degree over $\mathbb{Q}_p$, so
+$$
+[\mathbb{Q}_p(\mu_m):\mathbb{Q}_p]=n.
+$$
+Since $[L_n:\mathbb{Q}_p]=n$ and
+$$
+\mathbb{Q}_p(\mu_m)\subseteq L_n,
+$$
+we obtain
+$$
+L_n=\mathbb{Q}_p(\mu_{p^n-1}).
+$$
+
+For $p=2$, this is unchanged by the extra factor $2$, since $-1\in\mathbb{Q}_2$ and hence
+$$
+\mathbb{Q}_2(\mu_{2(2^n-1)})
+=\mathbb{Q}_2(\mu_{2^n-1}).
+$$
