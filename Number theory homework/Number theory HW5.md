@@ -21,17 +21,29 @@ ___
 $$
 \varepsilon<\min_{i\ne j}\|x_i-x_j\|.
 $$
-If $h$ is sufficiently close to $f$, its roots $y_1,\dots,y_n$ can be rearranged so that $\|y_i-x_i\|<\varepsilon$ for every $i$ (by the continuity of polynomial functions, if the coefficients are close enough, then so are the roots). In particular,
+If $h$ is sufficiently close to $f$, its roots $y_1,\dots,y_n$ can be rearranged so that $\|y_i-x_i\|<\varepsilon$ for every $i$ (by the continuity of simple roots of $f$ with respect to the coefficients, if the coefficients are close enough, then so are the roots). In particular,
 $$
 \|y_1-x_1\|<\|y_1-x_i\| \qquad (i\ge2).
 $$
-By Krasner's lemma, $x_1\in K(y_1)$. Hence $K(x_1)\subseteq K(y_1)$. Both extensions have degree $n$, so $K(x_1)=K(y_1)$. Similarly, $K(x_i)=K(y_i)\quad(i\geq2)$. 
+By Krasner's lemma, $x_1\in K(y_1)$. Hence $K(x_1)\subseteq K(y_1)$. $K(x_{1})$ has extension degree $n$ and $K(y_{1})$ has extension degree at most $n$, so $K(x_1)=K(y_1)$.
 
-Therefore, $h$ is irreducible (since $K(x_{1})\cong K[X]/(f(X))\cong K(X)/(h(X)) \cong K(y_{1})$) and $L_h\cong L$ (since $L_h\cong K(y_{1},\dots, y_{n}) \cong K(x_{1},\dots ,x_{n})\cong L$).
+Therefore,  since $K[X]/(f(X))\cong L\cong K(x_{1}) = K(y_{1})\cong L_{h}\cong  K[X]/(h(X))$, we have $h$ is irreducible and $L_h\cong L$.
 
-**(ii)** Let $g\in C[X]$ be a nonconstant polynomial. Choose a polynomial $f\in\overline{\mathbb{Q}}_p[X]$ of the same degree whose coefficients are sufficiently close to those of $g$. By (i), if $f$ is separable and irreducible in $\overline{ \mathbb{Q}_{p} }$, then $g$ has a root in $C$.
+>[!remark] Remark
+>Similarly we have $K(x_i)=K(y_i)\quad(i\geq2)$, so $K(y_{1},\dots, y_{n}) = K(x_{1},\dots ,x_{n})$. Therefore we have $h$ is separable and has the same splitting field as $f$'s.
+>
+>It is worth noting that $L_h$ and $L$ are not necessarily the same subfield of a fixed algebraic closure $\overline K$ of $K$ since $L$ or $L_{n}$ can be realized by add any roots of $f$ and $h$, not necessarily the corresponding ones. While their splitting fields are the same subfield of $\overline K$ because they contain all roots of $f$ or $h$.
 
-Since $\operatorname{char}\overline{ \mathbb{Q}_{p} }=0$, $\overline{ \mathbb{Q}_{p} }$ is perfect, $f$ is also separable. More generally, factor $f$ over $\overline{\mathbb{Q}}_p$ and choose one factor $h$ corresponding to a root of $g$. By (i), a sufficiently small perturbation of $h$ has a root in $\overline{\mathbb{Q}}_p$. Since $\overline{\mathbb{Q}}_p$ is dense in $C$, every polynomial over $C$ can therefore be approximated by polynomials having roots in $C$. Applying (i) to a sufficiently close approximation shows that $g$ itself has a root in $C$.
+**(ii)** Let $f$ be a non-constant irreducible polynomial in $C[X]$. By the density of $\overline{ \mathbb{Q}_{p} }$ in $C$, we may choose a polynomial $h\in\overline{\mathbb{Q}}_p[X]$ of the same degree whose coefficients are sufficiently close to those of $f$. By (i), since $f$ is separable ($\operatorname{char}C=0$, thus $C$ is perfect) and irreducible in $C$, then $h$ is irreducible in $C$. In particular, $h$ is irreducible in $\overline{ \mathbb{Q}_{p} }$, thus $\operatorname{deg}f=\operatorname{deg}h=1$ for $\overline{ \mathbb{Q}_{p} }$ is algebraically closed.
 
-Hence every nonconstant polynomial in $C[X]$ has a root in $C$, so $C$ is algebraically closed.
+Therefore, every non-constant irreducible polynomial in $C[X]$ is of degree $1$, i.e. $C$ is algebraically closed.
+___
 
+> [!problem] Problem 3
+> Fix an integer $n \ge 2$ and an algebraic closure $\overline{\mathbb{Q}}_p$ of the field $\mathbb{Q}_p$ of $p$-adic numbers. Let $L_n$ be a degree $n$ extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$ such that $(p) \subset \mathbb{Z}_p$ is unramified in $L_n$. Write $\mu(L_n)$ for the (multiplicative) torsion subgroup of $L_n^\times$, namely the group of all roots of unity in $L_n$, and $\mu_N$ for the subgroup of $N$-th roots of unity in $\overline{\mathbb{Q}}_p^\times$.
+>
+> (1) Show that $\mu(L_n) = \mu_{p^n-1}$ if $p$ is odd, and $\mu(L_n) = \mu_{2(p^n-1)}$ if $p$ is even (namely if $p=2$).
+> **Hint:** Hensel's lemma can help to show $\supset$.
+>
+> (2) Prove that $L_n = \mathbb{Q}_p(\mu_{p^n-1})$.
+> (Note: This implies that there exists a unique degree $n$ unramified extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$. It also follows that such an extension is Galois over $\mathbb{Q}_p$.)
