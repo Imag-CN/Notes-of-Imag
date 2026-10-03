@@ -15,3 +15,19 @@ ___
 > (i) ([SER II.2.1]) Let $K$ be a non-Archimedean complete field, and let $f(\mathrm{X}) \in \mathrm{K}[\mathrm{X}]$ be a separable irreducible polynomial of degree $n$. Let $\mathrm{L}/\mathrm{K}$ be the extension of degree $n$ defined by $f$. Show that for every polynomial $h(\mathrm{X})$ of degree $n$ that is close enough to $f$, $h(\mathrm{X})$ is irreducible and the extension $\mathrm{L}_h/\mathrm{K}$ defined by $h$ is isomorphic to $\mathrm{L}$. (Apply exer. 1 to the roots $x_i$ of $f$ and to a root $y$ of $h$.)
 >
 > (ii) Note that the $p$-adic valuation on $\mathbb{Q}_p$ extends uniquely to a valuation on $\overline{\mathbb{Q}}_p$; the latter is still called the $p$-adic valuation. Complete $\overline{\mathbb{Q}}_p$ with respect to the $p$-adic valuation and call it $C$. Use (i) to prove that $C$ is algebraically closed. (People often write $\mathbb{C}_p$ for this $C$.)
+
+**Proof:**
+**(i)** Let $x_1,\dots,x_n$ be the roots of $f$. Since $f$ is separable, $\|x_i-x_j\|>0$ for $i\ne j$. Choose $\varepsilon>0$ such that
+$$
+\varepsilon<\min_{i\ne j}\|x_i-x_j\|.
+$$
+If $h$ is sufficiently close to $f$, its roots $y_1,\dots,y_n$ can be rearranged so that $\|y_i-x_i\|<\varepsilon$ for every $i$ (by Vieta's formulas, if two ). In particular,
+$$
+\|y_1-x_1\|<\|y_1-x_i\| \qquad (i\ge2).
+$$
+By Krasner's lemma, $x_1\in K(y_1)$. Hence $K(x_1)\subseteq K(y_1)$. Both extensions have degree $n$, so $K(x_1)=K(y_1)$. Thus $h$ is irreducible and $L_h\cong L$.
+
+**(ii)** Let $g\in C[X]$ be a nonconstant polynomial. Choose a polynomial $f\in\overline{\mathbb{Q}}_p[X]$ of the same degree whose coefficients are sufficiently close to those of $g$. By (i), if $f$ is separable and irreducible, then $g$ has a root in $C$.
+
+Hence every nonconstant polynomial in $C[X]$ has a root in $C$, so $C$ is algebraically closed.
+
