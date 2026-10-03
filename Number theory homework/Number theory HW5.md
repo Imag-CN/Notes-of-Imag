@@ -43,7 +43,6 @@ ___
 > Fix an integer $n \ge 2$ and an algebraic closure $\overline{\mathbb{Q}}_p$ of the field $\mathbb{Q}_p$ of $p$-adic numbers. Let $L_n$ be a degree $n$ extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$ such that $(p) \subset \mathbb{Z}_p$ is unramified in $L_n$. Write $\mu(L_n)$ for the (multiplicative) torsion subgroup of $L_n^\times$, namely the group of all roots of unity in $L_n$, and $\mu_N$ for the subgroup of $N$-th roots of unity in $\overline{\mathbb{Q}}_p^\times$.
 >
 > (1) Show that $\mu(L_n) = \mu_{p^n-1}$ if $p$ is odd, and $\mu(L_n) = \mu_{2(p^n-1)}$ if $p$ is even (namely if $p=2$).
-> **Hint:** Hensel's lemma can help to show $\supset$.
 >
 > (2) Prove that $L_n = \mathbb{Q}_p(\mu_{p^n-1})$.
 > (Note: This implies that there exists a unique degree $n$ unramified extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$. It also follows that such an extension is Galois over $\mathbb{Q}_p$.)
