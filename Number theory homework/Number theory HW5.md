@@ -85,9 +85,9 @@ Since $L/K$ is infinite algebraic and separable, we can choose a strictly increa
 $$
 K=K_0\subsetneq K_1\subsetneq K_2\subsetneq\cdots\subset L,
 $$
-with $K_n=K(x_1,\dots,x_n)$ and $x_{n+1}\notin K_n$.
+with $K_n=K(y_1,\dots,y_n)$ and $y_{n+1}\notin K_n$.
 
-For each $n$, let $x_n=x_{n,1},\dots,x_{n,r_n}$ be the conjugates of $x_n$ over $K_{n-1}$. Choose $\varepsilon_n<\min_{i\ge2}\|x_n-x_{n,i}\|$, and choose $x_{n+1}$ sufficiently close to $x_n$ so that $\|x_{n+1}-x_n\|<\varepsilon_n$. Then $(x_n)$ is Cauchy by the ultrametric inequality.
+First, let $x_{1}=y_{1}$. For each $n\geq 2$, let $y_{n,1},\dots,y_{n,r_n}$ be the conjugates of $y_n$ over $K_{n-1}$ (WOLG we set $y_{n,1}=y_{n}$). By separability the conjugates are distinct. Choose some positive $\varepsilon_n<\min_{i\ge2}\|y_n-y_{n,i}\|$, and choose $x_{n+1}\in K_{n}$ sufficiently close to $x_n$ so that $\|x_{n+1}-x_n\|<\varepsilon_n$ (such $x_{n+1}$ can be found since $K_{n}$ is dense in $K_{n+1}$). Then $(x_n)$ is Cauchy by the ultrametric inequality, and $K_{n}=K(x_{1,\dots},x_{n})$.
 
 Suppose $x_n\to x\in L$. For sufficiently large $n$, $\|x-x_n\|<\varepsilon_n$. Hence $\|x-x_n\|<\|x-x_{n,i}\|$ for every $i\ge2$. By Krasner's lemma, $x_n\in K(x)$ for all sufficiently large $n$.
 
