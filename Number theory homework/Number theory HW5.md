@@ -72,15 +72,14 @@ $$
 $$
 so $p^d\not\equiv1\pmod m$. Therefore the minimal polynomial of $\overline{\zeta}_m$ over $\mathbb{F}_p$ has degree $n$.
 
-By Hensel's lemma, $\zeta_m$ has the same degree over $\mathbb{Q}_p$, so $[\mathbb{Q}_p(\mu_m):\mathbb{Q}_p]=n$.
-
-Since $[L_n:\mathbb{Q}_p]=n$ and $\mathbb{Q}_p(\mu_m)\subseteq L_n$, we obtain
-$$
-L_n=\mathbb{Q}_p(\mu_{p^n-1}).
-$$
-
-For $p=2$, this is unchanged by the extra factor $2$, since $-1\in\mathbb{Q}_2$ and hence
+By Hensel's lemma, $\zeta_m$ has the same degree over $\mathbb{Q}_p$, so $[\mathbb{Q}_p(\mu_m):\mathbb{Q}_p]=n$. Since $[L_n:\mathbb{Q}_p]=n$ and $\mathbb{Q}_p(\mu_m)\subseteq L_n$, we obtain $L_n=\mathbb{Q}_p(\mu_{p^n-1})$. For $p=2$, this is unchanged by the extra factor $2$, since $-1\in\mathbb{Q}_2$ and hence
 $$
 \mathbb{Q}_2(\mu_{2(2^n-1)})
 =\mathbb{Q}_2(\mu_{2^n-1}).
 $$
+___
+
+> [!problem] Problem 4
+> Do [N], p. 134, Exercise 1 in Section II.4: Show that an infinite separable algebraic extension $L$ of a non-Archimedean complete valued field $K$ is never complete. (The separability condition is missing in that exercise but it is needed. Feel free to assume that the valuation is discrete if it helps you, though this is unnecessary.)
+>
+> **Hint:** A possible idea is to construct a well-designed Cauchy sequence in $L$ that does not converge (in that you get a contradiction if it converges). Krasner's lemma can help.
