@@ -80,6 +80,19 @@ $$
 ___
 
 > [!problem] Problem 4
-> Do [N], p. 134, Exercise 1 in Section II.4: Show that an infinite separable algebraic extension $L$ of a non-Archimedean complete valued field $K$ is never complete. (The separability condition is missing in that exercise but it is needed. Feel free to assume that the valuation is discrete if it helps you, though this is unnecessary.)
->
-> **Hint:** A possible idea is to construct a well-designed Cauchy sequence in $L$ that does not converge (in that you get a contradiction if it converges). Krasner's lemma can help.
+> Show that an infinite separable algebraic extension $L$ of a non-Archimedean complete valued field $K$ is never complete.
+
+**Proof:**
+Since $L/K$ is infinite algebraic and separable, we can choose a strictly increasing sequence of finite extensions
+$$
+K=K_0\subsetneq K_1\subsetneq K_2\subsetneq\cdots\subset L,
+$$
+with $K_n=K(x_1,\dots,x_n)$ and $x_{n+1}\notin K_n$.
+
+For each $n$, let $x_n=x_{n,1},\dots,x_{n,r_n}$ be the conjugates of $x_n$ over $K_{n-1}$. Choose $\varepsilon_n<\min_{i\ge2}\|x_n-x_{n,i}\|$, and choose $x_{n+1}$ sufficiently close to $x_n$ so that $\|x_{n+1}-x_n\|<\varepsilon_n$. Then $(x_n)$ is Cauchy by the ultrametric inequality.
+
+Suppose $x_n\to x\in L$. For sufficiently large $n$, $\|x-x_n\|<\varepsilon_n$. Hence $\|x-x_n\|<\|x-x_{n,i}\|$ for every $i\ge2$. By Krasner's lemma, $x_n\in K(x)$ for all sufficiently large $n$.
+
+But $x$ is algebraic over $K$, so $K(x)/K$ is finite. Thus $K(x)$ cannot contain the infinitely many elements $x_n$ with $x_n\notin K_{n-1}$ and $K_n$ strictly increasing, a contradiction.
+
+Therefore $(x_n)$ is a Cauchy sequence in $L$ which does not converge in $L$, so $L$ is not complete.
