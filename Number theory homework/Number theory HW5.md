@@ -60,10 +60,7 @@ Moreover, every element of $\mathbb{F}_{p^n}^\times$ has a unique lift to a root
 
 - If $p=2$, the same argument shows that every root of unity of odd order belongs to $\mu_{2^n-1}$. The only $2$-power roots of unity in an unramified extension are $\pm1$. Hence $\mu(L_n)=\mu_{2(2^n-1)}$.
 
-**(2)** Put $m=p^n-1$. By (1), $\mu_m\subset L_n$, so
-$$
-\mathbb{Q}_p(\mu_m)\subseteq L_n.
-$$
+**(2)** Put $m=p^n-1$. By (1), $\mu_m\subset L_n$, so $\mathbb{Q}_p(\mu_m)\subseteq L_n$.
 
 Let $\zeta_m$ be a primitive $m$-th root of unity. Its reduction has order $m$ in $\mathbb{F}_{p^n}^\times$. The order of $p$ modulo $m$ is exactly $n$: indeed,
 $$
@@ -75,15 +72,9 @@ $$
 $$
 so $p^d\not\equiv1\pmod m$. Therefore the minimal polynomial of $\overline{\zeta}_m$ over $\mathbb{F}_p$ has degree $n$.
 
-By Hensel's lemma, $\zeta_m$ has the same degree over $\mathbb{Q}_p$, so
-$$
-[\mathbb{Q}_p(\mu_m):\mathbb{Q}_p]=n.
-$$
-Since $[L_n:\mathbb{Q}_p]=n$ and
-$$
-\mathbb{Q}_p(\mu_m)\subseteq L_n,
-$$
-we obtain
+By Hensel's lemma, $\zeta_m$ has the same degree over $\mathbb{Q}_p$, so $[\mathbb{Q}_p(\mu_m):\mathbb{Q}_p]=n$.
+
+Since $[L_n:\mathbb{Q}_p]=n$ and $\mathbb{Q}_p(\mu_m)\subseteq L_n$, we obtain
 $$
 L_n=\mathbb{Q}_p(\mu_{p^n-1}).
 $$
