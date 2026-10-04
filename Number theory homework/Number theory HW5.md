@@ -48,9 +48,9 @@ ___
 > (Note: This implies that there exists a unique degree $n$ unramified extension of $\mathbb{Q}_p$ in $\overline{\mathbb{Q}}_p$. It also follows that such an extension is Galois over $\mathbb{Q}_p$.)
 
 **Proof:**
-**(1)** Since $L_{n}$ is a finite extension of a discrete non-Archimedean CVF, $L_{n}$ is also a discrete non-Archimedean CVF with a unique valuation extending the valuation in $\mathbb{Q}_{p}$. Let $\mathcal{O}_{L_n}$ be the ring of integers of $L_n$ and let $\mathfrak{m}_{L_n}$ be its maximal ideal. Since $L_n/\mathbb{Q}_p$ is unramified of degree $n$, its residue field is $\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\cong\mathbb{F}_{p^n}$. Hence $\left(\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\right)^\times$ has order $p^n-1$.
+**(1)** Since $L_{n}$ is a finite extension of a discrete non-Archimedean CVF, $L_{n}$ is also a discrete non-Archimedean CVF with a unique valuation extending the valuation in $\mathbb{Q}_{p}$. Let $\mathcal{O}_{L_n}$ be the ring of integers of $L_n$ and let $\mathfrak{m}_{L_n}=(\pi)$ be its maximal ideal. Since $L_n/\mathbb{Q}_p$ is unramified of degree $n$, its residue field is $\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\cong\mathbb{F}_{p^n}$. Hence $\left(\mathcal{O}_{L_n}/\mathfrak{m}_{L_n}\right)^\times$ has order $p^n-1$.
 
-First suppose that $\zeta\in\mu(L_n)$ has order prime to $p$. Its reduction $\overline{\zeta}$ is nonzero, and reduction is injective on roots of unity of order prime to $p$ (if $\overline{ a }=\overline{ b }$ and $a^{k}=b^{l}=1$ for some $l,k$ prime to $p$, then $(a/b)^{lk}=1$, so $a=b$). Thus
+First suppose that $\zeta\in\mu(L_n)$ has order prime to $p$. Its reduction $\overline{\zeta}$ is nonzero, and reduction is injective on roots of unity of order prime to $p$ (if $\overline{ 1 }=\overline{ x }$ for some unit root $x$, then $x=1+\pi y$ for some $y$, $x$ is a unit root implies $y=0$). Thus
 $$
 \operatorname{ord}(\zeta)\mid p^n-1.
 $$
