@@ -109,13 +109,13 @@ Hence
 $$
 \|x-x_n\|\leq\varepsilon_{n}<\|x_{n}-x_{n,i}\| \qquad (i\ge2).
 $$
-So
+By ultrametric property,
 $$
-\|x-x_{n,i}\|=\|(x-x_{n})-(x_{n}-x_{n,i})\|=\|x-x_{n}\|,
+\|x-x_{n,i}\|=\|(x-x_{n})-(x_{n}-x_{n,i})\|=\|x_{n}-x_{n,i}\|,
 $$
-Then
+then
 $$
-
+\|x-x_{n}\|<\|x-x_{n,i}\|
 $$
 By Krasner's lemma, $x_n\in K(x)$ for all $n$, thus $K_{n}\subseteq K(x)$
 
@@ -126,4 +126,9 @@ $$
 is a strictly increasing sequence of finite extensions and each $K_{n}$ is contained in $K(x)$, contradiction.
 
 Therefore, $L$ is not complete.
+
+>[!remark] Remark
+>The separability condition is necessary.
+>
+>Consider $K=\mathbb{F}_{p}((t))$ and $L=\bigcup_{m\geq1} \mathbb{F}_{p}(t^{1/p^{m}})$. 
 
