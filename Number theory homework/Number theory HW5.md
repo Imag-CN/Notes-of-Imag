@@ -85,21 +85,6 @@ Since $L/K$ is infinite algebraic, we can choose a strictly increasing sequence 
 $$
 K=K_0\subsetneq K_1\subsetneq K_2\subsetneq\cdots\subset L,
 $$
-with $K_n=K(y_1,\dots,y_n)$ and $y_{n+1}\notin K_n$. Choose a fixed $z\in K$ such that $0<\|z\|<1$.
-
-First, let $x_{1}=y_{1}$. For each $n\geq 1$, let $y_{n,1},\dots,y_{n,r_n}$ be the conjugates of $y_n$ over $K_{n-1}$ (WOLG we set $y_{n,1}=y_{n}$). By separability, the conjugates are distinct. Choose some positive $\varepsilon_{n}$ such that $\varepsilon_n<\min_{i\ge2}\|y_n-y_{n,i}\|$, $\varepsilon_{n}<1/n$ and $\varepsilon_{n}<\varepsilon_{n-1}$ (say $\varepsilon_{0}=1$). Let $x_{n+1}=x_{n}+z^{N_{n}}y_{n}$  where $N_{n}$ is a sufficiently large integer such that $\|z^{N_{n}}y_{n}\|<\varepsilon_{n}$, i.e. $\|x_{n+1}-x_n\|<\varepsilon_n$. Then $(x_n)$ is Cauchy by the ultrametric inequality and the fact that $\varepsilon_{n}\to 0$.
-
-Suppose $x_n\to x\in L$. For all $n>N$ where $N$ is a sufficiently large integer, $\|x-x_n\|<\varepsilon_n$. Hence $\|x-x_n\|<\|x-x_{n,i}\|$ for every $i\ge2$. By Krasner's lemma, $x_n\in K(x)$ for all $n>N$.
-
-Assume $L$ is complete, then $x$ is $L$, thus algebraic over $K$, so $K(x)/K$ is finite. However, we have $y_{n+1}\not\in K_{n}$, so $x_{N+k+1}\not\in K(x_{N+1},\dots,x_{N+k})$, thus $[K(x_{N+1},\dots,x_{N+k}):K]$ is unbounded, contradition.
-
-Therefore, $L$ is not complete.
-___
-**Proof:**
-Since $L/K$ is infinite algebraic, we can choose a strictly increasing sequence of finite extensions
-$$
-K=K_0\subsetneq K_1\subsetneq K_2\subsetneq\cdots\subset L,
-$$
 where $K_n=K(y_1,\dots,y_n)$ and $y_{n+1}\notin K_n$. Choose $z\in K$ with $0<\|z\|<1$.
 
 Set $x_1=y_1$ and $\varepsilon_{0}=1$. For each $n\ge1$, let $x_{n,1},\dots,x_{n,r_n}$ be the conjugates of $x_n$ over $K$, with $x_{n,1}=x_n$. Since $x_n$ is separable over $K$, these conjugates are distinct. Choose $\varepsilon_{n}$ such that
@@ -114,7 +99,7 @@ and set
 $$
 x_{n+1}=x_n+z^{N_n}y_n.
 $$
-Then $\|x_{n+1}-x_n\|<\varepsilon_n$, so $(x_n)$ is Cauchy. Also, $K_{n}=K(x_{1},\dots ,x_{n})$
+Then $\|x_{n+1}-x_n\|<\varepsilon_n$, so $(x_n)$ is Cauchy. Also, by induction we have $K_{n}=K(x_{1},\dots ,x_{n})$.
 
 Suppose that $x_n\to x\in L$. Then
 $$
@@ -122,24 +107,15 @@ $$
 $$
 Hence
 $$
-\|x-x_n\|<\|x-x_{n,i}\| \qquad (i\ge2).
+\|x-x_n\|=<\|x-x_{n,i}\| \qquad (i\ge2).
 $$
-By Krasner's lemma, $x_n\in K(x)$ for all $n$, thus 
+By Krasner's lemma, $x_n\in K(x)$ for all $n$, thus $K_{n}\subseteq K(x)$
 
-Now let $F_n=K(x_1,\dots,x_n)$. Since
+Assume $L$ is complete, then $x$ is in $L$, thus algebraic over $K$, so $K(x)/K$ is finite. However, 
 $$
-x_{n+1}-x_n=z^{N_n}y_n
+K=K_0\subsetneq K_1\subsetneq K_2\subsetneq\cdots\subset L,
 $$
-and $z^{N_n}\in K^\times$, we have $y_n\in F_{n+1}$. Conversely, $x_n\in K_{n-1}$, so $F_n\subseteq K_{n-1}$. Inductively,
-$$
-F_{n+1}=K_n.
-$$
-Thus $[F_n:K]=[K_{n-1}:K]$ is unbounded.
+is a strictly increasing sequence of finite extensions and each $K_{n}$ is contained in $K(x)$, contradiction.
 
-If $L$ were complete, then $x\in L$, so $x$ is algebraic over $K$ and $[K(x):K]<\infty$. But for sufficiently large $n$, $x_n\in K(x)$, hence
-$$
-F_n=K(x_1,\dots,x_n)\subseteq K(x),
-$$
-contradicting the fact that $[F_n:K]$ is unbounded.
+Therefore, $L$ is not complete.
 
-Therefore $L$ is not complete.
