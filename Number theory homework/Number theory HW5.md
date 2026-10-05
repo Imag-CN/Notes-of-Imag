@@ -114,17 +114,17 @@ and set
 $$
 x_{n+1}=x_n+z^{N_n}y_n.
 $$
-Then $\|x_{n+1}-x_n\|<\varepsilon_n$, so $(x_n)$ is Cauchy.
+Then $\|x_{n+1}-x_n\|<\varepsilon_n$, so $(x_n)$ is Cauchy. Also, $K_{n}=K(x_{1},\dots ,x_{n})$
 
 Suppose that $x_n\to x\in L$. Then
 $$
-\|x-x_n\|<\varepsilon_n.
+\|x-x_n\|=\|\sum_{m=n}^{\infty}(x_{m+1}-x_{m})\|\leq \operatorname{sup}_{m\geq n}\{ \|x_{m+1}-x_{m}\| \}\leq\operatorname{sup}_{m\geq n}\{ \varepsilon_{n} \}=\varepsilon_n.
 $$
 Hence
 $$
 \|x-x_n\|<\|x-x_{n,i}\| \qquad (i\ge2).
 $$
-By Krasner's lemma, $x_n\in K(x)$ for all sufficiently large $n$.
+By Krasner's lemma, $x_n\in K(x)$ for all $n$, thus 
 
 Now let $F_n=K(x_1,\dots,x_n)$. Since
 $$
