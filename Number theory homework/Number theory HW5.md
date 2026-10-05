@@ -130,5 +130,5 @@ Therefore, $L$ is not complete.
 >[!remark] Remark
 >The separability condition is necessary.
 >
->Consider $K=\mathbb{F}_{p}((t))$ and $L=\bigcup_{m\geq1} \mathbb{F}_{p}(t^{1/p^{m}})$. 
+>Consider $K=\mathbb{F}_{p}((t))$ and $L=\bigcup_{m\geq1} \mathbb{F}_{p}(t^{1/p^{m}})$. The valuation of $x$
 
