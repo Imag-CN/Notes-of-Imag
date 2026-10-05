@@ -130,5 +130,4 @@ Therefore, $L$ is not complete.
 >[!remark] Remark
 >The separability condition is necessary.
 >
->Consider $K=\mathbb{F}_{p}((t))$ and $L=\bigcup_{m\geq1} \mathbb{F}_{p}(t^{1/p^{m}})$. The valuation of $x$
-
+>Consider $K=\mathbb{F}_{p}(x_{1},x_{2},\dots)((t))$, and $L=\mathbb{F}_{p}(x_{1}^{1/p},x_{2}^{1/p},\dots)((t^{1/p}))$ with $t$-adic valuation. It is obvious that $L/K$ is an infinite algebraic but not separable extension. Completeness of $K$ follows from the property of Laurent series. The Frobenius map $x\mapsto x^{p}$ is an isomorphism from $L$ to $K$. So the valuation on $L$ prolonging $\|\cdot\|_{K}$ is defined by $\|x\|_{L}=\|x^{p}\|_{K}^{1/p}$, thus $L$ is complete.
