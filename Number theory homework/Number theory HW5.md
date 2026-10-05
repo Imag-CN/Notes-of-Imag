@@ -107,7 +107,15 @@ $$
 $$
 Hence
 $$
-\|x-x_n\|=<\|x-x_{n,i}\| \qquad (i\ge2).
+\|x-x_n\|\leq\varepsilon_{n}<\|x_{n}-x_{n,i}\| \qquad (i\ge2).
+$$
+So
+$$
+\|x-x_{n,i}\|=\|(x-x_{n})-(x_{n}-x_{n,i})\|=\|x-x_{n}\|,
+$$
+Then
+$$
+
 $$
 By Krasner's lemma, $x_n\in K(x)$ for all $n$, thus $K_{n}\subseteq K(x)$
 
