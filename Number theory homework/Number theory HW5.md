@@ -81,13 +81,13 @@ ___
 > Show that an infinite separable algebraic extension $L$ of a non-Archimedean complete valued field $K$ is never complete.
 
 **Proof:**
-Since $L/K$ is infinite algebraic and separable, we can choose a strictly increasing sequence of finite extensions
+Since $L/K$ is infinite algebraic, we can choose a strictly increasing sequence of finite extensions
 $$
 K=K_0\subsetneq K_1\subsetneq K_2\subsetneq\cdots\subset L,
 $$
-with $K_n=K(y_1,\dots,y_n)$ and $y_{n+1}\notin K_n$.
+with $K_n=K(y_1,\dots,y_n)$ and $y_{n+1}\notin K_n$. Since a finite separable extension is also a simple extension, we can carefully choose $y_{n}$ such that $K_{n}=K(y_{n})$. Choose a fixed $z\in K$ such that $0<\|z\|<1$.
 
-First, let $x_{1}=y_{1}$. For each $n\geq 2$, let $y_{n,1},\dots,y_{n,r_n}$ be the conjugates of $y_n$ over $K_{n-1}$ (WOLG we set $y_{n,1}=y_{n}$). By separability the conjugates are distinct. Choose some positive $\varepsilon_n<\min_{i\ge2}\|y_n-y_{n,i}\|$, and choose $x_{n+1}\in K_{n}$ sufficiently close to $x_n$ so that $\|x_{n+1}-x_n\|<\varepsilon_n$ (such $x_{n+1}$ can be found since $K_{n}$ is dense in $K_{n+1}$). Then $(x_n)$ is Cauchy by the ultrametric inequality, and $K_{n}=K(x_{1,\dots},x_{n})$.
+First, let $x_{1}=y_{1}$. For each $n\geq 1$, let $y_{n,1},\dots,y_{n,r_n}$ be the conjugates of $y_n$ over $K_{n-1}$ (WOLG we set $y_{n,1}=y_{n}$). By separability, the conjugates are distinct. Choose some positive $\varepsilon_n<\min_{i\ge2}\|y_n-y_{n,i}\|$, and let $x_{n+1}=x_{n}+z^{N_{n}}y_{n}$  where $N_{n}$ is a sufficiently large integer such that $\|z^{N_{n}}y_{n}\|<\varepsilon$, i.e. $\|x_{n+1}-x_n\|<\varepsilon_n$. Then $(x_n)$ is Cauchy by the ultrametric inequality, and $K_{n}=K(x_{1,\dots},x_{n})$.
 
 Suppose $x_n\to x\in L$. For sufficiently large $n$, $\|x-x_n\|<\varepsilon_n$. Hence $\|x-x_n\|<\|x-x_{n,i}\|$ for every $i\ge2$. By Krasner's lemma, $x_n\in K(x)$ for all sufficiently large $n$.
 
