@@ -174,7 +174,7 @@ ___
 >c) Show that $\operatorname{dcl}(\operatorname{dcl}(A)) = A$.
 
 **Proof:**
-(a) Suppose first that $x$ is definable over $A$. Then $\{x\}$ is $A$-definable. Define the constant function $f:M\to M$ by $f(y)=x$. Its graph is
+**(a)** Suppose first that $x$ is definable over $A$. Then $\{x\}$ is $A$-definable. Define the constant function $f:M\to M$ by $f(y)=x$. Its graph is
 $$
 \operatorname{Graph}(f)=M\times\{x\},
 $$
@@ -186,7 +186,7 @@ $$
 $$
 uniquely defines $x$ over $A$. Hence $x\in\operatorname{dcl}(A)$.
 
-(b) Let $\phi(v,\overline{a})$ uniquely define $x$, where $\overline{a}\in A$. Since $\sigma$ fixes $A$ pointwise,
+**(b)** Let $\phi(v,\overline{a})$ uniquely define $x$, where $\overline{a}\in A$. Since $\sigma$ fixes $A$ pointwise,
 $$
 \mathcal M\models\phi(x,\overline{a})
 \quad\Longrightarrow\quad
@@ -194,7 +194,7 @@ $$
 $$
 But $\phi(v,\overline{a})$ has a unique solution, so $\sigma(x)=x$.
 
-(c) We prove
+**(c)** We prove
 $$
 \operatorname{dcl}(\operatorname{dcl}(A))=\operatorname{dcl}(A).
 $$
@@ -215,4 +215,64 @@ $$
 Thus $x\in\operatorname{dcl}(A)$, proving
 $$
 \operatorname{dcl}(\operatorname{dcl}(A))=\operatorname{dcl}(A).
+$$
+___
+
+> [!problem] [MAR] 1.4.11
+> Let $\mathcal{M}$ be an $\mathcal{L}$-structure and $A\subseteq M$. We say that $b\in M$ is *algebraic over $A$* if there is an $\mathcal{L}$-formula $\phi(v,\overline{w})$ and $\overline{a}\in A$ such that
+> $$
+> \mathcal{M}\models\phi(b,\overline{a})
+> $$
+> and $\{y\in M:\mathcal{M}\models\phi(y,\overline{a})\}$ is finite. We let $\operatorname{acl}(A)=\{x:x\text{ is algebraic over }A\}$.
+>
+> a) Suppose that $x\in\operatorname{acl}(A)$. Show that there are $x_1,\ldots,x_m$ such that if $\sigma$ is an automorphism of $\mathcal{M}$ with $\sigma(a)=a$ for all $a\in A$, then $\sigma(x)=x_i$ for some $i$. In other words, there are only finitely many conjugates of $x$ under automorphisms of $\mathcal{M}$ fixing $a$.
+>
+> b) Show that $\operatorname{acl}(\operatorname{acl}(A))=\operatorname{acl}(A)$.
+>
+> c) Show that if $x\in\operatorname{acl}(A)$, then $x\in\operatorname{acl}(A_0)$ for some finite $A_0\subseteq A$.
+>
+> d) Show that if $A\subseteq B$, then $\operatorname{acl}(A)\subseteq\operatorname{acl}(B)$.
+
+**Proof:**
+**(a)** Since $x\in\operatorname{acl}(A)$, there is a formula $\phi(v,\overline{a})$ with $\overline{a}\in A$ such that
+$$
+X=\{y\in M:\mathcal{M}\models\phi(y,\overline{a})\}
+$$
+is finite and contains $x$. Write $X=\{x_1,\ldots,x_m\}$.
+
+If $\sigma\in\operatorname{Aut}(\mathcal{M})$ fixes $A$ pointwise, then it fixes $\overline{a}$. Since $\mathcal{M}\models\phi(x,\overline{a})$, we have
+$$
+\mathcal{M}\models\phi(\sigma(x),\overline{a}).
+$$
+Thus $\sigma(x)\in X$, so $\sigma(x)=x_i$ for some $i$.
+
+**(b)** Clearly $\operatorname{acl}(A)\subseteq\operatorname{acl}(\operatorname{acl}(A))$. For the reverse inclusion, let $x\in\operatorname{acl}(\operatorname{acl}(A))$. Then there are $b_1,\ldots,b_n\in\operatorname{acl}(A)$ and a formula $\phi(v,\overline{b})$ such that
+$$
+X=\{x'\in M:\mathcal{M}\models\phi(x',\overline{b})\}
+$$
+is finite and contains $x$.
+
+For each $i$, choose a formula $\psi_i(w,\overline{a}_i)$ over $A$ whose solution set $B_i$ is finite and contains $b_i$. Consider
+$$
+\theta(v):=\exists w_1\cdots\exists w_n\left(\phi(v,w_1,\ldots,w_n)\land\bigwedge_{i=1}^n\psi_i(w_i,\overline{a}_i)\right).
+$$
+This is a formula over $A$ satisfied by $x$. Its solution set is contained in
+$$
+\bigcup_{(c_1,\ldots,c_n)\in B_1\times\cdots\times B_n}
+\{y:\mathcal{M}\models\phi(y,c_1,\ldots,c_n)\}.
+$$
+However, these sets need not all be finite, so we refine $\phi$ to assert that it has exactly $|X|$ solutions. Let $m=|X|$ and let $\chi_m(\overline{w})$ express that $\phi(v,\overline{w})$ has exactly $m$ solutions. Replacing $\phi$ by $\phi(v,\overline{w})\land\chi_m(\overline{w})$, every set in the above union is finite of size $m$. Hence $\theta(M)$ is finite.
+
+Therefore $x\in\operatorname{acl}(A)$, and
+$$
+\operatorname{acl}(\operatorname{acl}(A))=\operatorname{acl}(A).
+$$
+
+**(c)** If $x\in\operatorname{acl}(A)$, then $x$ satisfies some formula $\phi(v,\overline{a})$ with parameters $\overline{a}\in A$, having only finitely many solutions. Since a formula contains only finitely many parameters, let $A_0\subseteq A$ be the finite set of entries of $\overline{a}$. Then $x\in\operatorname{acl}(A_0)$.
+
+**(d)** Suppose $A\subseteq B$ and $x\in\operatorname{acl}(A)$. Then some formula $\phi(v,\overline{a})$ with $\overline{a}\in A$ defines a finite set containing $x$. Since $A\subseteq B$, the same formula is also a formula with parameters from $B$. Hence $x\in\operatorname{acl}(B)$.
+
+Therefore
+$$
+\operatorname{acl}(A)\subseteq\operatorname{acl}(B).
 $$
