@@ -130,7 +130,7 @@ is true in $\mathbb{Z}$ but not in $\mathbb{Z}\oplus \mathbb{Z}$.
 ___
 
 >[!problem] [MAR] 1.4.9
->Let  be an -structure. We say that  is definable if the graph of  is a definable set in .
+>Let  $\mathcal{M}$ be an -structure. We say that  is definable if the graph of  is a definable set in .
 >
 >a) Show that if $f: M^n \to M^m$ and $g: M^m \to M^l$ are definable, then so is $g \circ f$.
 >
@@ -158,3 +158,61 @@ $$
 This is definable since $\operatorname{Graph}(f)$ is definable. Hence $f^{-1}$ is definable.
 ___
 
+>[!problem] [MAR] 1.4.10
+>Let $\mathcal{M}$ be an $\mathcal{L}$-structure and $A \subseteq M$. We say that $b \in M$ is definable over $A$ if there is a formula $\phi(v, \overline{w})$ and $\overline{a} \in A$ such that
+>$$
+>\mathcal{M} \models \phi(b, \overline{a}) \land \forall y \ (\phi(y, \overline{a}) \to y = b).
+>$$
+>In other words, $\{b\}$ is $A$-definable.
+>
+>a) Show that $x$ is definable over $A$ if and only if for some $n$ there is an $A$-definable function $f : M^n \to M$ and $\overline{a} \in M$ such that $f(\overline{a}) = x$.
+>
+>b) Suppose that $x$ is definable from $A$ and $\sigma$ is an automorphism of $\mathcal{M}$ such that $\sigma(a) = a$ for all $a \in A$. Show that $\sigma(x) = x$.
+>
+>Let $\operatorname{dcl}(A) = \{x \in M : x \text{ is definable from } A\}$.
+>
+>c) Show that $\operatorname{dcl}(\operatorname{dcl}(A)) = A$.
+
+**Proof:**
+(a) Suppose first that $x$ is definable over $A$. Then $\{x\}$ is $A$-definable. Define the constant function $f:M\to M$ by $f(y)=x$. Its graph is
+$$
+\operatorname{Graph}(f)=M\times\{x\},
+$$
+which is $A$-definable. Thus $f$ is $A$-definable, and $f(a)=x$ for any $a\in M$.
+
+Conversely, suppose $f:M^n\to M$ is $A$-definable, $\overline{a}\in A^n$, and $f(\overline{a})=x$. If $\psi(\overline{v},w)$ defines the graph of $f$ over $A$, then
+$$
+\psi(\overline{a},w)
+$$
+uniquely defines $x$ over $A$. Hence $x\in\operatorname{dcl}(A)$.
+
+(b) Let $\phi(v,\overline{a})$ uniquely define $x$, where $\overline{a}\in A$. Since $\sigma$ fixes $A$ pointwise,
+$$
+\mathcal M\models\phi(x,\overline{a})
+\quad\Longrightarrow\quad
+\mathcal M\models\phi(\sigma(x),\overline{a}).
+$$
+But $\phi(v,\overline{a})$ has a unique solution, so $\sigma(x)=x$.
+
+(c) We prove
+$$
+\operatorname{dcl}(\operatorname{dcl}(A))=\operatorname{dcl}(A).
+$$
+The inclusion $\operatorname{dcl}(A)\subseteq\operatorname{dcl}(\operatorname{dcl}(A))$ is immediate.
+
+Conversely, let $x\in\operatorname{dcl}(\operatorname{dcl}(A))$. Then $x$ is uniquely defined by some formula
+$$
+\phi(v,b_1,\ldots,b_n),
+$$
+where each $b_i\in\operatorname{dcl}(A)$. For each $i$, choose a formula $\psi_i(w,\overline{a}_i)$ over $A$ uniquely defining $b_i$. Then $x$ is uniquely defined over $A$ by
+$$
+\exists w_1\cdots\exists w_n\left(
+\bigwedge_{i=1}^n\psi_i(w_i,\overline{a}_i)
+\land
+\phi(v,w_1,\ldots,w_n)
+\right).
+$$
+Thus $x\in\operatorname{dcl}(A)$, proving
+$$
+\operatorname{dcl}(\operatorname{dcl}(A))=\operatorname{dcl}(A).
+$$
