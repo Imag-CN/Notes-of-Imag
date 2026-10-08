@@ -85,8 +85,25 @@ $$
 1,\qquad\aleph_0,\qquad\aleph_0,\qquad2^{\aleph_1}.
 $$
 
-**(c)** Yes. Given two models $\mathcal{M},\mathcal{N}\models T$, any finite partial isomorphism can be extended by one element: if the new element belongs to an already represented class, choose a fresh element in the corresponding class; otherwise, choose an element in a new class. This is always possible because every class is infinite and there are infinitely many classes.
-
-The same holds in both directions, so the back-and-forth argument gives $\mathcal{M}\equiv\mathcal{N}$. Hence $T$ is complete.
+**(c)** Yes. By (b), $T$ is $\aleph_{0}$-categorical, $T$ and has no finite models.
 ___
 
+> [!problem] [MAR] 2.5.6
+> (Skolem's Paradox) Let ZFC be the Zermelo–Fraenkel axioms for set theory with the Axiom of Choice. Show that there is a countable model $\mathcal{M}$ of ZFC. How do you explain the fact that $\mathcal{M}\models$ "there is an uncountable set"?
+
+**Proof:**
+Assume ZFC is consistent, so it has a model $\mathcal{N}$. Since the language of set theory is countable, the Downward Löwenheim–Skolem Theorem gives a countable elementary substructure
+$$
+\mathcal{M}\preccurlyeq\mathcal{N}.
+$$
+Hence $\mathcal{M}\models\mathrm{ZFC}$.
+
+There is no contradiction with
+$$
+\mathcal{M}\models\text{"there is an uncountable set."}
+$$
+Indeed, if $X\in M$ is uncountable according to $\mathcal{M}$, this means that $\mathcal{M}$ contains no bijection from $\mathbb{N}^{\mathcal{M}}$ to $X$.
+
+Externally, however, $M$ is countable, so $X\subseteq M$ is countable. Thus there exists an external bijection from $\mathbb{N}$ to $X$, but this bijection need not be an element of $\mathcal{M}$.
+
+Therefore, "countable" inside $\mathcal{M}$ and countable from the outside are different notions, which explains Skolem's paradox.
