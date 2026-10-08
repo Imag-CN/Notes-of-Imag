@@ -42,5 +42,51 @@ Every finite subset of $T'$ contains only finitely many $\varphi_n$, say up to $
 Thus every finite subset of $T'$ is satisfiable. By the Compactness Theorem, $T'$ has a model $\mathcal{M}$. Since $\mathcal{M}\models\varphi_n$ for every $n$, $\mathcal{M}$ is infinite. Since $\mathcal{M}\models T$, it is an infinite model of $T$.
 ___
 
+> [!problem] [MAR] 2.5.5
+> Let $\mathcal{L}=\{E\}$ where $E$ is a binary relation symbol. Let $T$ be the $\mathcal{L}$-theory of an equivalence relation with infinitely many infinite classes.
+>
+> a) Write axioms for $T$.
+>
+> b) How many models of $T$ are there of cardinality $\aleph_0$? $\aleph_1$? $\aleph_2$? $\aleph_{\omega_1}$?
+>
+> c) Is $T$ complete?
 
+**Proof:**
+**(a)** Take the usual axioms for an equivalence relation, together with the following schemes.
+
+For each $n\geq1$, every equivalence class has at least $n$ elements:
+$$
+\forall x\,\exists y_1,\ldots,y_n\left(\bigwedge_i E(x,y_i)\land\bigwedge_{i\neq j}y_i\neq y_j\right).
+$$
+
+For each $n\geq1$, there are at least $n$ distinct equivalence classes:
+$$
+\exists x_1,\ldots,x_n\bigwedge_{i\neq j}\neg E(x_i,x_j).
+$$
+
+Thus every class is infinite and there are infinitely many classes.
+
+**(b)** A model is determined up to isomorphism by the number of equivalence classes of each infinite cardinality.
+
+For cardinality $\aleph_0$, every class is countable and there are countably many classes, so there is exactly $1$ model up to isomorphism.
+
+For cardinality $\aleph_1$, classes have size $\aleph_0$ or $\aleph_1$, and their multiplicities are among the finite cardinals, $\aleph_0$, and $\aleph_1$. Hence there are exactly $\aleph_0$ isomorphism types.
+
+The same argument for $\aleph_2$, with possible class sizes $\aleph_0,\aleph_1,\aleph_2$, again gives exactly $\aleph_0$ isomorphism types.
+
+For cardinality $\aleph_{\omega_1}$, there are $\aleph_1$ possible infinite class sizes, so there are at most
+$$
+(\aleph_1)^{\aleph_1}=2^{\aleph_1}
+$$
+isomorphism types. Conversely, for each $S\subseteq\omega_1$, take countably many countable classes, one class of size $\aleph_{\omega_1}$, and one class of size $\aleph_{\alpha+1}$ for each $\alpha\in S$. These models are pairwise nonisomorphic, giving $2^{\aleph_1}$ types.
+
+Therefore the answers are
+$$
+1,\qquad\aleph_0,\qquad\aleph_0,\qquad2^{\aleph_1}.
+$$
+
+**(c)** Yes. Given two models $\mathcal{M},\mathcal{N}\models T$, any finite partial isomorphism can be extended by one element: if the new element belongs to an already represented class, choose a fresh element in the corresponding class; otherwise, choose an element in a new class. This is always possible because every class is infinite and there are infinitely many classes.
+
+The same holds in both directions, so the back-and-forth argument gives $\mathcal{M}\equiv\mathcal{N}$. Hence $T$ is complete.
+___
 
