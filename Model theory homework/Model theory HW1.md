@@ -130,7 +130,7 @@ is true in $\mathbb{Z}$ but not in $\mathbb{Z}\oplus \mathbb{Z}$.
 ___
 
 >[!problem] [MAR] 1.4.9
->Let  $\mathcal{M}$ be an -structure. We say that  is definable if the graph of  is a definable set in .
+>Let  $\mathcal{M}$ be an -structure. We say that  is definable if the graph of  is a definable set in $M^{n+m}$.
 >
 >a) Show that if $f: M^n \to M^m$ and $g: M^m \to M^l$ are definable, then so is $g \circ f$.
 >
