@@ -137,3 +137,24 @@ ___
 >b) Suppose that $f: M^n \to M$ is definable. Show that the image of $f$ is definable.
 >
 >c) Suppose that $f: M^n \to M$ is definable and one-to-one. Show that $f^{-1}$ is definable.
+
+**Proof:**
+(a) Suppose $f:M^n\to M^m$ and $g:M^m\to M^l$ are definable. Then
+$$
+\operatorname{Graph}(g\circ f)=\{(x,z):\exists y\,((x,y)\in\operatorname{Graph}(f)\land(y,z)\in\operatorname{Graph}(g))\}.
+$$
+Since definable sets are closed under conjunction and projection, $\operatorname{Graph}(g\circ f)$ is definable. Hence $g\circ f$ is definable.
+
+(b) Suppose $f:M^n\to M$ is definable. Its image is
+$$
+f(M^n)=\{y\in M:\exists x\in M^n\,(x,y)\in\operatorname{Graph}(f)\}.
+$$
+Thus $f(M^n)$ is the projection of a definable set, so it is definable.
+
+(c) Suppose $f:M^n\to M$ is definable and one-to-one. Then $f^{-1}:f(M^n)\to M^n$ is a function, and
+$$
+\operatorname{Graph}(f^{-1})=\{(y,x):(x,y)\in\operatorname{Graph}(f)\}.
+$$
+This is definable since $\operatorname{Graph}(f)$ is definable. Hence $f^{-1}$ is definable.
+___
+
