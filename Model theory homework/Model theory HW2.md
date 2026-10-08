@@ -102,8 +102,39 @@ There is no contradiction with
 $$
 \mathcal{M}\models\text{"there is an uncountable set."}
 $$
-Indeed, if $X\in M$ is uncountable according to $\mathcal{M}$, this means that $\mathcal{M}$ contains no bijection from $\mathbb{N}^{\mathcal{M}}$ to $X$.
+Indeed, suppose
+$$
+\mathcal{M}\models\text{"$X$ is uncountable."}
+$$
+The set of elements that $\mathcal{M}$ regards as belonging to $X$ is
+$$
+X^{\mathcal{M}}=\{x\in M:\mathcal{M}\models x\in X\}.
+$$
+Since $X^{\mathcal{M}}\subseteq M$ and $M$ is countable externally, $X^{\mathcal{M}}$ is countable externally. However, $\mathcal{M}$ contains no bijection that it recognizes as a bijection between $\mathbb{N}^{\mathcal{M}}$ and $X$. Thus $X$ is uncountable inside $\mathcal{M}$ but countable externally.
+___
 
-Externally, however, $M$ is countable, so $X\subseteq M$ is countable. Thus there exists an external bijection from $\mathbb{N}$ to $X$, but this bijection need not be an element of $\mathcal{M}$.
+> [!problem] [MAR] 2.5.9
+> Suppose that $\mathcal{M}_0\subset\mathcal{M}_1\subset\mathcal{M}_2$, $\mathcal{M}_0\preceq\mathcal{M}_2$, and $\mathcal{M}_1\preceq\mathcal{M}_2$. Show that $\mathcal{M}_0\preceq\mathcal{M}_1$.
 
-Therefore, "countable" inside $\mathcal{M}$ and countable from the outside are different notions, which explains Skolem's paradox.
+**Proof:**
+Let $\phi(\overline{x})$ be any formula and $\overline{a}\in M_0$. Since $\mathcal{M}_0\preceq\mathcal{M}_2$,
+$$
+\mathcal{M}_0\models\phi(\overline{a})
+\iff
+\mathcal{M}_2\models\phi(\overline{a}).
+$$
+Since $\mathcal{M}_1\preceq\mathcal{M}_2$ and $\overline{a}\in M_0\subseteq M_1$,
+$$
+\mathcal{M}_1\models\phi(\overline{a})
+\iff
+\mathcal{M}_2\models\phi(\overline{a}).
+$$
+Therefore
+$$
+\mathcal{M}_0\models\phi(\overline{a})
+\iff
+\mathcal{M}_1\models\phi(\overline{a}),
+$$
+so $\mathcal{M}_0\preceq\mathcal{M}_1$.
+___
+
