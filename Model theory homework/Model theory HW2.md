@@ -138,3 +138,22 @@ $$
 so $\mathcal{M}_0\preceq\mathcal{M}_1$.
 ___
 
+> [!problem] [MAR] 2.5.13
+> Let $\mathcal{L}=\{s\}$, where $s$ is a unary function symbol. Let $T$ be the $\mathcal{L}$-theory that asserts that $s$ is a bijection with no cycles (i.e., $s^{(n)}(x)\neq x$ for $n=1,2,\ldots$). For what cardinals $\kappa$ is $T$ $\kappa$-categorical?
+
+**Proof:**
+Since $s$ is a bijection with no cycles, for every $a$ the orbit
+$$
+\{s^{(n)}(a):n\in\mathbb{Z}\}
+$$
+is isomorphic to $(\mathbb{Z},n\mapsto n+1)$. Thus every model of $T$ is a disjoint union of copies of $\mathbb{Z}$.
+
+Hence a model is determined up to isomorphism by the number of its orbits.
+
+If $\kappa>\aleph_0$, then the model must have $\kappa$ copies of orbits, thus is unique up to isomorphism.
+
+If $\kappa=\aleph_0$, a model may have $1,2,\ldots$, or $\aleph_0$ many orbits, giving nonisomorphic countable models. Thus $T$ is not $\aleph_0$-categorical.
+
+Therefore $T$ is $\kappa$-categorical for only cardinal $\kappa>\aleph_{0}$.
+___
+
