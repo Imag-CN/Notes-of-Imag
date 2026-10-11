@@ -193,7 +193,7 @@ $$
 $$
 Thus $\mathcal{M}\models T$.
 
-**(b)** Let $\Sigma$ be the set of all $\exists\forall$-sentences true in $\mathcal{M}$. We claim that $T\cup\Sigma$ is satisfieable. Suppose not, by compactness there are $\psi_1,\ldots,\psi_n\in\Sigma$ such that
+**(b)** Let $\Sigma$ be the set of all $\exists\forall$-sentences true in $\mathcal{M}$. We claim that $T\cup\Sigma$ is satisfiable. Suppose not, by compactness there are $\psi_1,\ldots,\psi_n\in\Sigma$ such that
 $$
 T\models\neg(\psi_1\land\cdots\land\psi_n).
 $$
@@ -205,13 +205,9 @@ But $\mathcal{M}\models\Gamma$ and $\mathcal{M}\models\psi_1\land\cdots\land\psi
 
 Therefore $T\cup\Sigma$ has a model $\mathcal{N}$. Then $\mathcal{N}\models T$, and every $\exists\forall$-sentence true in $\mathcal{M}$ is true in $\mathcal{N}$.
 
-**(c)** Expand the language by constants $c_a$ for $a\in M$. Let $\operatorname{Diag}(\mathcal{M})$ be the quantifier-free diagram of $\mathcal{M}$. We claim that
-$$
-\operatorname{Th}(\mathcal{N})\cup\operatorname{Diag}(\mathcal{M})
-$$
-is consistent.
+**(c)** We claim that $\operatorname{Th}(\mathcal{N})\cup\operatorname{Diag}(\mathcal{M})$ is satisfiable.
 
-Otherwise, some quantifier-free formula $\theta(\overline{c})$ from the diagram would give
+Suppose not, some quantifier-free formula $\theta(\overline{c})$ from the diagram would give
 $$
 \operatorname{Th}(\mathcal{N})\models\neg\exists\overline{x}\,\theta(\overline{x}).
 $$
@@ -219,9 +215,14 @@ Thus $\mathcal{N}\models\forall\overline{x}\neg\theta(\overline{x})$. But its ne
 
 Therefore there is $\mathcal{N}'\equiv\mathcal{N}$ containing an isomorphic copy of $\mathcal{M}$. Identifying this copy with $\mathcal{M}$, we have $\mathcal{N}'\supseteq\mathcal{M}$.
 
-**(d)** Since $\mathcal{M}\subseteq\mathcal{N}'$, apply the standard elementary-extension lemma: there is an elementary extension $\mathcal{M}'\succeq\mathcal{M}$ containing $\mathcal{N}'$. Thus
+**(d)** Since $\mathcal{M}\subseteq\mathcal{N}'$, we may apply the standard elementary-extension lemma: for any structures $\mathcal{A}\subseteq\mathcal{B}$, there exist an elementary extension $\mathcal{A}'\succeq\mathcal{A}$ and an embedding $f:\mathcal{B}\to\mathcal{A}'$ such that $f|_A=\operatorname{id}_A$.
+
+Apply this with $\mathcal{A}=\mathcal{M}$ and $\mathcal{B}=\mathcal{N}'$. We obtain $\mathcal{M}'\succeq\mathcal{M}$ and an embedding $f:\mathcal{N}'\to\mathcal{M}'$ fixing $\mathcal{M}$ pointwise. Replacing $\mathcal{N}'$ by its isomorphic copy $f(\mathcal{N}')$, we may identify $\mathcal{N}'$ with a substructure of $\mathcal{M}'$. Hence
+
 $$
-\mathcal{M}\preceq\mathcal{M}'\quad\text{and}\quad\mathcal{N}'\subseteq\mathcal{M}'.
+\mathcal{N}'\subseteq\mathcal{M}'
+\quad\text{and}\quad
+\mathcal{M}\preceq\mathcal{M}'.
 $$
 
 **(e)** Repeating (c) and (d), we obtain
