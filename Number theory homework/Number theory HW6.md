@@ -211,3 +211,25 @@ $$
 Thus $A^\flat$ is the valuation ring of $K^\flat$.
 ___
 
+> [!problem] Problem 4
+>Prove that the valued field $K^\flat$ is a perfectoid field.
+
+**Proof:**
+Put $r=|\varpi|$ and $w=\varpi^\flat$, so $|w|=r$.
+
+First, $K^\flat$ is perfect. Under the multiplicative bijection $K^\flat\cong\varprojlim_p K$, Frobenius sends $(y_i)$ to $(y_i^p)$, and its inverse is the shift $(y_i)\mapsto(y_{i+1})$. Moreover, $|w^{1/p^n}|=r^{1/p^n}\to1$, so the valuation is non-discrete. Its valuation ring $A^{\flat}\cong\varprojlim_p A/\varpi A$ has characteristic $p$, since $K^\flat$ does.
+
+It remains to prove completeness. Write $x=(x_0,x_1,\ldots)\in A^\flat$ and $f^{-1}(x)=(y_i)$. Since $x_n=y_n\bmod\varpi$ and $|y_n|^{p^n}=|x|$, we have
+$$
+x_n=0\iff |y_n|\le r\iff |x|\le r^{p^n}.
+$$
+Thus, for $x,z\in A^\flat$,
+$$
+x_n=z_n\iff |x-z|\le r^{p^n}.
+$$
+
+Let $(x^{(j)})_j$ be a Cauchy sequence in $A^\flat$. For every $n$, the preceding equivalence shows that $x_n^{(j)}$ is eventually constant; denote its eventual value by $x_n$. The relations $(x_{n+1}^{(j)})^p=x_n^{(j)}$ imply $x_{n+1}^p=x_n$, so $x=(x_n)\in A^\flat$. For each $n$, eventually $|x^{(j)}-x|\le r^{p^n}$. Since $r^{p^n}\to0$, we obtain $x^{(j)}\to x$. Hence $A^\flat$ is complete.
+
+Finally, every Cauchy sequence in $K^\flat$ is bounded. Multiplication by a sufficiently large power of $w$ places it in $A^\flat$, where it converges. Dividing its limit by that power of $w$ proves that $K^\flat$ is complete.
+
+Therefore $K^\flat$ satisfies all the conditions for a perfectoid field.
