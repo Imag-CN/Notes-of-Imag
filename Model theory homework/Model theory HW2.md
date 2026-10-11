@@ -193,7 +193,7 @@ $$
 $$
 Thus $\mathcal{M}\models T$.
 
-**(b)** Let $\Sigma$ be the set of all $\exists\forall$-sentences true in $\mathcal{M}$. We claim that $T\cup\Sigma$ is consistent. Otherwise, by compactness there are $\psi_1,\ldots,\psi_n\in\Sigma$ such that
+**(b)** Let $\Sigma$ be the set of all $\exists\forall$-sentences true in $\mathcal{M}$. We claim that $T\cup\Sigma$ is satisfieable. Suppose not, by compactness there are $\psi_1,\ldots,\psi_n\in\Sigma$ such that
 $$
 T\models\neg(\psi_1\land\cdots\land\psi_n).
 $$
