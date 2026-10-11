@@ -79,7 +79,15 @@ ___
 
 Its Frobenius map $(x_i)\mapsto(x_i^p)$ has inverse $(x_i)\mapsto(x_{i+1})$, since $x_{i+1}^p=x_i$. Therefore $A^\flat$ is perfect.
 
-**(2)** Put $r=|\varpi|\in(0,1)$. For $a,b\in A$, the binomial theorem gives
+**(2)** Put $r=|\varpi|\in(0,1)$. For $a,b\in A$, suppose $|a|\leq|b|$, the binomial theorem gives
+$$
+a^{p}=((a-b)+b)^{p}=(a-b)^{p}+b^{p}+\sum_{i=1}^{p-1}\binom{p}{i} (a-b)^{i}b^{p-i}
+$$
+since $a,b\in A$, we have $|a-b|,|b|\leq 1$, and since $p\mid \binom{p}{i}$, we get
+$$
+\left| \binom{p}{i} (a-b)^{i}b^{p-i} \right|\leq  |p| \cdot |a-b|\qquad(i=1,\dots,p-1)
+$$
+therefore, by the ultrametric inequality,
 $$
 |a^p-b^p|\le\max\{|p||a-b|,\ |a-b|^p\}.
 $$
