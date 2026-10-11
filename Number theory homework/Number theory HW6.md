@@ -52,9 +52,7 @@ For problems 2–4, we put ourselves in the following setting. Now we go back to
 $$
 \varpi\in A\quad\text{such that}\quad |p|\le|\varpi|<1.
 $$
-Such an element is often called a “**pseudo-uniformizer**” as it plays a similar role as a uniformizer for a DVR. If $\operatorname{char}(K)=0$ then one can simply take $\varpi=p$. However if $\operatorname{char}(K)=p$ then one should make a different choice. (E.g., for the completion of $\mathbb{F}_p((t^{1/p^\infty}))$ one can take $\varpi=t$.) In either case, (P3) implies that the $p$-th power map induces a surjection $A/\varpi A\to A/\varpi A$ (exercise).
-
-
+Such an element is often called a “**pseudo-uniformizer**” as it plays a similar role as a uniformizer for a DVR. If $\operatorname{char}(K)=0$ then one can simply take $\varpi=p$. However if $\operatorname{char}(K)=p$ then one should make a different choice. (E.g., for the completion of $\mathbb{F}_p((t^{1/p^\infty}))$ one can take $\varpi=t$.) In either case, (P3) implies that the $p$-th power map induces a surjection $A/\varpi A\to A/\varpi A$.
 ___
 
 > [!problem] Problem 2
@@ -79,7 +77,7 @@ ___
 **Proof:**
 **(1)** Since $|p|\le|\varpi|$, we have $p\in\varpi A$, so $A/\varpi A$ has characteristic $p$. Its Frobenius is a ring homomorphism, hence the compatibility conditions defining $A^\flat$ are preserved by coordinatewise addition and multiplication. Thus $A^\flat$ is a ring of characteristic $p$.
 
-Its Frobenius $F((x_i))=(x_i^p)$ has inverse $S((x_i))=(x_{i+1})$, since $x_{i+1}^p=x_i$. Therefore $A^\flat$ is perfect.
+Its Frobenius map $(x_i)\mapsto(x_i^p)$ has inverse $(x_i)\mapsto(x_{i+1})$, since $x_{i+1}^p=x_i$. Therefore $A^\flat$ is perfect.
 
 **(2)** Put $r=|\varpi|\in(0,1)$. For $a,b\in A$, the binomial theorem gives
 $$
@@ -108,3 +106,4 @@ $$
 $$
 Letting $n\to\infty$ yields $y_i=z_i$ for every $i$. Hence $f$ is bijective.
 ___
+
