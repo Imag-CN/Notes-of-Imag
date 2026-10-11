@@ -79,7 +79,7 @@ ___
 
 Its Frobenius map $(x_i)\mapsto(x_i^p)$ has inverse $(x_i)\mapsto(x_{i+1})$, since $x_{i+1}^p=x_i$. Therefore $A^\flat$ is perfect.
 
-**(2)** Put $r=|\varpi|\in(0,1)$. For $a,b\in A$, suppose $|a|\leq|b|$, the binomial theorem gives
+**(2)** Put $r=|\varpi|\in [|p|,1)$. For $a,b\in A$, suppose $|a|\leq|b|$, the binomial theorem gives
 $$
 a^{p}=((a-b)+b)^{p}=(a-b)^{p}+b^{p}+\sum_{i=1}^{p-1}\binom{p}{i} (a-b)^{i}b^{p-i}
 $$
@@ -95,8 +95,9 @@ Consequently, if $|a-b|\le r$, induction gives
 $$
 |a^{p^n}-b^{p^n}|\le r^{n+1}\qquad(n\ge0).
 $$
+We call this estimate *the key lemma.
 
-For surjectivity, take $x=(x_i)\in A^\flat$ and choose lifts $a_i\in A$ of $x_i$. For each $i$, set $b_{i,n}=a_{i+n}^{p^n}$. Since $|a_{i+n+1}^p-a_{i+n}|\le r$, the estimate gives $|b_{i,n+1}-b_{i,n}|\le r^{n+1}$. By the ultrametric inequality, $(b_{i,n})_n$ is Cauchy. Completeness and closedness of $A$ give
+For surjectivity, take $x=(x_i)\in A^\flat$ and choose lifts $a_i\in A$ of $x_i$. For each $i$, set $b_{i,n}=a_{i+n}^{p^n}$. Since $|a_{i+n+1}^p-a_{i+n}|\le r$, the key lemma gives $|b_{i,n+1}-b_{i,n}|\le r^{n+1}$. By the ultrametric inequality, $(b_{i,n})_n$ is Cauchy. Completeness of $A$ give
 $$
 y_i:=\lim_{n\to\infty}a_{i+n}^{p^n}\in A.
 $$
@@ -106,12 +107,15 @@ y_{i+1}^p=\lim_{n\to\infty}a_{i+n+1}^{p^{n+1}}=y_i.
 $$
 Thus $(y_i)\in\varprojlim_p A$ and $f((y_i))=x$.
 
-For injectivity, suppose $f((y_i))=f((z_i))$. Then $|y_j-z_j|\le r$ for every $j$. For any $i,n\ge0$, compatibility and the estimate give
+For injectivity, suppose $f((y_i))=f((z_i))$. Then $|y_j-z_j|\le r$ for every $j$. For any $i,n\ge0$, the key lemma give
 $$
 |y_i-z_i|
 =|y_{i+n}^{p^n}-z_{i+n}^{p^n}|
 \le r^{n+1}.
 $$
 Letting $n\to\infty$ yields $y_i=z_i$ for every $i$. Hence $f$ is bijective.
+___
+
+For each $x\in A^\flat$, write $f^{-1}(x)=(y_0,y_1,\ldots)$. Define $x^\#\in A$ to be $y_0$, namely the first coordinate in $f^{-1}(x)$. Thus we obtain a map $f^\#:A^\flat\longrightarrow A$ given by $x\mapsto x^\#$.
 ___
 
