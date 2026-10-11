@@ -79,7 +79,7 @@ ___
 
 Its Frobenius map $(x_i)\mapsto(x_i^p)$ has inverse $(x_i)\mapsto(x_{i+1})$, since $x_{i+1}^p=x_i$. Therefore $A^\flat$ is perfect.
 
-**(2)** Put $r=|\varpi|\in [|p|,1)$. For $a,b\in A$, suppose $|a|\leq|b|$, the binomial theorem gives
+**(2)** Put $r=|\varpi|$. For $a,b\in A$, suppose $|a|\leq|b|$, the binomial theorem gives
 $$
 a^{p}=((a-b)+b)^{p}=(a-b)^{p}+b^{p}+\sum_{i=1}^{p-1}\binom{p}{i} (a-b)^{i}b^{p-i}
 $$
@@ -91,16 +91,18 @@ therefore, by the ultrametric inequality,
 $$
 |a^p-b^p|\le\max\{|p||a-b|,\ |a-b|^p\}.
 $$
-Consequently, if $|a-b|\le r$, induction gives
+Consequently, if $|a-b|\le r$, induction and $r=|\varpi|\geq p$ gives
 $$
 |a^{p^n}-b^{p^n}|\le r^{n+1}\qquad(n\ge0).
 $$
 We call this estimate *the key lemma.
 
-For surjectivity, take $x=(x_i)\in A^\flat$ and choose lifts $a_i\in A$ of $x_i$. For each $i$, set $b_{i,n}=a_{i+n}^{p^n}$. Since $|a_{i+n+1}^p-a_{i+n}|\le r$, the key lemma gives $|b_{i,n+1}-b_{i,n}|\le r^{n+1}$. By the ultrametric inequality, $(b_{i,n})_n$ is Cauchy. Completeness of $A$ give
+For surjectivity, take $x=(x_i)\in A^\flat$ and choose lifts $a_i\in A$ of $x_i$. For each $i$, set $b_{i,n}=a_{i+n}^{p^n}$. Since $|a_{i+n+1}^p-a_{i+n}|\le r$, the key lemma gives $|b_{i,n+1}-b_{i,n}|\le r^{n+1}$. By the ultrametric inequality, $(b_{i,n})_n$ is Cauchy. Completeness of $A$ gives
 $$
 y_i:=\lim_{n\to\infty}a_{i+n}^{p^n}\in A.
 $$
+We call this equality *the important formula*.
+
 Every $b_{i,n}$ reduces to $x_i$, so $y_i\bmod\varpi=x_i$. Moreover,
 $$
 y_{i+1}^p=\lim_{n\to\infty}a_{i+n+1}^{p^{n+1}}=y_i.
@@ -117,5 +119,94 @@ Letting $n\to\infty$ yields $y_i=z_i$ for every $i$. Hence $f$ is bijective.
 ___
 
 For each $x\in A^\flat$, write $f^{-1}(x)=(y_0,y_1,\ldots)$. Define $x^\#\in A$ to be $y_0$, namely the first coordinate in $f^{-1}(x)$. Thus we obtain a map $f^\#:A^\flat\longrightarrow A$ given by $x\mapsto x^\#$.
+
+>[!remark] Remark
+>Fix the residue characteristic $p$. The construction $A\mapsto A^\flat$ defines a functor from valuation rings of perfectoid fields, with continuous ring homomorphisms, to perfect rings of characteristic $p$. Using the identification $A^\flat\cong\varprojlim_p A$, a morphism $\phi:A\to B$ induces $\phi^\flat((y_i))=(\phi(y_i))$. This preserves multiplication and, by continuity, addition, since
+>$$
+>(y+z)_i=\lim_{n\to\infty}(y_{i+n}+z_{i+n})^{p^n}.
+>$$
+>The construction is canonically independent of the choice of pseudo-uniformizer.
+>
+>The maps $\#:A^\flat\to A$ satisfy $\phi(x^\#)=(\phi^\flat(x))^\#$, so they form a natural transformation after passing to multiplicative monoids. In mixed characteristic, $\#$ is not a ring homomorphism. In characteristic $p$, it is a ring isomorphism.
+
+___
+
+> [!problem] Problem 3
+> (1) Given $x\in K^\times$, show that there exists $y\in K^\times$ such that $|y^p|=|x|$. (This tells us that $\Gamma=|K^\times|$ is not only non-discrete but “$p$-divisible”.)
+>
+> (2) Prove that there exists an element $\varpi^\flat\in A^\flat$ such that $|(\varpi^\flat)^\#|=|\varpi|$.
+>
+> (3) Consider the following localization of $A^\flat$ (with respect to the multiplicative set consisting of powers of $\varpi^\flat$)
+> $$
+> K^\flat:=A^\flat[1/\varpi^\flat].
+> $$
+> Show that the map $f^\#$ extends to a multiplicative map $K^\flat\to K$, still to be called $f^\#$. Concretely, construct this map by extending the bijection $f^{-1}$ (where $f$ is as in #2.(2)) to a multiplicative bijection $K^\flat\to\varprojlim_p K$ and projecting onto the first component. Deduce that $K^\flat$ is a field of characteristic $p$.
+>
+> (4) Show that the function
+> $$
+> |\cdot|:K^\flat\longrightarrow\mathbb{R}_{\ge0},\qquad |y|:=|f^\#(y)|
+> $$
+> is a valuation on $K^\flat$ and that $A^\flat$ is the valuation ring for $|\cdot|$.
+
+**Proof:**
+Put $r=|\varpi|$.
+
+**(1)** If $\operatorname{char}(K)=p$, (P3) says that Frobenius on $A$ is surjective. Applying this to $x$ gives the result.
+
+Suppose $\operatorname{char}(K)=0$. (P2) gives $t\in K$ with $|p|<|t|^p<1$. Choose $m\in\mathbb{Z}$ such that $u=x/t^{mp}$ satisfies $|t|^p<|u|\le1$. By (P3), there is $v\in A$ with $v^p-u\in pA$. Since $|v^p-u|\le|p|<|u|$, we have $|v|^p=|u|$. Thus $y=t^mv$ satisfies $|y|^p=|x|$.
+
+**(2)** By (1), choose $a_1\in A$ with $|a_1|^p=r$. Surjectivity of Frobenius on $A/\varpi A$ allows us to choose $a_{n+1}\in A$ with $a_{n+1}^p\equiv a_n\pmod{\varpi}$.
+
+Inductively, $|a_n|=r^{1/p^n}>r$: indeed, $|a_{n+1}^p-a_n|\le r<|a_n|$ implies $|a_{n+1}|^p=|a_n|$. Hence
+$$
+\varpi^\flat=(0,\overline{a_1},\overline{a_2},\ldots)\in A^\flat.
+$$
+By the important formula (see Problem 2.(2)),
+$$
+(\varpi^\flat)^\#=\lim_{n\to\infty}a_n^{p^n}.
+$$
+We have $|a_n^{p^n}|=r$, so $|(\varpi^\flat)^\#|=r=|\varpi|$.
+
+**(3)** Write $w=\varpi^\flat$ and $f^{-1}(w)=(w_i)$. Then $|w_i|=r^{1/p^i}$, so every $w_i$ is nonzero.
+
+The multiplicative bijection $f^{-1}:A^\flat\to\varprojlim_p A$ shows that $A^\flat$ is a domain: a nonzero compatible sequence has every coordinate nonzero, and coordinatewise products of nonzero sequences are nonzero.
+
+Define
+$$
+g:K^\flat\longrightarrow\varprojlim_p K,\qquad
+g(a/w^m)=\left(\frac{a_i}{w_i^m}\right)_{i\ge0},
+\quad f^{-1}(a)=(a_i).
+$$
+This is well-defined, multiplicative, and injective, by clearing denominators and using the injectivity of $f^{-1}$.
+
+For surjectivity, take $(z_i)\in\varprojlim_p K$. Choose $m\ge0$ with $|z_0|r^m\le1$. Since
+$$
+|z_iw_i^m|=(|z_0|r^m)^{1/p^i}\le1,
+$$
+the sequence $(z_iw_i^m)$ lies in $\varprojlim_p A$. If $f^{-1}(a)=(z_iw_i^m)$, then $g(a/w^m)=(z_i)$.
+
+Composing $g$ with the first projection gives the desired multiplicative map, explicitly
+$$
+(a/w^m)^\#=\frac{a^\#}{(w^\#)^m}.
+$$
+Every nonzero sequence in $\varprojlim_p K$ has the coordinatewise inverse $(z_i^{-1})$. By the multiplicative bijection $g$, every nonzero element of $K^\flat$ is invertible. Thus $K^\flat$ is a field, and its characteristic is $p$ because it contains $A^\flat$.
+
+**(4)** Multiplicativity and $|x|=0\iff x=0$ follow from $g$. To prove the ultrametric inequality, first take $a,b\in A^\flat$, with $f^{-1}(a)=(a_i)$ and $f^{-1}(b)=(b_i)$. The lifting formula gives
+$$
+(a+b)^\#=\lim_{n\to\infty}(a_n+b_n)^{p^n}.
+$$
+Since $|a_n|^{p^n}=|a^\#|$ and $|b_n|^{p^n}=|b^\#|$, we obtain
+$$
+|(a_n+b_n)^{p^n}|\le\max\{|a^\#|,|b^\#|\}.
+$$
+Taking limits yields $|a+b|\le\max\{|a|,|b|\}$. For arbitrary elements of $K^\flat$, multiply both by a common power of $w$ to reduce to this case.
+
+Finally, if $g(x)=(z_i)$, then $|z_i|=|z_0|^{1/p^i}$. Consequently,
+$$
+|x|\le1
+\iff z_i\in A\text{ for every }i
+\iff x\in A^\flat.
+$$
+Thus $A^\flat$ is the valuation ring of $K^\flat$.
 ___
 
