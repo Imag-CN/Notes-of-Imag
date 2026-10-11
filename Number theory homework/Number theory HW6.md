@@ -1,5 +1,6 @@
 ___
-
+*Using Chatgpt to help write markdown problem statements, provided ideas for problem 2, 3 and 4, and enhance writing conventions.*
+___
 Let $K$ be a non-Archimedean CVF (complete valued field). By $A$ we mean its valuation ring, $\mathfrak{m}$ the unique maximal ideal of $A$, and $k:=A/\mathfrak{m}$ the residue field.
 
 >[!definition] Definition
