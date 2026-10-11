@@ -119,6 +119,7 @@ Letting $n\to\infty$ yields $y_i=z_i$ for every $i$. Hence $f$ is bijective.
 ___
 
 For each $x\in A^\flat$, write $f^{-1}(x)=(y_0,y_1,\ldots)$. Define $x^\#\in A$ to be $y_0$, namely the first coordinate in $f^{-1}(x)$. Thus we obtain a map $f^\#:A^\flat\longrightarrow A$ given by $x\mapsto x^\#$.
+___
 
 >[!remark] Remark
 >Fix the residue characteristic $p$. The construction $A\mapsto A^\flat$ defines a functor from valuation rings of perfectoid fields, with continuous ring homomorphisms, to perfect rings of characteristic $p$. Using the identification $A^\flat\cong\varprojlim_p A$, a morphism $\phi:A\to B$ induces $\phi^\flat((y_i))=(\phi(y_i))$. This preserves multiplication and, by continuity, addition, since
@@ -169,13 +170,13 @@ We have $|a_n^{p^n}|=r$, so $|(\varpi^\flat)^\#|=r=|\varpi|$.
 
 **(3)** Write $w=\varpi^\flat$ and $f^{-1}(w)=(w_i)$. Then $|w_i|=r^{1/p^i}$, so every $w_i$ is nonzero.
 
-The multiplicative bijection $f^{-1}:A^\flat\to\varprojlim_p A$ shows that $A^\flat$ is a domain: a nonzero compatible sequence has every coordinate nonzero, and coordinatewise products of nonzero sequences are nonzero.
+The bijection $f^{-1}:A^\flat\to\varprojlim_p A$ shows that $A^\flat$ is an integral domain, since a nonzero sequence has every coordinate nonzero, and coordinatewise products of nonzero sequences are nonzero.
 
-Define
+Define an extension of $f^{-1}$:
 $$
 g:K^\flat\longrightarrow\varprojlim_p K,\qquad
 g(a/w^m)=\left(\frac{a_i}{w_i^m}\right)_{i\ge0},
-\quad f^{-1}(a)=(a_i).
+\quad\text{where }(a_i)=f^{-1}(a).
 $$
 This is well-defined, multiplicative, and injective, by clearing denominators and using the injectivity of $f^{-1}$.
 
@@ -185,13 +186,13 @@ $$
 $$
 the sequence $(z_iw_i^m)$ lies in $\varprojlim_p A$. If $f^{-1}(a)=(z_iw_i^m)$, then $g(a/w^m)=(z_i)$.
 
-Composing $g$ with the first projection gives the desired multiplicative map, explicitly
+Composing $g$ with the first component projection gives the desired multiplicative map, explicitly
 $$
 (a/w^m)^\#=\frac{a^\#}{(w^\#)^m}.
 $$
 Every nonzero sequence in $\varprojlim_p K$ has the coordinatewise inverse $(z_i^{-1})$. By the multiplicative bijection $g$, every nonzero element of $K^\flat$ is invertible. Thus $K^\flat$ is a field, and its characteristic is $p$ because it contains $A^\flat$.
 
-**(4)** Multiplicativity and $|x|=0\iff x=0$ follow from $g$. To prove the ultrametric inequality, first take $a,b\in A^\flat$, with $f^{-1}(a)=(a_i)$ and $f^{-1}(b)=(b_i)$. The lifting formula gives
+**(4)** Multiplicativity and $|x|=0\iff x=0$ follow from $g$. To prove the ultrametric inequality, first take $a,b\in A^\flat$, with $f^{-1}(a)=(a_i)$ and $f^{-1}(b)=(b_i)$. The important formula gives
 $$
 (a+b)^\#=\lim_{n\to\infty}(a_n+b_n)^{p^n}.
 $$
