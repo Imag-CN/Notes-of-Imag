@@ -66,7 +66,7 @@ ___
 **Proof:**
 Put $r=n-k$.
 
-**First proof:** 
+**First proof:**
 A monomial in $h_{k+i}e_{r-i}$ can be represented by a pair
 $$
 (a_1\le\cdots\le a_{k+i};\,b_1<\cdots<b_{r-i}),
@@ -103,3 +103,5 @@ $$
 s_{(k,1^{n-k})}
 =\sum_{i=0}^{n-k}(-1)^ih_{k+i}e_{n-k-i}.
 $$
+___
+
