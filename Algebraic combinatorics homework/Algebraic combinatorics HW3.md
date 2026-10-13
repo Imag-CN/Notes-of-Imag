@@ -10,12 +10,17 @@ ___
 **Proof:**
 Apply the Jacobi-Trudi identity to $\lambda'$:
 $$
-s_{\lambda'}=\det\left(h_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}.
+s_{\lambda'}=\det\left(h_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}\tag{1},
 $$
-Let $\omega$ be the standard involution of the ring of symmetric functions, characterized by $\omega(h_r)=e_r$ and $\omega(s_\mu)=s_{\mu'}$. Applying $\omega$ gives
+and
 $$
-s_\lambda=\det\left(e_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}.
+s_{\lambda}=\det\left(e_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}.\tag{2}
 $$
+Let $\omega$ be the standard involution of the ring of symmetric functions, characterized by $\omega(h_r)=e_r$. Applying $\omega$ on $(1)$ gives
+$$
+\omega(s_\lambda')=\det\left(e_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}.
+$$
+By $(2)$, we have 
 Taking the transpose of the matrix does not change its determinant, so
 $$
 s_\lambda=\det\left(e_{\lambda'_j-j+i}\right)_{1\le i,j\le\lambda_1}=\det(M).
