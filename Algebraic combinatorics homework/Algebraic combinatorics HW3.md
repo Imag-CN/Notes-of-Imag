@@ -8,23 +8,51 @@ ___
 > where $M$ is a $\lambda_1\times\lambda_1$ matrix and $M_{i,j}=e_{\lambda'_j-j+i}(\mathbf{x})$.
 
 **Proof:**
-Apply the Jacobi-Trudi identity to $\lambda'$:
+Let $l=\lambda_1$, and set
 $$
-s_{\lambda'}=\det\left(h_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}\tag{1},
+u_i=(1-i,1),\qquad v_i=(\lambda'_i-i+1,\infty)
 $$
-and
+for $1\le i\le l$. Consider northeast lattice paths from the $u_i$'s to the $v_j$'s.
+
+Use the $e$-labeling of the east steps: if the east steps of a path, from left to right, occur at heights
 $$
-s_{\lambda}=\det\left(e_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}.\tag{2}
+a_1<a_2<\cdots<a_r,
 $$
-Let $\omega$ be the standard involution of the ring of symmetric functions, characterized by $\omega(h_r)=e_r$. Applying $\omega$ on $(1)$ gives
+give the path weight $x_{a_1}\cdots x_{a_r}$. Thus the weight-generating function of paths having $r$ east steps is $e_r(\mathbf{x})$.
+
+A path from $u_i$ to $v_j$ has exactly
 $$
-\omega(s_\lambda')=\det\left(e_{\lambda'_i-i+j}\right)_{1\le i,j\le\lambda_1}.
+(\lambda'_j-j+1)-(1-i)=\lambda'_j-j+i
 $$
-By $(2)$, we have 
-Taking the transpose of the matrix does not change its determinant, so
+east steps. Hence its weight-generating function is
 $$
-s_\lambda=\det\left(e_{\lambda'_j-j+i}\right)_{1\le i,j\le\lambda_1}=\det(M).
+e_{\lambda'_j-j+i}(\mathbf{x}).
 $$
+Therefore, by the LGV lemma,
+$$
+\det\left(e_{\lambda'_j-j+i}(\mathbf{x})\right)_{1\le i,j\le l}
+$$
+is the weight-generating function of the nonintersecting path families connecting $u_i$ to $v_i$.
+
+It remains to identify these families with semistandard Young tableaux of shape $\lambda$. Given a nonintersecting family $(P_1,\ldots,P_l)$, record the labels of the east steps of $P_j$ in the $j$-th column of $\lambda$, from top to bottom. Since the $e$-labels along each path are strictly increasing, the entries in each column are strictly increasing. Since the paths are nonintersecting, the entries in each row are weakly increasing. Thus we obtain a semistandard Young tableau of shape $\lambda$.
+
+Conversely, from a semistandard Young tableau of shape $\lambda$, the entries in its $j$-th column uniquely determine the east steps of $P_j$. Column-strictness gives a valid path, and row weak increase implies that the resulting paths are nonintersecting. Hence this is a weight-preserving bijection.
+
+Therefore the generating function of the nonintersecting families is
+$$
+\sum_{T\in\operatorname{SSYT}(\lambda)}\mathbf{x}^T=s_\lambda(\mathbf{x}).
+$$
+Consequently,
+$$
+s_\lambda(\mathbf{x})
+=
+\det\left(e_{\lambda'_j-j+i}(\mathbf{x})\right)_{1\le i,j\le\lambda_1}
+=
+\det(M).
+$$
+>[!remark] Remark
+>Applying $\omega$ to the identity gives $\omega(s_{\lambda})=s_{\lambda'}$.
+
 ___
 
 > [!problem] 9.2
@@ -38,25 +66,24 @@ ___
 **Proof:**
 Put $r=n-k$.
 
-**First proof:** By the Pieri rule,
+**First proof:** 
+A monomial in $h_{k+i}e_{r-i}$ can be represented by a pair
 $$
-h_{k+i}e_{r-i}
-=s_{(k+i)}e_{r-i}
-=s_{(k+i,1^{r-i})}+s_{(k+i+1,1^{r-i-1})},
+(a_1\le\cdots\le a_{k+i};\,b_1<\cdots<b_{r-i}),
 $$
-where the second term is omitted when $i=r$.
+with weight $x_{a_1}\cdots x_{a_{k+i}}x_{b_1}\cdots x_{b_{r-i}}$ and sign $(-1)^i$.
 
-Thus we may regard the signed objects contributing to $(-1)^ih_{k+i}e_{r-i}$ as semistandard tableaux of these two possible hook shapes. Pair a tableau of shape $(k+i+1,1^{r-i-1})$ occurring in the $i$-th term with the identical tableau of shape
-$$
-(k+(i+1),1^{r-(i+1)})
-$$
-occurring in the $(i+1)$-st term. This is a weight-preserving, sign-reversing involution.
+We define a sign-reversing involution as follows. Compare $a_1$ with the entries $b_j$. If $a_1<b_1$ (or if there is no $b_1$), move $a_1$ from the weakly increasing sequence to the strictly increasing sequence. Otherwise, let $b_j$ be the largest $b_j\le a_1$ and move $b_j$ from the strictly increasing sequence to the weakly increasing sequence.
 
-All such objects cancel. The only unpaired objects are the tableaux of shape $(k,1^r)$ from the $i=0$ term. Hence
+The move changes $i$ by $1$, preserves the weight, and reversing the same move recovers the original pair. Hence all terms cancel except when $i=0$ and
 $$
-\sum_{i=0}^r(-1)^ih_{k+i}e_{r-i}=s_{(k,1^r)}=s_{(k,1^{n-k})}.
+a_1\le\cdots\le a_k,\qquad
+a_1<b_1<\cdots<b_r.
 $$
-
+These are precisely the semistandard tableaux of hook shape $(k,1^r)$, with the $a_j$ in the first row and the $b_j$ below $a_1$ in the first column. Therefore
+$$
+\sum_{i=0}^r(-1)^ih_{k+i}e_{r-i}=s_{(k,1^r)}.
+$$
 **Second proof:**
 Use the Jacobi-Trudi determinant
 $$
