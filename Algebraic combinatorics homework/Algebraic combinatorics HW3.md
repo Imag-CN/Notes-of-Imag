@@ -278,18 +278,206 @@ ___
 >$$
 >if $\ell>0$ and $b_{0,0}(0)=1$.
 
+**Proof:**
+We use induction on $\ell$. For $\ell=0$, $(U+D)^0=I$, so $b_{0,0}(0)=1$.
 
+Suppose
+$$
+(U+D)^{\ell-1}=\sum_{i,j}b_{i,j}(\ell-1)U^iD^j.
+$$
+From $DU=UD+I$, induction on $i$ gives
+$$
+DU^i=U^iD+iU^{i-1}.
+$$
+Therefore
+$$
+\begin{aligned}
+(U+D)^\ell
+&=(U+D)(U+D)^{\ell-1}\\
+&=\sum_{i,j}b_{i,j}(\ell-1)
+\left(U^{i+1}D^j+U^iD^{j+1}+iU^{i-1}D^j\right).
+\end{aligned}
+$$
+Collecting the coefficient of $U^iD^j$ gives
+$$
+b_{i,j}(\ell)
+=b_{i,j-1}(\ell-1)+(i+1)b_{i+1,j}(\ell-1)+b_{i-1,j}(\ell-1).
+$$
+Taking $b_{i,j}(\ell)=0$ outside $0\le i,j\le\ell$ completes the induction.
+___
 
 >[!problem] 11.5
 >Prove that $U^iD^j|\varnothing\rangle=0|\varnothing\rangle$ if $j>0$.
 
-
-
-
-
+**Proof:**
+Since $\varnothing$ is the minimal element of Young's lattice, $D|\varnothing\rangle=0$. Hence for $j>0$,
+$$
+D^j|\varnothing\rangle=0,
+$$
+and therefore
+$$
+U^iD^j|\varnothing\rangle=0.
+$$
+___
 
 >[!problem] 11.6
 >Show that if $|\lambda|=i$ and $\ell-i$ is even then
 >$$
 >\beta(\ell,\lambda)=f^\lambda\binom{\ell}{i}(1\cdot3\cdot5\cdots(\ell-i-1)).
 >$$
+
+**Proof:**
+By 11.3 and 11.4,
+$$
+\beta(\ell,\lambda)
+=\sum_{a,b}b_{a,b}(\ell)\langle\lambda|U^aD^b|\varnothing\rangle.
+$$
+By 11.5, all terms with $b>0$ vanish. Since $|\lambda|=i$, only $a=i$ can contribute. Thus
+$$
+\beta(\ell,\lambda)
+=b_{i,0}(\ell)\langle\lambda|U^i|\varnothing\rangle
+=b_{i,0}(\ell)f^\lambda.
+$$
+
+Write $\ell-i=2r$. We claim
+$$
+b_{i,0}(\ell)=\frac{\ell!}{i!2^rr!}.
+$$
+We prove this by induction on $\ell$. By 11.4,
+$$
+b_{i,0}(\ell)=(i+1)b_{i+1,0}(\ell-1)+b_{i-1,0}(\ell-1).
+$$
+Using the induction hypothesis,
+$$
+\begin{aligned}
+b_{i,0}(\ell)
+&=(i+1)\frac{(\ell-1)!}{(i+1)!2^{r-1}(r-1)!}
++\frac{(\ell-1)!}{(i-1)!2^rr!}\\
+&=\frac{(\ell-1)!}{i!2^rr!}(2r+i)
+=\frac{\ell!}{i!2^rr!},
+\end{aligned}
+$$
+since $2r+i=\ell$.
+
+Finally,
+$$
+\frac{\ell!}{i!2^rr!}
+=\binom{\ell}{i}\frac{(2r)!}{2^rr!}
+=\binom{\ell}{i}(1\cdot3\cdot5\cdots(2r-1)).
+$$
+Since $2r=\ell-i$, we conclude that
+$$
+\beta(\ell,\lambda)
+=f^\lambda\binom{\ell}{i}(1\cdot3\cdot5\cdots(\ell-i-1)).
+$$
+___
+
+Given a permutation $\pi$ of $[n]=\{1,2,\ldots,n\}$, we define the descent set of $\pi$ by:
+$$
+\operatorname{Des}(\pi)=\{i\mid i\in[n-1]\ \&\ \pi_i>\pi_{i+1}\}.
+$$
+and
+$$
+\operatorname{maj}(\pi)=\sum_{i\in \operatorname{Des}(\pi)}i.
+$$
+
+For example if $n=6$ and $\pi=315426$ then $\operatorname{Des}(\pi)=\{1,3,4\}$ and $\operatorname{maj}(\pi)=8$.
+
+Given a SYT $Q$ of shape $\lambda\vdash n$, we define the descent set
+$$
+\operatorname{Des}(Q)=\{i\mid i\in[n-1]\ \&\ i+1\text{ is strictly below }i\}.
+$$
+and
+$$
+\operatorname{maj}(Q)=\sum_{i\in \operatorname{Des}(Q)}i.
+$$
+___
+
+>[!problem] 12.1
+>Prove that
+>$$
+>\sum_{\pi\in S_n}q^{\operatorname{maj}(\pi)}=[n]_q!
+>$$
+>where $[n]_q=1+q=\cdots+q^{n-1}$ and $[1]_q!=1$ and $[n]_q!:=[n]_q[n-1]_q!$ for $n>1$.
+
+**Proof:**
+We prove the identity by induction on $n$. For $\sigma\in S_{n-1}$, insert $n$ into one of the $n$ slots of $\sigma$. Label these slots from right to left by
+$$
+0,1,\ldots,n-1.
+$$
+More precisely, first label the slot after $\sigma_{n-1}$ by $0$. Then label the slots immediately after the descents of $\sigma$, from right to left, by $1,2,\ldots,\operatorname{Des}(\sigma)$, and finally label the remaining slots from left to right by $\operatorname{Des}(\sigma)+1,\ldots,n-1$.
+
+If $n$ is inserted into the slot labeled $r$, then
+$$
+\operatorname{maj}(\pi)=\operatorname{maj}(\sigma)+r.
+$$
+Indeed, if the insertion is after a descent position $j$, that descent is replaced by a descent one position later, while the new entry $n$ creates a descent immediately after itself; the net change is exactly the label of that slot. The same direct calculation applies to a non-descent slot.
+
+Thus, as $n$ is inserted into all $n$ possible slots,
+$$
+\sum_{\pi\text{ obtained from }\sigma}q^{\operatorname{maj}(\pi)}
+=q^{\operatorname{maj}(\sigma)}(1+q+\cdots+q^{n-1})
+=[n]_q q^{\operatorname{maj}(\sigma)}.
+$$
+Summing over $\sigma\in S_{n-1}$ and using induction,
+$$
+\sum_{\pi\in S_n}q^{\operatorname{maj}(\pi)}
+=[n]_q\sum_{\sigma\in S_{n-1}}q^{\operatorname{maj}(\sigma)}
+=[n]_q[n-1]_q!
+=[n]_q!.
+$$
+___
+
+>[!problem] 12.2
+>Let $(P,Q)$ be the pairs of tableaux associated to $\pi$ by the Robinson-Schensted correspondence. Prove that the descent set of the permutation $\pi$ matches the descent set of its recording tableau $Q$.
+
+**Proof:**
+Let $(P,Q)$ be the pair associated to $\pi=\pi_1\cdots\pi_n$ under RS correspondence. We show that
+$$
+i\in\operatorname{Des}(\pi)\iff i\in\operatorname{Des}(Q).
+$$
+
+Recall that the cell created when $\pi_i$ is inserted into $P$ is labeled $i$ in $Q$. Thus it suffices to show that the new cell created by inserting $\pi_{i+1}$ lies strictly below the new cell created by inserting $\pi_i$ exactly when $\pi_i>\pi_{i+1}$.
+
+This follows from the row-bumping lemma. If $\pi_i\le\pi_{i+1}$, then the bumping path for $\pi_{i+1}$ lies weakly to the right of that for $\pi_i$, so its new cell is not strictly below the previous new cell. If $\pi_i>\pi_{i+1}$, then the bumping path for $\pi_{i+1}$ lies strictly to the left of the previous bumping path whenever both occur in the same row, and consequently its new cell lies in a strictly lower row.
+
+Therefore
+$$
+\operatorname{Des}(\pi)=\operatorname{Des}(Q),
+$$
+and hence
+$$
+\operatorname{maj}(\pi)=\operatorname{maj}(Q).
+$$
+___
+
+>[!problem] 12.3
+>Prove
+>$$
+>[n]!_q=\sum_{\lambda\vdash n}f^\lambda\sum_{Q\in \operatorname{SYT}(\lambda)}q^{\operatorname{maj}(Q)}.
+>$$
+
+**Proof:**
+By Problem 12.1,
+$$
+[n]_q!=\sum_{\pi\in S_n}q^{\operatorname{maj}(\pi)}.
+$$
+Under RS correspondence, permutations $\pi\in S_n$ are in bijection with pairs $(P,Q)$ of standard Young tableaux of the same shape $\lambda\vdash n$. By Part 2,
+$$
+\operatorname{maj}(\pi)=\operatorname{maj}(Q).
+$$
+Therefore
+$$
+[n]_q!
+=\sum_{\lambda\vdash n}
+\sum_{P,Q\in\operatorname{SYT}(\lambda)}
+q^{\operatorname{maj}(Q)}.
+$$
+For each fixed $Q\in\operatorname{SYT}(\lambda)$, there are exactly $f^\lambda$ choices for $P$. Hence
+$$
+[n]_q!
+=\sum_{\lambda\vdash n}
+f^\lambda
+\sum_{Q\in\operatorname{SYT}(\lambda)}
+q^{\operatorname{maj}(Q)}.
+$$
