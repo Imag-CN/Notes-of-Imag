@@ -131,6 +131,7 @@ $$
 3. **Iteration:** Repeat Step 2 until the walk terminates at a maximal element $z$.
 
 Now you need to prove Knuth's hook length formula:
+___
 
 > [!problem] 10.1
 > Prove that, for any maximal element $z\in P$, the probability $P(z)$ that the Tree Hook Walk terminates at $z$ is given by:
@@ -138,7 +139,29 @@ Now you need to prove Knuth's hook length formula:
 > P(z)=\frac{1}{n}\prod_{x<z}\left(1+\frac{1}{h(x)-1}\right).
 > $$
 
+**Proof:**
+Fix a maximal element $z$. For $x\le z$, let $q(x)$ be the probability that the walk ever visits $x$.
 
+The walk can visit $x$ either by starting at $x$, with probability $1/n$, or by jumping to $x$ from some $y<x$. Hence
+$$
+q(x)=\frac1n+\sum_{y<x}\frac{q(y)}{h(y)-1}.
+$$
+Since $P$ is a rooted tree, the elements below $x$ form a chain. Write them as $x_0<x_1<\cdots<x_r=x$. Then
+$$
+q(x_i)=\frac1n+\sum_{j<i}\frac{q(x_j)}{h(x_j)-1}.
+$$
+Subtracting the equations for $i$ and $i-1$ gives
+$$
+q(x_i)=q(x_{i-1})\left(1+\frac1{h(x_{i-1})-1}\right).
+$$
+Since $q(x_0)=1/n$, iterating gives
+$$
+q(x)=\frac1n\prod_{y<x}\left(1+\frac1{h(y)-1}\right).
+$$
+Since $z$ is maximal, the walk terminates at $z$ exactly when it visits $z$. Therefore
+$$
+P(z)=\frac1n\prod_{x<z}\left(1+\frac1{h(x)-1}\right).
+$$
 ___
 
 > [!problem] 10.2
@@ -146,3 +169,127 @@ ___
 > $$\frac{1}{n}\sum_{z\in\max(P)}\prod_{x\in P\setminus\{z\}}\frac{1}{h_{P\setminus\{z\}}(x)}=\prod_{x\in P}\frac{1}{h_P(x)}.$$
 >
 > Conclude that this identity implies Knuth's hook length formula for trees: $|\mathcal{L}(P)|=n!/\prod_{x\in P}h(x)$.
+
+**Proof:**
+Fix a maximal element $z$. Deleting $z$ decreases the hook length by $1$ exactly for $x<z$. Hence
+$$
+h_{P\setminus\{z\}}(x)=
+\begin{cases}
+h_P(x)-1,&x<z,\\
+h_P(x),&x\nless z,\ x\ne z.
+\end{cases}
+$$
+Since $h_P(z)=1$,
+$$
+\prod_{x\in P\setminus\{z\}}\frac1{h_{P\setminus\{z\}}(x)}
+=
+\left(\prod_{x\in P}\frac1{h_P(x)}\right)
+\prod_{x<z}\frac{h_P(x)}{h_P(x)-1}.
+$$
+By 9.1,
+$$
+\frac1n\prod_{x<z}\frac{h_P(x)}{h_P(x)-1}=P(z).
+$$
+Thus
+$$
+\frac1n\prod_{x\in P\setminus\{z\}}\frac1{h_{P\setminus\{z\}}(x)}
+=
+P(z)\prod_{x\in P}\frac1{h_P(x)}.
+$$
+Summing over all maximal $z$ and using $\sum_zP(z)=1$ gives
+$$
+\frac1n\sum_{z\in\max(P)}
+\prod_{x\in P\setminus\{z\}}\frac1{h_{P\setminus\{z\}}(x)}
+=
+\prod_{x\in P}\frac1{h_P(x)}.
+$$
+
+Finally, in every linear extension, the element labeled $n$ is maximal. Conversely, choosing a maximal $z$ to receive the label $n$ and a linear extension of $P\setminus\{z\}$ uniquely determines a linear extension of $P$. Therefore
+$$
+|\mathcal L(P)|=\sum_{z\in\max(P)}|\mathcal L(P\setminus\{z\})|.
+$$
+By induction,
+$$
+|\mathcal L(P\setminus\{z\})|
+=(n-1)!\prod_{x\in P\setminus\{z\}}\frac1{h_{P\setminus\{z\}}(x)}.
+$$
+Hence, using the identity above,
+$$
+|\mathcal L(P)|
+=(n-1)!\sum_{z\in\max(P)}
+\prod_{x\in P\setminus\{z\}}\frac1{h_{P\setminus\{z\}}(x)}
+=n!\prod_{x\in P}\frac1{h_P(x)}.
+$$
+___
+
+Let $\beta(\ell,\lambda)$ be the number of walks of length $\ell$ on Young's lattice starting at $\varnothing$ and ending at $\lambda$ using up and down steps.
+
+>[!problem] 11.1
+>Prove that $\beta(\ell,\lambda)=0$ if $\ell-|\lambda|$ is odd.
+
+**Proof:**
+Take any walk of length $\ell$ on Young's lattice starting at $\varnothing$ and ending at $\lambda$. Let $u$ and $d$ be the numbers of up and down steps, respectively. Then $\ell=u+d$ and $|\lambda|=u-d$. Hence
+$$
+\ell-|\lambda|=2d
+$$
+is even. Therefore, if $\ell-|\lambda|$ is odd, no such walk exists, so $\beta(\ell,\lambda)=0$.
+___
+
+>[!problem] 11.2
+>Prove that $\beta(|\lambda|,\lambda)=f^\lambda$ where $f^\lambda$ is the number of standard Young tableaux of shape $\lambda$.
+
+**Proof:**
+A walk of length $|\lambda|$ from $\varnothing$ to $\lambda$ must have $d=0$, since $|\lambda|=u-d$ and $|\lambda|=u+d$. Thus it consists entirely of up steps.
+
+Such a walk is a saturated chain
+$$
+\varnothing=\lambda^{(0)}\lessdot\lambda^{(1)}\lessdot\cdots\lessdot\lambda^{(|\lambda|)}=\lambda.
+$$
+There is a bijection between these chains and standard Young tableaux of shape $\lambda$: label the cell added at the $k$-th step by $k$. Therefore
+$$
+\beta(|\lambda|,\lambda)=f^\lambda.
+$$
+___
+
+>[!problem] 11.3
+>Prove that $\beta(\ell,\lambda)=\langle\lambda|(U+D)^\ell|\varnothing\rangle$.
+
+**Proof:**
+By definition,
+$$
+U|\mu\rangle=\sum_{\nu\gtrdot\mu}|\nu\rangle,
+\qquad
+D|\mu\rangle=\sum_{\nu\lessdot\mu}|\nu\rangle.
+$$
+Hence $(U+D)|\mu\rangle$ is the sum of all partitions reachable from $\mu$ by one up or down step. Therefore the coefficient of $|\lambda\rangle$ in $(U+D)^\ell|\varnothing\rangle$ is exactly the number of walks of length $\ell$ from $\varnothing$ to $\lambda$. Thus
+$$
+\beta(\ell,\lambda)=\langle\lambda|(U+D)^\ell|\varnothing\rangle.
+$$
+___
+
+>[!problem] 11.4
+>Use the fact that $DU=UD+I$, to prove that
+>$$
+>(U+D)^\ell=\sum_{i,j}b_{i,j}(\ell)U^iD^j
+>$$
+>where $b_{i,j}(\ell)$ is such that $b_{i,j}(\ell)=0$ if $i<0$ or $j<0$ or $i>\ell$ or $j>\ell$
+>$$
+>b_{i,j}(\ell)=b_{i,j-1}(\ell-1)+(i+1)b_{i+1,j}(\ell-1)+b_{i-1,j}(\ell-1)
+>$$
+>if $\ell>0$ and $b_{0,0}(0)=1$.
+
+
+
+>[!problem] 11.5
+>Prove that $U^iD^j|\varnothing\rangle=0|\varnothing\rangle$ if $j>0$.
+
+
+
+
+
+
+>[!problem] 11.6
+>Show that if $|\lambda|=i$ and $\ell-i$ is even then
+>$$
+>\beta(\ell,\lambda)=f^\lambda\binom{\ell}{i}(1\cdot3\cdot5\cdots(\ell-i-1)).
+>$$
