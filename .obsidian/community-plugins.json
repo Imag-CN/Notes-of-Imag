@@ -4,8 +4,8 @@
   "dataview",
   "quickadd",
   "obsidian-git",
-  "callout-manager",
   "claudian",
   "obsidian-enhancing-export",
-  "obsidian-tikzjax"
+  "obsidian-tikzjax",
+  "callout-manager"
 ]

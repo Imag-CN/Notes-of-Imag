@@ -1,70 +1,9 @@
 {
   "callouts": {
     "custom": [
-      "lemma",
-      "remark",
-      "definition",
-      "awesome",
-      "proposition",
-      "theorem",
-      "corollary"
+      "remark"
     ],
-    "settings": {
-      "lemma": [
-        {
-          "changes": {
-            "icon": "lucide-arrow-up-right-from-square",
-            "color": "208, 181, 48"
-          }
-        }
-      ],
-      "remark": [
-        {
-          "changes": {
-            "icon": "lucide-flame",
-            "color": "83, 223, 221"
-          }
-        }
-      ],
-      "definition": [
-        {
-          "changes": {
-            "icon": "lucide-book-text"
-          }
-        }
-      ],
-      "awesome": [
-        {
-          "changes": {
-            "icon": "lucide-laugh",
-            "color": "227, 107, 167"
-          }
-        }
-      ],
-      "proposition": [
-        {
-          "changes": {
-            "icon": "lucide-book-open-check",
-            "color": "68, 207, 110"
-          }
-        }
-      ],
-      "theorem": [
-        {
-          "changes": {
-            "icon": "lucide-book-type"
-          }
-        }
-      ],
-      "corollary": [
-        {
-          "changes": {
-            "icon": "lucide-arrow-big-right",
-            "color": "83, 223, 221"
-          }
-        }
-      ]
-    }
+    "settings": {}
   },
   "calloutDetection": {
     "obsidian": true,
