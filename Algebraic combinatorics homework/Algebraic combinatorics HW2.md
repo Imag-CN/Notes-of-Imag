@@ -15,7 +15,6 @@ For the set composition $(\{2,5\},\{4\},\{1\},\{3,6,7\})$:
 - **Splittable:** $\{2,5\}$, $\{3,6,7\}$
 - **Mergeable:** $\{ 2,5 \}$,$\{ 1 \}$
 
-
 Let $\Pi$ be the set of all set compositions of $[n]$. For $\pi = (B_1,\dots,B_k) \in \Pi$, define $\phi(\pi)$: choose the minimum $j$ such that $B_{j}$ is splittable or mergeable. If $B_j$ is mergeable, merge $B_j$ and $B_{j+1}$ into one block ($k \to k-1$). If $B_j$ is splittable, split $B_j$ by isolating its minimum element into a new singleton block ($k \to k+1$). If such $j$ doesn't exist, $\phi(\pi) = \pi$ (fixed point).
 
 This is a sign-reversing involution: non-fixed points are paired with opposite signs $(-1)^k$.
