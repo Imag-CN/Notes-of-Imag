@@ -386,14 +386,4 @@ $$
 $$
 so $\mu$ does not dominate $\lambda$.
 
-The converse is also false. For example,
-$$
-\mu=(3,3,0),\qquad \lambda=(4,1,1),
-$$
-satisfy $\mu$ dominates $\lambda$, since
-$$
-3\le4,\qquad 3+3\ge4+1,
-$$
-but $\mu<_{\mathrm{LEX}}\lambda$ because $\mu_1<\lambda_1$.
-
-Therefore, neither implication holds.
+The converse is true if $\mu\neq \lambda$. This can shown by induction.
