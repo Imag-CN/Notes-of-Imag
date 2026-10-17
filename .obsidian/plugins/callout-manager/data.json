@@ -1,8 +1,6 @@
 {
   "callouts": {
-    "custom": [
-      "remark"
-    ],
+    "custom": [],
     "settings": {}
   },
   "calloutDetection": {
