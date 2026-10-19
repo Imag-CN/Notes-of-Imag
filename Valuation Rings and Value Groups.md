@@ -1,423 +1,366 @@
 ___
+# 1. Valuations and Valuation Rings
 
->[!problem] Definitions
->
->Let $K$ be a field and $\Gamma$ a totally ordered abelian group, written additively. A **valuation** is a map
->$$
->v:K^\times\to\Gamma
->$$
->such that
->$$
->v(xy)=v(x)+v(y),\qquad
->v(x+y)\ge\min\{v(x),v(y)\},
->$$
->whenever $x+y\neq0$. We usually extend it by setting $v(0)=+\infty$.
->
->The **value group** is
->$$
->\Gamma_K=v(K^\times).
->$$
->
->In this note, we always assume that $v$ is surjective onto its value group unless explicitly stated otherwise.
->
->The associated **valuation ring** is
->$$
->\mathcal O_v=\{x\in K:v(x)\ge0\},
->$$
->with maximal ideal
->$$
->\mathfrak m_v=\{x\in K:v(x)>0\}.
->$$
->Its residue field is
->$$
->k_v=\mathcal O_v/\mathfrak m_v.
->$$
-
-We can also start from defining a valuation ring:
-
->[!problem] Definition 2
->A subring $\mathcal O\subseteq K$ is a **valuation ring** of $K$ if for every $x\in K^\times$, either $x\in\mathcal O$ or $x^{-1}\in\mathcal O$.
->
->We also call a domain a valuation ring if it is **a valuation ring** in its field of fraction.
-
-Given a valuation ring $\mathcal O\subseteq K$, its value group can be recovered as
-$$
-\Gamma=K^\times/\mathcal O^\times,
-$$
-with the order induced by divisibility. The valuation map is defined as the quotient map of the identity above. It's easy to verify that the two definitions are identical.
-___
-
->[!problem] Proposition 3
->Every totally ordered abelian group can occur as the value group of some valued field.
-
-**Proof:**
-A construction is
-$$
-K=k((t^\Gamma)).
-$$
-Its elements are formal sums
-$$
-f=\sum_{\gamma\in\Gamma}a_\gamma t^\gamma
-$$
-whose support is well-ordered. Define
-$$
-v(f)=\min\operatorname{supp}(f).
-$$
-Then
-$$
-v(t^\gamma)=\gamma,
-$$
-so
-$$
-v(K^\times)=\Gamma.
-$$
-
-Thus there is essentially no restriction beyond being a totally ordered abelian group.
-___
-
->[!problem] Definition 4
->An ordered abelian group $\Gamma$ is **Archimedean** if for every $\gamma,\delta>0$, there exists $n\ge1$ such that
->$$
->n\gamma>\delta.
->$$
->
->Equivalently, $\Gamma$ has no nonzero infinitesimal relative to another positive element.
-
-The fundamental result is **Hölder's theorem**:
-
->[!problem] Theorem 5 (Hölder's theorem)
-> An ordered abelian group $\Gamma$ is Archimedean iff it admits an order-preserving group embedding
-> $$
->\phi: \Gamma\hookrightarrow(\mathbb R,+).
+> [!problem] Definition 1.1  
+> Let $K$ be a field and $\Gamma$ a totally ordered abelian group, written additively. A **valuation** is a map  
+> $$  
+> v^\times\to\Gamma  
+> $$  
+> such that  
+> $$  
+> v(xy)=v(x)+v(y),\qquad v(x+y)\ge\min{v(x),v(y)},  
+> $$  
+> whenever $x+y\neq0$. We extend it by setting $v(0)=+\infty$.
+> 
+> The **value group** of $K$ is  
+> $$  
+> \Gamma_K=v(K^\times).  
+> $$  
+> Unless otherwise stated, we take $\Gamma=\Gamma_K$, so that $v$ is surjective.
+> 
+> The associated **valuation ring** is  
+> $$  
+> \mathcal O_v={x\in K(x)\ge0},  
+> $$  
+> with maximal ideal  
+> $$  
+> \mathfrak m_v={x\in K(x)>0}.  
+> $$  
+> The **residue field** is  
+> $$  
+> k_v=\mathcal O_v/\mathfrak m_v.  
 > $$
 
-**Proof:**
-The idea is to choose $u>0$ as a unit, i.e. let $\phi(u)=1$. For $x\in\Gamma$ and $n\in \mathbb{N}$, the Archimedean condition guarantees that there exists a unique $m_{n}\in \mathbb{Z}$ such that
-$$
-m_{n}u\leq nx <(m_{n}+1)u.
-$$
-It's easy to verify that $\{ m_{n} / n \}$ is a Cauchy sequence, we define $\phi(x)$ to be its limit.
+We can also start from the valuation ring itself.
 
-It remains to verify that $\phi$ is an order-preserving injective group homeomorphism, but those are all standard from construction.
+> [!problem] Definition 1.2  
+> A subring $\mathcal O\subseteq K$ is a **valuation ring** of $K$ if for every $x\in K^\times$, either $x\in\mathcal O$ or $x^{-1}\in\mathcal O$.
+> 
+> A domain is called a valuation ring if it is a valuation ring in its field of fractions.
+
+Given a valuation ring $\mathcal O\subseteq K$, its value group can be recovered as  
+$$  
+\Gamma=K^\times/\mathcal O^\times,  
+$$  
+with the order induced by divisibility. The quotient map  
+$$  
+v^\times\to K^\times/\mathcal O^\times  
+$$  
+is the corresponding valuation.
+
+Thus the two definitions of a valuation ring are equivalent.
 ___
 
->[!problem] Corollary 6
->There is a natrual bijection:
->
->$$
->\text{real-valued non-Archimedean absolute values}\longleftrightarrow\text{Archimedean-valued valuations}.
->$$
->
->This explains exactly when an additive valuation can be represented by a real-valued non-Archimedean absolute value.
+# 2. Groups that can Occur as Value Groups
 
-**Proof:**
-Suppose $v:K^\times\to\Gamma$ and $\Gamma$ is Archimedean. Choose an order embedding $\iota:\Gamma\hookrightarrow\mathbb R$. Then
-$$
-|x|=\exp(-\iota(v(x)))
-$$
-defines a non-Archimedean absolute value satisfying
-$$
-|x+y|\le\max\{|x|,|y|\}.
+> [!problem] Proposition 2.1  
+> Every totally ordered abelian group occurs as the value group of some valued field.
+
+**Proof:**  
+Let $k$ be a field and consider the Hahn series field  
+$$  
+K=k((t^\Gamma)).  
+$$  
+Its elements are formal sums  
+$$  
+f=\sum_{\gamma\in\Gamma}a_\gamma t^\gamma  
+$$  
+with well-ordered support. Define  
+$$  
+v(f)=\min\operatorname{supp}(f).  
+$$  
+Since $v(t^\gamma)=\gamma$, we have  
+$$  
+v(K^\times)=\Gamma.  
 $$
 
-Conversely, given a real-valued non-Archimedean absolute value, one may set
-$$
-v(x)=-\log|x|.
-$$
+Thus there is no restriction on a value group beyond being a totally ordered abelian group.
+___
+
+# 3. Archimedean Value Groups and Absolute Values
+
+> [!problem] Definition 3.1  
+> An ordered abelian group $\Gamma$ is **Archimedean** if for every $\gamma,\delta>0$, there exists $n\ge1$ such that  
+> $$  
+> n\gamma>\delta.  
+> $$
+> 
+> Equivalently, $\Gamma$ has no nonzero infinitesimal relative to another positive element.
+
+The fundamental result is Hölder's theorem.
+
+> [!problem] Theorem 3.2 (Hölder's Theorem)  
+> An ordered abelian group $\Gamma$ is Archimedean iff it admits an order-preserving group embedding  
+> $$  
+> \phi:\Gamma\hookrightarrow(\mathbb R,+).  
+> $$
+
+**Proof:**  
+Choose $u>0$ and regard it as a unit. For $x\in\Gamma$ and $n\ge1$, the Archimedean property gives a unique $m_n\in\mathbb Z$ such that  
+$$  
+m_nu\le nx<(m_n+1)u.  
+$$  
+Then $m_n/n$ converges to a real number $\phi(x)$. One verifies that  
+$$  
+\phi(x+y)=\phi(x)+\phi(y)  
+$$  
+and that $\phi$ is order-preserving and injective.
+
+The converse follows immediately since every ordered subgroup of $\mathbb R$ is Archimedean.
+
+> [!problem] Corollary 3.3  
+> A valuation can be represented by a real-valued non-Archimedean absolute value iff its value group is Archimedean.
+
+**Proof:**  
+Suppose $v^\times\to\Gamma$ and $\Gamma$ is Archimedean. By Hölder's theorem, choose an order embedding $\iota:\Gamma\hookrightarrow\mathbb R$. Then  
+$$  
+|x|=\exp(-\iota(v(x)))  
+$$  
+defines a non-Archimedean absolute value.
+
+Conversely, given a real-valued non-Archimedean absolute value, define  
+$$  
+v(x)=-\log|x|.  
+$$  
 Its value group is an ordered subgroup of $\mathbb R$, hence Archimedean.
 ___
-
 For example, $\mathbb Z$, $\mathbb Q$, $\mathbb Z[\sqrt2]$, and $\mathbb R$ are Archimedean ordered groups.
 
-On the other hand, $\mathbb Z^2$ with lexicographic order is not Archimedean, since
-$$
-n(0,1)<(1,0)
-$$
-for every $n\ge1$. Hence a valuation with value group $\mathbb Z^2_{\mathrm{lex}}$ cannot be encoded by an ordinary real-valued absolute value.
+On the other hand, $\mathbb Z^2$ with lexicographic order is not Archimedean, since  
+$$  
+n(0,1)<(1,0)  
+$$  
+for every $n\ge1$. Hence a valuation with value group $\mathbb Z^2_{\mathrm{lex}}$ cannot be represented by an ordinary real-valued absolute value.
+
 ___
 
-## 4. The valuation topology
+# 4. The Valuation Topology and Completeness
 
-For a general value group $\Gamma$, there may be no real-valued absolute value. Nevertheless, every valuation defines a natural topology on $K$.
+Even when $\Gamma$ is not Archimedean, a valuation still defines a natural topology on $K$.
 
-For $\gamma\in\Gamma$, set
-$$
-B_\gamma(0)=\{x\in K:v(x)>\gamma\}.
-$$
-These form a neighborhood basis of $0$. By translation,
-$$
-B_\gamma(a)=\{x\in K:v(x-a)>\gamma\}
-$$
-forms a neighborhood basis of $a$.
+> [!problem] Definition 4.1  
+> For $\gamma\in\Gamma$, define  
+> $$  
+> B_\gamma(0)={x\in K(x)>\gamma}.  
+> $$  
+> These sets form a neighborhood basis of $0$. By translation,  
+> $$  
+> B_\gamma(a)={x\in K(x-a)>\gamma}  
+> $$  
+> forms a neighborhood basis of $a$.
+> 
+> This topology is called the **valuation topology**.
 
-Thus
-$$
-x_i\to x
-$$
-means
-$$
-v(x_i-x)\to+\infty,
-$$
-where this notation means that for every $\gamma\in\Gamma$, eventually
-$$
-v(x_i-x)>\gamma.
-$$
+Thus $x_i\to x$ means  
+$$  
+v(x_i-x)\to+\infty,  
+$$  
+i.e. for every $\gamma\in\Gamma$, eventually $v(x_i-x)>\gamma$.
 
-This is **not** the order topology on $\Gamma$. For example, for the $p$-adic valuation,
-$$
-v_p(p^n)=n\to+\infty,
-$$
-although $1,2,3,\ldots$ does not converge in the order topology on $\mathbb Z$.
+This should not be confused with the order topology on $\Gamma$. The value group serves as a scale measuring how close two elements of $K$ are.
 
-The value group should therefore be thought of as a generalized ruler: its order tells us when one difference is smaller than another. We care about moving arbitrarily far toward $+\infty$, not about convergence inside $\Gamma$ itself.
+> [!problem] Definition 4.2  
+> A sequence $(x_n)$ is **Cauchy** if for every $\gamma\in\Gamma$, there exists $N$ such that  
+> $$  
+> m,n\ge N\implies v(x_m-x_n)>\gamma.  
+> $$
 
-A sequence $(x_n)$ is Cauchy if for every $\gamma\in\Gamma$, there exists $N$ such that
-$$
-m,n\ge N\implies v(x_m-x_n)>\gamma.
+For general value groups, sequences need not detect the whole topology, so completeness is more properly formulated using Cauchy nets or Cauchy filters.
+
+In the Archimedean case, after representing the valuation by $|\cdot|=e^{-v}$, the valuation topology is induced by the ultrametric  
+$$  
+d(x,y)=|x-y|.  
 $$
 
-For sufficiently general value groups, sequences need not detect the whole topology, so completeness is more properly formulated using Cauchy nets or Cauchy filters.
+Thus the absolute-value language contains no additional information for a fixed Archimedean valuation; it packages the valuation topology in the usual metric language.
+___
 
-In the Archimedean case, after replacing $v$ by $|\cdot|=e^{-v}$, this becomes the usual ultrametric language:
-$$
-d(x,y)=|x-y|.
-$$
+# 5. Rank and Convex Subgroups
 
-Thus the absolute-value language does not contain more information for a fixed rank-one valuation. Its advantage is that it places valued fields directly in the language of metric spaces, Banach spaces, and non-Archimedean analysis.
-
----
-
-## 5. Rank and convex subgroups
-
-A subgroup $\Delta\subseteq\Gamma$ is **convex** if
-$$
-0\le\gamma\le\delta,\quad \delta\in\Delta
-\quad\Longrightarrow\quad
-\gamma\in\Delta.
-$$
+> [!problem] Definition 5.1  
+> A subgroup $\Delta\subseteq\Gamma$ is **convex** if  
+> $$  
+> 0\le\gamma\le\delta,\quad \delta\in\Delta  
+> \quad\Longrightarrow\quad  
+> \gamma\in\Delta.  
+> $$
 
 The convex subgroups of an ordered abelian group are totally ordered by inclusion.
 
-For example,
-$$
-0\subsetneq\{0\}\times\mathbb Z\subsetneq\mathbb Z^2_{\mathrm{lex}}
-$$
-is the chain of convex subgroups of $\mathbb Z^2_{\mathrm{lex}}$.
+> [!problem] Definition 5.2  
+> The **rank** of an ordered abelian group $\Gamma$ is the order type of the chain of its proper convex subgroups.
+> 
+> In the finite-rank case, if  
+> $$  
+> 0=\Gamma_0\subsetneq\Gamma_1\subsetneq\cdots\subsetneq\Gamma_r=\Gamma  
+> $$  
+> is the full chain of convex subgroups, then $\Gamma$ has rank $r$.
 
-The **rank** of $\Gamma$ measures the length of this chain. In particular,
-$$
-\operatorname{rank}(\Gamma)=1
-$$
-iff $\Gamma$ has no nontrivial proper convex subgroup, which is equivalent to $\Gamma$ being Archimedean.
+For example,  
+$$  
+0\subsetneq{0}\times\mathbb Z\subsetneq\mathbb Z^2_{\mathrm{lex}},  
+$$  
+so $\mathbb Z^2_{\mathrm{lex}}$ has rank $2$.
 
-For a finite-rank group, a maximal convex filtration
-$$
-0=\Gamma_0\subsetneq\Gamma_1\subsetneq\cdots\subsetneq\Gamma_r=\Gamma
-$$
-has the property that every quotient
-$$
-\Gamma_i/\Gamma_{i-1}
-$$
-is Archimedean, hence embeds into $\mathbb R$.
+> [!problem] Proposition 5.3  
+> An ordered abelian group $\Gamma$ has rank $1$ iff it is Archimedean.
 
-Thus a higher-rank ordered group can be viewed as being built from several Archimedean scales.
+**Proof:**  
+If $\Gamma$ is not Archimedean, choose $\gamma,\delta>0$ such that $n\gamma<\delta$ for every $n$. Then  
+$$  
+\Delta={x\in\Gamma:|x|\le n\gamma\text{ for some }n}  
+$$  
+is a nontrivial proper convex subgroup.
 
-However, one should not conclude that
-$$
-\Gamma\cong A_1\oplus_{\mathrm{lex}}\cdots\oplus_{\mathrm{lex}}A_r.
-$$
-The successive extensions need not split. What is canonical is the convex filtration and its Archimedean quotients, not a direct-sum decomposition.
+Conversely, if $\Delta\subsetneq\Gamma$ is a nontrivial convex subgroup, choose $0<\gamma\in\Delta$ and $0<\delta\notin\Delta$. Then $n\gamma<\delta$ for every $n$, so $\Gamma$ is not Archimedean.
 
-The Hahn embedding theorem makes this picture precise: general ordered abelian groups can be embedded into suitable lexicographically ordered Hahn products of Archimedean groups.
+> [!problem] Remark 5.4  
+> If $\Gamma$ has finite rank with convex filtration  
+> $$  
+> 0=\Gamma_0\subsetneq\Gamma_1\subsetneq\cdots\subsetneq\Gamma_r=\Gamma,  
+> $$  
+> then every quotient $\Gamma_i/\Gamma_{i-1}$ is Archimedean.
+> 
+> Thus a higher-rank ordered group can be viewed as being built from several Archimedean scales.
 
----
+In general, these extensions need not split, so one cannot necessarily write  
+$$  
+\Gamma\cong A_1\oplus_{\mathrm{lex}}\cdots\oplus_{\mathrm{lex}}A_r.  
+$$  
+What is canonical is the convex filtration and its Archimedean quotients.
+___
 
-## 6. Dedekind completeness of the value group
+# 6. Dedekind Completeness of Ordered Groups
 
-It is important not to confuse completeness of the valued field with order completeness of its value group.
+Although every ordered abelian group has a divisible hull, ordinary Dedekind completion does not behave well for higher-rank groups.
 
-A Dedekind complete ordered abelian group must be Archimedean. Indeed, if $0<\epsilon$ were infinitesimal relative to $u>0$, so that
-$$
-n\epsilon<u
-$$
-for all $n$, then
-$$
-a=\sup\{n\epsilon:n\ge1\}
-$$
-would satisfy
-$$
-a+\epsilon=a,
-$$
-contradicting cancellation.
+> [!problem] Proposition 6.1  
+> Every Dedekind complete ordered abelian group is Archimedean.
 
-Thus a genuinely higher-rank ordered group cannot be embedded into a Dedekind complete ordered abelian group while preserving its ordered-group structure.
+**Proof:**  
+Suppose $0<\epsilon,u$ satisfy $n\epsilon<u$ for every $n\ge1$. Then  
+$$  
+a=\sup{n\epsilon\ge1}  
+$$  
+exists. But ${(n+1)\epsilon\ge1}$ has the same supremum, so  
+$$  
+a+\epsilon=a,  
+$$  
+contradicting $\epsilon>0$.
 
-In the Archimedean case, the familiar picture is
-$$
-\mathbb Z\longrightarrow\mathbb Q\longrightarrow\mathbb R,
-$$
-where the first step is divisible closure and the second is Dedekind completion.
+Therefore, a higher-rank ordered abelian group cannot be embedded as an ordered subgroup into a Dedekind complete ordered abelian group.
 
-For general higher-rank groups, ordinary Dedekind completion is therefore not the appropriate notion of completion in valuation theory.
+In the Archimedean case, the familiar picture is  
+$$  
+\mathbb Z\longrightarrow\mathbb Q\longrightarrow\mathbb R,  
+$$  
+where the first step is the divisible hull and the second is the Dedekind completion.
 
----
+Thus Dedekind completeness of the value group is generally unrelated to completeness of the valued field.
+___
+# 7. Completion of Valued Fields
 
-## 7. Completion of a valued field
+> [!problem] Definition 7.1  
+> An extension $(L,v)/(K,v)$ is called **immediate** if it does not change either the value group or the residue field:  
+> $$  
+> \Gamma_L=\Gamma_K,\qquad k_L=k_K.  
+> $$
 
-Let $\widehat K$ be the completion of a valued field $K$. The valuation extends uniquely to $\widehat K$, and
-$$
-\Gamma_{\widehat K}=\Gamma_K.
-$$
+> [!problem] Proposition 7.2  
+> Let $(K,v)$ be a valued field and $\widehat K$ its completion. Then $v$ extends uniquely to $\widehat K$, and $\widehat K/K$ is immediate. In particular,  
+> $$  
+> \Gamma_{\widehat K}=\Gamma_K,\qquad k_{\widehat K}=k_K.  
+> $$
 
-Indeed, if $x\in\widehat K^\times$ and $x_n\in K$ converges to $x$, then eventually
-$$
-v(x_n-x)>v(x),
-$$
-and the ultrametric inequality implies
-$$
-v(x_n)=v(x).
-$$
-Thus every value occurring in $\widehat K$ already occurs in $K$.
+**Proof:**  
+Let $x\in\widehat K^\times$ and choose $x_n\in K$ with $x_n\to x$. Eventually,  
+$$  
+v(x_n-x)>v(x),  
+$$  
+so $v(x_n)=v(x)$. Hence every value in $\widehat K$ already occurs in $K$.
 
-The residue field is unchanged as well:
-$$
-k_{\widehat K}\cong k_K.
-$$
+Similarly, every element of $\mathcal O_{\widehat K}$ can be approximated sufficiently closely by an element of $\mathcal O_K$ with the same residue. Hence $k_{\widehat K}=k_K$.
 
-Hence completion is an **immediate extension**:
-$$
-\boxed{
-\Gamma_{\widehat K}=\Gamma_K,\qquad
-k_{\widehat K}=k_K.
-}
-$$
+Thus completion of a valued field has nothing to do with Dedekind completion of its value group: completion does not change the value group at all.
+___
 
-This shows again why completing the valued field has essentially nothing to do with taking an order-theoretic completion of its value group.
+# 8. Algebraic Extensions and Algebraic Closure
 
----
 
-## 8. Algebraic closure and the divisible hull
+> [!problem] Proposition 8.1  
+> Let $(K,v)$ be a valued field with value group $\Gamma$, and choose an extension of $v$ to an algebraic closure $\overline K$. Then  
+> $$  
+> \Gamma_{\overline K}=\Gamma_{\mathbb Q}:=\Gamma\otimes_{\mathbb Z}\mathbb Q.  
+> $$  
+> Consequently, for every algebraic extension $K\subseteq L\subseteq\overline K$,  
+> $$  
+> \Gamma\subseteq\Gamma_L\subseteq\Gamma_{\mathbb Q}.  
+> $$
+> 
+> If $K$ is henselian, the extension of $v$ to $\overline K$, and hence to every algebraic extension $L/K$, is unique.
 
-Algebraic closure behaves very differently.
+**Proof:**  
+For $\gamma=v(a)\in\Gamma$ and $n\ge1$, choose $x\in\overline K$ such that $x^n=a$. Then  
+$$  
+v(x)=\frac{\gamma}{n},  
+$$
+so $\Gamma_{\mathbb Q}\subseteq\Gamma_{\overline K}$.
 
-Let $\overline K$ be an algebraic closure and extend $v$ to $\overline K$. Then
-$$
-\boxed{
-\Gamma_{\overline K}
-=
-\Gamma_K\otimes_{\mathbb Z}\mathbb Q.
-}
-$$
+Conversely, every $x\in\overline K^\times$ lies in some finite extension $E/K$. Since $\Gamma_E/\Gamma$ is torsion, some $n\ge1$ satisfies $nv(x)\in\Gamma$. Hence $v(x)\in\Gamma_{\mathbb Q}$.
 
-Indeed, if $a\in K^\times$ and $x^n=a$, then
-$$
-nv(x)=v(a),
-$$
-so
-$$
-v(x)=\frac{v(a)}n.
-$$
-Thus algebraic closure produces all rational divisions of values.
+> [!problem] Proposition 8.2  
+> With the same notation, the residue field of $\overline K$ is an algebraic closure of $k_K$:  
+> $$  
+> k_{\overline K}\cong\overline{k_K}.  
+> $$
 
-Conversely, every $x\in\overline K$ lies in some finite extension $L/K$, and $\Gamma_L/\Gamma_K$ is torsion. Hence some positive multiple of $v(x)$ lies in $\Gamma_K$. Therefore no values outside the divisible hull can appear.
+**Proof:**  
+The extension $k_{\overline K}/k_K$ is algebraic. Moreover, the residue field of an algebraically closed valued field is algebraically closed. Hence it is an algebraic closure of $k_K$.
 
-Similarly, the residue field becomes algebraically closed:
+Therefore,  
 $$
-k_{\overline K}\cong\overline{k_K}.
-$$
-
-Thus the two fundamental operations behave schematically as
-$$
-\begin{array}{c|cc}
-&\text{value group}&\text{residue field}\\
-\hline
-K&\Gamma_K&k_K\\
-\widehat K&\Gamma_K&k_K\\
-\overline K&\Gamma_K\otimes\mathbb Q&\overline{k_K}.
+\begin{array}{c|cc}  
+&\text{value group}&\text{residue field}\  
+K&\Gamma_K&k_K\  
+\widehat K&\Gamma_K&k_K\  
+\overline K&\Gamma_K\otimes_{\mathbb Z}\mathbb Q&\overline{k_K}.  
 \end{array}
 $$
 
 ---
 
-## 9. Example: $\mathbb Q_p$, $\overline{\mathbb Q}_p$, and $C_p$
+# 9. Example: $\mathbb Q_p$, $\overline{\mathbb Q}_p$, and $C_p$
 
-For $\mathbb Q_p$,
-$$
-\Gamma_{\mathbb Q_p}=\mathbb Z,\qquad
-k_{\mathbb Q_p}=\mathbb F_p.
-$$
+> [!problem] Example 9.1  
+> For $\mathbb Q_p$,  
+> $$  
+> \Gamma_{\mathbb Q_p}=\mathbb Z,\qquad  
+> k_{\mathbb Q_p}=\mathbb F_p.  
+> $$
+> 
+> Passing to the algebraic closure gives  
+> $$  
+> \Gamma_{\overline{\mathbb Q}_p}=\mathbb Q,\qquad  
+> k_{\overline{\mathbb Q}_p}=\overline{\mathbb F}_p.  
+> $$
+> 
+> Finally,  
+> $$  
+> C_p=\widehat{\overline{\mathbb Q}_p}.  
+> $$  
+> Since completion is immediate,  
+> $$  
+> \Gamma_{C_p}=\mathbb Q,\qquad  
+> k_{C_p}=\overline{\mathbb F}_p.  
+> $$
 
-Passing to the algebraic closure gives
-$$
-\Gamma_{\overline{\mathbb Q}_p}=\mathbb Q,\qquad
-k_{\overline{\mathbb Q}_p}=\overline{\mathbb F}_p.
-$$
-
-Finally,
-$$
-C_p=\widehat{\overline{\mathbb Q}_p}.
-$$
-Since completion is immediate,
-$$
-\Gamma_{C_p}=\mathbb Q,\qquad
-k_{C_p}=\overline{\mathbb F}_p.
-$$
-
-Thus
-$$
-(\mathbb Z,\mathbb F_p)
-\xrightarrow{\text{algebraic closure}}
-(\mathbb Q,\overline{\mathbb F}_p)
-\xrightarrow{\text{completion}}
-(\mathbb Q,\overline{\mathbb F}_p).
-$$
-
-In particular, the completeness of $C_p$ does **not** make its value group $\mathbb R$. Completeness concerns the uniform structure on the field, not order completeness of the value group.
-
----
-
-## 10. Summary
-
-The basic hierarchy is
-$$
-\boxed{
-\begin{array}{c}
-\text{totally ordered abelian groups}\\
-\updownarrow\\
-\text{possible value groups of general valuations}
-\end{array}}
+Thus  
+$$  
+(\mathbb Z,\mathbb F_p)  
+\xrightarrow{\text{algebraic closure}}  
+(\mathbb Q,\overline{\mathbb F}_p)  
+\xrightarrow{\text{completion}}  
+(\mathbb Q,\overline{\mathbb F}_p).  
 $$
 
-while
-$$
-\boxed{
-\begin{array}{c}
-\text{Archimedean ordered abelian groups}\\
-\updownarrow\\
-\text{ordered subgroups of }\mathbb R\\
-\updownarrow\\
-\text{real-valued non-Archimedean absolute values}.
-\end{array}}
-$$
-
-Rank measures the number of different Archimedean scales present in a value group. Rank one is precisely the Archimedean case; higher rank records genuinely infinitesimal levels that cannot be represented by a single real-valued absolute value.
-
-Finally, the value group should be viewed as a **scale of measurement**, not as the space being completed:
-$$
-\boxed{
-\text{completion of }K\text{ leaves }\Gamma\text{ unchanged},
-\qquad
-\text{algebraic closure replaces }\Gamma\text{ by }\Gamma\otimes\mathbb Q.
-}
-$$
-___
-Notice that every ordered abelian group is torsion-free. Hence it has a divisible hull
-$$
-\Gamma_{\mathbb Q}:=\Gamma\otimes_{\mathbb Z}\mathbb Q,
-$$
-and the order on $\Gamma$ extends uniquely to $\Gamma_{\mathbb Q}$.
-
->[!problem] Proposition 4
->The valuation $v$ on $K$ extend uniquely to its algebraic closure $\bar{K}$, with the valuation group $\Gamma$ extended to $\Gamma_{\mathbb{Q}}$.
->
->Therefore, if $L/K$ is an algebraic extension, then $v$ extend uniquely to $L$, with the valuation group $\Gamma$ extended to some subgroup of $\Gamma_{\mathbb{Q}}$.
+In particular, although $C_p$ is complete, its value group is still $\mathbb Q$, not $\mathbb R$. Completeness concerns the topology of the field, not the order completeness of its value group.
