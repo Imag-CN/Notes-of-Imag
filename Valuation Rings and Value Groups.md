@@ -75,31 +75,43 @@ $$
 Thus there is essentially no restriction beyond being a totally ordered abelian group.
 ___
 
-## 3. Archimedean ordered groups and absolute values
-
-An ordered abelian group $\Gamma$ is **Archimedean** if for every $\gamma,\delta>0$, there exists $n\ge1$ such that
-$$
-n\gamma>\delta.
-$$
-
-Equivalently, $\Gamma$ has no nonzero infinitesimal relative to another positive element.
+>[!problem] Definition 4
+>An ordered abelian group $\Gamma$ is **Archimedean** if for every $\gamma,\delta>0$, there exists $n\ge1$ such that
+>$$
+>n\gamma>\delta.
+>$$
+>
+>Equivalently, $\Gamma$ has no nonzero infinitesimal relative to another positive element.
 
 The fundamental result is **Hölder's theorem**:
 
+>[!problem] Theorem 5 (Hölder's theorem)
 > An ordered abelian group $\Gamma$ is Archimedean iff it admits an order-preserving group embedding
 > $$
-> \Gamma\hookrightarrow(\mathbb R,+).
+>\phi: \Gamma\hookrightarrow(\mathbb R,+).
 > $$
 
-The idea is to choose $u>0$ as a unit of measurement. For $x\in\Gamma$, compare $x$ with rational multiples of $u$ and define a real number by a Dedekind cut. The Archimedean condition guarantees that every element can be measured on this single scale.
-
-This explains exactly when an additive valuation can be represented by a real-valued non-Archimedean absolute value.
-
-Suppose
+**Proof:**
+The idea is to choose $u>0$ as a unit, i.e. let $\phi(u)=1$. For $x\in\Gamma$ and $n\in \mathbb{N}$, the Archimedean condition guarantees that there exists a unique $m_{n}\in \mathbb{Z}$ such that
 $$
-v:K^\times\to\Gamma
+m_{n}u\leq nx <(m_{n}+1)u.
 $$
-and $\Gamma$ is Archimedean. Choose an order embedding $\iota:\Gamma\hookrightarrow\mathbb R$. Then
+It's easy to verify that $\{ m_{n} / n \}$ is a Cauchy sequence, we define $\phi(x)$ to be its limit.
+
+It remains to verify that $\phi$ is an order-preserving injective group homeomorphism, but those are all standard from construction.
+___
+
+>[!problem] Corollary 6
+>There is a natrual bijection:
+>
+>$$
+>\text{real-valued non-Archimedean absolute values}\longleftrightarrow\text{Archimedean-valued valuations}.
+>$$
+>
+>This explains exactly when an additive valuation can be represented by a real-valued non-Archimedean absolute value.
+
+**Proof:**
+Suppose $v:K^\times\to\Gamma$ and $\Gamma$ is Archimedean. Choose an order embedding $\iota:\Gamma\hookrightarrow\mathbb R$. Then
 $$
 |x|=\exp(-\iota(v(x)))
 $$
@@ -113,25 +125,16 @@ $$
 v(x)=-\log|x|.
 $$
 Its value group is an ordered subgroup of $\mathbb R$, hence Archimedean.
+___
 
-Therefore
-$$
-\boxed{\text{real-valued non-Archimedean absolute values}
-\longleftrightarrow
-\text{Archimedean-valued valuations}.}
-$$
-
-Up to the usual equivalence/normalization, these are precisely the **rank-one valuations**.
-
-For example, $\mathbb Z$, $\mathbb Q$, $\mathbb Z+\sqrt2\mathbb Z$, and $\mathbb R$ are Archimedean ordered groups.
+For example, $\mathbb Z$, $\mathbb Q$, $\mathbb Z[\sqrt2]$, and $\mathbb R$ are Archimedean ordered groups.
 
 On the other hand, $\mathbb Z^2$ with lexicographic order is not Archimedean, since
 $$
 n(0,1)<(1,0)
 $$
 for every $n\ge1$. Hence a valuation with value group $\mathbb Z^2_{\mathrm{lex}}$ cannot be encoded by an ordinary real-valued absolute value.
-
----
+___
 
 ## 4. The valuation topology
 
