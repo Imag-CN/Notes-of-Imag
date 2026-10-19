@@ -74,14 +74,7 @@ $$
 
 Thus there is essentially no restriction beyond being a totally ordered abelian group.
 ___
-Notice that every ordered abelian group is torsion-free. Hence it has a divisible hull
-$$
-\Gamma_{\mathbb Q}:=\Gamma\otimes_{\mathbb Z}\mathbb Q,
-$$
-and the order on $\Gamma$ extends uniquely to $\Gamma_{\mathbb Q}$.
 
-
-___
 ## 3. Archimedean ordered groups and absolute values
 
 An ordered abelian group $\Gamma$ is **Archimedean** if for every $\gamma,\delta>0$, there exists $n\ge1$ such that
@@ -414,3 +407,14 @@ $$
 \text{algebraic closure replaces }\Gamma\text{ by }\Gamma\otimes\mathbb Q.
 }
 $$
+___
+Notice that every ordered abelian group is torsion-free. Hence it has a divisible hull
+$$
+\Gamma_{\mathbb Q}:=\Gamma\otimes_{\mathbb Z}\mathbb Q,
+$$
+and the order on $\Gamma$ extends uniquely to $\Gamma_{\mathbb Q}$.
+
+>[!problem] Proposition 4
+>The valuation $v$ on $K$ extend uniquely to its algebraic closure $\bar{K}$, with the valuation group $\Gamma$ extended to $\Gamma_{\mathbb{Q}}$.
+>
+>Therefore, if $L/K$ is an algebraic extension, then $v$ extend uniquely to $L$, with the valuation group $\Gamma$ extended to some subgroup of $\Gamma_{\mathbb{Q}}$.
